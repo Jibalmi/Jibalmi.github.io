@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Boston Logan Airport Sleeping Pod Reservation</title>
+</head>
+<body>
+    <!-- Welcome screen content -->
+    <div id="welcome">
+	<h2>Welcome to Boston Logan Airport Sleeping Pod Reservation<span id="pod-id"></span></h2>
+        <img src="Images\Il.PNG" alt="Welcome Pod" id="welcome-image">
+        <button onclick="showTerminalSelection();">Reserve Your Sleeping Pod</button>
+    </div>
+    
+    <!-- Terminal selection content -->
+    <div id="terminal-selection" style="display:none;">
+        <h2>Select a Terminal</h2>
+        <button onclick="selectTerminal('A');">A</button>
+        <button onclick="selectTerminal('B');">B</button>
+        <button onclick="selectTerminal('C');">C</button>
+        <button onclick="selectTerminal('E');">E</button>
+        <button onclick="goBack('welcome', 'terminal-selection');">Back</button>
+    </div>
+
+    <!-- Gate selection contentA -->
+    <div id="gate-selectionA" style="display:none;">
+        <h2>Enter Your Gate Number</h2>
+        <input type="number" id="gate-numberA" min="1" max="21" />
+        <button onclick="selectGateA();">Submit</button>
+        <button onclick="goBack('terminal-selection', 'gate-selectionA');">Back</button>
+    </div>
+
+    <!-- Gate range windows -->
+    <div id="range-1-10" class="sleeping-pods-container hidden" style="display:none;">
+		<h2>Available Sleeping Pods (Gate 1-10)</h2>
+		<div id="sleeping-pods-container"></div>
+		<button onclick="goBack('gate-selectionA', 'range-1-10');">Back</button>
+	</div>
+    <div id="range-11-21" class="sleeping-pods-container hidden" style="display:none;">
+        <!-- Content for gate range 11-21 -->
+		<h2>Available Sleeping Pods (Gate 11-21)</h2>
+		<div id="sleeping-pods-container"></div>
+        <button onclick="goBack('gate-selectionA', 'range-11-21');">Back</button>
+    </div>
+
+
+
+    <!-- Gate selection content B-->
+    <div id="gate-selectionB" style="display:none;">
+        <h2>Enter Your Gate Number</h2>
+        <input type="number" id="gate-numberB" min="1" max="38" />
+        <button onclick="selectGateB();">Submit</button>
+        <button onclick="goBack('terminal-selection', 'gate-selectionB');">Back</button>
+    </div>
+
+    <!-- Gate range windows -->
+    <div id="range-1-9" class="sleeping-pods-container hidden" style="display:none;">
+        <!-- Content for gate range 1-9 -->
+		<h2>Available Sleeping Pods (Gate 1-9)</h2>
+		<div id="sleeping-pods-containerB"></div>
+        <button onclick="goBack('gate-selectionB', 'range-1-9');">Back</button>
+    </div>
+    <div id="range-10-24" class="sleeping-pods-container hidden" style="display:none;">
+        <!-- Content for gate range 10-24 -->
+		<h2>Available Sleeping Pods (Gate 10-24)</h2>
+		<div id="sleeping-pods-containerB"></div>
+        <button onclick="goBack('gate-selectionB', 'range-10-24');">Back</button>
+    </div>
+	    </div>
+    <div id="range-25-38" class="sleeping-pods-container hidden" style="display:none;">
+        <!-- Content for gate range 25-38 -->
+		<h2>Available Sleeping Pods (Gate 25-38)</h2>
+		<div id="sleeping-pods-containerB"></div>
+        <button onclick="goBack('gate-selectionB', 'range-25-38');">Back</button>
+    </div>
+
+
+
+    <!-- Gate selection content C -->
+    <div id="gate-selectionC" style="display:none;">
+        <h2>Enter Your Gate Number</h2>
+        <input type="number" id="gate-numberC" min="8" max="42" />
+        <button onclick="selectGateC();">Submit</button>
+        <button onclick="goBack('terminal-selection', 'gate-selectionC');">Back</button>
+    </div>
+
+    <!-- Gate range windows -->
+    <div id="range-8-21" class="sleeping-pods-container hidden" style="display:none;">
+        <!-- Content for gate range 1-10 -->
+		<h2>Available Sleeping Pods (Gate 8-21)</h2>
+		<div id="sleeping-pods-containerC"></div>
+        <button onclick="goBack('gate-selectionC', 'range-8-21');">Back</button>
+    </div>
+    <div id="range-25-42" class="sleeping-pods-container hidden" style="display:none;">
+	<h2>Available Sleeping Pods (Gate 25-42)</h2>
+        <!-- Content for gate range 11-21 -->
+		<div id="sleeping-pods-containerC"></div>
+        <button onclick="goBack('gate-selectionC', 'range-25-42');">Back</button>
+    </div>
+
+    <!-- Gate selection content -->
+    <div id="gate-selectionE" style="display:none;">
+        <h2>Enter Your Gate Number</h2>
+        <input type="number" id="gate-numberE" min="1" max="12" />
+        <button onclick="selectGateE();">Submit</button>
+        <button onclick="goBack('terminal-selection', 'gate-selectionE');">Back</button>
+    </div>
+
+    <!-- Gate range windows -->
+    <div id="range-1-12" class="sleeping-pods-container hidden" style="display:none;">
+        <!-- Content for gate range 1-10 -->
+		<h2>Available Sleeping Pods (Gate 1-12)</h2>
+		<div id="sleeping-pods-containerE"></div>
+        <button onclick="goBack('gate-selectionE', 'range-1-12');">Back</button>
+    </div>
+    
+   <!-- Pod matters -->
+
+	<div id="reservation-popup">
+		<div id="reservation-popup-inner">
+			<h2>Sleeping Pod <span id="pod-id"></span></h2>
+			<img src="Images\Capture.PNG" alt="Sleeping Pod" id="pod-image">
+			<div>
+				<label for="reservation-date">Date:</label>
+				<input type="date" id="reservation-date">
+			</div>
+			<div>
+				<label for="start-time">Start Time:</label>
+				<input type="time" id="start-time" onchange="calculateTotalCost();">
+			</div>
+			<div>
+				<label for="end-time">End Time:</label>
+				<input type="time" id="end-time" onchange="calculateTotalCost();">
+			</div>
+			<div>
+				<label>Total Cost:</label>
+				<span id="total-cost">$0</span>
+			</div>
+			<button onclick="reservePod()">Reserve</button>
+			<button class="close-button" onclick="closeReservationPopup();">Close</button>
+
+		</div>
+	</div>
+<div id="cart-popup" class="cart-popup hidden">
+  <div class="cart-popup-header">
+    <h3>Cart</h3>
+    <button id="close-cart-btn" onclick="closeCartPopup()">X</button>
+  </div>
+  <div id="cart-content">
+    <p>Total Time in Minutes: <span id="total-time"></span></p>
+    <p>Total cost $: <span id="total-costa"></span></p>
+  </div>
+</div>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
