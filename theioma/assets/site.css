@@ -1355,6 +1355,12 @@ html { scroll-padding-top: 140px; }
 .bcards > .w12 { grid-column: 1 / -1; }
 .bstate.old { color: var(--ink2); }
 .bstate.old::before { background: transparent; box-shadow: inset 0 0 0 1.5px var(--ink2); }
+/* New and planned (lane landing-next, 3 Nov 2026): new is the half mark (written and tested, not yet proven over a long
+   run); planned is the hollow ring (not built). */
+.bstate.new::before { background: linear-gradient(90deg, var(--ink) 50%, transparent 50%); box-shadow: inset 0 0 0 1.5px var(--ink); }
+.bstate.plan { color: var(--ink2); }
+.bstate.plan::before { background: transparent; box-shadow: inset 0 0 0 1.5px var(--ink2); }
+.bc-sub a { color: var(--ink2); text-decoration: underline; text-underline-offset: 3px; }
 .bc-date { font-size: clamp(2.2rem, 1.5rem + 1.8vw, 3.1rem); }
 
 /* Where a turn's time goes: one row per stage, the p50 bar and the target notch on one scale. */

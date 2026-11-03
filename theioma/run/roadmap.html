@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>New and planned · Theioma</title>
+<meta name="description" content="What changed in Theioma on 3 November 2026, and what is planned next: the hardware pipeline, the digital twin, the lab desk, models and runtime, and models we build ourselves.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050505">
+<meta property="og:title" content="New and planned · Theioma">
+<meta property="og:description" content="What changed in Theioma on 3 November 2026, and what is planned next: the hardware pipeline, the digital twin, the lab desk, models and runtime, and models we build ourselves.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22none%22%3E%0A%20%20%3Ctitle%3Etheioma%3C%2Ftitle%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22body%22%20x1%3D%220.15%22%20y1%3D%220.85%22%20x2%3D%220.85%22%20y2%3D%220.15%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%230a2a48%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220.55%22%20stop-color%3D%22%231d1f5c%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%233a1858%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22rim%22%20x1%3D%220.1%22%20y1%3D%220.9%22%20x2%3D%220.9%22%20y2%3D%220.1%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%233bcce3%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220.5%22%20stop-color%3D%22%236950b6%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23db72b4%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22glow%22%20cx%3D%220.71%22%20cy%3D%220.28%22%20r%3D%220.3%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f38db7%22%20stop-opacity%3D%220.95%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f38db7%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%3C%2FradialGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2215%22%20fill%3D%22url(%23body)%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2215%22%20fill%3D%22url(%23glow)%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2214.1%22%20stroke%3D%22url(%23rim)%22%20stroke-width%3D%221.8%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2215.2%22%20cy%3D%2216.4%22%20r%3D%221.1%22%20fill%3D%22%236a5cff%22%2F%3E%0A%3C%2Fsvg%3E">
+<link rel="stylesheet" href="../assets/site.css">
+<script>(function(){var d=document.documentElement;if('IntersectionObserver' in window){d.classList.add('js');setTimeout(function(){if(!window.__site)d.classList.remove('js')},3000)}})()</script>
+<script src="../assets/site.js" defer></script>
+<script src="../assets/sphere.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="scrim" aria-hidden="true"></div>
+<div class="scrim scrim-paper" aria-hidden="true"></div>
+<header class="island">
+  <nav class="island-in" aria-label="Site">
+    <a class="brand" href="../index.html" aria-label="Theioma, home"><span class="tmark" aria-hidden="true"><img src="../assets/brand/theioma-orb.webp" alt="" width="96" height="96" decoding="async"></span><span>theioma</span></a>
+    <ul class="island-links">
+      <li><details class="nav-menu" data-menu><summary>Product<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="nav-panel"><ul><li><a href="../voice.html"><b>Voice</b><span>Say it; the sphere answers.</span></a></li><li><a href="../plan.html"><b>Plan</b><span>An interview becomes a plan.</span></a></li><li><a href="../agents.html"><b>Agents</b><span>One per task, in a real terminal.</span></a></li><li><a href="../sentinels.html"><b>Sentinels</b><span>Every code task reviewed twice.</span></a></li><li><a href="../approvals.html"><b>Approvals</b><span>Nothing consequential without you.</span></a></li><li><a href="../computers.html"><b>Network / Computers</b><span>Every computer you own, one team.</span></a></li><li><a href="../build-lab.html"><b>Build Lab</b><span>Hardware, room by room.</span></a></li><li><a href="../memory.html"><b>Memory & learning</b><span>It remembers, and it learns.</span></a></li><li><a href="../atlas.html"><b>Atlas</b><span>Every other feature, and where it lives.</span></a></li></ul></div></details></li>
+      <li><a href="../benchmarks.html">Benchmarks</a></li><li><a href="../proof.html">Proof</a></li><li><a href="../run/docs.html">Docs</a></li><li><a href="../open-source.html">Open source</a></li><li><a href="../about.html">About</a></li>
+      
+    </ul>
+    <a class="pill pill-primary pill-sm" href="../run/install.html">Run it<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <button class="burger" type="button" aria-label="Open the menu" aria-expanded="false" aria-controls="menu" data-burger><i></i><i></i></button>
+  </nav>
+</header>
+<div class="overlay" id="menu" aria-label="Menu" hidden>
+  <div class="overlay-in">
+    <div><p class="ov-k">Product</p><ol class="ov-main"><li><a href="../voice.html" style="--i:0">Voice</a></li><li><a href="../plan.html" style="--i:1">Plan</a></li><li><a href="../agents.html" style="--i:2">Agents</a></li><li><a href="../sentinels.html" style="--i:3">Sentinels</a></li><li><a href="../approvals.html" style="--i:4">Approvals</a></li><li><a href="../computers.html" style="--i:5">Network / Computers</a></li><li><a href="../build-lab.html" style="--i:6">Build Lab</a></li><li><a href="../memory.html" style="--i:7">Memory & learning</a></li><li><a href="../atlas.html" style="--i:8">Atlas</a></li></ol></div>
+    <div><p class="ov-k">More</p><ol class="ov-sub"><li><a href="../benchmarks.html" style="--i:9">Benchmarks</a></li><li><a href="../proof.html" style="--i:10">Proof</a></li><li><a href="../run/docs.html" style="--i:11">Docs</a></li><li><a href="../open-source.html" style="--i:12">Open source</a></li><li><a href="../about.html" style="--i:13">About</a></li><li><a href="../run/install.html" style="--i:14">Install</a></li><li><a href="../run/status.html" style="--i:15">Status</a></li><li><a href="../run/changelog.html" style="--i:16">Changelog</a></li><li><a href="../run/roadmap.html" aria-current="page" style="--i:17">New and planned</a></li></ol></div>
+    <a class="pill pill-primary" href="../run/install.html" style="--i:18">Run it from source<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+  </div>
+</div>
+<main id="main">
+
+<section class="opener opener-plain" aria-labelledby="h-top">
+  <div class="wrap">
+    <ol class="chapters" aria-label="Related pages"><li><a href="../run/install.html">Install</a></li><li><a href="../run/docs.html">Documentation</a></li><li><a href="../run/status.html">Status</a></li><li><a href="../run/changelog.html">Changelog</a></li><li><a href="../run/roadmap.html" aria-current="page">New and planned</a></li><li><a href="../about.html">About</a></li><li><a href="../open-source.html">Open source</a></li></ol>
+    <div class="opener-words">
+      <p class="eyebrow" data-reveal>Run it · New and planned</p>
+      <h1 class="h1" id="h-top" data-reveal style="--i:1">What is new, and what comes next.</h1>
+      <p class="lede" data-reveal style="--i:2">The harness changes of 3 November 2026, each with the file that holds it; then the research of the same day, as plans with the gate that will prove each one. Nothing under Planned is built yet.</p>
+      <div class="actions" data-reveal style="--i:3"><a class="pill pill-primary" href="#new">New on 3 November<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="pill pill-ghost" href="#plan-jpex">What is planned<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<section class="sec" id="new" aria-labelledby="h-new">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">New and planned</p><h2 class="h2" id="h-new">New on 3 November 2026.</h2></div>
+      <div class="sec-intro"><p>Changes to the harness that runs the agents, and to how it treats the disk. Each is new: written and tested on 3 Nov, not yet proven over a long run.</p></div>
+    </header>
+    <ol class="bcards">
+      <li class="bc w6 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate new">new</span><span class="bc-area">Harness · landing</span></p>
+        <p class="bc-title">Reviewed work lands by itself</p>
+        
+        <p class="bc-sub">When a task passes review, the lander finds the reviewed branch in whichever task checkout holds it and merges it. A stale, unmergeable edit in the way gives way to the landing, so the working copy matches the commit. Tasks that nothing alive is carrying any more are found and freed.</p>
+        <p class="bc-foot"><time datetime="2026-11-03">3 Nov 2026</time><span class="sep" aria-hidden="true">·</span><span><code>flow.ts</code></span></p>
+      </div></li>
+      <li class="bc w6 bz" data-reveal style="--i:1"><div class="cr">
+        <p class="bc-k"><span class="bstate new">new</span><span class="bc-area">Harness · review fixes</span></p>
+        <p class="bc-title">A fix loop stops at round 3, and steps up from round 2</p>
+        
+        <p class="bc-sub">Before, 23 tasks on one project went past fix round 3 and one reached round 12. Now a task parked at the cap stays parked until its project manager decides, and from round 2 the fix worker runs one model class above the model that wrote the failing work, on the same subscription.</p>
+        <p class="bc-foot"><time datetime="2026-11-03">3 Nov 2026</time><span class="sep" aria-hidden="true">·</span><span><code>fix-cap-guard.ts</code></span> · <span><code>fix-round-floor.ts</code></span></p>
+      </div></li>
+      <li class="bc w6 bz" data-reveal style="--i:2"><div class="cr">
+        <p class="bc-k"><span class="bstate new">new</span><span class="bc-area">Agents · method</span></p>
+        <p class="bc-title">Every change carries its proof</p>
+        
+        <p class="bc-sub">Workers prove each changed behaviour with a test that fails on the old code and passes on the new, and type-check only what they changed. Reviewers answer every acceptance line, and the title, MET or NOT MET with where it shows. The two largest review-failure causes over 14 days were weak tests (173 failures) and unmet acceptance lines (129).</p>
+        <p class="bc-foot"><time datetime="2026-11-03">3 Nov 2026</time><span class="sep" aria-hidden="true">·</span><span><code>worker-template.md</code></span></p>
+      </div></li>
+      <li class="bc w6 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate new">new</span><span class="bc-area">Harness · observer</span></p>
+        <p class="bc-title">A standing observer, and a daily page reviewer</p>
+        
+        <p class="bc-sub">Every 15 minutes an observer reads the task board and files what it finds, one task per problem: work no live agent carries, chains of blocked tasks, spikes of failures, agents idle beside a queue, finished work that never landed. Once a day, when it is switched on, a page reviewer screenshots the app’s pages at desktop and phone width in both themes and files each problem it sees.</p>
+        <p class="bc-foot"><time datetime="2026-11-03">3 Nov 2026</time><span class="sep" aria-hidden="true">·</span><span><code>harness-observer-arm.ts</code></span> · <span><code>page-reviewer-plan.ts</code></span></p>
+      </div></li>
+      <li class="bc w12 bz" data-reveal style="--i:1"><div class="cr">
+        <p class="bc-k"><span class="bstate new">new</span><span class="bc-area">Disk safety</span></p>
+        <p class="bc-title">Agents clean up after themselves</p>
+        
+        <p class="bc-sub">On 3 Nov the drive filled because nothing owned the task checkouts: free space fell from 79 GB to 5 GB in seven hours, with 268 checkouts of about 0.44 GB each that had outlived their agents. Now the one who makes a checkout removes it. A task checkout is freed when its last session ends, and its branch keeps the work. Checkouts share a 25 GB budget, and over it no new one is made. A checkout leaves out the documentation’s images, videos and PDFs: about 280 MB instead of about 420 MB. A Claude Code session records the checkouts it makes and removes them when it ends; one that holds changes is kept, with the reason written down.</p>
+        <p class="bc-foot"><time datetime="2026-11-03">3 Nov 2026</time><span class="sep" aria-hidden="true">·</span><span><code>plan.ts</code></span> · <span><code>session-checkouts-clean.mjs</code></span></p>
+      </div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec alt" id="plan-jpex" aria-labelledby="h-plan-jpex">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Planned</p><h2 class="h2" id="h-plan-jpex">J-PEX: stop the loop at stages 4 and 5.</h2></div>
+      <div class="sec-intro"><p>The hardware pipeline’s machine projects keep re-opening stages 4 (placement) and 5 (wiring), and stages 6 and 7 have never completed. The research reads why from the project records and orders the work by the waste it removes. From <span><code>jpex-multimodal/roadmap.md</code></span>.</p></div>
+    </header>
+    
+  <div class="scroll-x" data-reveal>
+    <table class="tbl">
+      <thead><tr><th scope="col"></th><th scope="col">The change</th><th scope="col">Why, with its evidence</th><th scope="col">The gate that proves it</th></tr></thead>
+      <tbody><tr><td><b>J0</b></td><td>Count a refiled stage as a revision, not a re-entry.</td><td>52 of the 98 recorded re-entries were refiles, so half the churn number is bookkeeping and the rest is real rework.</td><td>The 98 recorded rows replay as 52 refiles and 46 re-entries.</td></tr><tr><td><b>J1</b></td><td>Solve placement and wiring as one installation problem with the proposers that already exist, for a bounded number of rounds.</td><td>27 of the 34 stage-4 re-entries fell within an hour of a stage-5 re-entry. Stewards solved that loop by hand: 39 configuration and 35 arrangement calls, and no proposer call.</td><td>On the next machine project, at most 2 re-entries of stages 4 and 5 per frozen installation, against 34 and 52 on Drone v2.</td></tr><tr><td><b>J2</b></td><td>A measurement channel in the CAD jail: an authored program returns a small JSON dict of measurements and builds nothing.</td><td>135 of 212 failed live CAD runs were agents raising an error only to read a measurement out, each costing a jail slot and a false failure row.</td><td>A source that only measures returns its numbers and records no failure.</td></tr><tr><td><b>J3</b></td><td>Optimise what binds: a declared stiffness ceiling, and only fine-solved candidates nominated.</td><td>On the arm the strength margin sat far above its floor while stiffness binds; on the drone the same design solved fine dropped its safety factor from 3.281 to 2.522.</td><td>An arm sweep with a deflection ceiling nominates a fine-solved design.</td></tr><tr><td><b>J4</b></td><td>Let the generative loop spend its budget, then compare it with a sampler on real FEA under a gate it can meet.</td><td>Given more time the in-house loop stopped after 17.5 fine solves on average, so its old gate could not be reached.</td><td>Given more time, it spends that time and its result improves.</td></tr><tr><td><b>J5</b></td><td>Close the physical loop on time and mass: the first print through the print door, weighed and timed, against the slicer’s prediction.</td><td>No print has been measured yet: the records hold 202 print-ready rows and no physical reading.</td><td>The first predicted-against-measured row for time and mass on one revision.</td></tr></tbody>
+    </table>
+  </div>
+  </div>
+</section>
+
+<section class="sec" id="plan-twin" aria-labelledby="h-plan-twin">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Planned</p><h2 class="h2" id="h-plan-twin">The twin, in its real environment.</h2></div>
+      <div class="sec-intro"><p>Today the simulator has a ground plane and gravity, and no obstacle model. The plan places the whole machine in a reconstruction of its real site. The research ran the reconstruction, the collision split and the Monte Carlo in miniature on a laptop’s CPU, at no cost; a phone camera, a printed marker and calipers are the capture kit. From <span><code>digital-twin/roadmap.md</code></span>.</p></div>
+    </header>
+    
+  <div class="scroll-x" data-reveal>
+    <table class="tbl">
+      <thead><tr><th scope="col"></th><th scope="col">The change</th><th scope="col">Why, with its evidence</th><th scope="col">The gate that proves it</th></tr></thead>
+      <tbody><tr><td><b>T1</b></td><td>Scene input and arm-against-scene contact in the dynamics sidecar, with clearance recorded per pair.</td><td>Turns “no obstacle model” into a measured clearance; the bench run repeats with an identical trajectory hash.</td><td>A known-colliding run names the pair and the time.</td></tr><tr><td><b>T2</b></td><td>Split every mesh that collides into convex parts (CoACD).</td><td>Modelled as one hull, a pipe ring held a 40 mm ball on top at 0.34 m; split into 15 parts, the ball fell through to 0.04 m.</td><td>That ring test as a sidecar test.</td></tr><tr><td><b>T3</b></td><td>Monte Carlo over a register of unknowns, each with where its range came from (MuJoCo, on the CPU).</td><td>300 runs without a failure bound the failure rate below one in a hundred; a nominal pass alone hides the thinnest margin.</td><td>The same seeds give the same summary.</td></tr><tr><td><b>T4</b></td><td>A verdict card for any requirement: pass, fail, marginal or unknown, with the margin, the failure bound and what is not modelled.</td><td>Today twin readiness is three fixed cards and one point comparison.</td><td>A fixture yields exactly pass, fail, marginal and unknown.</td></tr><tr><td><b>T5</b></td><td>A site sidecar: photos, structure from motion (COLMAP on the CPU), a printed marker for scale, an independent check distance, a collision scene.</td><td>30 synthetic phone views registered with no camera data, and one 150 mm marker set the scale. The run peaked at 11.5 GB of memory, so it needs a declared budget.</td><td>On a real capture of a measured calibration block, the check distance and the block agree within 3 mm.</td></tr><tr><td><b>T6</b></td><td>Reach in the scene, and cable slack over the joint sweep.</td><td>Reach today ignores obstacles, and nothing checks a harness over motion.</td><td>A target behind an obstacle reads unreachable, naming the obstacle.</td></tr><tr><td><b>T7</b></td><td>Calibration from the first physical readings: damping, friction and motor constants fitted to a servo step response and friction coupons.</td><td>No physical reading of any kind is on record yet; it needs the operator, an arm and an emergency stop.</td><td>The calibrated twin predicts a held-out physical run within its own interval.</td></tr><tr><td><b>T8</b></td><td>Write the uncertainty and calibration step into the design method.</td><td>The method has no such step today.</td><td>The operator’s ruling on the decision record.</td></tr></tbody>
+    </table>
+  </div>
+  </div>
+</section>
+
+<section class="sec alt" id="plan-desk" aria-labelledby="h-plan-desk">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Planned</p><h2 class="h2" id="h-plan-desk">A lab desk that guides the build.</h2></div>
+      <div class="sec-intro"><p>A projector and a camera above the bench draw each step onto the desk itself: the parts to have in hand, where each one goes, and each connection one by one, paged by voice. It reuses the assembly manual the Build Lab already derives from a project’s parts. Nothing is built yet, and the desk itself can be filed as a J-PEX project. From <span><code>lab-desk/roadmap.md</code></span>.</p></div>
+    </header>
+    
+  <div class="scroll-x" data-reveal>
+    <table class="tbl">
+      <thead><tr><th scope="col"></th><th scope="col">The change</th><th scope="col">Why, with its evidence</th><th scope="col">The gate that proves it</th></tr></thead>
+      <tbody><tr><td><b>Phase 0</b></td><td>Measure the real desk, ceiling and light, and probe the printer’s port read-only.</td><td>Every requirement row scales from these numbers.</td><td>The numbers written into the project’s rows.</td></tr><tr><td><b>Phase 1</b></td><td>One projector and one camera: calibration, height correction, a breadboard layout from the netlist, a projector page, hand tracking, a component detector trained on our own data, a resistor-band reader, desk commands with no model call, and privacy (a field-of-view mask, an indicator, nothing kept by default, nothing leaves the computer).</td><td>In simulation, undistortion took the projected error from 5.5 mm to 0.03 mm; a stock detector found none of the desk’s components; bands read 300 of 300 synthetic resistors at 6 pixels per mm.</td><td>The operator builds a small Arduino circuit from projected guidance alone; 35 projected crosses within 1.0 mm on a measured target.</td></tr><tr><td><b>Phase 2</b></td><td>Scanning and measuring: a turntable, scans compared with the CAD, dimensions drawn around things on the desk.</td><td>Wires the one core event that has no emitter today (scan against CAD).</td><td>Scans within 0.5 mm on a reference bar.</td></tr><tr><td><b>Phase 3</b></td><td>The arm and the printer: hand-aware arm speed, a printer interlock, and later a plate swap by arm.</td><td>Needs hardware the operator has not bought; every write stays behind the existing arming rule.</td><td>Force and stop timing measured before any unattended run.</td></tr></tbody>
+    </table>
+  </div>
+  </div>
+</section>
+
+<section class="sec" id="plan-platform" aria-labelledby="h-plan-platform">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Planned</p><h2 class="h2" id="h-plan-platform">Models, runtime and agents.</h2></div>
+      <div class="sec-intro"><p>Six items, each with the gate that proves it. The order follows the evidence: nothing is chosen until it is measured on this computer. From <span><code>platform/roadmap.md</code></span>.</p></div>
+    </header>
+    
+  <div class="scroll-x" data-reveal>
+    <table class="tbl">
+      <thead><tr><th scope="col"></th><th scope="col">The change</th><th scope="col">Why, with its evidence</th><th scope="col">The gate that proves it</th></tr></thead>
+      <tbody><tr><td><b>R1</b></td><td>Make the model lab admissible: clear the two marks that refuse every receipt, fill the speed fields, and run three seeds with an interval.</td><td>About 3,000 receipts exist and none is admissible yet, and the speed fields are empty.</td><td>Two models with admissible receipts on every suite, reproduced on another day.</td></tr><tr><td><b>R2</b></td><td>A structured control contract per coding agent (events, resume, usage, approvals), Codex first, then OpenCode and others through one protocol.</td><td>Codex usage is not yet collected per turn, and a Codex hand-off cannot resume its own thread.</td><td>A Claude Code manager, a Codex worker and an OpenCode reviewer on one scratch project, with an approval raised by the Codex worker.</td></tr><tr><td><b>R3</b></td><td>Keep Ollama for the models it serves; add llama-server only where Ollama cannot do the job on this machine (speculative decoding, large mixture-of-experts models); put the stable part of every long prompt first.</td><td>On the same weights Ollama decoded 127.0 tokens a second and llama.cpp 121.6. A shared prompt prefix took a long prompt’s first token from 9.36 s to 0.69 s.</td><td>Admitted only if no suite’s pass count drops and warm decoding clears its bar.</td></tr><tr><td><b>R4</b></td><td>Unblock the learning loop at its one stuck step, then train only where the base model has room to gain.</td><td>Over 14 nights, 81 failure clusters produced 0 proposals. The one adapter trained so far started at 0.9687 and could not clear its gate.</td><td>One evolution proposal applies cleanly, and one adapter clears the promotion gate.</td></tr><tr><td><b>R5</b></td><td>The two-machine pilot: an OS-neutral node agent, richer node facts, per-node quotas.</td><td>The multi-computer design is proven on one machine only.</td><td>Every injected fault (cable, lease, revocation, process kill, cold restart) ends in a named state on two physical machines.</td></tr><tr><td><b>R6</b></td><td>Security tests the guards have not met yet: 20 poisoned tool descriptions, and each tool list pinned by hash.</td><td>Turns “a guard exists” into “a guard was measured”.</td><td>Every poisoned call refused, and a changed tool list refused.</td></tr></tbody>
+    </table>
+  </div>
+  </div>
+</section>
+
+<section class="sec alt" id="plan-own" aria-labelledby="h-plan-own">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Planned</p><h2 class="h2" id="h-plan-own">Models we build ourselves.</h2></div>
+      <div class="sec-intro"><p>When the only good model or tool for a job carries a licence we cannot use, the plan is to build our own from the published paper, never from its code. The procedure keeps the spec writer, the implementer and the verifier in separate sessions; the implementer never opens upstream code, never loads restricted weights and never trains on restricted data; a patent search comes before the design. It is an engineering procedure, not legal advice, and a lawyer confirms it before anything ships. From <span><code>own-build/roadmap.md</code></span>.</p></div>
+    </header>
+    
+  <div class="scroll-x" data-reveal>
+    <table class="tbl">
+      <thead><tr><th scope="col"></th><th scope="col">The change</th><th scope="col">Why, with its evidence</th><th scope="col">The gate that proves it</th></tr></thead>
+      <tbody><tr><td><b>O0</b></td><td>Finish the patent searches and write a one-page brief for counsel.</td><td>Some searches did not complete, and a live patent family can turn a planned build into a blocked one.</td><td>Every row carries a completed search or a counsel answer.</td></tr><tr><td><b>O1</b></td><td>Adopt the clean-room procedure as a decision record, with our own similarity checker.</td><td>The rule against copying code needs a checkable procedure for models derived from papers.</td><td>The checker flags a planted copied block and passes a rewrite.</td></tr><tr><td><b>O2</b></td><td>Scan to CAD, stage A: a deterministic fitter from a point cloud to build123d.</td><td>No permissively licensed point-to-CAD tool exists.</td><td>High agreement with our own sampled parts, with every region it cannot explain reported.</td></tr><tr><td><b>O3</b></td><td>An evaluation set built from the project’s own 639 authored CAD sources.</td><td>A model is judged on our parts, not on a public set it may have seen.</td><td>It reproduces the known ordering on a calibration subset.</td></tr><tr><td><b>O4</b></td><td>A desk component detector trained on our own photos and renders (RF-DETR Nano, Apache-2.0).</td><td>The available detectors know no electronics parts, and the common one carries the AGPL.</td><td>The lab desk’s detection gate.</td></tr><tr><td><b>Later</b></td><td>A learned scan-to-CAD model of our own, on a 24 to 32 GB GPU node.</td><td>Waits for that node, which the operator has not bought; rented GPUs are refused.</td><td>It must beat stage A on held-out real scans.</td></tr><tr><td><b>Reconstruction</b></td><td>Feed-forward scene reconstruction of the VGGT class.</td><td>VGGT-1B’s weights are non-commercial, so the research recommends an Apache-licensed alternative (MapAnything) rather than a build; a marker-scaled COLMAP capture still sets every verdict.</td><td>Adopted only after it beats COLMAP with a marker on the same capture.</td></tr></tbody>
+    </table>
+  </div>
+  </div>
+</section>
+
+<section class="sec" id="not-claimed" aria-labelledby="h-not-claimed">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">New and planned</p><h2 class="h2" id="h-not-claimed">What this page does not claim.</h2></div>
+      <div class="sec-intro"><p>J-PEX stages 6 and 7 have never completed. No physical print, flash or measurement is on record. No measured voice turn is under one second. Every item under Planned is a plan with a gate, not a feature, until its gate passes.</p></div>
+    </header>
+    
+  </div>
+</section>
+</main>
+
+  <nav class="handoff" aria-label="Next">
+    
+    <a class="handoff-next" href="../run/install.html"><span class="cr"><span class="handoff-k">Next</span><b>Run it from source</b><span class="handoff-gist">The commands that start the web app on one computer.</span><span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+  </nav>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="../index.html" aria-label="Theioma, home"><span class="tmark" aria-hidden="true"><img src="../assets/brand/theioma-orb.webp" alt="" width="96" height="96" decoding="async"></span><span>theioma</span></a>
+      <p>A supervised command centre for engineering with many agents, in software and in hardware. It runs from source on the computers you own.</p>
+      <a class="pill pill-primary pill-sm" href="../run/install.html">Run it from source<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <div><p class="foot-k">Product</p><ul class="two"><li><a href="../voice.html">Voice</a></li><li><a href="../plan.html">Plan</a></li><li><a href="../agents.html">Agents</a></li><li><a href="../sentinels.html">Sentinels</a></li><li><a href="../approvals.html">Approvals</a></li><li><a href="../computers.html">Network / Computers</a></li><li><a href="../build-lab.html">Build Lab</a></li><li><a href="../memory.html">Memory & learning</a></li><li><a href="../atlas.html">Atlas</a></li><li><a href="../benchmarks.html">Benchmarks</a></li><li><a href="../proof.html">Proof</a></li><li><a href="../run/status.html">Status</a></li></ul></div>
+      <div><p class="foot-k">Documentation</p><ul><li><a href="../run/install.html">Install</a></li><li><a href="../run/docs.html">Documentation map</a></li></ul></div>
+      <div><p class="foot-k">Project</p><ul><li><a href="../about.html">About</a></li><li><a href="../open-source.html">Open source</a></li><li><a href="../run/changelog.html">Changelog</a></li></ul></div>
+    </nav>
+  </div>
+  <div class="wrap foot-legal">
+    <p>Apache License 2.0. Pre-release copy. Read the <a href="../proof.html">Proof</a> page for tested scope and open gaps; release claim review is in progress.</p>
+    <p><a href="../LICENCES.md">Font licences</a></p>
+  </div>
+  <p class="foot-word" aria-hidden="true">theioma</p>
+</footer>
+</body>
+</html>
