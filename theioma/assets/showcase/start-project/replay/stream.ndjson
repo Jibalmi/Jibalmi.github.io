@@ -1,0 +1,26 @@
+{"t": "header", "v": 1, "startedAtMs": 1790849302243, "droppedBeforeStart": 0, "droppedOverflow": 0, "viewport": {"width": 1280, "height": 720}}
+{"t": "event", "kind": "card", "tMs": 79, "route": "blank", "title": "Say what you want built."}
+{"t": "event", "kind": "navigate", "tMs": 2944, "route": "/", "status": 200}
+{"t": "event", "kind": "speech", "tMs": 2944, "route": "/", "role": "caption", "text": "Mission Control. One verb starts everything: New project.", "frame": "001.jpg"}
+{"t": "event", "kind": "click", "tMs": 7492, "route": "/", "selector": "New project", "componentText": "New project", "redacted": false, "bbox": {"x": 356.40625, "y": 72.5, "width": 116.609375, "height": 28}, "frame": "002.jpg"}
+{"t": "event", "kind": "click", "tMs": 10196, "route": "/", "selector": "Project name", "componentText": "", "redacted": false, "bbox": {"x": 373, "y": 219.796875, "width": 534, "height": 36}, "frame": "003.jpg"}
+{"t": "event", "kind": "input", "tMs": 12967, "route": "/", "selector": "Project name", "fieldKind": "text", "typed": "[redacted]"}
+{"t": "event", "kind": "click", "tMs": 15009, "route": "/", "selector": "Short description", "componentText": "", "redacted": false, "bbox": {"x": 373, "y": 287.796875, "width": 534, "height": 36}, "frame": "004.jpg"}
+{"t": "event", "kind": "input", "tMs": 19162, "route": "/", "selector": "Short description", "fieldKind": "text", "typed": "[redacted]"}
+{"t": "event", "kind": "speech", "tMs": 19843, "route": "/", "role": "caption", "text": "Say it the way you would to an engineer. The orchestrator's interview starts from these words."}
+{"t": "event", "kind": "click", "tMs": 21215, "route": "/", "selector": "Full description", "componentText": "", "redacted": false, "bbox": {"x": 373, "y": 355.796875, "width": 534, "height": 90}, "frame": "005.jpg"}
+{"t": "event", "kind": "input", "tMs": 29465, "route": "/", "selector": "Full description", "fieldKind": "text", "typed": "[redacted]"}
+{"t": "event", "kind": "click", "tMs": 31544, "route": "/", "selector": "Project directory", "componentText": "", "redacted": false, "bbox": {"x": 373, "y": 517.578125, "width": 534, "height": 36}, "frame": "006.jpg"}
+{"t": "event", "kind": "input", "tMs": 33746, "route": "/", "selector": "Project directory", "fieldKind": "text", "typed": "[redacted]"}
+{"t": "event", "kind": "speech", "tMs": 34436, "route": "/", "role": "caption", "text": "Launch is switched off in this recording: the test server has no Claude login. On the live app it opens the interview at once."}
+{"t": "event", "kind": "click", "tMs": 35703, "route": "/", "selector": "Launch master orchestrator", "componentText": "", "redacted": false, "bbox": {"x": 863, "y": 516.359375, "width": 44, "height": 28}, "frame": "007.jpg"}
+{"t": "event", "kind": "click", "tMs": 40321, "route": "/", "selector": "Create project", "componentText": "Create project", "redacted": false, "bbox": {"x": 788.59375, "y": 591.1875, "width": 118.40625, "height": 30}, "frame": "008.jpg"}
+{"t": "event", "kind": "speech", "tMs": 47075, "route": "/", "role": "caption", "text": "Saved, in PLANNING. The dialog's code-graph scan is blocked in this recording, and it says the scan did not run.", "frame": "009.jpg"}
+{"t": "event", "kind": "click", "tMs": 51654, "route": "/", "selector": "Open project", "componentText": "Open project", "redacted": false, "bbox": {"x": 801.796875, "y": 442.75, "width": 105.203125, "height": 30}, "frame": "010.jpg"}
+{"t": "event", "kind": "speech", "tMs": 66751, "route": "/projects/:id", "role": "caption", "text": "The project exists, in PLANNING, with its directory and description.", "frame": "011.jpg"}
+{"t": "event", "kind": "navigate", "tMs": 74957, "route": "/sessions", "status": 200}
+{"t": "event", "kind": "speech", "tMs": 74957, "route": "/sessions", "role": "caption", "text": "The orchestrator interviews: the problem first, then the limits, the done-test and the numbers it cannot defer.", "frame": "012.jpg"}
+{"t": "event", "kind": "speech", "tMs": 94877, "route": "/sessions", "role": "caption", "text": "These words are a real interview run through the product (29 Sep 2026); here they replay from a fixture transcript.", "frame": "014.jpg"}
+{"t": "event", "kind": "speech", "tMs": 103959, "route": "/sessions", "role": "caption", "text": "Each answer becomes a coded requirement with its threshold, in the project's spec graph.", "frame": "015.jpg"}
+{"t": "event", "kind": "card", "tMs": 106294, "route": "/sessions", "title": "Start a project"}
+{"t": "end", "eventCount": 24, "endedAtMs": 1790849414560}

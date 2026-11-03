@@ -1,0 +1,22 @@
+{"t": "header", "v": 1, "startedAtMs": 1790820974842, "droppedBeforeStart": 0, "droppedOverflow": 0}
+{"t": "event", "kind": "card", "tMs": 37, "route": "blank", "title": "The agents propose. You decide."}
+{"t": "event", "kind": "navigate", "tMs": 3742, "route": "/projects/:id", "status": 200}
+{"t": "event", "kind": "speech", "tMs": 7017, "route": "/projects/:id", "role": "caption", "text": "The plan: ten stages, each ending in a render-and-look and your approval. These are the stages of a real interview's plan."}
+{"t": "event", "kind": "navigate", "tMs": 12816, "route": "/inbox", "status": 200}
+{"t": "event", "kind": "speech", "tMs": 17076, "route": "/inbox", "role": "caption", "text": "The orchestrator stops and asks: approve the plan, then hand it to the engineering project manager."}
+{"t": "event", "kind": "click", "tMs": 19114, "route": "/inbox", "selector": "What approving does", "componentText": "Show decision summary", "redacted": false, "bbox": {"x": 505.234375, "y": 437.5, "width": 126, "height": 15}, "frame": "001.jpg"}
+{"t": "event", "kind": "speech", "tMs": 20372, "route": "/inbox", "role": "caption", "text": "The decision packet: what is asked, why, the risk, and how to undo it, each stated by the agent or named as missing."}
+{"t": "event", "kind": "click", "tMs": 24956, "route": "/inbox", "selector": "Compose a decision", "componentText": "Compose", "redacted": false, "bbox": {"x": 812.46875, "y": 324, "width": 90.203125, "height": 28}, "frame": "002.jpg"}
+{"t": "event", "kind": "speech", "tMs": 26373, "route": "/inbox", "role": "caption", "text": "The decision composer: a verdict, a note, and the next steps the agent will receive, numbered."}
+{"t": "event", "kind": "click", "tMs": 27421, "route": "/inbox", "selector": "Approve", "componentText": "Approve", "redacted": false, "bbox": {"x": 514.234375, "y": 431.5, "width": 90.203125, "height": 28}, "frame": "003.jpg"}
+{"t": "event", "kind": "click", "tMs": 29740, "route": "/inbox", "selector": "Note", "componentText": "", "redacted": false, "bbox": {"x": 514.234375, "y": 486.5, "width": 379.4375, "height": 68}, "frame": "004.jpg"}
+{"t": "event", "kind": "input", "tMs": 33856, "route": "/inbox", "selector": "Note", "fieldKind": "text", "typed": "[redacted]"}
+{"t": "event", "kind": "click", "tMs": 35618, "route": "/inbox", "selector": "Next step", "componentText": "", "redacted": false, "bbox": {"x": 514.234375, "y": 431.5, "width": 282.625, "height": 28}, "frame": "005.jpg"}
+{"t": "event", "kind": "input", "tMs": 38625, "route": "/inbox", "selector": "Next step", "fieldKind": "text", "typed": "[redacted]"}
+{"t": "event", "kind": "click", "tMs": 40345, "route": "/inbox", "selector": "Add the step", "componentText": "Add step", "redacted": false, "bbox": {"x": 802.859375, "y": 431.5, "width": 90.8125, "height": 28}, "frame": "006.jpg"}
+{"t": "event", "kind": "speech", "tMs": 43366, "route": "/inbox", "role": "caption", "text": "A MEDIUM decision asks for the passkey; the virtual authenticator signs it in this recording."}
+{"t": "event", "kind": "click", "tMs": 46490, "route": "/inbox", "selector": "Send", "componentText": "Approve and send", "redacted": false, "bbox": {"x": 514.234375, "y": 431.5, "width": 131.609375, "height": 28}, "frame": "007.jpg"}
+{"t": "event", "kind": "speech", "tMs": 61115, "route": "/inbox", "role": "caption", "text": "Decided. The resolve door records it and types it into the requesting agent's terminal."}
+{"t": "event", "kind": "speech", "tMs": 63399, "route": "/inbox", "role": "caption", "text": "What the orchestrator received: the verdict, your note and the numbered next steps."}
+{"t": "event", "kind": "card", "tMs": 68980, "route": "/inbox", "title": "Deciding the project"}
+{"t": "end", "eventCount": 20, "endedAtMs": 1790821051953}

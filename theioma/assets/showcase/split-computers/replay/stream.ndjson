@@ -1,0 +1,25 @@
+{"t": "header", "v": 1, "startedAtMs": 1790821143129, "droppedBeforeStart": 0, "droppedOverflow": 0}
+{"t": "event", "kind": "card", "tMs": 32, "route": "blank", "title": "Every computer you own, one team of agents."}
+{"t": "event", "kind": "navigate", "tMs": 2819, "route": "/settings/devices", "status": 200}
+{"t": "event", "kind": "speech", "tMs": 5622, "route": "/settings/devices", "role": "caption", "text": "Devices: each computer joined with a single-use code bound to its key, and your passkey admitted it."}
+{"t": "event", "kind": "speech", "tMs": 8765, "route": "/settings/devices", "role": "caption", "text": "vm-01 waits for your confirmation; laptop-02 was revoked. Nothing runs on either."}
+{"t": "event", "kind": "click", "tMs": 13545, "route": "/settings/devices", "selector": "rig-01", "componentText": "rig-01", "redacted": false, "bbox": {"x": 288, "y": 203, "width": 29.09375, "height": 15}, "frame": "001.jpg"}
+{"t": "event", "kind": "speech", "tMs": 14797, "route": "/settings/devices/:id", "role": "caption", "text": "rig-01's record. Enrolment grants nothing: until you grant it work, it runs nothing."}
+{"t": "event", "kind": "speech", "tMs": 17074, "route": "/settings/devices/:id", "role": "caption", "text": "Grant it work per project: which harnesses, which tiers, which projects, which folders."}
+{"t": "event", "kind": "click", "tMs": 18036, "route": "/settings/devices/:id", "selector": "Claude Code", "componentText": "", "redacted": false, "bbox": {"x": 241, "y": 531.28125, "width": 13, "height": 13}, "frame": "002.jpg"}
+{"t": "event", "kind": "click", "tMs": 20277, "route": "/settings/devices/:id", "selector": "Worker", "componentText": "", "redacted": false, "bbox": {"x": 630, "y": 531.28125, "width": 13, "height": 13}, "frame": "003.jpg"}
+{"t": "event", "kind": "click", "tMs": 22500, "route": "/settings/devices/:id", "selector": "Six-axis desktop arm", "componentText": "", "redacted": false, "bbox": {"x": 241, "y": 445.28125, "width": 13, "height": 13}, "frame": "004.jpg"}
+{"t": "event", "kind": "click", "tMs": 24704, "route": "/settings/devices/:id", "selector": "Folders", "componentText": "", "redacted": false, "bbox": {"x": 630, "y": 409.78125, "width": 377, "height": 72}, "frame": "005.jpg"}
+{"t": "event", "kind": "input", "tMs": 27361, "route": "/settings/devices/:id", "selector": "Folders", "fieldKind": "text", "typed": "[redacted]"}
+{"t": "event", "kind": "speech", "tMs": 32886, "route": "/settings/devices/:id", "role": "caption", "text": "Saving asks for a fresh passkey; the virtual authenticator signs it in this recording. The hub enforces the grant."}
+{"t": "event", "kind": "click", "tMs": 33859, "route": "/settings/devices/:id", "selector": "Save the grant with passkey", "componentText": "Save the grant with passkey", "redacted": false, "bbox": {"x": 241, "y": 631.59375, "width": 196.203125, "height": 28}, "frame": "006.jpg"}
+{"t": "event", "kind": "click", "tMs": 51460, "route": "/settings/devices/:id", "selector": "History", "componentText": "History\n0", "redacted": false, "bbox": {"x": 294, "y": 192.28125, "width": 74.203125, "height": 28}, "frame": "007.jpg"}
+{"t": "event", "kind": "speech", "tMs": 54114, "route": "/settings/devices/:id", "role": "caption", "text": "Every change is a revision, and an entry in the computer's hash-chained audit."}
+{"t": "event", "kind": "navigate", "tMs": 59947, "route": "/network", "status": 200}
+{"t": "event", "kind": "speech", "tMs": 61411, "route": "/network", "role": "caption", "text": "The network room: computers first, the hub on top, each computer's agents beneath it, per platform."}
+{"t": "event", "kind": "click", "tMs": 65044, "route": "/network", "selector": "Agents by computer", "componentText": "AGENTS BY COMPUTER", "redacted": false, "bbox": {"x": 977.21875, "y": 82, "width": 135, "height": 28}, "frame": "008.jpg"}
+{"t": "event", "kind": "speech", "tMs": 68629, "route": "/network", "role": "caption", "text": "Agents grouped by the computer they run on: the test lane on mac-mini, its manager on this computer."}
+{"t": "event", "kind": "navigate", "tMs": 74934, "route": "/network/:id", "status": 200}
+{"t": "event", "kind": "speech", "tMs": 76379, "route": "/network/:id", "role": "caption", "text": "mac-mini: what runs there and where each agent's parent runs. Remote dispatch stays off until it is switched on and the node channel is up."}
+{"t": "event", "kind": "card", "tMs": 80760, "route": "/network/:id", "title": "Every computer you own"}
+{"t": "end", "eventCount": 23, "endedAtMs": 1790821232959}

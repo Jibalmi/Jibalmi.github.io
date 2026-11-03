@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Voice · Theioma</title>
+<meta name="description" content="You say what to build, by voice or by typing. Theioma’s voice loop hears you, answers through the model the router picks, and speaks back; every latency on this page is measured, with its source.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050505">
+<meta property="og:title" content="Voice · Theioma">
+<meta property="og:description" content="You say what to build, by voice or by typing. Theioma’s voice loop hears you, answers through the model the router picks, and speaks back; every latency on this page is measured, with its source.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22none%22%3E%0A%20%20%3Ctitle%3Etheioma%3C%2Ftitle%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22body%22%20x1%3D%220.15%22%20y1%3D%220.85%22%20x2%3D%220.85%22%20y2%3D%220.15%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%230a2a48%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220.55%22%20stop-color%3D%22%231d1f5c%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%233a1858%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22rim%22%20x1%3D%220.1%22%20y1%3D%220.9%22%20x2%3D%220.9%22%20y2%3D%220.1%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%233bcce3%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220.5%22%20stop-color%3D%22%236950b6%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23db72b4%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22glow%22%20cx%3D%220.71%22%20cy%3D%220.28%22%20r%3D%220.3%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f38db7%22%20stop-opacity%3D%220.95%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f38db7%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%3C%2FradialGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2215%22%20fill%3D%22url(%23body)%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2215%22%20fill%3D%22url(%23glow)%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2214.1%22%20stroke%3D%22url(%23rim)%22%20stroke-width%3D%221.8%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2215.2%22%20cy%3D%2216.4%22%20r%3D%221.1%22%20fill%3D%22%236a5cff%22%2F%3E%0A%3C%2Fsvg%3E">
+<link rel="stylesheet" href="assets/site.css">
+<script>(function(){var d=document.documentElement;if('IntersectionObserver' in window){d.classList.add('js');setTimeout(function(){if(!window.__site)d.classList.remove('js')},3000)}})()</script>
+<script src="assets/site.js" defer></script>
+<script src="assets/sphere.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="scrim" aria-hidden="true"></div>
+<div class="scrim scrim-paper" aria-hidden="true"></div>
+<header class="island">
+  <nav class="island-in" aria-label="Site">
+    <a class="brand" href="index.html" aria-label="Theioma, home"><span class="tmark" aria-hidden="true"><img src="assets/brand/theioma-orb.webp" alt="" width="96" height="96" decoding="async"></span><span>theioma</span></a>
+    <ul class="island-links">
+      <li><details class="nav-menu" data-menu><summary data-current>Product<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="nav-panel"><ul><li><a href="voice.html" aria-current="page"><b>Voice</b><span>Say it; the sphere answers.</span></a></li><li><a href="plan.html"><b>Plan</b><span>An interview becomes a plan.</span></a></li><li><a href="agents.html"><b>Agents</b><span>One per task, in a real terminal.</span></a></li><li><a href="sentinels.html"><b>Sentinels</b><span>Every code task reviewed twice.</span></a></li><li><a href="approvals.html"><b>Approvals</b><span>Nothing consequential without you.</span></a></li><li><a href="computers.html"><b>Network / Computers</b><span>Every computer you own, one team.</span></a></li><li><a href="build-lab.html"><b>Build Lab</b><span>Hardware, room by room.</span></a></li><li><a href="memory.html"><b>Memory & learning</b><span>It remembers, and it learns.</span></a></li><li><a href="atlas.html"><b>Atlas</b><span>Every other feature, and where it lives.</span></a></li></ul></div></details></li>
+      <li><a href="benchmarks.html">Benchmarks</a></li><li><a href="proof.html">Proof</a></li><li><a href="run/docs.html">Docs</a></li><li><a href="open-source.html">Open source</a></li><li><a href="about.html">About</a></li>
+      
+    </ul>
+    <a class="pill pill-primary pill-sm" href="run/install.html">Run it<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <button class="burger" type="button" aria-label="Open the menu" aria-expanded="false" aria-controls="menu" data-burger><i></i><i></i></button>
+  </nav>
+</header>
+<div class="overlay" id="menu" aria-label="Menu" hidden>
+  <div class="overlay-in">
+    <div><p class="ov-k">Product</p><ol class="ov-main"><li><a href="voice.html" aria-current="page" style="--i:0">Voice</a></li><li><a href="plan.html" style="--i:1">Plan</a></li><li><a href="agents.html" style="--i:2">Agents</a></li><li><a href="sentinels.html" style="--i:3">Sentinels</a></li><li><a href="approvals.html" style="--i:4">Approvals</a></li><li><a href="computers.html" style="--i:5">Network / Computers</a></li><li><a href="build-lab.html" style="--i:6">Build Lab</a></li><li><a href="memory.html" style="--i:7">Memory & learning</a></li><li><a href="atlas.html" style="--i:8">Atlas</a></li></ol></div>
+    <div><p class="ov-k">More</p><ol class="ov-sub"><li><a href="benchmarks.html" style="--i:9">Benchmarks</a></li><li><a href="proof.html" style="--i:10">Proof</a></li><li><a href="run/docs.html" style="--i:11">Docs</a></li><li><a href="open-source.html" style="--i:12">Open source</a></li><li><a href="about.html" style="--i:13">About</a></li><li><a href="run/install.html" style="--i:14">Install</a></li><li><a href="run/status.html" style="--i:15">Status</a></li><li><a href="run/changelog.html" style="--i:16">Changelog</a></li></ol></div>
+    <a class="pill pill-primary" href="run/install.html" style="--i:18">Run it from source<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+  </div>
+</div>
+<main id="main">
+
+<section class="opener" aria-labelledby="h-top">
+  <div class="wrap">
+    <ol class="chapters" aria-label="Product pages"><li><a href="voice.html" aria-current="page">Voice</a></li><li><a href="plan.html">Plan</a></li><li><a href="agents.html">Agents</a></li><li><a href="sentinels.html">Sentinels</a></li><li><a href="approvals.html">Approvals</a></li><li><a href="computers.html">Computers</a></li><li><a href="build-lab.html">Build Lab</a></li><li><a href="memory.html">Memory</a></li><li><a href="atlas.html">Atlas</a></li></ol>
+    <div class="opener-words">
+      <p class="eyebrow" data-reveal>Product · Voice</p>
+      <h1 class="h1" id="h-top" data-reveal style="--i:1">You say it once.</h1>
+      <p class="lede" data-reveal style="--i:2">Speak to the sphere or type to it. Speech becomes text, the router picks a model for the turn, the answer comes back as speech, and the master orchestrator takes it from there: it interviews you until the goal is specific, then hands it to a project manager.</p>
+      <div class="actions" data-reveal style="--i:3"><a class="pill pill-primary" href="plan.html">Then the plan<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="pill pill-ghost" href="#measured">What is measured<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+      
+    </div>
+    <div class="opener-media" data-reveal style="--i:4">
+  <figure class="demo demo-live demo-lead" data-reveal>
+    <div class="demo-frame">
+      <div class="demo-bar" aria-hidden="true"><i></i><i></i><i></i><span>Voice widget</span></div>
+      <div class="demo-screen voice-screen">
+        <div class="orb"><canvas data-sphere data-sphere-palette="grey" width="360" height="360" role="img" aria-label="The Theioma voice sphere, drawn live by the app’s own renderer"></canvas><i class="orb-ring" aria-hidden="true"></i><i class="orb-core" aria-hidden="true"></i></div>
+        <ol class="loop6"><li><b>Silero VAD</b><span>hears you stop</span></li><li><b>faster-whisper</b><span>speech to text</span></li><li><b>Silence gap</b><span>ends your turn</span></li><li><b>Router</b><span>picks a model tier</span></li><li class="acc"><b>The model</b><span>answers</span></li><li><b>Kokoro</b><span>speaks back</span></li></ol>
+      </div>
+    </div>
+    <figcaption class="demo-cap">
+      <p class="demo-title">The app’s own sphere, live in this page.</p>
+      <div class="reel-meta"><span class="reel-label"><b>Live drawing</b>, not a recording: the app’s sphere renderer runs here; the six stages are the voice loop’s own.</span><span class="reel-acts"><a class="reel-open" href="#loop">One turn, stage by stage</a></span></div>
+    </figcaption>
+  </figure></div>
+  </div>
+</section>
+
+<section class="sec alt" id="loop" aria-labelledby="h-loop">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Voice</p><h2 class="h2" id="h-loop">One turn, stage by stage.</h2></div>
+      <div class="sec-intro"><p>Seven stages in the order they run, each with the time measured for it and the file that number comes from.</p></div>
+    </header>
+    
+  <figure class="reel reel-stage" data-slot="voice-diagram" data-state="recorded" data-source="live" data-kind="diagram" data-reveal>
+    <div class="reel-screen is-frame" style="--frame-h:720px"><iframe class="reel-media" src="assets/showcase/voice-diagram/voice-diagram.html?theme=dark" title="The voice loop, stage by stage" loading="lazy" sandbox="allow-scripts" data-reel-frame data-max="2400"></iframe></div>
+    <figcaption class="reel-cap">
+      <div class="reel-meta"><span class="reel-label"><b>Live diagram</b>, recorded <time datetime="2026-10-01T00:24:00Z">1 Oct 2026</time></span><span class="reel-hash" title="sha256 of the file as recorded">sha256 19093b94589d</span><span class="reel-acts"><a class="reel-open" href="assets/showcase/voice-diagram/voice-diagram.html">Open it alone</a></span></div>
+      <p class="reel-title">The voice loop, stage by stage</p>
+      <p>One voice turn in seven stages, drawn with the app's own sphere renderer in the app's greys, with this site's solid orange point at its centre (solid ring while it listens, dashed while it speaks). Each number is a measured p50/p95 with its source: the shipped configuration on the running voice sidecars with synthetic speech (30 Sep 2026) and one run through the app routes (6 Sep 2026). The router tier and playback say unmeasured, because nobody has measured them. The animation is not to time scale; the listening amplitude is simulated.</p>
+      <p class="reel-note">live numbers, not a recording: each stage time is a measured p50/p95 from the receipts; the sphere's motion and the listening amplitude are drawn, not captured.</p>
+      <p class="reel-src">Receipts: <span><code>budget.md</code></span>, <span><code>2026-09-06-voice-e2e.md</code></span>, <span><code>voice-diagram.src.html</code></span>, <span><code>20261002T215622Z-r24-job.json</code></span></p>
+      
+    </figcaption>
+  </figure>
+  </div>
+</section>
+
+<section class="sec" id="voice" aria-labelledby="h-voice">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Voice</p><h2 class="h2" id="h-voice">The voice loop, part by part.</h2></div>
+      <div class="sec-intro"><p>Hearing you and speaking back run on your own computer; the model that answers is a local one on Ollama or Claude, as the router picks. A part that is down is named as down in the voice widget, and typing always reaches Theioma.</p></div>
+    </header>
+    
+  <div class="scroll-x" data-reveal>
+    <table class="tbl">
+      <thead><tr><th scope="col">Part</th><th scope="col">What it does</th></tr></thead>
+      <tbody><tr><td>Silero VAD</td><td>Hears when you start and stop speaking.</td></tr><tr><td>faster-whisper</td><td>Turns your hands-free speech into text on your own computer.</td></tr><tr><td>Parakeet</td><td>Turns a recording from your phone, or a push-to-talk recording, into text.</td></tr><tr><td>The silence gap</td><td>Decides when your turn is over: a pause ends it.</td></tr><tr><td>The router</td><td>Picks the model for the turn: a local model on Ollama for routine turns, Claude for the rest.</td></tr><tr><td>Kokoro</td><td>Speaks the answer as it streams, clause by clause.</td></tr><tr><td>The sphere</td><td>Shows the state: listening, thinking, speaking or muted, each named in words beside it.</td></tr></tbody>
+    </table>
+  </div>
+  </div>
+</section>
+
+<section class="sec alt" id="measured" aria-labelledby="h-measured">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Voice</p><h2 class="h2" id="h-measured">What a spoken turn takes.</h2></div>
+      <div class="sec-intro"><p>One full spoken turn, through the app’s own routes, timed end to end on 6 Sep 2026 with synthetic audio.</p></div>
+    </header>
+    <ul class="register" data-reveal><li><b>8.2 s</b><span>the best full spoken turn through the app, on an RTX 5080</span></li><li><b>23.1 s</b><span>the same turn on the CPU</span></li></ul><p class="small quiet" style="margin-top:18px;max-width:80ch">From <span><code>2026-09-06-voice-e2e.md</code></span> §8.</p>
+  </div>
+</section>
+
+<section class="sec" id="interview" aria-labelledby="h-interview">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Voice</p><h2 class="h2" id="h-interview">What you said becomes a goal.</h2></div>
+      <div class="sec-intro"><p>The master orchestrator is an agent definition with its own brief and tools. On a new project it interviews you; on a returning one it presents the brief and carries on.</p></div>
+    </header>
+    
+  <div class="grid"><dl class="defs">
+    <div data-reveal style="--i:0"><dt>The interview</dt><dd>It asks until the goal is specific enough to plan, and writes it down. It runs for software and for hardware.</dd></div>
+    <div data-reveal style="--i:1"><dt>The hand-off</dt><dd>It staffs the goal with a project manager and never writes code itself.</dd></div>
+    <div data-reveal style="--i:2"><dt>A machine</dt><dd>A hardware project is handed to the engineering project manager, which runs the design method stage by stage.</dd></div>
+    <div data-reveal style="--i:3"><dt>On your desktop</dt><dd>Desktop control is built for Windows, behind approval; its driver starts only when you name and arm it.</dd></div>
+  </dl></div>
+  </div>
+</section>
+</main>
+
+  <nav class="handoff" aria-label="Next">
+    
+    <a class="handoff-next" href="plan.html"><span class="cr"><span class="handoff-k">Next</span><b>Plan</b><span class="handoff-gist">An interview becomes a plan.</span><span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+  </nav>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html" aria-label="Theioma, home"><span class="tmark" aria-hidden="true"><img src="assets/brand/theioma-orb.webp" alt="" width="96" height="96" decoding="async"></span><span>theioma</span></a>
+      <p>A supervised command centre for engineering with many agents, in software and in hardware. It runs from source on the computers you own.</p>
+      <a class="pill pill-primary pill-sm" href="run/install.html">Run it from source<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <div><p class="foot-k">Product</p><ul class="two"><li><a href="voice.html" aria-current="page">Voice</a></li><li><a href="plan.html">Plan</a></li><li><a href="agents.html">Agents</a></li><li><a href="sentinels.html">Sentinels</a></li><li><a href="approvals.html">Approvals</a></li><li><a href="computers.html">Network / Computers</a></li><li><a href="build-lab.html">Build Lab</a></li><li><a href="memory.html">Memory & learning</a></li><li><a href="atlas.html">Atlas</a></li><li><a href="benchmarks.html">Benchmarks</a></li><li><a href="proof.html">Proof</a></li><li><a href="run/status.html">Status</a></li></ul></div>
+      <div><p class="foot-k">Documentation</p><ul><li><a href="run/install.html">Install</a></li><li><a href="run/docs.html">Documentation map</a></li></ul></div>
+      <div><p class="foot-k">Project</p><ul><li><a href="about.html">About</a></li><li><a href="open-source.html">Open source</a></li><li><a href="run/changelog.html">Changelog</a></li></ul></div>
+    </nav>
+  </div>
+  <div class="wrap foot-legal">
+    <p>Apache License 2.0. Pre-release copy. Read the <a href="proof.html">Proof</a> page for tested scope and open gaps; release claim review is in progress.</p>
+    <p><a href="LICENCES.md">Font licences</a></p>
+  </div>
+  <p class="foot-word" aria-hidden="true">theioma</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,718 @@
+{
+ "title": "PERCI penetrator (post-burn impact config, SRBs ejected; reconstruction)",
+ "units": "mm",
+ "explode_scale": 1.0,
+ "parts": {
+  "nose_cone": {
+   "label": "Nose cone (hemispherically tipped ogive, CRH 5)",
+   "explode": [
+    0.27318,
+    0.3,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "main_body": {
+   "label": "Main body (hollow cylinder)",
+   "explode": [
+    0.045,
+    0.3,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "flare_shell": {
+   "label": "Aft flare with SRB pockets and avionics cavity",
+   "explode": [
+    -0.236,
+    0.3,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "seismometer": {
+   "label": "Seismometer (Artius, 1.4 kg; shape est.)",
+   "explode": [
+    0.432,
+    0.0,
+    0.0
+   ],
+   "group": "payload"
+  },
+  "accelerometer": {
+   "label": "Accelerometer (PCB 350B41, 27 g; shape est.)",
+   "explode": [
+    0.54,
+    0.0,
+    0.0
+   ],
+   "group": "payload"
+  },
+  "nose_bulkhead": {
+   "label": "Nose/body bulkhead",
+   "explode": [
+    0.3762,
+    0.0,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "nadir_camera": {
+   "label": "Nadir camera (behind window at the body/nose bulkhead)",
+   "explode": [
+    0.215,
+    0.44,
+    0.0
+   ],
+   "group": "payload"
+  },
+  "cdh_pcb_1": {
+   "label": "CDH board 1 (ATmegaS128, TMR)",
+   "explode": [
+    -0.21078,
+    0.0,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "cdh_pcb_2": {
+   "label": "CDH board 2 (ATmegaS128, TMR)",
+   "explode": [
+    -0.20178,
+    0.0,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "cdh_pcb_3": {
+   "label": "CDH board 3 (ATmegaS128, TMR)",
+   "explode": [
+    -0.19278,
+    0.0,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "battery_bulkhead_aft": {
+   "label": "Battery stack aft plate",
+   "explode": [
+    -0.1809,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_01": {
+   "label": "LTC battery set 1 (4 cells; representative layout)",
+   "explode": [
+    -0.15773,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_02": {
+   "label": "LTC battery set 2 (4 cells; representative layout)",
+   "explode": [
+    -0.15773,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_03": {
+   "label": "LTC battery set 3 (4 cells; representative layout)",
+   "explode": [
+    -0.15773,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_04": {
+   "label": "LTC battery set 4 (4 cells; representative layout)",
+   "explode": [
+    -0.15773,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_05": {
+   "label": "LTC battery set 5 (4 cells; representative layout)",
+   "explode": [
+    -0.15773,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_06": {
+   "label": "LTC battery set 6 (4 cells; representative layout)",
+   "explode": [
+    -0.12173,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_07": {
+   "label": "LTC battery set 7 (4 cells; representative layout)",
+   "explode": [
+    -0.12173,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_08": {
+   "label": "LTC battery set 8 (4 cells; representative layout)",
+   "explode": [
+    -0.12173,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_09": {
+   "label": "LTC battery set 9 (4 cells; representative layout)",
+   "explode": [
+    -0.12173,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_10": {
+   "label": "LTC battery set 10 (4 cells; representative layout)",
+   "explode": [
+    -0.12173,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_11": {
+   "label": "LTC battery set 11 (4 cells; representative layout)",
+   "explode": [
+    -0.08573,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_12": {
+   "label": "LTC battery set 12 (4 cells; representative layout)",
+   "explode": [
+    -0.08573,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_13": {
+   "label": "LTC battery set 13 (4 cells; representative layout)",
+   "explode": [
+    -0.08573,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_14": {
+   "label": "LTC battery set 14 (4 cells; representative layout)",
+   "explode": [
+    -0.08573,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_15": {
+   "label": "LTC battery set 15 (4 cells; representative layout)",
+   "explode": [
+    -0.08573,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_16": {
+   "label": "LTC battery set 16 (4 cells; representative layout)",
+   "explode": [
+    -0.04973,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_17": {
+   "label": "LTC battery set 17 (4 cells; representative layout)",
+   "explode": [
+    -0.04973,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_18": {
+   "label": "LTC battery set 18 (4 cells; representative layout)",
+   "explode": [
+    -0.04973,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_19": {
+   "label": "LTC battery set 19 (4 cells; representative layout)",
+   "explode": [
+    -0.04973,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_20": {
+   "label": "LTC battery set 20 (4 cells; representative layout)",
+   "explode": [
+    -0.04973,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_21": {
+   "label": "LTC battery set 21 (4 cells; representative layout)",
+   "explode": [
+    -0.01372,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_22": {
+   "label": "LTC battery set 22 (4 cells; representative layout)",
+   "explode": [
+    -0.01372,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_23": {
+   "label": "LTC battery set 23 (4 cells; representative layout)",
+   "explode": [
+    -0.01372,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_24": {
+   "label": "LTC battery set 24 (4 cells; representative layout)",
+   "explode": [
+    -0.01372,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_25": {
+   "label": "LTC battery set 25 (4 cells; representative layout)",
+   "explode": [
+    -0.01372,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_26": {
+   "label": "LTC battery set 26 (4 cells; representative layout)",
+   "explode": [
+    0.02228,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_27": {
+   "label": "LTC battery set 27 (4 cells; representative layout)",
+   "explode": [
+    0.02228,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_28": {
+   "label": "LTC battery set 28 (4 cells; representative layout)",
+   "explode": [
+    0.02228,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_29": {
+   "label": "LTC battery set 29 (4 cells; representative layout)",
+   "explode": [
+    0.02228,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_30": {
+   "label": "LTC battery set 30 (4 cells; representative layout)",
+   "explode": [
+    0.02228,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_31": {
+   "label": "LTC battery set 31 (4 cells; representative layout)",
+   "explode": [
+    0.05828,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_32": {
+   "label": "LTC battery set 32 (4 cells; representative layout)",
+   "explode": [
+    0.05828,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_33": {
+   "label": "LTC battery set 33 (4 cells; representative layout)",
+   "explode": [
+    0.05828,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_34": {
+   "label": "LTC battery set 34 (4 cells; representative layout)",
+   "explode": [
+    0.05828,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_35": {
+   "label": "LTC battery set 35 (4 cells; representative layout)",
+   "explode": [
+    0.05828,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_36": {
+   "label": "LTC battery set 36 (4 cells; representative layout)",
+   "explode": [
+    0.09428,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_37": {
+   "label": "LTC battery set 37 (4 cells; representative layout)",
+   "explode": [
+    0.09428,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_38": {
+   "label": "LTC battery set 38 (4 cells; representative layout)",
+   "explode": [
+    0.09428,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_39": {
+   "label": "LTC battery set 39 (4 cells; representative layout)",
+   "explode": [
+    0.09428,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_40": {
+   "label": "LTC battery set 40 (4 cells; representative layout)",
+   "explode": [
+    0.09428,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_41": {
+   "label": "LTC battery set 41 (4 cells; representative layout)",
+   "explode": [
+    0.13028,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_42": {
+   "label": "LTC battery set 42 (4 cells; representative layout)",
+   "explode": [
+    0.13028,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_43": {
+   "label": "LTC battery set 43 (4 cells; representative layout)",
+   "explode": [
+    0.13028,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_44": {
+   "label": "LTC battery set 44 (4 cells; representative layout)",
+   "explode": [
+    0.13028,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_45": {
+   "label": "LTC battery set 45 (4 cells; representative layout)",
+   "explode": [
+    0.13028,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_46": {
+   "label": "LTC battery set 46 (4 cells; representative layout)",
+   "explode": [
+    0.16628,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_47": {
+   "label": "LTC battery set 47 (4 cells; representative layout)",
+   "explode": [
+    0.16628,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pack_48": {
+   "label": "LTC battery set 48 (4 cells; representative layout)",
+   "explode": [
+    0.16628,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "battery_bulkhead_fwd": {
+   "label": "Battery stack forward plate",
+   "explode": [
+    0.1845,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "tie_rod_1": {
+   "label": "Battery stack tie rod",
+   "explode": [
+    0.0045,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "tie_rod_2": {
+   "label": "Battery stack tie rod",
+   "explode": [
+    0.0045,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "tie_rod_3": {
+   "label": "Battery stack tie rod",
+   "explode": [
+    0.0045,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "tie_rod_4": {
+   "label": "Battery stack tie rod",
+   "explode": [
+    0.0045,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "rtd_1": {
+   "label": "RTD probe (Cernox) between battery layers",
+   "explode": [
+    -0.1395,
+    0.0,
+    -0.09
+   ],
+   "group": "payload"
+  },
+  "rtd_2": {
+   "label": "RTD probe (Cernox) between battery layers",
+   "explode": [
+    -0.0675,
+    0.06364,
+    -0.06364
+   ],
+   "group": "payload"
+  },
+  "rtd_3": {
+   "label": "RTD probe (Cernox) between battery layers",
+   "explode": [
+    0.0045,
+    0.09,
+    -0.0
+   ],
+   "group": "payload"
+  },
+  "rtd_4": {
+   "label": "RTD probe (Cernox) between battery layers",
+   "explode": [
+    0.0765,
+    0.06364,
+    0.06364
+   ],
+   "group": "payload"
+  },
+  "rw_1": {
+   "label": "Reaction wheel 1 (Rocket Lab 60 mNms, 77x65x38)",
+   "explode": [
+    -0.5859,
+    0.0,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "rw_2": {
+   "label": "Reaction wheel 2",
+   "explode": [
+    -0.52785,
+    0.0,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "rw_3": {
+   "label": "Reaction wheel 3",
+   "explode": [
+    -0.45135,
+    0.0,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "imu": {
+   "label": "3-axis IMU (size est.)",
+   "explode": [
+    -0.3915,
+    0.0,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "star_tracker_1": {
+   "label": "Star tracker (size est.)",
+   "explode": [
+    -0.275,
+    0.40607,
+    0.10607
+   ],
+   "group": "adcs"
+  },
+  "star_tracker_2": {
+   "label": "Star tracker (size est.)",
+   "explode": [
+    -0.275,
+    0.19393,
+    -0.10607
+   ],
+   "group": "adcs"
+  },
+  "azimuth_camera": {
+   "label": "Azimuthal camera on the aft flare (size est.)",
+   "explode": [
+    -0.275,
+    0.40607,
+    -0.10607
+   ],
+   "group": "payload"
+  },
+  "antenna_substrate": {
+   "label": "Patch antenna substrate (6 mm; est.)",
+   "explode": [
+    -0.08,
+    0.0,
+    0.0
+   ],
+   "group": "comms"
+  },
+  "antenna_patch": {
+   "label": "2 GHz microstrip patch, 0.15 m diameter",
+   "explode": [
+    -0.15,
+    0.0,
+    0.0
+   ],
+   "group": "comms"
+  },
+  "antenna_feed_1": {
+   "label": "Antenna feed line (orthogonal pair)",
+   "explode": [
+    -0.15,
+    0.0,
+    0.0
+   ],
+   "group": "comms"
+  },
+  "antenna_feed_2": {
+   "label": "Antenna feed line (orthogonal pair)",
+   "explode": [
+    -0.15,
+    0.0,
+    0.0
+   ],
+   "group": "comms"
+  }
+ }
+}

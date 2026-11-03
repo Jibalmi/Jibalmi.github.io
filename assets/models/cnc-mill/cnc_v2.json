@@ -1,0 +1,574 @@
+{
+ "title": "Rucksack CNC mill v2 (design: closed-loop steppers + ball screws + brushless spindle)",
+ "units": "mm",
+ "explode_scale": 1,
+ "parts": {
+  "foot_1": {
+   "label": "Rubber foot 1 (est.)",
+   "explode": [
+    0.0,
+    -0.045,
+    0.0
+   ],
+   "group": "Frame"
+  },
+  "foot_2": {
+   "label": "Rubber foot 2 (est.)",
+   "explode": [
+    0.0,
+    -0.045,
+    0.0
+   ],
+   "group": "Frame"
+  },
+  "foot_3": {
+   "label": "Rubber foot 3 (est.)",
+   "explode": [
+    0.0,
+    -0.045,
+    0.0
+   ],
+   "group": "Frame"
+  },
+  "foot_4": {
+   "label": "Rubber foot 4 (est.)",
+   "explode": [
+    0.0,
+    -0.045,
+    0.0
+   ],
+   "group": "Frame"
+  },
+  "side_y1": {
+   "label": "Side member 1 (2040, 270)",
+   "explode": [
+    -0.06,
+    0.0,
+    0.0
+   ],
+   "group": "Frame"
+  },
+  "side_y2": {
+   "label": "Side member 2 (2040, 270)",
+   "explode": [
+    0.06,
+    0.0,
+    0.0
+   ],
+   "group": "Frame"
+  },
+  "cross_1": {
+   "label": "Cross member 1 (2020)",
+   "explode": [
+    0.0,
+    0.0,
+    0.06
+   ],
+   "group": "Frame"
+  },
+  "cross_2": {
+   "label": "Cross member 2 (2020)",
+   "explode": [
+    0.0,
+    0.0,
+    -0.06
+   ],
+   "group": "Frame"
+  },
+  "column_1": {
+   "label": "Gantry column 1 (4040)",
+   "explode": [
+    -0.06,
+    0.04,
+    0.0
+   ],
+   "group": "Gantry"
+  },
+  "column_2": {
+   "label": "Gantry column 2 (4040)",
+   "explode": [
+    0.06,
+    0.04,
+    0.0
+   ],
+   "group": "Gantry"
+  },
+  "beam": {
+   "label": "Gantry beam (4040)",
+   "explode": [
+    0.0,
+    0.13,
+    0.0
+   ],
+   "group": "Gantry"
+  },
+  "rail_y1": {
+   "label": "Table rail 1 (MGNR12, 250)",
+   "explode": [
+    -0.06,
+    0.06,
+    0.0
+   ],
+   "group": "Y axis"
+  },
+  "rail_y2": {
+   "label": "Table rail 2 (MGNR12, 250)",
+   "explode": [
+    0.06,
+    0.06,
+    0.0
+   ],
+   "group": "Y axis"
+  },
+  "blk_y1": {
+   "label": "MGN12H carriage (Y) 1",
+   "explode": [
+    -0.06,
+    0.075,
+    0.025
+   ],
+   "group": "Y axis"
+  },
+  "blk_y2": {
+   "label": "MGN12H carriage (Y) 2",
+   "explode": [
+    -0.06,
+    0.075,
+    -0.025
+   ],
+   "group": "Y axis"
+  },
+  "blk_y3": {
+   "label": "MGN12H carriage (Y) 3",
+   "explode": [
+    0.06,
+    0.075,
+    0.025
+   ],
+   "group": "Y axis"
+  },
+  "blk_y4": {
+   "label": "MGN12H carriage (Y) 4",
+   "explode": [
+    0.06,
+    0.075,
+    -0.025
+   ],
+   "group": "Y axis"
+  },
+  "table": {
+   "label": "Table plate (6061, 220 x 170 x 5)",
+   "explode": [
+    0.0,
+    0.11,
+    0.0
+   ],
+   "group": "Y axis"
+  },
+  "screw_y": {
+   "label": "Y ball screw SFU1204 (300)",
+   "explode": [
+    0.0,
+    0.04,
+    0.0
+   ],
+   "group": "Y axis"
+  },
+  "nut_y": {
+   "label": "Y ball nut (SFU1204)",
+   "explode": [
+    0.0,
+    0.075,
+    0.0
+   ],
+   "group": "Y axis"
+  },
+  "nutbr_y": {
+   "label": "Y nut bracket (est.)",
+   "explode": [
+    0.0,
+    0.1,
+    -0.04
+   ],
+   "group": "Y axis"
+  },
+  "bk_y": {
+   "label": "BK10 fixed support (Y) (est.)",
+   "explode": [
+    0.0,
+    0.04,
+    0.05
+   ],
+   "group": "Y axis"
+  },
+  "bf_y": {
+   "label": "BF10 floating support (Y) (est.)",
+   "explode": [
+    0.0,
+    0.04,
+    -0.05
+   ],
+   "group": "Y axis"
+  },
+  "coupler_y": {
+   "label": "Coupler 5-8 mm (Y)",
+   "explode": [
+    0.0,
+    0.04,
+    0.09
+   ],
+   "group": "Y axis"
+  },
+  "motor_y": {
+   "label": "Closed-loop NEMA 17 (Y)",
+   "explode": [
+    0.0,
+    0.04,
+    0.11
+   ],
+   "group": "Y axis"
+  },
+  "mbr_y": {
+   "label": "Y motor bracket (est.)",
+   "explode": [
+    0.0,
+    0.04,
+    0.15
+   ],
+   "group": "Y axis"
+  },
+  "rail_x": {
+   "label": "X rail (MGNR12, 250)",
+   "explode": [
+    0.0,
+    0.0,
+    0.05
+   ],
+   "group": "X axis"
+  },
+  "blk_x1": {
+   "label": "MGN12H carriage (X) 1",
+   "explode": [
+    -0.03,
+    0.0,
+    0.08
+   ],
+   "group": "X axis"
+  },
+  "blk_x2": {
+   "label": "MGN12H carriage (X) 2",
+   "explode": [
+    0.03,
+    0.0,
+    0.08
+   ],
+   "group": "X axis"
+  },
+  "zplate": {
+   "label": "Z plate / X carriage (6061, 8 mm) (est.)",
+   "explode": [
+    0.0,
+    0.0,
+    0.14
+   ],
+   "group": "Z axis"
+  },
+  "rail_z": {
+   "label": "Z rail (MGNR12, 150)",
+   "explode": [
+    0.0,
+    0.0,
+    0.17
+   ],
+   "group": "Z axis"
+  },
+  "blk_z1": {
+   "label": "MGN12H carriage (Z) 1",
+   "explode": [
+    0.0,
+    0.0,
+    0.2
+   ],
+   "group": "Z axis"
+  },
+  "blk_z2": {
+   "label": "MGN12H carriage (Z) 2",
+   "explode": [
+    0.0,
+    0.0,
+    0.2
+   ],
+   "group": "Z axis"
+  },
+  "holder": {
+   "label": "Spindle holder plate (6061, 8 mm) (est.)",
+   "explode": [
+    0.0,
+    0.0,
+    0.23
+   ],
+   "group": "Spindle"
+  },
+  "clamp": {
+   "label": "Spindle clamp (52 mm bore) (est.)",
+   "explode": [
+    0.0,
+    0.03,
+    0.26
+   ],
+   "group": "Spindle"
+  },
+  "spindle": {
+   "label": "Spindle 400 W brushless (52 mm) (est.)",
+   "explode": [
+    0.0,
+    0.08,
+    0.26
+   ],
+   "group": "Spindle"
+  },
+  "collet_nut": {
+   "label": "ER11 collet nut",
+   "explode": [
+    0.0,
+    0.04,
+    0.26
+   ],
+   "group": "Spindle"
+  },
+  "cutter": {
+   "label": "Cutter 6 mm (carbide, 2 flute) (est.)",
+   "explode": [
+    0.0,
+    -0.03,
+    0.26
+   ],
+   "group": "Spindle"
+  },
+  "screw_z": {
+   "label": "Z ball screw SFU1204 (200)",
+   "explode": [
+    0.0,
+    0.06,
+    0.14
+   ],
+   "group": "Z axis"
+  },
+  "nut_z": {
+   "label": "Z ball nut",
+   "explode": [
+    0.0,
+    0.02,
+    0.14
+   ],
+   "group": "Z axis"
+  },
+  "nutbr_z": {
+   "label": "Z nut bracket (est.)",
+   "explode": [
+    0.0,
+    0.02,
+    0.24
+   ],
+   "group": "Z axis"
+  },
+  "bk_z": {
+   "label": "BK10 fixed support (Z, top) (est.)",
+   "explode": [
+    0.0,
+    0.1,
+    0.14
+   ],
+   "group": "Z axis"
+  },
+  "bf_z": {
+   "label": "BF10 floating support (Z, bottom) (est.)",
+   "explode": [
+    0.0,
+    -0.04,
+    0.14
+   ],
+   "group": "Z axis"
+  },
+  "coupler_z": {
+   "label": "Coupler 5-8 mm (Z)",
+   "explode": [
+    0.0,
+    0.13,
+    0.14
+   ],
+   "group": "Z axis"
+  },
+  "motor_z": {
+   "label": "Closed-loop NEMA 17 (Z)",
+   "explode": [
+    0.0,
+    0.16,
+    0.14
+   ],
+   "group": "Z axis"
+  },
+  "mbr_z": {
+   "label": "Z motor bracket (est.)",
+   "explode": [
+    0.0,
+    0.145,
+    0.14
+   ],
+   "group": "Z axis"
+  },
+  "screw_x": {
+   "label": "X ball screw SFU1204 (300)",
+   "explode": [
+    0.0,
+    0.19,
+    0.0
+   ],
+   "group": "X axis"
+  },
+  "nut_x": {
+   "label": "X ball nut",
+   "explode": [
+    0.0,
+    0.23,
+    0.0
+   ],
+   "group": "X axis"
+  },
+  "nutbr_x": {
+   "label": "X nut bracket (est.)",
+   "explode": [
+    0.0,
+    0.23,
+    0.15
+   ],
+   "group": "X axis"
+  },
+  "bk_x": {
+   "label": "BK10 fixed support (X) (est.)",
+   "explode": [
+    -0.05,
+    0.19,
+    0.0
+   ],
+   "group": "X axis"
+  },
+  "bf_x": {
+   "label": "BF10 floating support (X) (est.)",
+   "explode": [
+    0.05,
+    0.19,
+    0.0
+   ],
+   "group": "X axis"
+  },
+  "coupler_x": {
+   "label": "Coupler 5-8 mm (X)",
+   "explode": [
+    -0.11,
+    0.19,
+    0.0
+   ],
+   "group": "X axis"
+  },
+  "motor_x": {
+   "label": "Closed-loop NEMA 17 (X)",
+   "explode": [
+    -0.13,
+    0.19,
+    0.0
+   ],
+   "group": "X axis"
+  },
+  "mbr_x": {
+   "label": "X motor bracket (est.)",
+   "explode": [
+    -0.17,
+    0.19,
+    0.0
+   ],
+   "group": "X axis"
+  },
+  "estop": {
+   "label": "E-stop button (22 mm) (est.)",
+   "explode": [
+    0.06,
+    0.06,
+    0.12
+   ],
+   "group": "Electronics"
+  },
+  "ctrl": {
+   "label": "ESP32 / FluidNC controller (est.)",
+   "explode": [
+    0.08,
+    0.02,
+    0.0
+   ],
+   "group": "Electronics"
+  },
+  "psu48": {
+   "label": "PSU 48 V 350 W (external)",
+   "explode": [
+    0.15,
+    0.1,
+    0.0
+   ],
+   "group": "Electronics"
+  },
+  "psu24": {
+   "label": "PSU 24 V 100 W (external)",
+   "explode": [
+    0.15,
+    0.1,
+    0.05
+   ],
+   "group": "Electronics"
+  },
+  "spdrv": {
+   "label": "Spindle driver (BLDC, 48 V) (est.)",
+   "explode": [
+    0.09,
+    0.06,
+    0.04
+   ],
+   "group": "Electronics"
+  },
+  "limit_x": {
+   "label": "Limit/home switch X (est.)",
+   "explode": [
+    0.0,
+    0.03,
+    0.03
+   ],
+   "group": "Electronics"
+  },
+  "limit_y": {
+   "label": "Limit/home switch Y (est.)",
+   "explode": [
+    0.0,
+    0.03,
+    0.03
+   ],
+   "group": "Electronics"
+  },
+  "limit_z": {
+   "label": "Limit/home switch Z (est.)",
+   "explode": [
+    0.0,
+    0.03,
+    0.03
+   ],
+   "group": "Electronics"
+  },
+  "work_vol": {
+   "label": "Tool-tip working volume 160 x 120 x 50 mm",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "Reference"
+  }
+ }
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jibalmi.github.io/sitemap.xml

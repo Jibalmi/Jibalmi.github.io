@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Proof · Theioma</title>
+<meta name="description" content="What Theioma has proven and what it has not: each capability in one line, the multi-computer ledger with its receipts, the status area by area, and the repository’s own evidence, quoted.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050505">
+<meta property="og:title" content="Proof · Theioma">
+<meta property="og:description" content="What Theioma has proven and what it has not: each capability in one line, the multi-computer ledger with its receipts, the status area by area, and the repository’s own evidence, quoted.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22none%22%3E%0A%20%20%3Ctitle%3Etheioma%3C%2Ftitle%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22body%22%20x1%3D%220.15%22%20y1%3D%220.85%22%20x2%3D%220.85%22%20y2%3D%220.15%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%230a2a48%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220.55%22%20stop-color%3D%22%231d1f5c%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%233a1858%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22rim%22%20x1%3D%220.1%22%20y1%3D%220.9%22%20x2%3D%220.9%22%20y2%3D%220.1%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%233bcce3%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220.5%22%20stop-color%3D%22%236950b6%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23db72b4%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22glow%22%20cx%3D%220.71%22%20cy%3D%220.28%22%20r%3D%220.3%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f38db7%22%20stop-opacity%3D%220.95%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f38db7%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%3C%2FradialGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2215%22%20fill%3D%22url(%23body)%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2215%22%20fill%3D%22url(%23glow)%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2214.1%22%20stroke%3D%22url(%23rim)%22%20stroke-width%3D%221.8%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2215.2%22%20cy%3D%2216.4%22%20r%3D%221.1%22%20fill%3D%22%236a5cff%22%2F%3E%0A%3C%2Fsvg%3E">
+<link rel="stylesheet" href="assets/site.css">
+<script>(function(){var d=document.documentElement;if('IntersectionObserver' in window){d.classList.add('js');setTimeout(function(){if(!window.__site)d.classList.remove('js')},3000)}})()</script>
+<script src="assets/site.js" defer></script>
+<script src="assets/sphere.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="scrim" aria-hidden="true"></div>
+<div class="scrim scrim-paper" aria-hidden="true"></div>
+<header class="island">
+  <nav class="island-in" aria-label="Site">
+    <a class="brand" href="index.html" aria-label="Theioma, home"><span class="tmark" aria-hidden="true"><img src="assets/brand/theioma-orb.webp" alt="" width="96" height="96" decoding="async"></span><span>theioma</span></a>
+    <ul class="island-links">
+      <li><details class="nav-menu" data-menu><summary>Product<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="nav-panel"><ul><li><a href="voice.html"><b>Voice</b><span>Say it; the sphere answers.</span></a></li><li><a href="plan.html"><b>Plan</b><span>An interview becomes a plan.</span></a></li><li><a href="agents.html"><b>Agents</b><span>One per task, in a real terminal.</span></a></li><li><a href="sentinels.html"><b>Sentinels</b><span>Every code task reviewed twice.</span></a></li><li><a href="approvals.html"><b>Approvals</b><span>Nothing consequential without you.</span></a></li><li><a href="computers.html"><b>Network / Computers</b><span>Every computer you own, one team.</span></a></li><li><a href="build-lab.html"><b>Build Lab</b><span>Hardware, room by room.</span></a></li><li><a href="memory.html"><b>Memory & learning</b><span>It remembers, and it learns.</span></a></li><li><a href="atlas.html"><b>Atlas</b><span>Every other feature, and where it lives.</span></a></li></ul></div></details></li>
+      <li><a href="benchmarks.html">Benchmarks</a></li><li><a href="proof.html" aria-current="page">Proof</a></li><li><a href="run/docs.html">Docs</a></li><li><a href="open-source.html">Open source</a></li><li><a href="about.html">About</a></li>
+      
+    </ul>
+    <a class="pill pill-primary pill-sm" href="run/install.html">Run it<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <button class="burger" type="button" aria-label="Open the menu" aria-expanded="false" aria-controls="menu" data-burger><i></i><i></i></button>
+  </nav>
+</header>
+<div class="overlay" id="menu" aria-label="Menu" hidden>
+  <div class="overlay-in">
+    <div><p class="ov-k">Product</p><ol class="ov-main"><li><a href="voice.html" style="--i:0">Voice</a></li><li><a href="plan.html" style="--i:1">Plan</a></li><li><a href="agents.html" style="--i:2">Agents</a></li><li><a href="sentinels.html" style="--i:3">Sentinels</a></li><li><a href="approvals.html" style="--i:4">Approvals</a></li><li><a href="computers.html" style="--i:5">Network / Computers</a></li><li><a href="build-lab.html" style="--i:6">Build Lab</a></li><li><a href="memory.html" style="--i:7">Memory & learning</a></li><li><a href="atlas.html" style="--i:8">Atlas</a></li></ol></div>
+    <div><p class="ov-k">More</p><ol class="ov-sub"><li><a href="benchmarks.html" style="--i:9">Benchmarks</a></li><li><a href="proof.html" aria-current="page" style="--i:10">Proof</a></li><li><a href="run/docs.html" style="--i:11">Docs</a></li><li><a href="open-source.html" style="--i:12">Open source</a></li><li><a href="about.html" style="--i:13">About</a></li><li><a href="run/install.html" style="--i:14">Install</a></li><li><a href="run/status.html" style="--i:15">Status</a></li><li><a href="run/changelog.html" style="--i:16">Changelog</a></li></ol></div>
+    <a class="pill pill-primary" href="run/install.html" style="--i:18">Run it from source<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+  </div>
+</div>
+<main id="main">
+
+<section class="opener opener-plain" aria-labelledby="h-top">
+  <div class="wrap">
+    <ol class="chapters" aria-label="Related pages"><li><a href="benchmarks.html">Benchmarks</a></li><li><a href="proof.html" aria-current="page">Proof</a></li></ol>
+    <div class="opener-words">
+      <p class="eyebrow" data-reveal>Proof</p>
+      <h1 class="h1" id="h-top" data-reveal style="--i:1">What is proven. What is not, yet.</h1>
+      <p class="lede" data-reveal style="--i:2">This page links selected tests and audits, including limits and failed checks. The public claim review is in progress; an unlinked statement is not release proof.</p>
+      <div class="actions" data-reveal style="--i:3"><a class="pill pill-primary" href="#now">Where it stands<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="pill pill-ghost" href="#by-capability">Capability by capability<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="pill pill-ghost" href="#tests">Tests run<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="pill pill-ghost" href="benchmarks.html">The numbers<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<section class="sec alt" id="now" aria-labelledby="h-now">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Proof</p><h2 class="h2" id="h-now">Where it stands, 17 October 2026.</h2></div>
+      <div class="sec-intro"><p>What ran that day, and what is still not proven, each with the file that says so.</p></div>
+    </header>
+    
+  <div class="ledger" data-reveal>
+    <section><h3>Ran, with its receipt</h3><ol><li><span>The product ran its own chain: an engineering PM spawned 11 room stewards on 13 Oct, and 19 workers ran under the Laboratory steward from 13 to 17 Oct.</span><span class="src"><span><code>17-GAP-REGISTER</code></span></span></li><li><span>Drone v2’s system graph: 44 nodes and 94 connections, checked against its own records; its component research priced a full buying list from 53 sources kept on file.</span><span class="src"><span><code>Drone v2 PM files</code></span></span></li><li><span>The usage ledger names every recorded model the way the catalogue does, and the model scorecard shows tokens for the price of Claude Opus 5.5 over seven and thirty days.</span><span class="src"><span><code>scorecard receipt</code></span></span></li><li><span>The agent graph draws each agent as a ball whose outline shows its state, under the agent that started it, in 2D and 3D.</span><span class="src"><span><code>ball-tree.ts</code></span></span></li><li><span>Asked the time, how many agents are running or what waits for approval, the voice answers from the app’s own readings without waiting for the model.</span><span class="src"><span><code>fleet-answer.ts</code></span></span></li><li><span>A usability and depth pass went over every page: counts that agree between Home and the Inbox, a dismiss that asks first, dead ends removed from the Build Lab’s result rooms.</span><span class="src">lane reports of 17 Oct, captures still being checked</span></li></ol></section>
+    <section class="open"><h3>Not proven yet</h3><ol><li><span>Drone v2 is not finished: its buying list is over the 450 euro ceiling, stage 2 cannot close until its research check passes, stage 3 has not started, and nothing has been bought, printed or flown.</span><span class="src"><span><code>Drone v2 PM files</code></span></span></li><li><span>The chain does not close a stage cleanly yet: stage 2 research was issued 7 times and assessed 6 times.</span><span class="src"><span><code>17-GAP-REGISTER</code></span></span></li><li><span>Most of the model catalogue is untried: <data class="mv" value="17" data-metric="catalogue-coverage.numbers.withData">17</data> of <data class="mv" value="773" data-metric="catalogue-coverage.numbers.catalogue">773</data> models have any data.</span><span class="src"><span><code>scorecard receipt</code></span></span></li><li><span>No whole-tree type check and test run has passed since 11 Oct, and CI is not running.</span><span class="src"><span><code>17-GAP-REGISTER</code></span></span></li><li><span>A spoken turn that needs the model still takes seconds, against a target of first audio in about a third of a second.</span><span class="src"><span><code>17-GAP-REGISTER</code></span></span></li><li><span>Nightly consolidation waits for an idle fleet and has not run since 11 Oct, and the daily error clusters have produced no proposal yet.</span><span class="src"><span><code>17-GAP-REGISTER</code></span></span></li></ol></section>
+  </div>
+  </div>
+</section>
+
+<section class="sec" id="by-capability" aria-labelledby="h-by-capability">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Proof</p><h2 class="h2" id="h-by-capability">Capability by capability.</h2></div>
+      <div class="sec-intro"><p>The same line each capability carries on the home page, with where its evidence is filed.</p></div>
+    </header>
+    
+  <div class="scroll-x" data-reveal>
+    <table class="tbl">
+      <thead><tr><th scope="col">Capability</th><th scope="col">How far it runs today</th><th scope="col">Receipt</th></tr></thead>
+      <tbody><tr><td><a href="voice.html">Voice</a></td><td><span class="status-text">Speak a brief and hear the answer. A 6 Sep 2026 test with synthetic audio measured an 8.2&nbsp;s spoken turn on an RTX 5080.</span></td><td><span><code>voice-e2e.md</code></span></td></tr><tr><td><a href="plan.html">Plan</a></td><td><span class="status-text">The interview and the plan run for software and for hardware, and the plan waits for your approval.</span></td><td><span><code>software-e2e.md</code></span></td></tr><tr><td><a href="agents.html">Agents</a></td><td><span class="status-text">Claude Code and Codex have each run as an agent under a steward, in a real terminal; OpenClaw, any HTTP agent and Cursor have passed a probe; opencode, Gemini CLI and Aider are rows not verified yet.</span></td><td><span><code>providers.ts</code></span></td></tr><tr><td><a href="sentinels.html">Sentinels</a></td><td><span class="status-text">The review chain runs on the hub, and its verdicts are on record.</span></td><td><span><code>metrics.json</code></span></td></tr><tr><td><a href="approvals.html">Approvals</a></td><td><span class="status-text">Prints, flashes and desktop clicks file an approval and wait, and above low risk an approval asks for your passkey. Phone pairing and the phone’s approval routes are built; an approval answered on a physical phone is not yet proven.</span></td><td><span><code>README, Status</code></span></td></tr><tr><td><a href="computers.html">Network / Computers</a></td><td><span class="status-text">Device keys, the account CA, mutual TLS 1.3, leases and revocation. The receipts were measured with three node processes on one computer.</span></td><td><span><code>06-two-node-proof.txt</code></span></td></tr><tr><td><a href="build-lab.html">Build Lab</a></td><td><span class="status-text">Every stage up to the print gate has run on a real project, and a print waits for your approval.</span></td><td><span><code>drone-e2e.md</code></span></td></tr><tr><td><a href="memory.html">Memory & learning</a></td><td><span class="status-text">Past work is recalled into new sessions, and feedback and outcomes are logged. The nightly passes run and record each step, and none has yet applied an edit live; the monthly fine-tune is a dry run that trains nothing.</span></td><td><span><code>README, Status</code></span></td></tr><tr><td><a href="agents.html#limits">Limits and handoffs</a></td><td><span class="status-text">A full context window hands off to a fresh session, and a usage limit moves the turn to another member serving the same model. Both are tested; neither has passed a live drill yet.</span></td><td><span><code>session-rotator.ts</code></span></td></tr></tbody>
+    </table>
+  </div>
+  </div>
+</section>
+
+<section class="sec alt" id="tests" aria-labelledby="h-tests">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Proof</p><h2 class="h2" id="h-tests">Tests run, with their results.</h2></div>
+      <div class="sec-intro"><p>The whole test suite, the type check and the lint as last filed in the repository, each with its date, and the ship list as it stands when this page is built. A failure is counted here, not hidden, and a run that has not finished says so.</p></div>
+    </header>
+    
+    <ol class="bcards">
+      
+      <li class="bc w7 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate old">no recent run</span><span class="bc-area">Vitest</span></p>
+        <p class="bc-title">The whole test suite</p>
+        <p class="bc-ring">Historical evidence unavailable</p>
+        <p class="bc-sub">The historical raw test receipts are unavailable. Total, pass counts and the local database comparison are unknown; no suite pass is claimed.</p>
+        <p class="bc-foot"><span><code>Historical lane notes</code></span> · notes are not verification of missing raw receipts</p>
+      </div></li>
+      
+      <li class="bc w5 bz" data-reveal style="--i:1"><div class="cr">
+        <p class="bc-k"><span class="bstate prog">in progress</span><span class="bc-area">Ship list</span></p>
+        <p class="bc-title">What v1.0 must meet</p>
+        <p class="bc-num">2<span class="bc-unit">of 25 met</span></p>
+        <ol class="crit" aria-label="2 of 25 criteria met"><li class=""><span>R1</span></li><li class=""><span>R2</span></li><li class="met"><span>R3</span></li><li class="met"><span>R4</span></li><li class=""><span>A1</span></li><li class=""><span>A2</span></li><li class=""><span>A3</span></li><li class=""><span>B1</span></li><li class=""><span>B2</span></li><li class=""><span>B3</span></li><li class=""><span>C1</span></li><li class=""><span>C2</span></li><li class=""><span>C3</span></li><li class=""><span>C4</span></li><li class=""><span>C5</span></li><li class=""><span>C6</span></li><li class=""><span>D1</span></li><li class=""><span>D2</span></li><li class=""><span>D3</span></li><li class=""><span>E1</span></li><li class=""><span>E2</span></li><li class=""><span>E3</span></li><li class=""><span>X1</span></li><li class=""><span>X2</span></li><li class=""><span>X3</span></li></ol>
+        <p class="bc-sub">Read from the ship program’s registry when this page was built: 305 work lanes, 104 of them committed or done.</p>
+        <p class="bc-foot"><time datetime="2026-10-17">17 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>00-SHIPPABLE.md</code></span></p>
+      </div></li>
+      
+      <li class="bc w4 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate red">not green yet</span><span class="bc-area">Type check</span></p>
+        <p class="bc-title">TypeScript, the whole app</p>
+        <p class="bc-num">10<span class="bc-unit">errors in 7 files</span></p>
+        <p class="bc-sub">As read at 11:52 on <time datetime="2026-10-04">4 Oct 2026</time>, the last whole-app read filed in the repository. Their fixes are in the tree; later reads are not filed here yet.</p>
+        <p class="bc-foot"><time datetime="2026-10-04">4 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>r-tsc-green</code></span></p>
+      </div></li>
+      
+      <li class="bc w4 bz" data-reveal style="--i:1"><div class="cr">
+        <p class="bc-k"><span class="bstate part">partly</span><span class="bc-area">Lint</span></p>
+        <p class="bc-title">ESLint</p>
+        <ul class="bc-lines"><li><span class="bstate measured">pass</span><b>Every package</b></li><li><span class="bstate none">no result</span><b>The app, typed</b></li></ul>
+        <p class="bc-sub">The app’s typed lint ran out of memory before it finished. A run in smaller pieces has not finished yet.</p>
+        <p class="bc-foot"><time datetime="2026-10-04">4 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>r-lint-green</code></span></p>
+      </div></li>
+      
+      <li class="bc w4 bz" data-reveal style="--i:2"><div class="cr">
+        <p class="bc-k"><span class="bstate old">no recent run</span><span class="bc-area">CI</span></p>
+        <p class="bc-title">Continuous integration on master</p>
+        <p class="bc-num bc-date">3 Sep 2026</p>
+        <p class="bc-sub">The last run on a push to master, and those runs were cancelled. No CI pass is claimed here.</p>
+        <p class="bc-foot"><time datetime="2026-10-06">6 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>r-ci-health</code></span></p>
+      </div></li>
+      
+      <li class="bc w12 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate measured">measured</span><span class="bc-area">At the published commit</span></p>
+        <p class="bc-title">Tests the repository keeps</p>
+        <ul class="bc-stats"><li><b>6,883</b><span>TypeScript and JavaScript test files</span></li><li><b>310</b><span>Python test files</span></li><li><b>266</b><span>Playwright end-to-end specs</span></li></ul>
+        <p class="bc-sub">A count of files, not a pass rate. The end-to-end specs run in batches, and no single all-green run of them exists to cite yet.</p>
+        <p class="bc-foot"><time datetime="2026-10-17">17 Oct 2026</time><span class="sep" aria-hidden="true">·</span>commit <code>604ad1f53</code>, counted by <code>git ls-tree</code></p>
+      </div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="e2e" aria-labelledby="h-e2e">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Proof</p><h2 class="h2" id="h-e2e">Run end to end, each with its report.</h2></div>
+      <div class="sec-intro"><p>One brief or one project at a time, through the real app, every request logged in the order it happened. Each report names what it covered.</p></div>
+    </header>
+    <div data-reveal>
+        <ol class="runs">
+          <li><span class="runs-d"><time datetime="2026-10-03">3 Oct 2026</time></span><span class="runs-w"><b>A hardware interview, through the product</b><span>31 requirement rows filed and the plan approved. Its hand-off to the engineering project manager has not run.</span></span><span class="runs-s"><span><code>c-int-live-proof</code></span></span></li>
+          <li><span class="runs-d"><time datetime="2026-09-29">29 Sep 2026</time></span><span class="runs-w"><b>Many computers, three node processes on one computer</b><span>3 device keys; mutual TLS, leases and a revocation; the revoked process exited and the rest kept working.</span></span><span class="runs-s"><span><code>06-two-node-proof.txt</code></span></span></li>
+          <li><span class="runs-d"><time datetime="2026-09-07">7 Sep 2026</time></span><span class="runs-w"><b>A robotic arm, through the same rooms</b><span>224 logged calls; its report left two approvals for the operator.</span></span><span class="runs-s"><span><code>2026-09-07-arm-e2e.md</code></span></span></li>
+          <li><span class="runs-d"><time datetime="2026-09-06">6 Sep 2026</time></span><span class="runs-w"><b>One drone brief, through every room</b><span>144 logged calls; every id a row the run wrote.</span></span><span class="runs-s"><span><code>2026-09-06-drone-e2e.md</code></span></span></li>
+          <li><span class="runs-d"><time datetime="2026-09-06">6 Sep 2026</time></span><span class="runs-w"><b>A software project, through every page</b><span>106 logged round trips: created, planned, worked, refused with a reason, read back.</span></span><span class="runs-s"><span><code>2026-09-06-software-e2e.md</code></span></span></li>
+        </ol></div>
+  </div>
+</section>
+
+<section class="sec alt" id="computers" aria-labelledby="h-computers">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Proof</p><h2 class="h2" id="h-computers">Many computers: measured.</h2></div>
+      <div class="sec-intro"><p>Each measured line names the receipt it came from. The receipts are <span><code>node-channel/06-two-node-proof.txt</code></span> and <span><code>node-facts/PROGRESS.md</code></span>; the NC tests are in <code>channel.integration.test.ts</code>. The design and its threat model: <span><code>12-MULTI-COMPUTER-SECURITY.md</code></span>.</p></div>
+    </header>
+    
+  <div class="ledger" data-reveal>
+    <section><h3>Measured, with its receipt</h3><ol><li><span>Three node processes on one computer, each with its own device key and state folder.</span><span class="src">node-channel 06</span></li><li><span>A spawn addressed to one computer ran on that computer only, with a 141&nbsp;ms round trip.</span><span class="src">node-channel 06</span></li><li><span>A revoked computer was dropped from the channel in 458&nbsp;ms and 346&nbsp;ms; its process exited with code 3 and its next spawn got 403.</span><span class="src">node-channel 06, node-facts</span></li><li><span>Only TLS 1.3 with a current certificate from your account’s CA gets in. Another CA, an expired certificate, TLS 1.2, or a node posing as the hub: each is refused.</span><span class="src">NC-2, NC-3</span></li><li><span>A stale lease token is refused, and a revocation advances the fence.</span><span class="src">NC-6, NC-7b</span></li><li><span>No node holds the database URL or the internal secret: a scan of seven values found none.</span><span class="src">node-channel 06</span></li><li><span>A 29 Sep 2026 test verified the audit chain for three node processes on one computer.</span><span class="src">node-channel 06</span></li><li><span>A node reports its GPU; the hub read 16303&nbsp;MiB, the card its own <code>nvidia-smi</code> saw.</span><span class="src">node-facts</span></li></ol></section>
+    
+  </div>
+  </div>
+</section>
+
+<section class="sec" id="areas" aria-labelledby="h-areas">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Proof</p><h2 class="h2" id="h-areas">Area by area.</h2></div>
+      <div class="sec-intro"><p>Each area below is a capability of the product, in the words of the README’s <span>Status table</span>. <span><code>06-GAP-SUMMARY.md</code></span> holds the file-and-line evidence.</p></div>
+    </header>
+    
+  <div class="scroll-x" data-reveal>
+    <table class="tbl">
+      <thead><tr><th scope="col">Area</th><th scope="col">What it does</th></tr></thead>
+      <tbody><tr><td>Many computers</td><td>Each computer you own joins with its own device key under your account’s certificate authority, over mutual TLS 1.3. Work is leased to the computer that fits it, a lease is fenced, and a revoked computer is cut off at its next call. The receipts are three node processes on one computer; two physical computers come after v1.0.</td></tr><tr><td>Agents</td><td>Claude Code and Codex have each run as an agent under a steward, in a real terminal; OpenClaw, any HTTP agent and Cursor have passed a probe; opencode, Gemini CLI and Aider are rows not verified yet.</td></tr><tr><td>Models</td><td>One catalogue of models, a router that picks a tier for each task, and a usage ledger for model use.</td></tr><tr><td>Phone approvals</td><td>Pair a phone with a QR code and answer approvals from it: one tap at low risk, your passkey for anything consequential. An approval answered on a physical phone is not yet proven.</td></tr><tr><td>Voice and desktop</td><td>Speak to Theioma and it speaks back; the best measured spoken turn took 8.2&nbsp;s, and no path is under one second yet. Desktop control is built for Windows, behind your approval, and its driver starts only when you name and arm it.</td></tr><tr><td>Learning</td><td>Feedback and outcomes are captured, and lessons are filed with their source. The nightly passes run and record each step; none has yet proposed and applied an edit live. The monthly fine-tune is a dry run that records itself and trains nothing, and the one local fine-tune trained so far was refused by its own held-out gate.</td></tr><tr><td>J-PEX hardware</td><td>A sentence becomes a researched, simulated, editable electromechanical design: requirements, parts, CAD, circuit, firmware, simulation, documents and a print approval, each stage granted only by a check that ran. A drone and a robot arm have been through every core room; no print or firmware flash has been sent by Theioma. The product has now run its own chain on a second drone: an engineering PM started the room stewards and a steward started its workers, though a stage does not yet close cleanly.</td></tr><tr><td>Packaging</td><td>Theioma runs from source on Windows, and the desktop shell builds unsigned Windows installers from the same source. No installer is published, and macOS and Linux come after v1.0.</td></tr></tbody>
+    </table>
+  </div>
+  </div>
+</section>
+
+<section class="sec" id="recordings" aria-labelledby="h-recordings">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Proof</p><h2 class="h2" id="h-recordings">Every recording, in full.</h2></div>
+      <div class="sec-intro"><p>A demo on this site shows a part of a recording. Here is each whole take with its date, its hash, what it shows and its receipts.</p></div>
+    </header>
+    <p class="film-entry" id="film">No film is published yet. A film of the app at work, one continuous take, is planned.</p><div class="reel-list">
+  <figure class="reel reel-wide" data-slot="plan-conversation" data-state="recorded" data-source="fixture" data-kind="clip" id="reel-plan-conversation" data-reveal>
+    <div class="reel-screen" style="--ar:16 / 9"><video class="reel-media" src="assets/showcase/plan-conversation/plan-conversation.webm" poster="assets/showcase/plan-conversation/plan-conversation-poster.jpg" muted loop playsinline controls preload="none" data-reel-play aria-label="Deciding the project: the plan, the packet, the composer"></video></div>
+    <figcaption class="reel-cap">
+      <div class="reel-meta"><span class="reel-label"><b>Fixture clip</b>, recorded <time datetime="2026-10-01T02:16:14.842Z">1 Oct 2026</time> · 1:17</span><span class="reel-hash" title="sha256 of the file as recorded">sha256 35695e9c176c</span><span class="reel-acts"><a class="reel-open" href="assets/showcase/plan-conversation/replay/index.html" data-reel-step>Step through it</a><a class="reel-open" href="assets/showcase/plan-conversation/plan-conversation.webm">Open it alone</a></span></div>
+      <p class="reel-title">Deciding the project: the plan, the packet, the composer</p>
+      <p>The plan of a real interview (ten stages, as fixture rows), the orchestrator's plan approval in the Inbox, its decision packet, and the decision composer: a MEDIUM decision sent through the real resolve door with a passkey step-up to a stand-in terminal, which shows what the agent received. Fixture data on an isolated test server.</p>
+      <p class="reel-note">fixture: the real app in a real browser on an isolated test server, over rows created for this take and deleted after it; not a live session, and nothing in it was spawned or sent to a real agent.</p>
+      <p class="reel-src">Receipts: <span><code>plan-conversation.receipt.json</code></span>, <span><code>scan.json</code></span>, <span><code>scan.json</code></span>, <span><code>20261001T014417Z-job.txt</code></span>, <span><code>2026-10-01T02-12-38-027Z-showcase_signed-webpack</code></span></p>
+      
+    </figcaption>
+  </figure>
+  <figure class="reel reel-wide" data-slot="start-project" data-state="recorded" data-source="fixture" data-kind="clip" id="reel-start-project" data-reveal>
+    <div class="reel-screen" style="--ar:16 / 9"><video class="reel-media" src="assets/showcase/start-project/start-project.webm" poster="assets/showcase/start-project/start-project-poster.jpg" muted loop playsinline controls preload="none" data-reel-play aria-label="Start a project: typed, then the interview"></video></div>
+    <figcaption class="reel-cap">
+      <div class="reel-meta"><span class="reel-label"><b>Fixture clip</b>, recorded <time datetime="2026-10-01T10:08:22.243Z">1 Oct 2026</time> · 1:52</span><span class="reel-hash" title="sha256 of the file as recorded">sha256 bb990bef3af0</span><span class="reel-acts"><a class="reel-open" href="assets/showcase/start-project/replay/index.html" data-reel-step>Step through it</a><a class="reel-open" href="assets/showcase/start-project/start-project.webm">Open it alone</a></span></div>
+      <p class="reel-title">Start a project: typed, then the interview</p>
+      <p>Mission Control's New project dialog, typed at human pace and submitted on an isolated test server. The orchestrator launch is switched off there (no Claude login) and the dialog's code-graph scan is blocked, which the dialog says. The interview then replays from a fixture transcript whose words are a real interview run through the product on 29 Sep 2026.</p>
+      <p class="reel-note">fixture: the real app in a real browser on an isolated test server, over rows created for this take and deleted after it; not a live session, and nothing in it was spawned or sent to a real agent.</p>
+      <p class="reel-src">Receipts: <span><code>start-project.receipt.json</code></span>, <span><code>scan.json</code></span>, <span><code>scan.json</code></span>, <span><code>20261001T100409Z-job.txt</code></span>, <span><code>2026-10-01T10-05-45-247Z-showcase-webpack</code></span></p>
+      
+    </figcaption>
+  </figure>
+  <figure class="reel reel-wide" data-slot="sentinel-loop" data-state="recorded" data-source="fixture" data-kind="clip" id="reel-sentinel-loop" data-reveal>
+    <div class="reel-screen" style="--ar:16 / 9"><video class="reel-media" src="assets/showcase/sentinel-loop/sentinel-loop.webm" poster="assets/showcase/sentinel-loop/sentinel-loop-poster.jpg" muted loop playsinline controls preload="none" data-reel-play aria-label="Every task reviewed: findings, fixes, re-review"></video></div>
+    <figcaption class="reel-cap">
+      <div class="reel-meta"><span class="reel-label"><b>Fixture clip</b>, recorded <time datetime="2026-10-01T10:23:55.693Z">1 Oct 2026</time> · 0:40</span><span class="reel-hash" title="sha256 of the file as recorded">sha256 5a45f3c95f39</span><span class="reel-acts"><a class="reel-open" href="assets/showcase/sentinel-loop/replay/index.html" data-reel-step>Step through it</a><a class="reel-open" href="assets/showcase/sentinel-loop/sentinel-loop.webm">Open it alone</a></span></div>
+      <p class="reel-title">Every task reviewed: findings, fixes, re-review</p>
+      <p>The review register, then one finding's record and its thread: the code sentinel's finding, the fix, and the re-reviews that pass; then the agents grouped by computer. Fixture rows on an isolated test server: no reviewer ran, and the second computer is a fixture row.</p>
+      <p class="reel-note">fixture: the real app in a real browser on an isolated test server, over rows created for this take and deleted after it; not a live session, and nothing in it was spawned or sent to a real agent.</p>
+      <p class="reel-src">Receipts: <span><code>sentinel-loop.receipt.json</code></span>, <span><code>scan.json</code></span>, <span><code>scan.json</code></span>, <span><code>20261001T100409Z-job.txt</code></span>, <span><code>2026-10-01T10-05-45-247Z-showcase-webpack</code></span></p>
+      
+    </figcaption>
+  </figure>
+  <figure class="reel reel-wide" data-slot="split-computers" data-state="recorded" data-source="fixture" data-kind="clip" id="reel-split-computers" data-reveal>
+    <div class="reel-screen" style="--ar:16 / 9"><video class="reel-media" src="assets/showcase/split-computers/split-computers.webm" poster="assets/showcase/split-computers/split-computers-poster.jpg" muted loop playsinline controls preload="none" data-reel-play aria-label="Every computer you own: enrol, grant, split the work"></video></div>
+    <figcaption class="reel-cap">
+      <div class="reel-meta"><span class="reel-label"><b>Fixture clip</b>, recorded <time datetime="2026-10-01T02:19:03.129Z">1 Oct 2026</time> · 1:30</span><span class="reel-hash" title="sha256 of the file as recorded">sha256 fd8b3f8ffde7</span><span class="reel-acts"><a class="reel-open" href="assets/showcase/split-computers/replay/index.html" data-reel-step>Step through it</a><a class="reel-open" href="assets/showcase/split-computers/split-computers.webm">Open it alone</a></span></div>
+      <p class="reel-title">Every computer you own: enrol, grant, split the work</p>
+      <p>The Devices register, one computer's record and its grant editor, saved through the real grant door with a passkey step-up, then the network room's agents by computer. The enrolled computers and their sessions are fixture rows (the hub's own card reads this machine's hardware live); a session on a real second computer is not proven by this recording.</p>
+      <p class="reel-note">fixture: the real app in a real browser on an isolated test server, over rows created for this take and deleted after it; not a live session, and nothing in it was spawned or sent to a real agent.</p>
+      <p class="reel-src">Receipts: <span><code>scan.json</code></span>, <span><code>scan.json</code></span>, <span><code>20261001T014417Z-job.txt</code></span>, <span><code>2026-10-01T02-12-38-027Z-showcase_signed-webpack</code></span></p>
+      
+    </figcaption>
+  </figure></div>
+  </div>
+</section>
+
+<section class="sec alt" id="receipts" aria-labelledby="h-receipts">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Proof</p><h2 class="h2" id="h-receipts">What the repository’s own evidence says.</h2></div>
+      <div class="sec-intro"><p>Quoted from the audits and the code, each with the file it is written in.</p></div>
+    </header>
+    
+  <ol class="receipts">
+    <li class="receipt" data-reveal>
+      <div class="receipt-src"><span>The drone run, one brief through every room</span><code>docs/jpex/audit/2026-09-06-drone-e2e.md</code></div>
+      <blockquote>Nothing below is a fabricated artifact: every id is a row this run wrote</blockquote>
+    </li>
+    <li class="receipt" data-reveal>
+      <div class="receipt-src"><span>The node channel proof’s own output, three node processes on one computer</span><code>docs/design/evidence/2026-09-26-codex-goal/app-coverage/node-channel/06-two-node-proof.txt</code></div>
+      <pre>"revocation": {
+  "droppedFromChannelMs": 458,
+  "processExitMs": 732,
+  "exitCodeB": 3,</pre>
+    </li>
+    <li class="receipt" data-reveal>
+      <div class="receipt-src"><span>The approval gate, on why it is enforced at the server</span><code>apps/web/src/lib/approvals/physical-action.ts</code></div>
+      <blockquote>A safety property that holds on one surface is not a safety property; it is a coincidence of which page the operator opened.</blockquote>
+    </li>
+    <li class="receipt" data-reveal>
+      <div class="receipt-src"><span>The heartbeat thresholds</span><code>apps/web/src/lib/session-liveness/constants.ts</code></div>
+      <blockquote>Three canonical thresholds — all in milliseconds — chosen so the UI never shows contradictory state across pages</blockquote>
+    </li>
+    <li class="receipt" data-reveal>
+      <div class="receipt-src"><span>The repository’s rules for agents</span><code>CLAUDE.md</code></div>
+      <blockquote>A declared gate with no route behind it is the failure mode to look for.</blockquote>
+    </li>
+    <li class="receipt" data-reveal>
+      <div class="receipt-src"><span>The product brief, on honest refusal</span><code>PRODUCT.md</code></div>
+      <blockquote>A tool that cannot do something says so with the number or the reason, rather than returning a plausible value.</blockquote>
+    </li>
+    <li class="receipt" data-reveal>
+      <div class="receipt-src"><span>The model catalogue’s rules</span><code>CLAUDE.md</code></div>
+      <blockquote>A price not served is null, never 0.</blockquote>
+    </li>
+    <li class="receipt" data-reveal>
+      <div class="receipt-src"><span>The route audit, on what may be deleted</span><code>CLAUDE.md</code></div>
+      <blockquote>A static-analysis miss is not a dead route</blockquote>
+    </li>
+  </ol>
+  </div>
+</section>
+</main>
+
+  <nav class="handoff" aria-label="Next">
+    
+    <a class="handoff-next" href="run/install.html"><span class="cr"><span class="handoff-k">Next</span><b>Run it from source</b><span class="handoff-gist">The commands that start the web app on one computer.</span><span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+  </nav>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html" aria-label="Theioma, home"><span class="tmark" aria-hidden="true"><img src="assets/brand/theioma-orb.webp" alt="" width="96" height="96" decoding="async"></span><span>theioma</span></a>
+      <p>A supervised command centre for engineering with many agents, in software and in hardware. It runs from source on the computers you own.</p>
+      <a class="pill pill-primary pill-sm" href="run/install.html">Run it from source<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <div><p class="foot-k">Product</p><ul class="two"><li><a href="voice.html">Voice</a></li><li><a href="plan.html">Plan</a></li><li><a href="agents.html">Agents</a></li><li><a href="sentinels.html">Sentinels</a></li><li><a href="approvals.html">Approvals</a></li><li><a href="computers.html">Network / Computers</a></li><li><a href="build-lab.html">Build Lab</a></li><li><a href="memory.html">Memory & learning</a></li><li><a href="atlas.html">Atlas</a></li><li><a href="benchmarks.html">Benchmarks</a></li><li><a href="proof.html" aria-current="page">Proof</a></li><li><a href="run/status.html">Status</a></li></ul></div>
+      <div><p class="foot-k">Documentation</p><ul><li><a href="run/install.html">Install</a></li><li><a href="run/docs.html">Documentation map</a></li></ul></div>
+      <div><p class="foot-k">Project</p><ul><li><a href="about.html">About</a></li><li><a href="open-source.html">Open source</a></li><li><a href="run/changelog.html">Changelog</a></li></ul></div>
+    </nav>
+  </div>
+  <div class="wrap foot-legal">
+    <p>Apache License 2.0. Pre-release copy. Read the <a href="proof.html">Proof</a> page for tested scope and open gaps; release claim review is in progress.</p>
+    <p><a href="LICENCES.md">Font licences</a></p>
+  </div>
+  <p class="foot-word" aria-hidden="true">theioma</p>
+</footer>
+</body>
+</html>

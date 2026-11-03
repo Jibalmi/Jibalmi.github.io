@@ -1,0 +1,304 @@
+{
+ "title": "GoPro gimbal v2 (brushless)",
+ "units": "mm",
+ "explode_scale": 1.0,
+ "parts": {
+  "handle_shell_L": {
+   "label": "Handle shell, left half",
+   "explode": [
+    -0.062,
+    0.0,
+    0.0
+   ],
+   "group": "handle"
+  },
+  "handle_shell_R": {
+   "label": "Handle shell, right half",
+   "explode": [
+    0.062,
+    0.0,
+    0.0
+   ],
+   "group": "handle"
+  },
+  "grip_skin": {
+   "label": "Grip skin (ribbed TPU sleeve)",
+   "explode": [
+    0.0,
+    -0.07,
+    0.0
+   ],
+   "group": "handle"
+  },
+  "battery_cap": {
+   "label": "Battery door",
+   "explode": [
+    0.0,
+    -0.125,
+    0.0
+   ],
+   "group": "handle"
+  },
+  "battery": {
+   "label": "Battery 3S LiPo 850 mAh",
+   "explode": [
+    0.0,
+    -0.095,
+    0.0
+   ],
+   "group": "handle"
+  },
+  "trigger": {
+   "label": "Trigger (record / mode)",
+   "explode": [
+    0.0,
+    0.0,
+    0.04
+   ],
+   "group": "controls"
+  },
+  "thumb_pad": {
+   "label": "Thumb pad (control pad)",
+   "explode": [
+    0.0,
+    0.0,
+    -0.044
+   ],
+   "group": "controls"
+  },
+  "joystick": {
+   "label": "Joystick cap",
+   "explode": [
+    0.0,
+    0.0,
+    -0.066
+   ],
+   "group": "controls"
+  },
+  "accent_ring": {
+   "label": "Accent ring (the one colour)",
+   "explode": [
+    0.0,
+    0.022,
+    0.0
+   ],
+   "group": "handle"
+  },
+  "driver_yaw": {
+   "label": "Yaw FOC driver (SimpleFOC Mini)",
+   "explode": [
+    0.0,
+    0.004,
+    -0.09
+   ],
+   "group": "electronics"
+  },
+  "driver_roll": {
+   "label": "Roll FOC driver (SimpleFOC Mini)",
+   "explode": [
+    0.0,
+    0.014,
+    -0.09
+   ],
+   "group": "electronics"
+  },
+  "driver_pitch": {
+   "label": "Pitch FOC driver (SimpleFOC Mini)",
+   "explode": [
+    0.0,
+    0.024,
+    -0.09
+   ],
+   "group": "electronics"
+  },
+  "teensy": {
+   "label": "Teensy 4.0 (MCU)",
+   "explode": [
+    0.0,
+    0.034,
+    -0.09
+   ],
+   "group": "electronics"
+  },
+  "buck5v": {
+   "label": "5 V buck (Pololu D24V10F5)",
+   "explode": [
+    0.0,
+    0.044,
+    -0.09
+   ],
+   "group": "electronics"
+  },
+  "motor_yaw_stator": {
+   "label": "Yaw motor stator + encoder",
+   "explode": [
+    0.0,
+    -0.04,
+    0.0
+   ],
+   "group": "motors"
+  },
+  "motor_yaw_rotor": {
+   "label": "Yaw motor rotor bell",
+   "explode": [
+    0.0,
+    0.03,
+    0.0
+   ],
+   "group": "motors"
+  },
+  "motor_roll_stator": {
+   "label": "Roll motor stator + encoder",
+   "explode": [
+    0.0,
+    0.078,
+    -0.062
+   ],
+   "group": "motors"
+  },
+  "motor_roll_rotor": {
+   "label": "Roll motor rotor bell",
+   "explode": [
+    0.0,
+    0.078,
+    -0.014
+   ],
+   "group": "motors"
+  },
+  "motor_pitch_stator": {
+   "label": "Pitch motor stator + encoder",
+   "explode": [
+    -0.068,
+    0.078,
+    0.07
+   ],
+   "group": "motors"
+  },
+  "motor_pitch_rotor": {
+   "label": "Pitch motor rotor bell",
+   "explode": [
+    -0.04,
+    0.078,
+    0.07
+   ],
+   "group": "motors"
+  },
+  "yaw_arm": {
+   "label": "Yaw arm (CNC aluminium)",
+   "explode": [
+    0.0,
+    0.078,
+    0.0
+   ],
+   "group": "arm"
+  },
+  "roll_shroud": {
+   "label": "Roll motor shroud",
+   "explode": [
+    0.0,
+    0.078,
+    -0.088
+   ],
+   "group": "arm"
+  },
+  "pitch_shroud": {
+   "label": "Pitch motor shroud",
+   "explode": [
+    -0.094,
+    0.078,
+    0.07
+   ],
+   "group": "arm"
+  },
+  "roll_yoke": {
+   "label": "Roll yoke (CNC aluminium)",
+   "explode": [
+    0.0,
+    0.078,
+    0.07
+   ],
+   "group": "arm"
+  },
+  "bearing_r": {
+   "label": "Right pivot bearing MR115ZZ",
+   "explode": [
+    0.028,
+    0.078,
+    0.07
+   ],
+   "group": "arm"
+  },
+  "pivot_pin": {
+   "label": "Right pivot pin (5 mm)",
+   "explode": [
+    0.046,
+    0.078,
+    0.125
+   ],
+   "group": "cradle"
+  },
+  "pivot_cap": {
+   "label": "Pivot cap / roll balance mass",
+   "explode": [
+    0.066,
+    0.078,
+    0.07
+   ],
+   "group": "cradle"
+  },
+  "cradle": {
+   "label": "Camera cradle (quick-release jaws)",
+   "explode": [
+    0.0,
+    0.078,
+    0.125
+   ],
+   "group": "cradle"
+  },
+  "gopro": {
+   "label": "GoPro HERO4 Black",
+   "explode": [
+    0.0,
+    0.16,
+    0.125
+   ],
+   "group": "camera"
+  },
+  "gopro_lens": {
+   "label": "GoPro lens barrel",
+   "explode": [
+    0.0,
+    0.16,
+    0.165
+   ],
+   "group": "camera"
+  },
+  "imu": {
+   "label": "IMU board (ICM-42688-P)",
+   "explode": [
+    0.0,
+    0.19,
+    0.125
+   ],
+   "group": "electronics"
+  },
+  "qr_plate": {
+   "label": "Quick-release slide plate",
+   "explode": [
+    0.0,
+    0.118,
+    0.125
+   ],
+   "group": "cradle"
+  },
+  "lock_knob": {
+   "label": "Slide lock knob",
+   "explode": [
+    0.0,
+    0.078,
+    0.16
+   ],
+   "group": "cradle"
+  }
+ }
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%23050505%22/%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%226%22 fill=%22%23ff5b2e%22/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tez — Miguel Villax</title>
+<meta name="description" content="An open alternative to a hosted decision model. A local LLM reads the situation once and returns a typed decision with calibrated probabilities, with no token generation, as a Python package, command line tool and HTTP server with conformal abstention.">
+<link rel="canonical" href="https://jibalmi.github.io/work/tez.html">
+<meta property="og:title" content="Tez — Miguel Villax">
+<meta property="og:description" content="An open alternative to a hosted decision model. A local LLM reads the situation once and returns a typed decision with calibrated probabilities, with no token generation, as a Python package, command line tool and HTTP server with conformal abstention.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jibalmi.github.io/work/tez.html">
+
+<meta name="theme-color" content="#050505">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@200;300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Miguel Villax", "url": "https://jibalmi.github.io/", "sameAs": ["https://github.com/Jibalmi"], "jobTitle": "Engineer"}</script>
+</head>
+<body class="page-work">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap bar">
+  <a class="mark" href="../index.html" aria-label="Miguel Villax, home">Miguel Villax<i></i></a>
+  <nav aria-label="Main"><a href="../work.html" aria-current=page>Work</a><a href="../about.html">About</a><a class="ext" href="https://github.com/Jibalmi" rel="noopener">GitHub<span aria-hidden="true"> ↗</span></a></nav>
+</div></header>
+<main id="main">
+
+<article class="project">
+  <div class="wrap">
+    <nav class="crumb rv" aria-label="Breadcrumb"><a href="../work.html">Work</a><i>/</i>Software</nav>
+    <header class="project-h">
+      <p class="kicker rv">Software · Sep 2026 – present · Open source</p>
+      <h1 class="rv">Tez</h1>
+      <p class="lede rv">Typed decisions with calibrated confidence from one forward pass of a local model.</p>
+    </header>
+    <div class="p-hero rv"><div class="media photo fig-cover"><img src="../assets/figs/covers/cover_tez.jpg" alt="Tez" style="object-position:50% 50%"></div></div>
+    <ul class="stats"><li class="rv"><b>0.943</b><span>balanced accuracy on SemIf (reference 0.813)</span></li><li class="rv"><b>0.885</b><span>macro accuracy over 11 languages on MASSIVE (reference 0.524)</span></li><li class="rv"><b>0.794</b><span>typed decisions with a linear probe trained on the benchmark&#x27;s labels, frozen 4B model (zero-shot 0.704; hosted model&#x27;s published 0.727)</span></li><li class="rv"><b>45.5 ms</b><span>median from the decisive spoken word to the first action, on replayed recordings (95th percentile about 1.2 s)</span></li></ul>
+    <div class="project-cols">
+      <div class="project-text">
+        <p class="summary rv">An open alternative to a hosted decision model. A local LLM reads the situation once and returns a typed decision with calibrated probabilities, with no token generation, as a Python package, command line tool and HTTP server with conformal abstention.</p>
+        <section class="rv"><h2><i>01</i>Why it exists</h2><p>Most agent stacks ask a language model to write a decision out as text and then parse it. Tez asks a different question: given a fixed set of typed options, which one, and how sure? It reads the model's state in a single forward pass and turns it into calibrated probabilities. When it is not sure enough it abstains instead of guessing, and a person or a larger model takes over.</p></section><section class="rv"><h2><i>02</i>How it works</h2><p>The situation and its options go in once. Tez reads the answer from the frozen model's own signals at the option letters, calibrates the scores with a fitted temperature, and applies a conformal threshold that decides whether to act or hand over. No text is generated, which is why a streaming voice demo goes from the decisive spoken word to the first action in a median 45.5 ms, measured by replaying recorded recogniser output through the model (95th percentile about 1.2 s), not on a live microphone.</p><div class="figs"><figure class="fig img-fig fig-png wide rv"><a class="zoom" href="../assets/figs/tez/tez_pipeline.png" data-cap="One decision is a single forward pass of a frozen local model, a readout, a fitted temperature and a conformal gate that either acts or escalates; on typed decisions the gate acts on half the decisions at 0.853 accuracy."><img src="../assets/figs/tez/tez_pipeline.png" width="1800" height="990" alt="Flow diagram of the Tez pipeline from question to frozen LLM to readout to calibration to gate, branching to act or escalate, with the measured act rate." loading=lazy decoding=async></a><figcaption>One decision is a single forward pass of a frozen local model, a readout, a fitted temperature and a conformal gate that either acts or escalates; on typed decisions the gate acts on half the decisions at 0.853 accuracy.</figcaption></figure><figure class="fig img-fig fig-png wide rv"><a class="zoom" href="../assets/figs/tez/tez_latency.png" data-cap="With a re-decoding speech recogniser the first instant action lands a median 45.5 ms after the decisive word ends; the 95th percentile is about 1.2 seconds, so the tail is not met."><img src="../assets/figs/tez/tez_latency.png" width="1800" height="930" alt="Dot-and-range chart on a log axis: median and 95th percentile latency for perfect, Whisper re-decode and Nemotron recogniser paths, with the 50 ms target line." loading=lazy decoding=async></a><figcaption>With a re-decoding speech recogniser the first instant action lands a median 45.5 ms after the decisive word ends; the 95th percentile is about 1.2 seconds, so the tail is not met.</figcaption></figure></div></section><section class="rv"><h2><i>03</i>Results, in the open</h2><p>Every number was measured on one machine and comes with the script that produced it. The backbone is frozen; the typed-decisions row uses a small supervised linear probe, so it is not zero-training. On the SemIf benchmark the Gemma 4 12B backbone scored 0.943 balanced accuracy against a reference of 0.813. On the typed-decisions benchmark, Tez zero-shot scores 0.704, below the hosted model's published 0.727 (its own figure; that model was never run here), and 0.725 with four examples. A linear probe fitted on the benchmark's training labels, on a frozen Qwen3.5-4B, reached 0.794, ahead of an encoder fine-tuned on the same training split at 0.766.</p>
+<p>Across eleven languages on the MASSIVE intent benchmark, Tez reached 0.885 macro accuracy against 0.524 for the best trained encoder, and all eleven languages were above three times random. Khmer was the weakest, at 0.79 against 0.21 for the trained encoder.</p><div class="figs"><figure class="fig img-fig fig-png wide rv"><a class="zoom" href="../assets/figs/tez/tez_semif_typed.png" data-cap="Left: on SemIf&#x27;s benchmark, frozen Gemma 4 12B scores 0.943 balanced accuracy against 0.813 for SemIf&#x27;s 4B model. Right: on typed decisions a probe on a frozen 4B model scores 0.794, ahead of the fine-tuned encoder at 0.766 and Jev&#x27;s published 0.727; zero-shot Tez scores 0.704."><img src="../assets/figs/tez/tez_semif_typed.png" width="1800" height="930" alt="Two horizontal bar charts: SemIf balanced accuracy 0.943 versus 0.813, and typed-decision accuracy for six systems from 0.794 down to 0.362." loading=lazy decoding=async></a><figcaption>Left: on SemIf&#x27;s benchmark, frozen Gemma 4 12B scores 0.943 balanced accuracy against 0.813 for SemIf&#x27;s 4B model. Right: on typed decisions a probe on a frozen 4B model scores 0.794, ahead of the fine-tuned encoder at 0.766 and Jev&#x27;s published 0.727; zero-shot Tez scores 0.704.</figcaption></figure><figure class="fig img-fig fig-png wide rv"><a class="zoom" href="../assets/figs/tez/tez_massive.png" data-cap="Across 11 MASSIVE languages, frozen Tez averages 0.885 against 0.524 for the trained Laya-multilingual encoder; Khmer is the weakest at 79 against 21."><img src="../assets/figs/tez/tez_massive.png" width="1800" height="870" alt="Grouped bar chart of accuracy per language for Tez and Laya-multilingual with both macro averages marked." loading=lazy decoding=async></a><figcaption>Across 11 MASSIVE languages, frozen Tez averages 0.885 against 0.524 for the trained Laya-multilingual encoder; Khmer is the weakest at 79 against 21.</figcaption></figure></div></section><section class="rv"><h2><i>04</i>Where it loses</h2><p>The page would be dishonest without this. On the XNLI inference benchmark, a trained multilingual encoder is ahead of Tez, 0.794 against 0.699 macro. Tez also trails on AG News (0.880 against 0.948 for the best trained checkpoint) and is a point behind on one emotion set (0.540 against 0.550). Across all 18 comparisons with the best trained checkpoint, Tez is ahead on 9 and behind on 9, and nine of those tasks were in that model's training mix. A language model reading options is not the best tool for every classification job, and the benchmark suite says so in the same table as the wins.</p><div class="figs"><figure class="fig img-fig fig-png wide rv"><a class="zoom" href="../assets/figs/tez/tez_losses.png" data-cap="Tez against the best Laya checkpoint on identical rows: ahead on 9 of 18 comparisons, behind on 9, with the largest gaps on XNLI and on tasks Laya was trained on."><img src="../assets/figs/tez/tez_losses.png" width="1800" height="1410" alt="Sorted horizontal bar chart of accuracy gaps in percentage points, grey where Tez is behind and orange where ahead, with dots marking tasks in Laya&#x27;s training mix." loading=lazy decoding=async></a><figcaption>Tez against the best Laya checkpoint on identical rows: ahead on 9 of 18 comparisons, behind on 9, with the largest gaps on XNLI and on tasks Laya was trained on.</figcaption></figure></div></section><section class="rv"><h2><i>05</i>How it was checked</h2><p>The comparison models answered byte-identical rows on the same GPU, and the harness reproduces the published SemIf reference exactly (0.8132), though one comparison model did not reproduce its published scores on some application tasks; those rows are marked. Calibration is reported alongside accuracy: macro expected calibration error on the language set is 0.099 as shipped.</p></section>
+        <div class="actions rv"><a class="btn" href="https://github.com/Jibalmi/Tez" rel="noopener">Source code on GitHub ↗</a><a class="btn" href="https://jibalmi.github.io/Tez/" rel="noopener">Project site ↗</a></div>
+      </div>
+      <aside class="project-side">
+        <table class="spec rv"><caption>Specification</caption><tr><th>My part</th><td>Sole designer and developer</td></tr><tr><th>Started</th><td>September 2026</td></tr><tr><th>Model</th><td>Gemma 4 12B, frozen (Q8 for accuracy, Q4_K_M for the voice demo); the typed-decisions probe uses Qwen3.5-4B</td></tr><tr><th>Hardware</th><td>One RTX 5080 laptop GPU, 16 GB, llama.cpp</td></tr><tr><th>Interfaces</th><td>Python package, CLI, HTTP server, MCP</td></tr><tr><th>Licence</th><td>MIT</td></tr><tr><th>Repository</th><td>github.com/Jibalmi/Tez</td></tr></table>
+        <ul class="tags rv" aria-label="Tags"><li>Local LLM</li><li>Calibration</li><li>Python</li><li>Open source</li><li>Benchmarks</li></ul>
+      </aside>
+    </div>
+    <nav class="pn" aria-label="More projects">
+      <a href="theioma.html" rel="prev"><span>Previous</span>Theioma</a>
+      <a href="work-hub.html" rel="next"><span>Next</span>Local-first work hub</a>
+    </nav>
+  </div>
+</article>
+
+</main>
+<footer class="foot"><div class="wrap">
+  <div class="foot-top">
+    <p class="foot-big">Building something that needs both software <em>and</em> hardware?</p>
+    <p class="foot-contact"><a href="mailto:miguelvillaxip@gmail.com">miguelvillaxip@gmail.com</a><i>·</i><a href="https://github.com/Jibalmi" rel="noopener">github.com/Jibalmi</a></p>
+  </div>
+  <div class="foot-bot"><span>Miguel Villax · Neuchâtel, Switzerland</span><span>Drawings made in code. Built from JSON. 2026</span></div>
+</div></footer>
+<div class="lightbox" hidden><button type="button" class="lb-close" aria-label="Close">×</button><img alt=""><p class="lb-cap"></p></div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

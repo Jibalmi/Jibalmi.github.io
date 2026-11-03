@@ -1,0 +1,14 @@
+{"t": "header", "v": 1, "startedAtMs": 1790850235693, "droppedBeforeStart": 0, "droppedOverflow": 0, "viewport": {"width": 1280, "height": 720}}
+{"t": "event", "kind": "card", "tMs": 37, "route": "blank", "title": "Nothing is done until it is reviewed."}
+{"t": "event", "kind": "navigate", "tMs": 2766, "route": "/reviews", "status": 200}
+{"t": "event", "kind": "speech", "tMs": 2766, "route": "/reviews", "role": "caption", "text": "The review register: every reviewer's verdict on every task, by severity.", "frame": "001.jpg"}
+{"t": "event", "kind": "click", "tMs": 9351, "route": "/reviews", "selector": "the code sentinel's finding", "componentText": "Refund retries can charge twice: the idempotency key is saved after the charge c", "redacted": false, "bbox": {"x": 371.046875, "y": 315, "width": 686.4375, "height": 15}, "frame": "002.jpg"}
+{"t": "event", "kind": "speech", "tMs": 11186, "route": "/reviews/:id", "role": "caption", "text": "The code sentinel's finding (S2): a retried refund could charge twice. The lane fixed it.", "frame": "003.jpg"}
+{"t": "event", "kind": "speech", "tMs": 15024, "route": "/reviews/:id", "role": "caption", "text": "Its thread, newest first: the security finding, then the re-reviews that passed after the fix.", "frame": "004.jpg"}
+{"t": "event", "kind": "click", "tMs": 20033, "route": "/reviews/:id", "selector": "the code re-review", "componentText": "Re-review: the key is checked before the charge and a retry returns the stored r", "redacted": false, "bbox": {"x": 279, "y": 242.6875, "width": 666, "height": 16.796875}, "frame": "005.jpg"}
+{"t": "event", "kind": "speech", "tMs": 21272, "route": "/reviews/:id", "role": "caption", "text": "The re-review: the key is checked before the charge, and a test covers the retry. Pass.", "frame": "006.jpg"}
+{"t": "event", "kind": "navigate", "tMs": 26488, "route": "/network", "status": 200}
+{"t": "event", "kind": "speech", "tMs": 26488, "route": "/network", "role": "caption", "text": "Where each reviewer runs: agents grouped by the computer they run on.", "frame": "007.jpg"}
+{"t": "event", "kind": "speech", "tMs": 30580, "route": "/network", "role": "caption", "text": "Here the code sentinel is placed on rig-01 by a fixture row. A real second computer is not proven yet: remote dispatch is proven by an integration test with in-process node agents.", "frame": "008.jpg"}
+{"t": "event", "kind": "card", "tMs": 35578, "route": "/network", "title": "Every task, reviewed"}
+{"t": "end", "eventCount": 12, "endedAtMs": 1790850275709}

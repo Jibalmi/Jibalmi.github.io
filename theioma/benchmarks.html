@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Benchmark Room · Theioma</title>
+<meta name="description" content="How Theioma is measured: cost saved by the router, time to a done task, right first time, and what the reviewers raised, each with its value or what it waits on, its dates, its source and its caveat.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050505">
+<meta property="og:title" content="Benchmark Room · Theioma">
+<meta property="og:description" content="How Theioma is measured: cost saved by the router, time to a done task, right first time, and what the reviewers raised, each with its value or what it waits on, its dates, its source and its caveat.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22none%22%3E%0A%20%20%3Ctitle%3Etheioma%3C%2Ftitle%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22body%22%20x1%3D%220.15%22%20y1%3D%220.85%22%20x2%3D%220.85%22%20y2%3D%220.15%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%230a2a48%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220.55%22%20stop-color%3D%22%231d1f5c%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%233a1858%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22rim%22%20x1%3D%220.1%22%20y1%3D%220.9%22%20x2%3D%220.9%22%20y2%3D%220.1%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%233bcce3%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220.5%22%20stop-color%3D%22%236950b6%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23db72b4%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22glow%22%20cx%3D%220.71%22%20cy%3D%220.28%22%20r%3D%220.3%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f38db7%22%20stop-opacity%3D%220.95%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f38db7%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%3C%2FradialGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2215%22%20fill%3D%22url(%23body)%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2215%22%20fill%3D%22url(%23glow)%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2214.1%22%20stroke%3D%22url(%23rim)%22%20stroke-width%3D%221.8%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2215.2%22%20cy%3D%2216.4%22%20r%3D%221.1%22%20fill%3D%22%236a5cff%22%2F%3E%0A%3C%2Fsvg%3E">
+<link rel="stylesheet" href="assets/site.css">
+<script>(function(){var d=document.documentElement;if('IntersectionObserver' in window){d.classList.add('js');setTimeout(function(){if(!window.__site)d.classList.remove('js')},3000)}})()</script>
+<script src="assets/site.js" defer></script>
+<script src="assets/sphere.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="scrim" aria-hidden="true"></div>
+<div class="scrim scrim-paper" aria-hidden="true"></div>
+<header class="island">
+  <nav class="island-in" aria-label="Site">
+    <a class="brand" href="index.html" aria-label="Theioma, home"><span class="tmark" aria-hidden="true"><img src="assets/brand/theioma-orb.webp" alt="" width="96" height="96" decoding="async"></span><span>theioma</span></a>
+    <ul class="island-links">
+      <li><details class="nav-menu" data-menu><summary>Product<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="nav-panel"><ul><li><a href="voice.html"><b>Voice</b><span>Say it; the sphere answers.</span></a></li><li><a href="plan.html"><b>Plan</b><span>An interview becomes a plan.</span></a></li><li><a href="agents.html"><b>Agents</b><span>One per task, in a real terminal.</span></a></li><li><a href="sentinels.html"><b>Sentinels</b><span>Every code task reviewed twice.</span></a></li><li><a href="approvals.html"><b>Approvals</b><span>Nothing consequential without you.</span></a></li><li><a href="computers.html"><b>Network / Computers</b><span>Every computer you own, one team.</span></a></li><li><a href="build-lab.html"><b>Build Lab</b><span>Hardware, room by room.</span></a></li><li><a href="memory.html"><b>Memory & learning</b><span>It remembers, and it learns.</span></a></li><li><a href="atlas.html"><b>Atlas</b><span>Every other feature, and where it lives.</span></a></li></ul></div></details></li>
+      <li><a href="benchmarks.html" aria-current="page">Benchmarks</a></li><li><a href="proof.html">Proof</a></li><li><a href="run/docs.html">Docs</a></li><li><a href="open-source.html">Open source</a></li><li><a href="about.html">About</a></li>
+      
+    </ul>
+    <a class="pill pill-primary pill-sm" href="run/install.html">Run it<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <button class="burger" type="button" aria-label="Open the menu" aria-expanded="false" aria-controls="menu" data-burger><i></i><i></i></button>
+  </nav>
+</header>
+<div class="overlay" id="menu" aria-label="Menu" hidden>
+  <div class="overlay-in">
+    <div><p class="ov-k">Product</p><ol class="ov-main"><li><a href="voice.html" style="--i:0">Voice</a></li><li><a href="plan.html" style="--i:1">Plan</a></li><li><a href="agents.html" style="--i:2">Agents</a></li><li><a href="sentinels.html" style="--i:3">Sentinels</a></li><li><a href="approvals.html" style="--i:4">Approvals</a></li><li><a href="computers.html" style="--i:5">Network / Computers</a></li><li><a href="build-lab.html" style="--i:6">Build Lab</a></li><li><a href="memory.html" style="--i:7">Memory & learning</a></li><li><a href="atlas.html" style="--i:8">Atlas</a></li></ol></div>
+    <div><p class="ov-k">More</p><ol class="ov-sub"><li><a href="benchmarks.html" aria-current="page" style="--i:9">Benchmarks</a></li><li><a href="proof.html" style="--i:10">Proof</a></li><li><a href="run/docs.html" style="--i:11">Docs</a></li><li><a href="open-source.html" style="--i:12">Open source</a></li><li><a href="about.html" style="--i:13">About</a></li><li><a href="run/install.html" style="--i:14">Install</a></li><li><a href="run/status.html" style="--i:15">Status</a></li><li><a href="run/changelog.html" style="--i:16">Changelog</a></li></ol></div>
+    <a class="pill pill-primary" href="run/install.html" style="--i:18">Run it from source<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+  </div>
+</div>
+<main id="main">
+
+<section class="opener opener-plain" aria-labelledby="h-top">
+  <div class="wrap">
+    <ol class="chapters" aria-label="Related pages"><li><a href="benchmarks.html" aria-current="page">Benchmarks</a></li><li><a href="proof.html">Proof</a></li></ol>
+    <div class="opener-words">
+      <p class="eyebrow" data-reveal>Benchmarks</p>
+      <h1 class="h1" id="h-top" data-reveal style="--i:1">The Benchmark Room.</h1>
+      <p class="lede" data-reveal style="--i:2">What has been measured first: the speech model, a whole spoken turn and the node channel, each with its receipt. Then the three numbers that were asked for: what routing each call through the cost cascade saves, how long a task takes against one plain agent, and how often the work is right the first time. None of those three is ready to lead with. Each is below with its value, or with what it waits on, and every number carries its dates, its source and its caveat.</p>
+      <div class="actions" data-reveal style="--i:3"><a class="pill pill-primary" href="#tokens">Tokens for the price of Opus<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="pill pill-ghost" href="#measured">What has been measured<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="pill pill-ghost" href="#where">Where each number stands<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+      <p class="opener-aside" data-reveal style="--i:4">The journal’s numbers are read from <span><code>metrics.json</code></span>, generated from a read-only snapshot taken <time datetime="2026-09-30T19:45:00Z">30 Sep 2026, 19:45 UTC</time>. The app’s own figures (tokens for the price of Claude Opus 5.5, the catalogue coverage) are read from <span><code>readings.json</code></span>, each checked against its dated receipt. The others are read from the file each was measured in when this page is built, and name it. The site’s build fails when a number that reads as a metric, on any page, does not come from metrics.json.</p>
+    </div>
+    
+  </div>
+</section>
+
+<section class="sec" id="tokens" aria-labelledby="h-tokens">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Benchmarks</p><h2 class="h2" id="h-tokens">Tokens for the price of Claude Opus 5.5.</h2></div>
+      <div class="sec-intro"><p>What the operator asked of routing: how many tokens it serves for the list-price value it draws, against Claude Opus 5.5 alone, over the last seven and thirty days. Read from the running app, with its method; beside it, how much of the model catalogue has been tried at all.</p></div>
+    </header>
+    
+    <article class="metric wide" id="m-tokens-for-opus" data-reveal>
+      <header class="metric-head"><span class="mstate measured">measured · not a headline</span><h3 class="h3">Tokens for the price of Claude Opus 5.5</h3></header>
+      <dl class="metric-words">
+        <div><dt>What it is</dt><dd>How many tokens routing served for the list-price value it drew, against how many tokens that same value buys on Claude Opus 5.5 alone, as the app’s model scorecard computes it: the price Opus 5.5 lists for these tokens, type by type, divided by their recorded list-price value.</dd></div>
+        <div><dt>What it is not</dt><dd>Money spent or saved. Most of the work runs on included subscriptions and free routes: a subscription call counts at its list-price equivalent and a free or local call at zero. No plan publishes that its allowance follows list prices, so this is not a share of a subscription saved.</dd></div>
+        <div><dt>Why it is not a headline</dt><dd>It was read from the running app on one afternoon, over one operator’s own ledger, and it moves with the window: below one over the last seven days, because GPT-6-Astra lists above Opus 5.5, and above one over the last thirty.</dd></div>
+      </dl>
+      <div class="metric-data">
+        <table class="tbl mtbl">
+          
+          <thead><tr><th scope="col" class="v">Value</th><th scope="col">What it counts</th><th scope="col">Dates</th></tr></thead>
+          <tbody><tr><td class="v" data-th="Value"><data class="mv" value="0.91" data-metric="tokens-for-opus.numbers.multiple7d">0.91×</data></td><td data-th="What it counts">tokens served for each token the same list-price value buys on Claude Opus 5.5 alone, last 7 days</td><td class="d" data-th="Dates"><time datetime="2026-10-10T14:25:13.369Z">10 Oct 2026</time> to <time datetime="2026-10-17T14:25:13.369Z">17 Oct 2026</time></td></tr><tr><td class="v" data-th="Value"><data class="mv" value="18" data-metric="tokens-for-opus.numbers.served7d">18.0B</data></td><td data-th="What it counts">tokens served, last 7 days</td><td class="d" data-th="Dates"><time datetime="2026-10-10T14:25:13.369Z">10 Oct 2026</time> to <time datetime="2026-10-17T14:25:13.369Z">17 Oct 2026</time></td></tr><tr><td class="v" data-th="Value"><data class="mv" value="19.8" data-metric="tokens-for-opus.numbers.onOpus7d">19.8B</data></td><td data-th="What it counts">tokens the same list-price value buys on Claude Opus 5.5 alone, last 7 days</td><td class="d" data-th="Dates"><time datetime="2026-10-10T14:25:13.369Z">10 Oct 2026</time> to <time datetime="2026-10-17T14:25:13.369Z">17 Oct 2026</time></td></tr><tr><td class="v" data-th="Value"><data class="mv" value="1.06" data-metric="tokens-for-opus.numbers.multiple30d">1.06×</data></td><td data-th="What it counts">tokens served for each token the same list-price value buys on Claude Opus 5.5 alone, last 30 days</td><td class="d" data-th="Dates"><time datetime="2026-09-17T14:25:13.369Z">17 Sep 2026</time> to <time datetime="2026-10-17T14:25:13.369Z">17 Oct 2026</time></td></tr><tr><td class="v" data-th="Value"><data class="mv" value="35.2" data-metric="tokens-for-opus.numbers.served30d">35.2B</data></td><td data-th="What it counts">tokens served, last 30 days</td><td class="d" data-th="Dates"><time datetime="2026-09-17T14:25:13.369Z">17 Sep 2026</time> to <time datetime="2026-10-17T14:25:13.369Z">17 Oct 2026</time></td></tr><tr><td class="v" data-th="Value"><data class="mv" value="33.4" data-metric="tokens-for-opus.numbers.onOpus30d">33.4B</data></td><td data-th="What it counts">tokens the same list-price value buys on Claude Opus 5.5 alone, last 30 days</td><td class="d" data-th="Dates"><time datetime="2026-09-17T14:25:13.369Z">17 Sep 2026</time> to <time datetime="2026-10-17T14:25:13.369Z">17 Oct 2026</time></td></tr></tbody>
+        </table>
+        
+        <div class="mnote">
+          <p><b>Source</b>the model scorecard of the running app (/models/scorecard), read 2026-10-17 14:25 UTC</p>
+          <p><b>Caveat</b>List-price value, not money charged.</p><p><b>Caveat</b>At Claude Opus 5.5’s catalogue list price.</p><p><b>Caveat</b>Priced calls only; a call with no price is left out and counted.</p>
+        </div>
+        <p class="mread">A multiple above one means the same list-price value went further than Claude Opus 5.5 alone would have taken it; below one, not as far. Most of the work runs on included subscriptions and free routes, so these are list-price values, not money charged, and not a share of any plan’s allowance.</p><p class="mread">Read from the running app’s model scorecard: <span><code>2026-10-17-models-scorecard.txt</code></span>, the page’s words verbatim, with the method the app states. The figure is computed by <span><code>opus-multiple.ts</code></span>.</p></div>
+      
+    </article>
+    
+    <article class="metric" id="m-catalogue-coverage" data-reveal>
+      <header class="metric-head"><span class="mstate measured">measured · not a headline</span><h3 class="h3">Which catalogue models have been tried</h3></header>
+      <dl class="metric-words">
+        <div><dt>What it is</dt><dd>Of the live models in the catalogue (aliases left out), how many have ever served a call in the operator’s ledger, and why each of the others never has.</dd></div>
+        <div><dt>What it is not</dt><dd>A ranking of models, or a judgement of the ones never tried: a model with no data has simply never been asked.</dd></div>
+        <div><dt>Why it is not a headline</dt><dd>It counts one operator’s ledger, read from the running app on one afternoon.</dd></div>
+      </dl>
+      <div class="metric-data">
+        <table class="tbl mtbl">
+          <caption><time datetime="2026-04-23T08:15:59.376Z">23 Apr 2026</time> to <time datetime="2026-10-17T14:25:13.369Z">17 Oct 2026</time></caption>
+          <thead><tr><th scope="col" class="v">Value</th><th scope="col">What it counts</th></tr></thead>
+          <tbody><tr><td class="v" data-th="Value"><data class="mv" value="17" data-metric="catalogue-coverage.numbers.withData">17</data></td><td data-th="What it counts">catalogue models with at least one recorded call</td></tr><tr><td class="v" data-th="Value"><data class="mv" value="773" data-metric="catalogue-coverage.numbers.catalogue">773</data></td><td data-th="What it counts">live models in the catalogue, aliases left out</td></tr><tr><td class="v" data-th="Value"><data class="mv" value="72" data-metric="catalogue-coverage.numbers.noTools">72</data></td><td data-th="What it counts">never tried: no tool support</td></tr><tr><td class="v" data-th="Value"><data class="mv" value="52" data-metric="catalogue-coverage.numbers.noConnection">52</data></td><td data-th="What it counts">never tried: no enabled connection</td></tr><tr><td class="v" data-th="Value"><data class="mv" value="632" data-metric="catalogue-coverage.numbers.neverRouted">632</data></td><td data-th="What it counts">never tried: never routed</td></tr></tbody>
+        </table>
+        
+        <div class="mnote">
+          <p><b>Source</b>the model scorecard of the running app (/models/scorecard), read 2026-10-17 14:25 UTC</p>
+          <p><b>Caveat</b>The whole ledger, from its first recorded call.</p><p><b>Caveat</b>An agent needs tools, so these are not candidates.</p><p><b>Caveat</b>No provider connection that serves them is enabled.</p><p><b>Caveat</b>Reachable in principle; no task has been routed to them.</p><p><b>Caveat</b>The catalogue grows when it is refreshed; a refresh never makes a model routable by itself.</p>
+        </div><p class="mread">Read from the running app’s model scorecard: <span><code>2026-10-17-models-scorecard.txt</code></span>, the page’s words verbatim, with the method the app states. The figure is computed by <span><code>benchmark-read.ts</code></span>.</p></div>
+      
+    </article>
+  </div>
+</section>
+
+<section class="sec alt" id="measured" aria-labelledby="h-measured">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Benchmarks</p><h2 class="h2" id="h-measured">Measured, each from its own receipt.</h2></div>
+      <div class="sec-intro"><p>The speech model before and after its rewrite, a whole spoken turn through the app, and the node channel. Before and after are drawn to one scale and left side by side.</p></div>
+    </header>
+    
+    <p class="band-k" data-reveal>Voice</p>
+    <ol class="bcards">
+      
+      <li class="bc w7 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate measured">measured</span><span class="bc-area">Speech model</span></p>
+        <p class="bc-title">First audio from the speech model, before and after its rewrite</p>
+        
+        <div class="pair">
+          <div class="pair-row">
+            <span class="pair-k">p50</span>
+            <span class="pair-bars" aria-hidden="true"><i class="was" style="width:56.4%"></i><i class="now" style="width:33.1%"></i></span>
+            <span class="pair-v"><span class="was">262.0</span><span class="now">153.6<small>ms</small></span></span>
+          </div>
+          <div class="pair-row">
+            <span class="pair-k">p95</span>
+            <span class="pair-bars" aria-hidden="true"><i class="was" style="width:100.0%"></i><i class="now" style="width:65.5%"></i></span>
+            <span class="pair-v"><span class="was">464.5</span><span class="now">304.1<small>ms</small></span></span>
+          </div>
+          <p class="pair-key"><span class="was">Before</span><span class="now">After</span></p>
+        </div>
+        <p class="bc-sub">Kokoro on the RTX 5080: 330 paired requests, two voices, in one process; the same length and the same word error rate as before. This dated run times the model alone, not a whole turn. The source now defaults to <code>fp32-matmul</code>; it does not measure the running service.</p>
+        <p class="bc-foot"><time datetime="2026-10-04">4 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>b-kokoro-speed</code></span></p>
+      </div></li>
+      
+      <li class="bc w5 bz" data-reveal style="--i:1"><div class="cr">
+        <p class="bc-k"><span class="bstate measured">measured</span><span class="bc-area">Voice turn</span></p>
+        <p class="bc-title">A whole spoken turn through the app, at its best</p>
+        <p class="bc-num">8.2<span class="bc-unit">s, on the RTX 5080</span></p>
+        <div class="pair">
+          <div class="pair-row">
+            <span class="pair-k">turn</span>
+            <span class="pair-bars" aria-hidden="true"><i class="was" style="width:100.0%"></i><i class="now" style="width:35.3%"></i></span>
+            <span class="pair-v"><span class="was">23.1</span><span class="now">8.2<small>s</small></span></span>
+          </div>
+          <p class="pair-key"><span class="was">On the CPU</span><span class="now">On the RTX 5080</span></p>
+        </div>
+        <p class="bc-sub">Speech to text, the answer and its speech, through the app’s own routes. A turn under one second has not been measured on any path.</p>
+        <p class="bc-foot"><time datetime="2026-09-06">6 Sep 2026</time><span class="sep" aria-hidden="true">·</span><span><code>voice-e2e.md §8.1</code></span></p>
+      </div></li>
+      
+      <li class="bc w12 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate measured">measured</span><span class="bc-area">Voice budget</span></p>
+        <p class="bc-title">Where a turn’s time goes, stage by stage, against a 300&nbsp;ms target</p>
+        
+        <ol class="stages">
+          <li>
+            <span class="sg-l">The end of your turn, decided</span>
+            <span class="sg-bar" aria-hidden="true"><i style="width:37.12%"></i><b style="left:3.06%"></b></span>
+            <span class="sg-v"><b>1,455</b>&nbsp;ms</span>
+            <span class="sg-n">p95&nbsp;1,508&nbsp;ms · n 24 · its share 120&nbsp;ms</span>
+          </li>
+          <li>
+            <span class="sg-l">Speech to text, the final transcript</span>
+            <span class="sg-bar" aria-hidden="true"><i style="width:1.45%"></i><b style="left:0.51%"></b></span>
+            <span class="sg-v"><b>57</b>&nbsp;ms</span>
+            <span class="sg-n">p95&nbsp;88&nbsp;ms · n 105 · its share 20&nbsp;ms</span>
+          </li>
+          <li>
+            <span class="sg-l">The local model’s first output</span>
+            <span class="sg-bar" aria-hidden="true"><i style="width:100.00%"></i><b style="left:1.53%"></b></span>
+            <span class="sg-v"><b>3,920</b>&nbsp;ms</span>
+            <span class="sg-n">p95&nbsp;6,263&nbsp;ms · n 24 · its share 60&nbsp;ms</span>
+          </li>
+          <li>
+            <span class="sg-l">First audio of the first clause</span>
+            <span class="sg-bar" aria-hidden="true"><i style="width:4.59%"></i><b style="left:1.53%"></b></span>
+            <span class="sg-v"><b>180</b>&nbsp;ms</span>
+            <span class="sg-n">p95&nbsp;274&nbsp;ms · n 24 · its share 60&nbsp;ms</span>
+          </li>
+        </ol>
+        <p class="sg-key"><span class="bar">p50, all to one scale</span><span class="tick">its share of the 300&nbsp;ms target</span></p>
+        <p class="bc-sub">Each stage timed on its own, on synthetic speech, as the app ships it. Not measured yet: the phone path’s transcript, the route before the model, playback start. The 300&nbsp;ms is the operator’s target for first audio, not a measurement.</p>
+        <p class="bc-foot"><time datetime="2026-09-30">30 Sep 2026</time><span class="sep" aria-hidden="true">·</span><span><code>voice-latency budget.md</code></span></p>
+      </div></li>
+    </ol>
+    <p class="band-k" data-reveal>Computers and learning</p>
+    <ol class="bcards">
+      
+      <li class="bc w4 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate measured">measured</span><span class="bc-area">Computers</span></p>
+        <p class="bc-title">A revoked computer, dropped from the channel</p>
+        <p class="bc-num">458<span class="bc-unit">ms</span></p>
+        <p class="bc-sub">Its process exited with code 3 and the others kept working. Three node processes on one computer, not two machines.</p>
+        <p class="bc-foot"><time datetime="2026-09-29">29 Sep 2026</time><span class="sep" aria-hidden="true">·</span><span><code>06-two-node-proof.txt</code></span></p>
+      </div></li>
+      
+      <li class="bc w4 bz" data-reveal style="--i:1"><div class="cr">
+        <p class="bc-k"><span class="bstate measured">measured</span><span class="bc-area">Computers</span></p>
+        <p class="bc-title">A spawn sent to one computer, there and back</p>
+        <p class="bc-num">141<span class="bc-unit">ms</span></p>
+        <p class="bc-sub">It ran on that computer only. The same proof, on the same one computer.</p>
+        <p class="bc-foot"><time datetime="2026-09-29">29 Sep 2026</time><span class="sep" aria-hidden="true">·</span><span><code>06-two-node-proof.txt</code></span></p>
+      </div></li>
+      
+      <li class="bc w4 bz" data-reveal style="--i:2"><div class="cr">
+        <p class="bc-k"><span class="bstate ran">ran once</span><span class="bc-area">Learning</span></p>
+        <p class="bc-title">A local fine-tune, held to its evaluation gate</p>
+        <ul class="bc-kv"><li><span>The base model</span><b>309 of 319</b></li><li><span>With the adapter</span><b>310 of 319</b></li></ul>
+        <p class="bc-sub">Held-out answers right, one task class, Qwen3-4B. A gain of 0.0031 against a gate of 0.02, so the swap refused the adapter and nothing is served from it.</p>
+        <p class="bc-foot"><time datetime="2026-10-01">1 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>d2-train-serve</code></span></p>
+      </div></li>
+    </ol>
+  <h3 class="h3 sub-h" data-reveal>Every row, with its date and receipt.</h3>
+  
+  <div class="scroll-x" data-reveal>
+  <table class="tbl mtbl mx-tbl">
+    <thead><tr><th scope="col">Area</th><th scope="col">What was timed</th><th scope="col" class="v">Before</th><th scope="col" class="v">After, or the value</th><th scope="col" class="v">Sample</th><th scope="col">Date</th><th scope="col">Receipt</th></tr></thead>
+    <tbody><tr><td data-th="Area">Speech model</td><td data-th="What was timed">First audio, p50, both paths in one process</td><td class="v" data-th="Before">262.0&nbsp;ms</td><td class="v" data-th="After, or the value">153.6&nbsp;ms</td><td class="v" data-th="Sample">330</td><td class="d" data-th="Date"><time datetime="2026-10-04">4 Oct 2026</time></td><td data-th="Receipt"><span><code>b-kokoro-speed</code></span></td></tr><tr><td data-th="Area">Speech model</td><td data-th="What was timed">First audio, p95, both paths in one process</td><td class="v" data-th="Before">464.5&nbsp;ms</td><td class="v" data-th="After, or the value">304.1&nbsp;ms</td><td class="v" data-th="Sample">330</td><td class="d" data-th="Date"><time datetime="2026-10-04">4 Oct 2026</time></td><td data-th="Receipt"><span><code>b-kokoro-speed</code></span></td></tr><tr><td data-th="Area">Speech model</td><td data-th="What was timed">First audio, mean, both paths in one process</td><td class="v" data-th="Before">284.9&nbsp;ms</td><td class="v" data-th="After, or the value">174.6&nbsp;ms</td><td class="v" data-th="Sample">330</td><td class="d" data-th="Date"><time datetime="2026-10-04">4 Oct 2026</time></td><td data-th="Receipt"><span><code>b-kokoro-speed</code></span></td></tr><tr><td data-th="Area">Speech model</td><td data-th="What was timed">First audio of one spoken clause, p50</td><td class="v" data-th="Before">277.9&nbsp;ms</td><td class="v" data-th="After, or the value">155.7&nbsp;ms</td><td class="v" data-th="Sample">144</td><td class="d" data-th="Date"><time datetime="2026-10-04">4 Oct 2026</time></td><td data-th="Receipt"><span><code>b-kokoro-speed</code></span></td></tr><tr><td data-th="Area">Speech model</td><td data-th="What was timed">First audio through the sidecar’s own HTTP server, p50</td><td class="v" data-th="Before">257.7&nbsp;ms</td><td class="v" data-th="After, or the value">161.4&nbsp;ms</td><td class="v" data-th="Sample">110</td><td class="d" data-th="Date"><time datetime="2026-10-04">4 Oct 2026</time></td><td data-th="Receipt"><span><code>b-kokoro-speed</code></span></td></tr><tr><td data-th="Area">Speech model</td><td data-th="What was timed">First audio through the sidecar’s own HTTP server, p95</td><td class="v" data-th="Before">435.5&nbsp;ms</td><td class="v" data-th="After, or the value">230.1&nbsp;ms</td><td class="v" data-th="Sample">110</td><td class="d" data-th="Date"><time datetime="2026-10-04">4 Oct 2026</time></td><td data-th="Receipt"><span><code>b-kokoro-speed</code></span></td></tr><tr><td data-th="Area">Speech model</td><td data-th="What was timed">First audio of the long replies alone, p95</td><td class="v" data-th="Before">348.5&nbsp;ms</td><td class="v" data-th="After, or the value">373.1&nbsp;ms</td><td class="v" data-th="Sample">30</td><td class="d" data-th="Date"><time datetime="2026-10-04">4 Oct 2026</time></td><td data-th="Receipt"><span><code>b-kokoro-speed</code></span></td></tr><tr><td data-th="Area">Voice turn</td><td data-th="What was timed">A whole spoken turn through the app routes, at its best, on the RTX 5080</td><td class="v" data-th="Before"><span class="quiet">none</span></td><td class="v" data-th="After, or the value">8.2&nbsp;s</td><td class="v" data-th="Sample">one turn</td><td class="d" data-th="Date"><time datetime="2026-09-06">6 Sep 2026</time></td><td data-th="Receipt"><span><code>voice-e2e.md §8.1</code></span></td></tr><tr><td data-th="Area">Voice turn</td><td data-th="What was timed">The same turn on the CPU</td><td class="v" data-th="Before"><span class="quiet">none</span></td><td class="v" data-th="After, or the value">23.1&nbsp;s</td><td class="v" data-th="Sample">one turn</td><td class="d" data-th="Date"><time datetime="2026-09-06">6 Sep 2026</time></td><td data-th="Receipt"><span><code>voice-e2e.md §8.1</code></span></td></tr><tr><td data-th="Area">Voice turn</td><td data-th="What was timed">Request to the first audible frame, p50 (a short filler, not the answer)</td><td class="v" data-th="Before"><span class="quiet">none</span></td><td class="v" data-th="After, or the value">562&nbsp;ms</td><td class="v" data-th="Sample">five turns</td><td class="d" data-th="Date"><time datetime="2026-09-06">6 Sep 2026</time></td><td data-th="Receipt"><span><code>voice-e2e.md §8.2</code></span></td></tr><tr><td data-th="Area">Computers</td><td data-th="What was timed">A revoked computer dropped from the channel</td><td class="v" data-th="Before"><span class="quiet">none</span></td><td class="v" data-th="After, or the value">458&nbsp;ms</td><td class="v" data-th="Sample">one run</td><td class="d" data-th="Date"><time datetime="2026-09-29">29 Sep 2026</time></td><td data-th="Receipt"><span><code>06-two-node-proof.txt</code></span></td></tr><tr><td data-th="Area">Computers</td><td data-th="What was timed">Its node process exited, code 3</td><td class="v" data-th="Before"><span class="quiet">none</span></td><td class="v" data-th="After, or the value">732&nbsp;ms</td><td class="v" data-th="Sample">one run</td><td class="d" data-th="Date"><time datetime="2026-09-29">29 Sep 2026</time></td><td data-th="Receipt"><span><code>06-two-node-proof.txt</code></span></td></tr><tr><td data-th="Area">Computers</td><td data-th="What was timed">A spawn sent to one computer, there and back</td><td class="v" data-th="Before"><span class="quiet">none</span></td><td class="v" data-th="After, or the value">141&nbsp;ms</td><td class="v" data-th="Sample">one run</td><td class="d" data-th="Date"><time datetime="2026-09-29">29 Sep 2026</time></td><td data-th="Receipt"><span><code>06-two-node-proof.txt</code></span></td></tr></tbody>
+  </table>
+  </div>
+  <div class="mnote" data-reveal>
+    <p><b>Speech model</b>Both paths ran in the same process and the same run, 2 voices, 55 utterances each, 3 repetitions. The new path matched the old one’s length on every utterance and its word error rate on both voices (<span><code>quality.json</code></span>). The card was shared and warm during the run (72 to 84&nbsp;°C), so an idle card’s times are lower; both paths saw the same card. This dated comparison times the model alone, not a turn. The source now defaults to <code>fp32-matmul</code>; current service speed is not measured here (<span><code>server.py</code></span>).</p>
+    <p><b>Voice turn</b>Taken before the shared database was reported saturated that day; its state during the run was not measured, as the audit’s timing note says. No path through the app has been measured under one second.</p>
+    <p><b>Computers</b>Three node processes on one computer, each with its own device key. Two separate physical computers have not been measured.</p>
+  </div>
+  </div>
+</section>
+
+<section class="sec" id="where" aria-labelledby="h-where">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Benchmarks</p><h2 class="h2" id="h-where">Where each number stands.</h2></div>
+      <div class="sec-intro"><p>One shelf of samples, read left to right. Each carries its state, set by the data and never by hand: measured, counted from recorded history; not enough data, counted but below the floor a claim needs; pending, not run yet.</p></div>
+    </header>
+    
+  <ol class="shelf" data-reveal>
+    <li class="sample insufficient">
+      <span class="mstate insufficient">not enough data</span>
+      <a class="sample-title" href="#m-cost-saved-router">Cost saved by routing through the cost cascade</a>
+      <dl class="recipe">
+        <div><dt>Method</dt><dd>What the calls whose model the router chose would have cost had every one of them gone to the baseline model instead, at the same token counts and today’s list prices. <span>METHOD.md</span></dd></div>
+        <div><dt>Dates</dt><dd><time datetime="2026-09-25T03:34:15.927Z">25 Sep 2026</time> to <time datetime="2026-09-27T00:10:41.671Z">27 Sep 2026</time></dd></div>
+        <div><dt>Caveat</dt><dd>A counterfactual on recorded token counts at the catalogue’s list prices on one date: the same tokens re-priced, not a re-run.</dd></div>
+      </dl>
+    </li>
+    <li class="sample measured">
+      <span class="mstate measured">measured · not a headline</span>
+      <a class="sample-title" href="#m-cost-model-mix">The fleet’s model mix against one model for everything</a>
+      <dl class="recipe">
+        <div><dt>Method</dt><dd>Every call Theioma journaled, priced at its own model and again at each baseline model, from the same token counts. <span>METHOD.md</span></dd></div>
+        <div><dt>Dates</dt><dd><time datetime="2026-04-23T08:15:59.376Z">23 Apr 2026</time> to <time datetime="2026-09-30T09:48:07.701Z">30 Sep 2026</time></dd></div>
+        <div><dt>Caveat</dt><dd>A counterfactual on recorded token counts at the catalogue’s list prices on one date: the same tokens re-priced, not a re-run.</dd></div>
+      </dl>
+    </li>
+    <li class="sample pending">
+      <span class="mstate pending">pending · not run</span>
+      <a class="sample-title" href="#m-speed-build-time">Time to a done task: Theioma against one plain session</a>
+      <dl class="recipe">
+        <div><dt>Method</dt><dd>On the bench’s frozen task set, the geometric mean over tasks of (baseline median wall time ÷ Theioma median wall time). <span>METHOD.md</span></dd></div>
+        <div><dt>Dates</dt><dd>Not run, so no dates yet.</dd></div>
+        <div><dt>Caveat</dt><dd>A speed-up on tasks unlike the bench’s, or on a machine, model or quota other than the run’s.</dd></div>
+      </dl>
+    </li>
+    <li class="sample pending">
+      <span class="mstate pending">pending · not run</span>
+      <a class="sample-title" href="#m-one-shot-correctness">Right first time: hidden acceptance passes the first time the work is declared done</a>
+      <dl class="recipe">
+        <div><dt>Method</dt><dd>The share of runs whose hidden acceptance tests passed at the first declaration of done, per arm, paired by task and rep. <span>METHOD.md</span></dd></div>
+        <div><dt>Dates</dt><dd>Not run, so no dates yet.</dd></div>
+        <div><dt>Caveat</dt><dd>That the reviewers caused the difference by themselves: the Theioma arm also plans and routes.</dd></div>
+      </dl>
+    </li>
+    <li class="sample measured">
+      <span class="mstate measured">measured · counts only</span>
+      <a class="sample-title" href="#m-sentinel-findings-history">What the code, security and QA reviewers raised before a task was accepted</a>
+      <dl class="recipe">
+        <div><dt>Method</dt><dd>Counts from the review records the reviewers filed while tasks sat in the review chain, by severity, over the dated range. <span>METHOD.md</span></dd></div>
+        <div><dt>Dates</dt><dd><time datetime="2026-07-23T11:35:29.411Z">23 Jul 2026</time> to <time datetime="2026-08-24T12:18:51.293Z">24 Aug 2026</time></dd></div>
+        <div><dt>Caveat</dt><dd>Descriptive history from one operator’s projects; excluded test residue is counted in the receipt.</dd></div>
+      </dl>
+    </li>
+  </ol>
+  </div>
+</section>
+
+<section class="sec alt" id="cost" aria-labelledby="h-cost">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Benchmarks</p><h2 class="h2" id="h-cost">Cost saved by the router: not enough data yet.</h2></div>
+      <div class="sec-intro"><p>A session has recorded the model the router chose for it only since <time datetime="2026-09-24">24 September 2026</time>, and too few sessions carry that record yet to say what routing saves. The whole fleet’s mix of models is measured beside it; that mix is not the router’s doing.</p></div>
+    </header>
+    
+    <article class="metric with-reel" id="m-cost-saved-router" data-reveal>
+      <header class="metric-head"><span class="mstate insufficient">not enough data</span><h3 class="h3">Cost saved by routing through the cost cascade</h3></header>
+      <dl class="metric-words">
+        <div><dt>What it would be</dt><dd>What the calls whose model the router chose would have cost had every one of them gone to the baseline model instead, at the same token counts and today’s list prices.</dd></div>
+        <div><dt>What it would not be</dt><dd>Money taken off an invoice (the calls ran on a flat subscription), or what a different model would have needed to do the same work.</dd></div>
+        <div><dt>Why there is no number</dt><dd>6 sessions ran on a model the router chose (recorded since 2026-09-24), with 78 priced calls; a headline needs at least 30 sessions.</dd></div>
+      </dl>
+      <div class="metric-data">
+        <table class="tbl mtbl">
+          <caption><time datetime="2026-09-25T03:34:15.927Z">25 Sep 2026</time> to <time datetime="2026-09-27T00:10:41.671Z">27 Sep 2026</time></caption>
+          <thead><tr><th scope="col" class="v">Value</th><th scope="col">What it counts</th></tr></thead>
+          <tbody><tr><td class="v" data-th="Value"><data class="mv" value="6" data-metric="cost-saved-router.observed.routedSessions">6</data></td><td data-th="What it counts">sessions with a router-made model choice</td></tr><tr><td class="v" data-th="Value"><data class="mv" value="78" data-metric="cost-saved-router.observed.routedCalls">78</data></td><td data-th="What it counts">priced calls in those sessions</td></tr></tbody>
+        </table>
+        
+        <div class="mnote">
+          <p><b>Source</b>LLMCallEvent × Session.modelAssignment × ModelCatalogEntry, read only from theioma-pg (snapshot sha256 63311fde56c8…, <span><code>10-extract.json</code></span>)</p>
+          <p><b>Caveat</b>A counterfactual on recorded token counts at the catalogue’s list prices on one date: the same tokens re-priced, not a re-run. Every call ran on the Claude subscription, so no per-call money was charged; these are list-price equivalents.</p>
+        </div>
+        
+        <details class="mcmd"><summary>Recompute it from a read-only snapshot<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary><div class="code"><pre>npx tsx --tsconfig bench/metrics-bench/tsconfig.json bench/metrics-bench/bin/extract.ts --until &lt;UTC ISO&gt; --out &lt;evidence&gt;/receipts/10-snapshot.json.gz --receipt &lt;evidence&gt;/receipts/10-extract.json &amp;&amp;
+npx tsx --tsconfig bench/metrics-bench/tsconfig.json bench/metrics-bench/bin/compute.ts</pre></div></details></div>
+      <div class="metric-reel">
+  <figure class="reel reel-side" data-slot="bench-cost-saved-router" data-state="recorded" data-source="live" data-kind="replay" data-reveal>
+    <div class="reel-screen is-frame" style="--frame-h:420px"><iframe class="reel-media" src="assets/showcase/bench-cost-saved-router/bench-cost-saved-router.html?theme=dark" title="Cost saved by routing through the cost cascade" loading="lazy" sandbox="allow-scripts" data-reel-frame data-max="560"></iframe></div>
+    <figcaption class="reel-cap">
+      <div class="reel-meta"><span class="reel-label"><b>Live replay</b>, recorded <time datetime="2026-09-30T20:02:24Z">30 Sep 2026</time></span><span class="reel-hash" title="sha256 of the file as recorded">sha256 1508fd41466b</span><span class="reel-acts"><a class="reel-open" href="assets/showcase/bench-cost-saved-router/bench-cost-saved-router.html">Open it alone</a></span></div>
+      <p class="reel-title">Cost saved by routing through the cost cascade</p>
+      <p>The calls whose model the router chose, priced against one model for everything. Six sessions are too few for a claim, and the computation says so itself. Replayed from the run's saved output; the numbers are the ones metrics.json carries.</p>
+      <p class="reel-note">live: the lines are a real computation's saved output over a read-only snapshot of the recorded history; not a screen recording, and nothing is re-run when it plays.</p>
+      <p class="reel-src">Receipts: <span><code>20-compute-stdout.txt</code></span>, <span><code>metrics.json</code></span>, <span><code>METHOD.md</code></span></p>
+      
+    </figcaption>
+  </figure></div>
+    </article>
+    <article class="metric wide" id="m-cost-model-mix" data-reveal>
+      <header class="metric-head"><span class="mstate measured">measured · not a headline</span><h3 class="h3">The fleet’s model mix against one model for everything</h3></header>
+      <dl class="metric-words">
+        <div><dt>What it is</dt><dd>Every call Theioma journaled, priced at its own model and again at each baseline model, from the same token counts.</dd></div>
+        <div><dt>What it is not</dt><dd>A saving made by the router: most of these sessions predate the router’s recorded choices, and their models were set by spawn defaults, agent definitions and people. The sign depends on the baseline chosen.</dd></div>
+        <div><dt>Why it is not a headline</dt><dd>Not attributable to the router, and its sign flips with the baseline (METHOD.md §B.4).</dd></div>
+      </dl>
+      <div class="metric-data">
+        <div class="scroll-x">
+        <table class="tbl mtbl mix">
+          <thead><tr><th scope="col">Which calls</th><th scope="col" class="v">Calls</th><th scope="col">Dates</th><th scope="col" class="v">At their own models</th><th scope="col" class="v">The same tokens at one model</th><th scope="col" class="v">Own ÷ one model</th></tr></thead>
+          <tbody><tr><td data-th="Which calls">All priced calls, against Claude Opus 5.5</td><td class="v" data-th="Calls"><data class="mv" value="33435" data-metric="cost-model-mix.numbers.callsIncluded">33,435</data></td><td class="d" data-th="Dates"><time datetime="2026-04-23T08:15:59.376Z">23 Apr 2026</time> to <time datetime="2026-09-30T09:48:07.701Z">30 Sep 2026</time></td><td class="v" data-th="At their own models"><data class="mv" value="10696.88" data-metric="cost-model-mix.numbers.actualUsd">$10,696.88</data></td><td class="v" data-th="The same tokens at one model"><data class="mv" value="5803.25" data-metric="cost-model-mix.numbers.baselineUsd:claude-opus-5-5">$5,803.25</data></td><td class="v" data-th="Own ÷ one model"><data class="mv" value="1.8433" data-metric="cost-model-mix.numbers.ratio:claude-opus-5-5">1.843</data></td></tr><tr><td data-th="Which calls">All priced calls, against Claude Fable 5.1</td><td class="v" data-th="Calls"><data class="mv" value="33435" data-metric="cost-model-mix.numbers.callsIncluded">33,435</data></td><td class="d" data-th="Dates"><time datetime="2026-04-23T08:15:59.376Z">23 Apr 2026</time> to <time datetime="2026-09-30T09:48:07.701Z">30 Sep 2026</time></td><td class="v" data-th="At their own models"><data class="mv" value="10696.88" data-metric="cost-model-mix.numbers.actualUsd">$10,696.88</data></td><td class="v" data-th="The same tokens at one model"><data class="mv" value="11004.07" data-metric="cost-model-mix.numbers.baselineUsd:claude-fable-5-1">$11,004.07</data></td><td class="v" data-th="Own ÷ one model"><data class="mv" value="0.9721" data-metric="cost-model-mix.numbers.ratio:claude-fable-5-1">0.972</data></td></tr><tr><td data-th="Which calls">Calls since Claude Opus 5.5 was first used</td><td class="v" data-th="Calls"><data class="mv" value="4349" data-metric="cost-model-mix.numbers.callsSinceFirstSeen:claude-opus-5-5">4,349</data></td><td class="d" data-th="Dates"><time datetime="2026-09-23T07:05:51.868Z">23 Sep 2026</time> to <time datetime="2026-09-30T09:48:07.701Z">30 Sep 2026</time></td><td class="v" data-th="At their own models"><data class="mv" value="872.29" data-metric="cost-model-mix.numbers.actualUsdSinceFirstSeen:claude-opus-5-5">$872.29</data></td><td class="v" data-th="The same tokens at one model"><data class="mv" value="872.99" data-metric="cost-model-mix.numbers.baselineUsdSinceFirstSeen:claude-opus-5-5">$872.99</data></td><td class="v" data-th="Own ÷ one model"><data class="mv" value="0.9992" data-metric="cost-model-mix.numbers.ratioSinceFirstSeen:claude-opus-5-5">0.999</data></td></tr><tr><td data-th="Which calls">Calls since Claude Fable 5.1 was first used</td><td class="v" data-th="Calls"><data class="mv" value="15094" data-metric="cost-model-mix.numbers.callsSinceFirstSeen:claude-fable-5-1">15,094</data></td><td class="d" data-th="Dates"><time datetime="2026-09-02T16:55:25.389Z">2 Sep 2026</time> to <time datetime="2026-09-30T09:48:07.701Z">30 Sep 2026</time></td><td class="v" data-th="At their own models"><data class="mv" value="5420.67" data-metric="cost-model-mix.numbers.actualUsdSinceFirstSeen:claude-fable-5-1">$5,420.67</data></td><td class="v" data-th="The same tokens at one model"><data class="mv" value="5889.06" data-metric="cost-model-mix.numbers.baselineUsdSinceFirstSeen:claude-fable-5-1">$5,889.06</data></td><td class="v" data-th="Own ÷ one model"><data class="mv" value="0.9205" data-metric="cost-model-mix.numbers.ratioSinceFirstSeen:claude-fable-5-1">0.920</data></td></tr></tbody>
+        </table>
+        </div>
+        <p class="mread">A ratio above one means the recorded mix cost more, at list price, than one model for everything would have. Dollars are list-price equivalents at the catalogue’s prices on one date, not money charged.</p>
+        <table class="tbl mtbl">
+          <caption><time datetime="2026-04-23T08:15:59.376Z">23 Apr 2026</time> to <time datetime="2026-09-30T09:48:07.701Z">30 Sep 2026</time></caption>
+          <thead><tr><th scope="col" class="v">Value</th><th scope="col">What it counts</th></tr></thead>
+          <tbody><tr><td class="v" data-th="Value"><data class="mv" value="325" data-metric="cost-model-mix.numbers.sessions">325</data></td><td data-th="What it counts">sessions</td></tr><tr><td class="v" data-th="Value"><data class="mv" value="457" data-metric="cost-model-mix.numbers.callsExcluded">457</data></td><td data-th="What it counts">calls excluded (stub harness, synthetic, or no catalogue price), each counted by reason in the receipt</td></tr></tbody>
+        </table>
+        
+        <div class="mnote">
+          <p><b>Source</b>LLMCallEvent × Session.modelAssignment × ModelCatalogEntry, read only from theioma-pg (snapshot sha256 63311fde56c8…, <span><code>10-extract.json</code></span>)</p>
+          <p><b>Caveat</b>A counterfactual on recorded token counts at the catalogue’s list prices on one date: the same tokens re-priced, not a re-run. Every call ran on the Claude subscription, so no per-call money was charged; these are list-price equivalents.</p><p><b>Caveat</b>Only calls made on or after claude-opus-5-5’s first recorded call (2026-09-23T07:05:51.868Z), so every call compared was made while the baseline was available.</p><p><b>Caveat</b>Only calls made on or after claude-fable-5-1’s first recorded call (2026-09-02T16:55:25.389Z), so every call compared was made while the baseline was available.</p>
+        </div>
+        
+        <details class="mcmd"><summary>Recompute it from a read-only snapshot<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary><div class="code"><pre>npx tsx --tsconfig bench/metrics-bench/tsconfig.json bench/metrics-bench/bin/extract.ts --until &lt;UTC ISO&gt; --out &lt;evidence&gt;/receipts/10-snapshot.json.gz --receipt &lt;evidence&gt;/receipts/10-extract.json &amp;&amp;
+npx tsx --tsconfig bench/metrics-bench/tsconfig.json bench/metrics-bench/bin/compute.ts</pre></div></details>
+        <div class="metric-reel-wide">
+  <figure class="reel reel-side" data-slot="bench-cost-model-mix" data-state="recorded" data-source="live" data-kind="replay" data-reveal>
+    <div class="reel-screen is-frame" style="--frame-h:420px"><iframe class="reel-media" src="assets/showcase/bench-cost-model-mix/bench-cost-model-mix.html?theme=dark" title="The fleet's model mix against one model for everything" loading="lazy" sandbox="allow-scripts" data-reel-frame data-max="560"></iframe></div>
+    <figcaption class="reel-cap">
+      <div class="reel-meta"><span class="reel-label"><b>Live replay</b>, recorded <time datetime="2026-09-30T20:02:24Z">30 Sep 2026</time></span><span class="reel-hash" title="sha256 of the file as recorded">sha256 774a0c7845f1</span><span class="reel-acts"><a class="reel-open" href="assets/showcase/bench-cost-model-mix/bench-cost-model-mix.html">Open it alone</a></span></div>
+      <p class="reel-title">The fleet's model mix against one model for everything</p>
+      <p>The fleet's whole recorded model mix priced against one model for everything, computed over a read-only snapshot of the recorded calls. Measured, not a headline; list-price equivalents, not money charged. Replayed from the run's saved output; the numbers are the ones metrics.json carries.</p>
+      <p class="reel-note">live: the lines are a real computation's saved output over a read-only snapshot of the recorded history; not a screen recording, and nothing is re-run when it plays.</p>
+      <p class="reel-src">Receipts: <span><code>20-compute-stdout.txt</code></span>, <span><code>metrics.json</code></span>, <span><code>METHOD.md</code></span></p>
+      
+    </figcaption>
+  </figure></div></div>
+      
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="bench" aria-labelledby="h-bench">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Benchmarks</p><h2 class="h2" id="h-bench">Speed and right first time: one bench, not run yet.</h2></div>
+      <div class="sec-intro"><p>History cannot answer either question: no plain single-agent run was ever recorded on the same work. Both numbers come from one controlled bench, and a real run waits for the operator’s OK because it spends the operator’s Claude usage.</p></div>
+    </header>
+    
+  
+  <ol class="rlog" data-reveal>
+    <li><span class="rlog-at">two arms</span><p><b>The same task, twice.</b> One plain Claude Code session on Claude Opus 5.5, with no Theioma server, no router and no reviewer. Then the same prompt handed to Theioma’s project manager, which plans, spawns router-assigned workers and sends every task through the code, security and QA reviewers.</p><p class="src"><span>METHOD §D.1</span></p></li>
+    <li><span class="rlog-at">hidden tests</span><p><b>Hidden tests decide.</b> Each task is a defect this repository fixed red-first, and its hidden acceptance is that lane’s own test. Neither arm sees it before declaring the work done. A failure gets the same fix message in both arms, word for word.</p><p class="src"><span>METHOD §D.2</span></p></li>
+    <li><span class="rlog-at">rule first</span><p><b>The rule came first.</b> Right first time may lead only if McNemar’s exact test on the paired runs gives p&nbsp;&lt;&nbsp;0.05; speed only if its bootstrap interval over tasks excludes one. The tokens each arm spent are always shown beside the result.</p><p class="src"><span>METHOD §D.5</span></p></li>
+  </ol>
+  <div class="metric-pair">
+    <article class="metric with-reel" id="m-speed-build-time" data-reveal>
+      <header class="metric-head"><span class="mstate pending">pending · not run</span><h3 class="h3">Time to a done task: Theioma against one plain session</h3></header>
+      <dl class="metric-words">
+        <div><dt>What it will be</dt><dd>On the bench’s frozen task set, the geometric mean over tasks of (baseline median wall time ÷ Theioma median wall time).</dd></div>
+        <div><dt>What it will not be</dt><dd>A speed-up on tasks unlike the bench’s, or on a machine, model or quota other than the run’s.</dd></div>
+        <div><dt>Why there is no number</dt><dd>Not run: a real run spends the operator’s Claude usage and waits for the operator’s OK. The dry run proves the harness only (fixture numbers, never published).</dd></div>
+      </dl>
+      <div class="metric-data">
+        <div class="mabsent"><b>No number yet.</b><p>It is shown here once the bench has run and its result clears the rule above, which was fixed before any run. Until then this page prints nothing in its place. The run’s command, and what must be done before it may start, are in <span>METHOD §D.8</span>.</p></div></div>
+      <div class="metric-reel">
+  <figure class="reel reel-side pending" data-slot="bench-speed-build-time" data-state="pending" data-reveal>
+    <div class="reel-box">
+      <p class="reel-pending"><b>Recording pending</b>Time to a done task</p>
+      <p class="reel-will">The bench run that measures it: the same task, one plain session against Theioma.</p>
+      <p class="reel-reason">no run exists: the metric is pending (metrics-bench METHOD.md §D.8, a live bench run the operator starts); the harness's dry run prints fixture numbers, which are never shown</p>
+      <p class="reel-none">Nothing is shown in its place. The slot fills from the showcase manifest once the recording exists, labelled fixture or live with its date.</p>
+    </div>
+    
+  </figure></div>
+    </article>
+    <article class="metric with-reel" id="m-one-shot-correctness" data-reveal>
+      <header class="metric-head"><span class="mstate pending">pending · not run</span><h3 class="h3">Right first time: hidden acceptance passes the first time the work is declared done</h3></header>
+      <dl class="metric-words">
+        <div><dt>What it will be</dt><dd>The share of runs whose hidden acceptance tests passed at the first declaration of done, per arm, paired by task and rep.</dd></div>
+        <div><dt>What it will not be</dt><dd>That the reviewers caused the difference by themselves: the Theioma arm also plans and routes. Nor correctness beyond the acceptance tests.</dd></div>
+        <div><dt>Why there is no number</dt><dd>Not run: a real run spends the operator’s Claude usage and waits for the operator’s OK. The dry run proves the harness only (fixture numbers, never published).</dd></div>
+      </dl>
+      <div class="metric-data">
+        <div class="mabsent"><b>No number yet.</b><p>It is shown here once the bench has run and its result clears the rule above, which was fixed before any run. Until then this page prints nothing in its place. The run’s command, and what must be done before it may start, are in <span>METHOD §D.8</span>.</p></div></div>
+      <div class="metric-reel">
+  <figure class="reel reel-side pending" data-slot="bench-one-shot-correctness" data-state="pending" data-reveal>
+    <div class="reel-box">
+      <p class="reel-pending"><b>Recording pending</b>Right first time</p>
+      <p class="reel-will">The bench run that measures it: work declared done, then the hidden acceptance tests.</p>
+      <p class="reel-reason">no run exists: the metric is pending (metrics-bench METHOD.md §D.8, a live bench run the operator starts); the harness's dry run prints fixture numbers, which are never shown</p>
+      <p class="reel-none">Nothing is shown in its place. The slot fills from the showcase manifest once the recording exists, labelled fixture or live with its date.</p>
+    </div>
+    
+  </figure></div>
+    </article></div>
+  <h3 class="h3 sub-h">The bench, and what it still has to run.</h3>
+  
+  <div class="ledger" data-reveal>
+    <section><h3>Built and tested</h3><ol><li><span>The dry run plays fixture outcomes through the whole harness and reproduces byte for byte. Its numbers are fixtures and are never published.</span><span class="src"><span>receipt 31</span></span></li><li><span>The baseline arm’s live adapter is built: one plain session in its own worktree, with an empty MCP config.</span><span class="src"><span>the adapter</span></span></li><li><span>The statistics and the headline rules were written into the method before any run.</span><span class="src"><span>METHOD §D.5</span></span></li></ol></section>
+    <section class="open"><h3>Still to run</h3><ol><li><span>No live run: it waits for the operator’s OK.</span><span class="src"><span>METHOD §D.8</span></span></li><li><span>The task set is not curated yet: at least thirty defect replays from this repository’s red-first lanes.</span><span class="src"><span>METHOD §D.2</span></span></li><li><span>The Theioma arm’s live driver is not wired: it needs the fleet running to be checked.</span><span class="src"><span>the driver</span></span></li><li><span>Nothing separates the router from planning and review yet: that needs a third arm with the router pinned, which is not built.</span><span class="src"><span>METHOD §B.8</span></span></li></ol></section>
+  </div>
+  </div>
+</section>
+
+<section class="sec alt" id="reviews" aria-labelledby="h-reviews">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Benchmarks</p><h2 class="h2" id="h-reviews">What the reviewers raised: a record, not a result.</h2></div>
+      <div class="sec-intro"><p>Before a task is accepted, code, security and QA reviewers each file a verdict. These are the verdicts on record. They say what was found; they do not say the reviews made the work better, or what would have shipped without them.</p></div>
+    </header>
+    
+  <figure class="fig mfig" data-reveal aria-labelledby="fig1-name">
+    <div class="fig-head">
+      <div class="fig-title"><span class="fig-no">Figure 1</span><span class="fig-name" id="fig1-name"><data class="mv" value="84" data-metric="sentinel-findings-history.numbers.reviews">84</data> review records, by what each one said</span></div>
+      <span class="fig-no"><time datetime="2026-07-23T11:35:29.411Z">23 Jul 2026</time> to <time datetime="2026-08-24T12:18:51.293Z">24 Aug 2026</time></span>
+    </div>
+    <div class="mbar" aria-hidden="true"><span class="s1" style="--n:6" title="S1 findings (rejected, or failed three times)"></span><span class="s2" style="--n:45" title="S2 findings (changes requested)"></span><span class="s3" style="--n:11" title="S3 findings left open (warnings)"></span><span class="pass" style="--n:22" title="clean passes"></span></div>
+    <ol class="mkey"><li><i class="s1" aria-hidden="true"></i><data class="mv" value="6" data-metric="sentinel-findings-history.numbers.findingsS1">6</data><span>S1 findings (rejected, or failed three times)</span></li><li><i class="s2" aria-hidden="true"></i><data class="mv" value="45" data-metric="sentinel-findings-history.numbers.findingsS2">45</data><span>S2 findings (changes requested)</span></li><li><i class="s3" aria-hidden="true"></i><data class="mv" value="11" data-metric="sentinel-findings-history.numbers.findingsS3">11</data><span>S3 findings left open (warnings)</span></li><li><i class="pass" aria-hidden="true"></i><data class="mv" value="22" data-metric="sentinel-findings-history.numbers.passes">22</data><span>clean passes</span></li></ol>
+    <figcaption class="fig-cap"><p>Each record is one reviewer’s verdict on one task, filed while the task waited in the review chain: code, security and QA. A clean pass is a finding-free verdict; every other record is a finding at its severity.</p><p>Widths are to scale. Two projects, one operator.</p></figcaption>
+  </figure>
+    <article class="metric with-reel" id="m-sentinel-findings-history" data-reveal>
+      <header class="metric-head"><span class="mstate measured">measured · counts only</span><h3 class="h3">What the code, security and QA reviewers raised before a task was accepted</h3></header>
+      <dl class="metric-words">
+        <div><dt>What it is</dt><dd>Counts from the review records the reviewers filed while tasks sat in the review chain, by severity, over the dated range.</dd></div>
+        <div><dt>What it is not</dt><dd>A causal claim: it does not show that the reviewers made the work better, or that work without them would have shipped these findings.</dd></div>
+        <div><dt>How it may be read</dt><dd>Counts of recorded events, stated as counts with their range; no rate or causal claim.</dd></div>
+      </dl>
+      <div class="metric-data">
+        <table class="tbl mtbl">
+          <caption><time datetime="2026-07-23T11:35:29.411Z">23 Jul 2026</time> to <time datetime="2026-08-24T12:18:51.293Z">24 Aug 2026</time></caption>
+          <thead><tr><th scope="col" class="v">Value</th><th scope="col">What it counts</th></tr></thead>
+          <tbody><tr><td class="v" data-th="Value"><data class="mv" value="24" data-metric="sentinel-findings-history.numbers.tasksReviewed">24</data></td><td data-th="What it counts">tasks reviewed</td></tr><tr><td class="v" data-th="Value"><data class="mv" value="20" data-metric="sentinel-findings-history.numbers.tasksWithFinding">20</data></td><td data-th="What it counts">tasks with at least one finding</td></tr><tr><td class="v" data-th="Value"><data class="mv" value="5" data-metric="sentinel-findings-history.numbers.tasksCaughtThenPassed">5</data></td><td data-th="What it counts">tasks where a finding was followed by a pass from the same reviewer</td></tr></tbody>
+        </table>
+        
+        <div class="mnote">
+          <p><b>Source</b>ReviewRecord × Task × Project, read only from theioma-pg (snapshot sha256 63311fde56c8…, <span><code>10-extract.json</code></span>)</p>
+          <p><b>Caveat</b>Descriptive history from one operator’s projects; excluded test residue is counted in the receipt. No causal claim.</p>
+        </div>
+        
+        <details class="mcmd"><summary>Recompute it from a read-only snapshot<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary><div class="code"><pre>npx tsx --tsconfig bench/metrics-bench/tsconfig.json bench/metrics-bench/bin/extract.ts --until &lt;UTC ISO&gt; --out &lt;evidence&gt;/receipts/10-snapshot.json.gz --receipt &lt;evidence&gt;/receipts/10-extract.json &amp;&amp;
+npx tsx --tsconfig bench/metrics-bench/tsconfig.json bench/metrics-bench/bin/compute.ts</pre></div></details></div>
+      <div class="metric-reel">
+  <figure class="reel reel-side" data-slot="bench-sentinel-findings-history" data-state="recorded" data-source="live" data-kind="replay" data-reveal>
+    <div class="reel-screen is-frame" style="--frame-h:420px"><iframe class="reel-media" src="assets/showcase/bench-sentinel-findings-history/bench-sentinel-findings-history.html?theme=dark" title="What the code, security and QA reviewers raised before a task was accepted" loading="lazy" sandbox="allow-scripts" data-reel-frame data-max="560"></iframe></div>
+    <figcaption class="reel-cap">
+      <div class="reel-meta"><span class="reel-label"><b>Live replay</b>, recorded <time datetime="2026-09-30T20:02:24Z">30 Sep 2026</time></span><span class="reel-hash" title="sha256 of the file as recorded">sha256 f1f45c031afa</span><span class="reel-acts"><a class="reel-open" href="assets/showcase/bench-sentinel-findings-history/bench-sentinel-findings-history.html">Open it alone</a></span></div>
+      <p class="reel-title">What the code, security and QA reviewers raised before a task was accepted</p>
+      <p>What the code, security and QA reviewers raised, counted from the recorded review records: findings by severity, passes, and the tasks caught and then passed. Replayed from the run's saved output; the numbers are the ones metrics.json carries.</p>
+      <p class="reel-note">live: the lines are a real computation's saved output over a read-only snapshot of the recorded history; not a screen recording, and nothing is re-run when it plays.</p>
+      <p class="reel-src">Receipts: <span><code>20-compute-stdout.txt</code></span>, <span><code>metrics.json</code></span>, <span><code>METHOD.md</code></span></p>
+      
+    </figcaption>
+  </figure></div>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="unmeasured" aria-labelledby="h-unmeasured">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Benchmarks</p><h2 class="h2" id="h-unmeasured">The work the bench will measure, and what no metric measures yet.</h2></div>
+      <div class="sec-intro"><p>Recordings of the work itself, not measurements: a project started on one computer is what the time to a done task will time; the sentinel loop is what right first time will check; and no benchmark measures a split across computers yet, which is proven so far with three node processes on one computer.</p></div>
+    </header>
+    <div class="reel-trio">
+  <figure class="reel reel-side" data-slot="start-project" data-state="recorded" data-source="fixture" data-kind="clip" data-reveal>
+    <div class="reel-screen" style="--ar:16 / 9"><video class="reel-media" src="assets/showcase/start-project/start-project.webm" poster="assets/showcase/start-project/start-project-poster.jpg" muted loop playsinline controls preload="none" data-reel-play aria-label="Start a project: typed, then the interview"></video></div>
+    <figcaption class="reel-cap">
+      <div class="reel-meta"><span class="reel-label"><b>Fixture clip</b>, recorded <time datetime="2026-10-01T10:08:22.243Z">1 Oct 2026</time> · 1:52</span><span class="reel-hash" title="sha256 of the file as recorded">sha256 bb990bef3af0</span><span class="reel-acts"><a class="reel-open" href="assets/showcase/start-project/replay/index.html" data-reel-step>Step through it</a><a class="reel-open" href="assets/showcase/start-project/start-project.webm">Open it alone</a></span></div>
+      <p class="reel-title">Start a project: typed, then the interview</p>
+      <p>Mission Control's New project dialog, typed at human pace and submitted on an isolated test server. The orchestrator launch is switched off there (no Claude login) and the dialog's code-graph scan is blocked, which the dialog says. The interview then replays from a fixture transcript whose words are a real interview run through the product on 29 Sep 2026.</p>
+      <p class="reel-note">fixture: the real app in a real browser on an isolated test server, over rows created for this take and deleted after it; not a live session, and nothing in it was spawned or sent to a real agent.</p>
+      <p class="reel-src">Receipts: <span><code>start-project.receipt.json</code></span>, <span><code>scan.json</code></span>, <span><code>scan.json</code></span>, <span><code>20261001T100409Z-job.txt</code></span>, <span><code>2026-10-01T10-05-45-247Z-showcase-webpack</code></span></p>
+      <p>Measured by: time to a done task (pending).</p>
+    </figcaption>
+  </figure>
+  <figure class="reel reel-side" data-slot="sentinel-loop" data-state="recorded" data-source="fixture" data-kind="clip" data-reveal>
+    <div class="reel-screen" style="--ar:16 / 9"><video class="reel-media" src="assets/showcase/sentinel-loop/sentinel-loop.webm" poster="assets/showcase/sentinel-loop/sentinel-loop-poster.jpg" muted loop playsinline controls preload="none" data-reel-play aria-label="Every task reviewed: findings, fixes, re-review"></video></div>
+    <figcaption class="reel-cap">
+      <div class="reel-meta"><span class="reel-label"><b>Fixture clip</b>, recorded <time datetime="2026-10-01T10:23:55.693Z">1 Oct 2026</time> · 0:40</span><span class="reel-hash" title="sha256 of the file as recorded">sha256 5a45f3c95f39</span><span class="reel-acts"><a class="reel-open" href="assets/showcase/sentinel-loop/replay/index.html" data-reel-step>Step through it</a><a class="reel-open" href="assets/showcase/sentinel-loop/sentinel-loop.webm">Open it alone</a></span></div>
+      <p class="reel-title">Every task reviewed: findings, fixes, re-review</p>
+      <p>The review register, then one finding's record and its thread: the code sentinel's finding, the fix, and the re-reviews that pass; then the agents grouped by computer. Fixture rows on an isolated test server: no reviewer ran, and the second computer is a fixture row.</p>
+      <p class="reel-note">fixture: the real app in a real browser on an isolated test server, over rows created for this take and deleted after it; not a live session, and nothing in it was spawned or sent to a real agent.</p>
+      <p class="reel-src">Receipts: <span><code>sentinel-loop.receipt.json</code></span>, <span><code>scan.json</code></span>, <span><code>scan.json</code></span>, <span><code>20261001T100409Z-job.txt</code></span>, <span><code>2026-10-01T10-05-45-247Z-showcase-webpack</code></span></p>
+      <p>Measured by: right first time (pending).</p>
+    </figcaption>
+  </figure>
+  <figure class="reel reel-side" data-slot="split-computers" data-state="recorded" data-source="fixture" data-kind="clip" data-reveal>
+    <div class="reel-screen" style="--ar:16 / 9"><video class="reel-media" src="assets/showcase/split-computers/split-computers.webm" poster="assets/showcase/split-computers/split-computers-poster.jpg" muted loop playsinline controls preload="none" data-reel-play aria-label="Every computer you own: enrol, grant, split the work"></video></div>
+    <figcaption class="reel-cap">
+      <div class="reel-meta"><span class="reel-label"><b>Fixture clip</b>, recorded <time datetime="2026-10-01T02:19:03.129Z">1 Oct 2026</time> · 1:30</span><span class="reel-hash" title="sha256 of the file as recorded">sha256 fd8b3f8ffde7</span><span class="reel-acts"><a class="reel-open" href="assets/showcase/split-computers/replay/index.html" data-reel-step>Step through it</a><a class="reel-open" href="assets/showcase/split-computers/split-computers.webm">Open it alone</a></span></div>
+      <p class="reel-title">Every computer you own: enrol, grant, split the work</p>
+      <p>The Devices register, one computer's record and its grant editor, saved through the real grant door with a passkey step-up, then the network room's agents by computer. The enrolled computers and their sessions are fixture rows (the hub's own card reads this machine's hardware live); a session on a real second computer is not proven by this recording.</p>
+      <p class="reel-note">fixture: the real app in a real browser on an isolated test server, over rows created for this take and deleted after it; not a live session, and nothing in it was spawned or sent to a real agent.</p>
+      <p class="reel-src">Receipts: <span><code>scan.json</code></span>, <span><code>scan.json</code></span>, <span><code>20261001T014417Z-job.txt</code></span>, <span><code>2026-10-01T02-12-38-027Z-showcase_signed-webpack</code></span></p>
+      <p>Measured by: no metric yet.</p>
+    </figcaption>
+  </figure></div>
+  </div>
+</section>
+
+<section class="sec runit" id="start" aria-labelledby="h-start">
+  <div class="wrap">
+    <div class="runit-in" data-reveal>
+      <p class="eyebrow">Next step</p>
+      <h2 class="h3" id="h-start">Read how each number is made.</h2>
+      <p>The method, the bench and every receipt are in the repository. The history numbers recompute from a read-only snapshot; the bench numbers appear here only after a real run, never from its dry run.</p>
+      <div class="actions"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+  <nav class="handoff" aria-label="Next">
+    
+    <a class="handoff-next" href="run/install.html"><span class="cr"><span class="handoff-k">Next</span><b>Run it from source</b><span class="handoff-gist">The commands that start the web app on one computer.</span><span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+  </nav>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html" aria-label="Theioma, home"><span class="tmark" aria-hidden="true"><img src="assets/brand/theioma-orb.webp" alt="" width="96" height="96" decoding="async"></span><span>theioma</span></a>
+      <p>A supervised command centre for engineering with many agents, in software and in hardware. It runs from source on the computers you own.</p>
+      <a class="pill pill-primary pill-sm" href="run/install.html">Run it from source<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <div><p class="foot-k">Product</p><ul class="two"><li><a href="voice.html">Voice</a></li><li><a href="plan.html">Plan</a></li><li><a href="agents.html">Agents</a></li><li><a href="sentinels.html">Sentinels</a></li><li><a href="approvals.html">Approvals</a></li><li><a href="computers.html">Network / Computers</a></li><li><a href="build-lab.html">Build Lab</a></li><li><a href="memory.html">Memory & learning</a></li><li><a href="atlas.html">Atlas</a></li><li><a href="benchmarks.html" aria-current="page">Benchmarks</a></li><li><a href="proof.html">Proof</a></li><li><a href="run/status.html">Status</a></li></ul></div>
+      <div><p class="foot-k">Documentation</p><ul><li><a href="run/install.html">Install</a></li><li><a href="run/docs.html">Documentation map</a></li></ul></div>
+      <div><p class="foot-k">Project</p><ul><li><a href="about.html">About</a></li><li><a href="open-source.html">Open source</a></li><li><a href="run/changelog.html">Changelog</a></li></ul></div>
+    </nav>
+  </div>
+  <div class="wrap foot-legal">
+    <p>Apache License 2.0. Pre-release copy. Read the <a href="proof.html">Proof</a> page for tested scope and open gaps; release claim review is in progress.</p>
+    <p><a href="LICENCES.md">Font licences</a></p>
+  </div>
+  <p class="foot-word" aria-hidden="true">theioma</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agents · Theioma</title>
+<meta name="description" content="The plan becomes a team: a project manager, leads and stewards, and workers, each a real coding agent in its own terminal, started under a spawn rule the channel enforces and watched by a heartbeat every 30 seconds.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050505">
+<meta property="og:title" content="Agents · Theioma">
+<meta property="og:description" content="The plan becomes a team: a project manager, leads and stewards, and workers, each a real coding agent in its own terminal, started under a spawn rule the channel enforces and watched by a heartbeat every 30 seconds.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22none%22%3E%0A%20%20%3Ctitle%3Etheioma%3C%2Ftitle%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22body%22%20x1%3D%220.15%22%20y1%3D%220.85%22%20x2%3D%220.85%22%20y2%3D%220.15%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%230a2a48%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220.55%22%20stop-color%3D%22%231d1f5c%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%233a1858%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22rim%22%20x1%3D%220.1%22%20y1%3D%220.9%22%20x2%3D%220.9%22%20y2%3D%220.1%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%233bcce3%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220.5%22%20stop-color%3D%22%236950b6%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23db72b4%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22glow%22%20cx%3D%220.71%22%20cy%3D%220.28%22%20r%3D%220.3%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f38db7%22%20stop-opacity%3D%220.95%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f38db7%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%3C%2FradialGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2215%22%20fill%3D%22url(%23body)%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2215%22%20fill%3D%22url(%23glow)%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2214.1%22%20stroke%3D%22url(%23rim)%22%20stroke-width%3D%221.8%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2215.2%22%20cy%3D%2216.4%22%20r%3D%221.1%22%20fill%3D%22%236a5cff%22%2F%3E%0A%3C%2Fsvg%3E">
+<link rel="stylesheet" href="assets/site.css">
+<script>(function(){var d=document.documentElement;if('IntersectionObserver' in window){d.classList.add('js');setTimeout(function(){if(!window.__site)d.classList.remove('js')},3000)}})()</script>
+<script src="assets/site.js" defer></script>
+<script src="assets/sphere.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="scrim" aria-hidden="true"></div>
+<div class="scrim scrim-paper" aria-hidden="true"></div>
+<header class="island">
+  <nav class="island-in" aria-label="Site">
+    <a class="brand" href="index.html" aria-label="Theioma, home"><span class="tmark" aria-hidden="true"><img src="assets/brand/theioma-orb.webp" alt="" width="96" height="96" decoding="async"></span><span>theioma</span></a>
+    <ul class="island-links">
+      <li><details class="nav-menu" data-menu><summary data-current>Product<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="nav-panel"><ul><li><a href="voice.html"><b>Voice</b><span>Say it; the sphere answers.</span></a></li><li><a href="plan.html"><b>Plan</b><span>An interview becomes a plan.</span></a></li><li><a href="agents.html" aria-current="page"><b>Agents</b><span>One per task, in a real terminal.</span></a></li><li><a href="sentinels.html"><b>Sentinels</b><span>Every code task reviewed twice.</span></a></li><li><a href="approvals.html"><b>Approvals</b><span>Nothing consequential without you.</span></a></li><li><a href="computers.html"><b>Network / Computers</b><span>Every computer you own, one team.</span></a></li><li><a href="build-lab.html"><b>Build Lab</b><span>Hardware, room by room.</span></a></li><li><a href="memory.html"><b>Memory & learning</b><span>It remembers, and it learns.</span></a></li><li><a href="atlas.html"><b>Atlas</b><span>Every other feature, and where it lives.</span></a></li></ul></div></details></li>
+      <li><a href="benchmarks.html">Benchmarks</a></li><li><a href="proof.html">Proof</a></li><li><a href="run/docs.html">Docs</a></li><li><a href="open-source.html">Open source</a></li><li><a href="about.html">About</a></li>
+      
+    </ul>
+    <a class="pill pill-primary pill-sm" href="run/install.html">Run it<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <button class="burger" type="button" aria-label="Open the menu" aria-expanded="false" aria-controls="menu" data-burger><i></i><i></i></button>
+  </nav>
+</header>
+<div class="overlay" id="menu" aria-label="Menu" hidden>
+  <div class="overlay-in">
+    <div><p class="ov-k">Product</p><ol class="ov-main"><li><a href="voice.html" style="--i:0">Voice</a></li><li><a href="plan.html" style="--i:1">Plan</a></li><li><a href="agents.html" aria-current="page" style="--i:2">Agents</a></li><li><a href="sentinels.html" style="--i:3">Sentinels</a></li><li><a href="approvals.html" style="--i:4">Approvals</a></li><li><a href="computers.html" style="--i:5">Network / Computers</a></li><li><a href="build-lab.html" style="--i:6">Build Lab</a></li><li><a href="memory.html" style="--i:7">Memory & learning</a></li><li><a href="atlas.html" style="--i:8">Atlas</a></li></ol></div>
+    <div><p class="ov-k">More</p><ol class="ov-sub"><li><a href="benchmarks.html" style="--i:9">Benchmarks</a></li><li><a href="proof.html" style="--i:10">Proof</a></li><li><a href="run/docs.html" style="--i:11">Docs</a></li><li><a href="open-source.html" style="--i:12">Open source</a></li><li><a href="about.html" style="--i:13">About</a></li><li><a href="run/install.html" style="--i:14">Install</a></li><li><a href="run/status.html" style="--i:15">Status</a></li><li><a href="run/changelog.html" style="--i:16">Changelog</a></li></ol></div>
+    <a class="pill pill-primary" href="run/install.html" style="--i:18">Run it from source<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+  </div>
+</div>
+<main id="main">
+
+<section class="opener" aria-labelledby="h-top">
+  <div class="wrap">
+    <ol class="chapters" aria-label="Product pages"><li><a href="voice.html">Voice</a></li><li><a href="plan.html">Plan</a></li><li><a href="agents.html" aria-current="page">Agents</a></li><li><a href="sentinels.html">Sentinels</a></li><li><a href="approvals.html">Approvals</a></li><li><a href="computers.html">Computers</a></li><li><a href="build-lab.html">Build Lab</a></li><li><a href="memory.html">Memory</a></li><li><a href="atlas.html">Atlas</a></li></ol>
+    <div class="opener-words">
+      <p class="eyebrow" data-reveal>Product · Agents</p>
+      <h1 class="h1" id="h-top" data-reveal style="--i:1">Every task gets its own agent, in a real terminal.</h1>
+      <p class="lede" data-reveal style="--i:2">One master orchestrator, a project manager per project, leads and room stewards, and workers. Claude Code, Codex and other agents run in real terminals; who may start whom is enforced by the channel, not asked of the model.</p>
+      <div class="actions" data-reveal style="--i:3"><a class="pill pill-primary" href="sentinels.html">Then the sentinels<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="pill pill-ghost" href="#harness">Which agents<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+      
+    </div>
+    <div class="opener-media" data-reveal style="--i:4">
+  <figure class="fig" data-reveal="fig" aria-labelledby="fig1-name">
+    <div class="fig-head">
+      <div class="fig-title"><span class="fig-no">Figure 1</span><span class="fig-name" id="fig1-name">Who may start whom</span></div>
+      
+    </div>
+    <div class="fig-body"><svg class="figsvg figsvg-wide" viewBox="0 0 960 560" role="img" aria-labelledby="p5-1-wide-t p5-1-wide-d"><title id="p5-1-wide-t">Who may start whom</title><desc id="p5-1-wide-d">You give the master orchestrator a goal. It interviews you, writes the plan, and spawns a project manager for software. For a machine it spawns an engineering project manager, which runs the design method one room steward per stage. A project manager spawns leads: domain leads such as backend and frontend, or one room steward per hardware stage. A lead spawns workers. A worker spawns nothing. Any agent that needs a decision files an approval request, and it waits for you.</desc><g class="node" data-node="you"><rect class="card" x="282" y="20" width="220" height="57" rx="12"/><text class="t" x="296" y="46">You</text><text class="s q" x="488" y="46" text-anchor="end">desk or phone</text><text class="l" x="296" y="64">a goal, and every decision</text></g><g class="node" data-node="mo"><rect class="card ink" x="242" y="118" width="300" height="75" rx="12"/><text class="t inv" x="256" y="144">Master orchestrator</text><text class="l inv" x="256" y="162">interviews you, writes the plan</text><text class="m inv" x="256" y="179">spawns a PM or a lead</text></g><g class="link"><path class="e" d="M392 77 C392 97.5 392 97.5 392 118"/><circle class="dot" cx="392" cy="77" r="2.6"/><circle class="dot" cx="392" cy="118" r="2.6"/></g><g class="node" data-node="pm"><rect class="card" x="40" y="236" width="300" height="75" rx="12"/><text class="t" x="54" y="262">Project manager</text><text class="s q" x="326" y="262" text-anchor="end">software</text><text class="m" x="54" y="279">project-manager</text><text class="m" x="54" y="297">spawns leads</text></g><g class="node" data-node="epm"><rect class="card" x="444" y="236" width="316" height="75" rx="12"/><text class="t" x="458" y="262">Engineering PM</text><text class="s q" x="746" y="262" text-anchor="end">a machine</text><text class="m" x="458" y="279">engineering-project-manager</text><text class="m" x="458" y="297">one room steward per stage</text></g><g class="link"><path class="e" d="M302 193 C302 214.5 190 214.5 190 236"/><circle class="dot" cx="302" cy="193" r="2.6"/><circle class="dot" cx="190" cy="236" r="2.6"/></g><g class="link"><path class="e" d="M482 193 C482 214.5 602 214.5 602 236"/><circle class="dot" cx="482" cy="193" r="2.6"/><circle class="dot" cx="602" cy="236" r="2.6"/></g><g class="band"><rect class="bandbg" x="12" y="336" width="766" height="102" rx="18"/><text class="h" x="28" y="360">Leads: spawn workers</text></g><g class="node" data-node="l0"><rect class="card" x="28" y="372" width="176" height="57" rx="12"/><text class="t" x="42" y="398">Backend lead</text><text class="m" x="42" y="415">backend-lead</text></g><g class="node" data-node="l1"><rect class="card" x="214" y="372" width="176" height="57" rx="12"/><text class="t" x="228" y="398">Frontend lead</text><text class="m" x="228" y="415">frontend-lead</text></g><g class="node" data-node="l2"><rect class="card" x="400" y="372" width="176" height="57" rx="12"/><text class="t" x="414" y="398">CAD Studio steward</text><text class="m" x="414" y="415">cad-studio-steward</text></g><g class="node" data-node="l3"><rect class="card" x="586" y="372" width="176" height="57" rx="12"/><text class="t" x="600" y="398">Sim Bay steward</text><text class="m" x="600" y="415">sim-bay-steward</text></g><g class="link"><path class="e" d="M115.9 311 C115.9 341.5 116 341.5 116 372"/><circle class="dot" cx="115.9" cy="311" r="2.6"/><circle class="dot" cx="116" cy="372" r="2.6"/></g><g class="link"><path class="e" d="M301.9 311 C301.9 341.5 302 341.5 302 372"/><circle class="dot" cx="301.9" cy="311" r="2.6"/><circle class="dot" cx="302" cy="372" r="2.6"/></g><g class="link"><path class="e" d="M490.1 311 C490.1 341.5 488 341.5 488 372"/><circle class="dot" cx="490.1" cy="311" r="2.6"/><circle class="dot" cx="488" cy="372" r="2.6"/></g><g class="link"><path class="e" d="M675.9 311 C675.9 341.5 674 341.5 674 372"/><circle class="dot" cx="675.9" cy="311" r="2.6"/><circle class="dot" cx="674" cy="372" r="2.6"/></g><g class="band"><rect class="bandbg" x="12" y="450" width="766" height="102" rx="18"/><text class="h" x="28" y="474">Workers: spawn nothing</text></g><g class="node" data-node="w0"><rect class="card" x="28" y="486" width="176" height="55" rx="12"/><text class="t" x="42" y="512">route-handler</text><text class="s" x="42" y="529">writes API routes</text></g><g class="node" data-node="w1"><rect class="card" x="214" y="486" width="176" height="55" rx="12"/><text class="t" x="228" y="512">unit-test-writer</text><text class="s" x="228" y="529">writes the tests</text></g><g class="node" data-node="w2"><rect class="card" x="400" y="486" width="176" height="55" rx="12"/><text class="t" x="414" y="512">cad-part-worker</text><text class="s" x="414" y="529">owns one printed part</text></g><g class="node" data-node="w3"><rect class="card" x="586" y="486" width="176" height="55" rx="12"/><text class="t" x="600" y="512">fea-runner</text><text class="s" x="600" y="529">structural FEA</text></g><g class="link"><path class="e" d="M116 429 C116 457.5 116 457.5 116 486"/><circle class="dot" cx="116" cy="429" r="2.6"/><circle class="dot" cx="116" cy="486" r="2.6"/></g><g class="link"><path class="e" d="M302 429 C302 457.5 302 457.5 302 486"/><circle class="dot" cx="302" cy="429" r="2.6"/><circle class="dot" cx="302" cy="486" r="2.6"/></g><g class="link"><path class="e" d="M488 429 C488 457.5 488 457.5 488 486"/><circle class="dot" cx="488" cy="429" r="2.6"/><circle class="dot" cx="488" cy="486" r="2.6"/></g><g class="link"><path class="e" d="M674 429 C674 457.5 674 457.5 674 486"/><circle class="dot" cx="674" cy="429" r="2.6"/><circle class="dot" cx="674" cy="486" r="2.6"/></g><g class="link"><path class="e acc" d="M502 48.5 C686 48.5 686 48.5 870 48.5"/></g><g class="link"><path class="e acc" d="M870 48.5 L870 495.5 Q870 513.5 852 513.5 L762 513.5"/></g><circle class="dot acc" cx="502" cy="48.5" r="2.6"/><circle class="dot acc" cx="762" cy="513.5" r="2.6"/><g class="pill"><rect class="pillbg" x="807.5" y="252" width="125" height="20" rx="10"/><text class="p acc" x="870" y="265.8" text-anchor="middle">approval request</text></g></svg><svg class="figsvg figsvg-narrow" viewBox="0 0 360 842" role="img" aria-labelledby="p5-1-narrow-t p5-1-narrow-d"><title id="p5-1-narrow-t">Who may start whom</title><desc id="p5-1-narrow-d">You give the master orchestrator a goal. It interviews you, writes the plan, and spawns a project manager for software. For a machine it spawns an engineering project manager, which runs the design method one room steward per stage. A project manager spawns leads: domain leads such as backend and frontend, or one room steward per hardware stage. A lead spawns workers. A worker spawns nothing. Any agent that needs a decision files an approval request, and it waits for you.</desc><g class="band"><rect class="bandbg" x="8" y="12" width="344" height="180" rx="18"/></g><g class="node" data-node="you"><rect class="card" x="24" y="28" width="312" height="57" rx="12"/><text class="t" x="38" y="54">You</text><text class="s q" x="322" y="54" text-anchor="end">desk or phone</text><text class="l" x="38" y="72">a goal, and every decision</text></g><g class="node" data-node="mo"><rect class="card ink" x="24" y="103" width="312" height="75" rx="12"/><text class="t inv" x="38" y="129">Master orchestrator</text><text class="l inv" x="38" y="147">interviews you, writes the plan</text><text class="m inv" x="38" y="164">spawns a PM or a lead</text></g><g class="link"><path class="e" d="M311 85 C311 94 311 94 311 103"/><circle class="dot" cx="311" cy="85" r="2.6"/><circle class="dot" cx="311" cy="103" r="2.6"/></g><g class="band"><rect class="bandbg" x="8" y="204" width="344" height="186" rx="18"/><text class="h" x="24" y="228">Project managers</text></g><g class="node" data-node="pm"><rect class="card" x="24" y="244" width="312" height="57" rx="12"/><text class="t" x="38" y="270">Project manager</text><text class="s q" x="322" y="270" text-anchor="end">software</text><text class="m" x="38" y="287">project-manager</text></g><g class="link"><path class="e" d="M311 178 C311 211 311 211 311 244"/><circle class="dot" cx="311" cy="178" r="2.6"/><circle class="dot" cx="311" cy="244" r="2.6"/></g><g class="node" data-node="epm"><rect class="card" x="24" y="319" width="312" height="57" rx="12"/><text class="t" x="38" y="345">Engineering PM</text><text class="s q" x="322" y="345" text-anchor="end">a machine</text><text class="m" x="38" y="362">engineering-project-manager</text></g><g class="band"><rect class="bandbg" x="8" y="402" width="344" height="186" rx="18"/><text class="h" x="24" y="426">Leads: spawn workers</text></g><g class="node" data-node="l0"><rect class="card" x="24" y="442" width="312" height="57" rx="12"/><text class="t" x="38" y="468">Backend lead</text><text class="m" x="38" y="485">backend-lead</text></g><g class="link"><path class="e" d="M311 376 C311 409 311 409 311 442"/><circle class="dot" cx="311" cy="376" r="2.6"/><circle class="dot" cx="311" cy="442" r="2.6"/></g><g class="node" data-node="l2"><rect class="card" x="24" y="517" width="312" height="57" rx="12"/><text class="t" x="38" y="543">CAD Studio steward</text><text class="m" x="38" y="560">cad-studio-steward</text></g><g class="band"><rect class="bandbg" x="8" y="600" width="344" height="182" rx="18"/><text class="h" x="24" y="624">Workers: spawn nothing</text></g><g class="node" data-node="w0"><rect class="card" x="24" y="640" width="312" height="55" rx="12"/><text class="t" x="38" y="666">route-handler</text><text class="s" x="38" y="683">a software worker</text></g><g class="link"><path class="e" d="M311 574 C311 607 311 607 311 640"/><circle class="dot" cx="311" cy="574" r="2.6"/><circle class="dot" cx="311" cy="640" r="2.6"/></g><g class="node" data-node="w2"><rect class="card" x="24" y="713" width="312" height="55" rx="12"/><text class="t" x="38" y="739">fea-runner</text><text class="s" x="38" y="756">a Sim Bay worker</text></g><text class="s" x="16" y="802">Any agent files an approval request;</text><text class="s" x="16" y="819">it waits for you.</text></svg></div>
+    <figcaption class="fig-cap"><p>Every card names a real agent definition under <code>.claude/agents/</code>.</p></figcaption>
+  </figure></div>
+  </div>
+</section>
+
+<section class="sec" id="recordings" aria-labelledby="h-recordings">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Agents</p><h2 class="h2" id="h-recordings">A spawn, and the team it becomes.</h2></div>
+      <div class="sec-intro"><p>The words “start a project” on one computer, and a plan broken down into a manager, leads and workers, each in its own terminal.</p></div>
+    </header>
+    <div class="reel-pair"><div>
+  <figure class="reel demo demo-crop" data-slot="start-project" data-state="recorded" data-source="fixture" data-kind="clip" style="--cw:720px" data-reveal>
+    <div class="demo-frame">
+      <div class="demo-bar" aria-hidden="true"><i></i><i></i><i></i><span>Mission Control · New project</span></div>
+      <button class="demo-play" type="button" data-demo-toggle aria-label="Play or pause the clip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.2v13.6L19.4 12z" fill="currentColor"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13M16 5.5v13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+      <div class="demo-screen" style="--ar:720 / 450">
+        <video class="reel-media demo-video" src="assets/showcase/start-project/start-project.webm" muted playsinline preload="none" data-demo data-from="24" data-to="36" style="width:177.778%;left:-38.889%;top:-33.333%" aria-label="Start a project: typed, then the interview"></video>
+        <img class="demo-poster" src="assets/demo/start.jpg" alt="" loading="lazy" decoding="async">
+      </div>
+    </div>
+    <figcaption class="demo-cap">
+      <p class="demo-title">Say what you want built.</p>
+      <a class="demo-src" href="proof.html#reel-start-project" data-sha="bb990bef3af0"><span class="reel-label"><b>Recorded from the app</b> · fixture data · <time datetime="2026-10-01T10:08:22.243Z">1 Oct 2026</time></span></a>
+    </figcaption>
+  </figure></div>
+  <figure class="reel reel-side pending" data-slot="agents-deconstruct" data-state="pending" data-reveal>
+    <div class="reel-box">
+      <p class="reel-pending"><b>Recording pending</b>The plan, deconstructed into agents</p>
+      <p class="reel-will">A plan broken down into a manager, leads and workers, each in its own terminal, on the live map.</p>
+      <p class="reel-reason">Being recorded again: the last take stopped on the agent map before the project's team was on screen. It appears here once a new take passes the frame-by-frame check.</p>
+      <p class="reel-none">Nothing is shown in its place. The slot fills from the showcase manifest once the recording exists, labelled fixture or live with its date.</p>
+    </div>
+    
+  </figure></div>
+  </div>
+</section>
+
+<section class="sec alt" id="tiers" aria-labelledby="h-tiers">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Agents</p><h2 class="h2" id="h-tiers">Four tiers.</h2></div>
+      <div class="sec-intro"><p>Each agent is a Markdown definition with its own brief and tools. The tier decides what it may start and what it may report.</p></div>
+    </header>
+    
+  <div class="grid"><dl class="defs">
+    <div data-reveal style="--i:0"><dt>Master orchestrator</dt><dd>Interviews you on a new project and writes the plan; on a returning one it presents the brief. It hands software to the project manager and never writes code. A hardware project is handed to the engineering project manager.</dd></div>
+    <div data-reveal style="--i:1"><dt>Project managers</dt><dd>Own the plan and the tasks for one project. The engineering project manager runs the design method stage by stage, with one room steward per stage, and it is built to start each steward itself. A chain the product ran on its own, from the orchestrator to a worker, is not on record yet.</dd></div>
+    <div data-reveal style="--i:2"><dt>Leads and stewards</dt><dd>5 domain leads, backend to research, and 19 room stewards for the hardware stages. A lead spawns the workers its stage needs.</dd></div>
+    <div data-reveal style="--i:3"><dt>Workers</dt><dd>49 worker definitions, each for one job: a route, a test, a printed part, an FEA run. A worker spawns nothing.</dd></div>
+  </dl></div>
+  </div>
+</section>
+
+<section class="sec" id="rules" aria-labelledby="h-rules">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Agents</p><h2 class="h2" id="h-rules">The rule, as code.</h2></div>
+      <div class="sec-intro"><p>The channel reads the caller’s tier from its session and refuses any spawn the table does not allow. A session with no tier is refused by every spawn door.</p></div>
+    </header>
+    
+  <div class="scroll-x" data-reveal>
+    <table class="tbl">
+      <thead><tr><th scope="col">The caller</th><th scope="col">May spawn</th></tr></thead>
+      <tbody><tr><td>Master orchestrator</td><td>a project manager, or a lead</td></tr><tr><td>Project manager</td><td>a lead</td></tr><tr><td>Lead or steward</td><td>a worker</td></tr><tr><td>Worker</td><td>nothing</td></tr></tbody>
+    </table>
+  </div><p class="small quiet" style="margin-top:18px;max-width:80ch"><code>ALLOWED_CHILD_TIER</code> in <span><code>spawn-authority.ts</code></span>. Children are started with <code>spawn_agent_pty</code> or <code>spawn_lead</code>; the older <code>spawn_agent</code> is refused for every caller. Reports are tier-checked too, so a worker cannot file a manager’s report.</p>
+  </div>
+</section>
+
+<section class="sec alt" id="map" aria-labelledby="h-map">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Agents</p><h2 class="h2" id="h-map">Watch the tree while it works.</h2></div>
+      <div class="sec-intro"><p>Sessions draws the org chart as it runs: each node is a session with its state, how long it has run and its model.</p></div>
+    </header>
+    
+    <div class="grid split stack">
+      <div class="split-text" data-reveal><h3 class="h3">One map for every session and sub-agent.</h3>
+        <p>A session is parented by the session that spawned it, so a project manager’s lanes hang under it and a steward’s workers under the steward. Claude Code’s own in-process sub-agents join the same tree from its transcripts.</p><ul class="ticks"><li><span><b>Live:</b> heartbeats every 30 seconds; stale after 90.</span></li><li><span><b>Steerable:</b> pause, resume, hand off, restart or end any session.</span></li><li><span><b>Honest:</b> a source that cannot be read is named, and the rest still answer.</span></li></ul></div>
+      <div class="split-media">
+      <figure class="shot" data-reveal="shot">
+        <div class="frame has-phone" style="--ar-p:644 / 212">
+          <a class="theme-img-dark" href="assets/shots/sessions-dark.png" title="Open at full size"><picture><source media="(max-width: 720px)" srcset="assets/shots/sessions-phone-dark.png" width="644" height="212"><img src="assets/shots/sessions-dark.png" width="1200" height="212" loading="lazy" decoding="async" alt="Sessions, the agent map: a project manager with two live worker lanes and a CAD Studio steward with one worker, each with its state, uptime and model."></picture></a>
+          <a class="theme-img-light" href="assets/shots/sessions-light.png" title="Open at full size"><picture><source media="(max-width: 720px)" srcset="assets/shots/sessions-phone-light.png" width="644" height="212"><img src="assets/shots/sessions-light.png" width="1200" height="212" loading="lazy" decoding="async" alt="Sessions, the agent map: a project manager with two live worker lanes and a CAD Studio steward with one worker, each with its state, uptime and model."></picture></a>
+        </div>
+        <figcaption><span>Sessions: the agent map.</span><span class="demo">demo data · isolated test instance</span></figcaption>
+      </figure></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="catalogue" aria-labelledby="h-catalogue">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Agents</p><h2 class="h2" id="h-catalogue">A catalogue of definitions.</h2></div>
+      <div class="sec-intro"><p>Counted from the repository when this page was built.</p></div>
+    </header>
+    <ul class="register" data-reveal><li><b>187</b><span>agent definitions in 23 folders</span></li><li><b>5</b><span>domain leads</span></li><li><b>19</b><span>room stewards</span></li><li><b>49</b><span>worker definitions for the hardware rooms</span></li></ul>
+  </div>
+</section>
+
+<section class="sec alt" id="harness" aria-labelledby="h-harness">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Agents</p><h2 class="h2" id="h-harness">Bring the agents you already use.</h2></div>
+      <div class="sec-intro"><p>Each coding agent is a row in one harness table that states how far it has been verified. A row is a claim, and each row carries the evidence for its level; a flag nobody could verify is named as unverified, not written down as true.</p></div>
+    </header>
+    
+    <div class="grid split stack">
+      <div class="split-text" data-reveal><h3 class="h3">Every harness, and how far it is proven.</h3>
+        <p>Theioma spawns the agent into a real terminal and wires it to the team, with its session config written by the spawn route.</p></div>
+      <div class="split-media">
+      <figure class="shot" data-reveal="shot">
+        <div class="frame has-phone" style="--ar-p:644 / 450">
+          <a class="theme-img-dark" href="assets/shots/providers-dark.png" title="Open at full size"><picture><source media="(max-width: 720px)" srcset="assets/shots/providers-phone-dark.png" width="644" height="450"><img src="assets/shots/providers-dark.png" width="1440" height="900" loading="lazy" decoding="async" alt="Settings, agent providers: the Claude Code row, its command and flags, and the file and line each flag is verified against."></picture></a>
+          <a class="theme-img-light" href="assets/shots/providers-light.png" title="Open at full size"><picture><source media="(max-width: 720px)" srcset="assets/shots/providers-phone-light.png" width="644" height="450"><img src="assets/shots/providers-light.png" width="1440" height="900" loading="lazy" decoding="async" alt="Settings, agent providers: the Claude Code row, its command and flags, and the file and line each flag is verified against."></picture></a>
+        </div>
+        <figcaption><span>Settings: the agent providers.</span><span class="demo">demo data · isolated test instance</span></figcaption>
+      </figure></div>
+    </div><div style="margin-top:48px">
+  <div class="scroll-x" data-reveal>
+    <table class="tbl">
+      <thead><tr><th scope="col">Agent</th><th scope="col">Verified</th><th scope="col">What it does under Theioma</th></tr></thead>
+      <tbody><tr><td>Claude Code</td><td><span class="lvl">Ran under a steward</span></td><td>The canonical agent: a real terminal, both MCP servers, its session config written by the spawn route.</td></tr><tr><td>OpenAI Codex CLI</td><td><span class="lvl">Ran under a steward</span></td><td>Runs sandboxed, with its MCP servers passed as command-line overrides. It has run once under a steward, on 24 Sep 2026, with no hardware-tool call under it.</td></tr><tr><td>OpenClaw</td><td><span class="lvl probe">Passed a probe</span></td><td>Runs through the harness in its own terminal.</td></tr><tr><td>Any agent behind HTTP</td><td><span class="lvl probe">Passed a probe</span></td><td>Any agent that speaks HTTP.</td></tr><tr><td>opencode</td><td><span class="lvl none">Not verified yet</span></td><td>Reads a session-private config; only that first stage has been checked.</td></tr><tr><td>Cursor agent CLI</td><td><span class="lvl probe">Passed a probe</span></td><td>Spawned through the spawn route; it acknowledges its brief and calls the Channel and hardware tools.</td></tr><tr><td>Gemini CLI</td><td><span class="lvl none">Not verified yet</span></td><td>A row for Gemini CLI in its own terminal. It was not installed where the row was written, so nothing has run it.</td></tr><tr><td>Aider</td><td><span class="lvl none">Not verified yet</span></td><td>A row for Aider in its own terminal. It was not installed where the row was written, so nothing has run it.</td></tr></tbody>
+    </table>
+  </div></div><p class="small quiet" style="margin-top:18px;max-width:80ch">The rows are the harness registry in <span><code>providers.ts</code></span>, read when this page was built.</p>
+  </div>
+</section>
+
+<section class="sec" id="models" aria-labelledby="h-models">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Agents</p><h2 class="h2" id="h-models">Models from anywhere you already pay for, or nowhere.</h2></div>
+      <div class="sec-intro"><p>The model gateway hands each session its own token and never proxies a subscription.</p></div>
+    </header>
+    
+  <div class="grid"><dl class="defs defs-2">
+    <div data-reveal style="--i:0"><dt>Subscriptions</dt><dd>Claude and Codex sessions run on your own logins, never through a shared key.</dd></div>
+    <div data-reveal style="--i:1"><dt>API providers</dt><dd>Through the gateway, including families that speak only the OpenAI Chat API, translated both ways.</dd></div>
+    <div data-reveal style="--i:2"><dt>Local</dt><dd>Ollama serving gemma4:12b for the local tier, found when the app starts.</dd></div>
+    <div data-reveal style="--i:3"><dt>Limits</dt><dd>At a usage limit a turn moves to another member serving the same model, never to another family. Tested; a live continuation has not run yet.</dd></div>
+  </dl></div>
+  </div>
+</section>
+
+<section class="sec alt" id="model-catalogue" aria-labelledby="h-model-catalogue">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Agents</p><h2 class="h2" id="h-model-catalogue">A catalogue that never promotes itself.</h2></div>
+      <div class="sec-intro"><p>The model catalogue holds facts from OpenRouter’s public list, a transcribed DeepSeek table and your local Ollama.</p></div>
+    </header>
+    <div class="grid"><div class="prose col-8" data-reveal><p>A refresh never makes a model routable: a reviewed list says which model may be a candidate on which harness. A price not served is null, never zero. A model that disappears is marked retired and kept, never deleted.</p></div></div>
+  </div>
+</section>
+
+<section class="sec" id="heartbeats" aria-labelledby="h-heartbeats">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Agents</p><h2 class="h2" id="h-heartbeats">A heartbeat every 30 seconds. Silence has a meaning.</h2></div>
+      <div class="sec-intro"><p>Every session reports on a clock. Every page reads the same three thresholds, so no screen calls a silent agent alive and no two screens disagree about it.</p></div>
+    </header>
+    
+  <figure class="fig" data-reveal="fig" aria-labelledby="fig2-name">
+    <div class="fig-head">
+      <div class="fig-title"><span class="fig-no">Figure 2</span><span class="fig-name" id="fig2-name">What silence means, and when</span></div>
+      
+    </div>
+    <div class="fig-body"><svg class="figsvg figsvg-wide" viewBox="0 0 960 214" role="img" aria-labelledby="p5-2-wide-t p5-2-wide-d"><title id="p5-2-wide-t">What silence means, and when</title><desc id="p5-2-wide-d">A session heartbeats every 30 seconds. After its last heartbeat it reads online for 90 seconds, three missed beats; stale until 5 minutes; offline until 10 minutes; after that it is a dormant session, listed on Sessions for you to clean up. Every page reads the same three thresholds.</desc><line class="rule strong" x1="48" y1="104" x2="912" y2="104"/><line class="tick" x1="144" y1="98" x2="144" y2="110"/><line class="tick" x1="208" y1="101" x2="208" y2="107"/><line class="tick" x1="272" y1="101" x2="272" y2="107"/><line class="tick" x1="336" y1="101" x2="336" y2="107"/><line class="tick" x1="400" y1="101" x2="400" y2="107"/><line class="tick" x1="464" y1="98" x2="464" y2="110"/><line class="tick" x1="528" y1="101" x2="528" y2="107"/><line class="tick" x1="592" y1="101" x2="592" y2="107"/><line class="tick" x1="656" y1="101" x2="656" y2="107"/><line class="tick" x1="720" y1="101" x2="720" y2="107"/><line class="tick" x1="784" y1="98" x2="784" y2="110"/><line class="tick" x1="848" y1="101" x2="848" y2="107"/><line class="tick" x1="912" y1="98" x2="912" y2="110"/><circle class="mark" cx="48" cy="104" r="3"/><circle class="mark" cx="80" cy="104" r="3"/><circle class="mark" cx="112" cy="104" r="3"/><line class="rule" x1="144" y1="96" x2="144" y2="58"/><circle class="mark hollow" cx="144" cy="104" r="4.5"/><text class="h" x="136" y="36" text-anchor="end">Last heartbeat</text><text class="m" x="136" y="54" text-anchor="end">then silence</text><line class="rule" x1="240" y1="96" x2="240" y2="58"/><circle class="mark" cx="240" cy="104" r="4.5"/><text class="h" x="248" y="36">90 seconds</text><text class="m" x="248" y="54">three beats missed</text><line class="rule" x1="464" y1="96" x2="464" y2="58"/><circle class="mark" cx="464" cy="104" r="4.5"/><text class="h" x="472" y="36">5 minutes</text><text class="m" x="472" y="54">status demoted</text><line class="rule" x1="784" y1="96" x2="784" y2="58"/><circle class="mark" cx="784" cy="104" r="4.5"/><text class="h" x="792" y="36">10 minutes</text><text class="m" x="792" y="54">a dormant session</text><line class="rule strong" x1="148" y1="126" x2="236" y2="126"/><line class="tick" x1="148" y1="122" x2="148" y2="130"/><line class="tick" x1="236" y1="122" x2="236" y2="130"/><text class="m" x="192" y="148" text-anchor="middle">online</text><line class="rule strong" x1="244" y1="126" x2="460" y2="126"/><line class="tick" x1="244" y1="122" x2="244" y2="130"/><line class="tick" x1="460" y1="122" x2="460" y2="130"/><text class="m" x="352" y="148" text-anchor="middle">stale</text><line class="rule strong" x1="468" y1="126" x2="780" y2="126"/><line class="tick" x1="468" y1="122" x2="468" y2="130"/><line class="tick" x1="780" y1="122" x2="780" y2="130"/><text class="m" x="624" y="148" text-anchor="middle">offline</text><line class="rule strong" x1="788" y1="126" x2="908" y2="126"/><line class="tick" x1="788" y1="122" x2="788" y2="130"/><line class="tick" x1="908" y1="122" x2="908" y2="130"/><text class="m" x="848" y="148" text-anchor="middle">dormant</text><text class="m" x="96" y="148" text-anchor="middle">every 30 s</text><text class="s" x="912" y="200" text-anchor="end">Minutes since the last heartbeat. Every page reads the same three thresholds.</text></svg><svg class="figsvg figsvg-narrow" viewBox="0 0 360 391" role="img" aria-labelledby="p5-2-narrow-t p5-2-narrow-d"><title id="p5-2-narrow-t">What silence means, and when</title><desc id="p5-2-narrow-d">A session heartbeats every 30 seconds. After its last heartbeat it reads online for 90 seconds, three missed beats; stale until 5 minutes; offline until 10 minutes; after that it is a dormant session, listed on Sessions for you to clean up. Every page reads the same three thresholds.</desc><g class="band"><rect class="bandbg" x="8" y="12" width="344" height="336" rx="18"/><text class="h" x="24" y="36">Minutes since the last heartbeat</text></g><g class="node" data-node="online"><rect class="card" x="24" y="52" width="312" height="57" rx="12"/><text class="t" x="38" y="78">Online</text><text class="s q" x="322" y="78" text-anchor="end">under 90 s</text><text class="l" x="38" y="96">a heartbeat every 30 s</text></g><g class="node" data-node="stale"><rect class="card" x="24" y="127" width="312" height="57" rx="12"/><text class="t" x="38" y="153">Stale</text><text class="s q" x="322" y="153" text-anchor="end">90 s to 5 min</text><text class="l" x="38" y="171">three beats missed</text></g><g class="link"><path class="e" d="M311 109 C311 118 311 118 311 127"/><circle class="dot" cx="311" cy="109" r="2.6"/><circle class="dot" cx="311" cy="127" r="2.6"/></g><g class="node" data-node="offline"><rect class="card" x="24" y="202" width="312" height="57" rx="12"/><text class="t" x="38" y="228">Offline</text><text class="s q" x="322" y="228" text-anchor="end">5 to 10 min</text><text class="l" x="38" y="246">status demoted</text></g><g class="link"><path class="e" d="M311 184 C311 193 311 193 311 202"/><circle class="dot" cx="311" cy="184" r="2.6"/><circle class="dot" cx="311" cy="202" r="2.6"/></g><g class="node" data-node="dormant"><rect class="card" x="24" y="277" width="312" height="57" rx="12"/><text class="t" x="38" y="303">Dormant</text><text class="s q" x="322" y="303" text-anchor="end">past 10 min</text><text class="l" x="38" y="321">listed for you to clean up</text></g><g class="link"><path class="e" d="M311 259 C311 268 311 268 311 277"/><circle class="dot" cx="311" cy="259" r="2.6"/><circle class="dot" cx="311" cy="277" r="2.6"/></g><text class="s" x="16" y="368">Every page reads the same three thresholds.</text></svg></div>
+    <figcaption class="fig-cap"><p>From <code>session-liveness/constants.ts</code>: three missed 30-second beats is 90 seconds.</p></figcaption>
+  </figure>
+  </div>
+</section>
+
+<section class="sec alt" id="clock" aria-labelledby="h-clock">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Agents</p><h2 class="h2" id="h-clock">Jobs on a clock you can see.</h2></div>
+      <div class="sec-intro"><p>50 registration paths put jobs on the clock: 40 registered directly and 10 behind a setting.</p></div>
+    </header>
+    
+    <div class="grid split stack">
+      <div class="split-text" data-reveal><h3 class="h3">Every job, and when it last ran.</h3>
+        <p>The Cron page lists each job with its schedule and its last run. The route that lists them registers the baseline jobs first, so the list and the scheduler cannot disagree.</p><ul class="ticks"><li><span><b>Nightly consolidation</b> waits for 30 minutes of quiet before it starts.</span></li><li><span><b>A drift gate</b> asks you before a change above 30 percent.</span></li><li><span><b>Stale sessions</b> are demoted by the same thresholds the pages read.</span></li></ul></div>
+      <div class="split-media">
+      <figure class="shot" data-reveal="shot">
+        <div class="frame has-phone" style="--ar-p:644 / 444">
+          <a class="theme-img-dark" href="assets/shots/cron-dark.png" title="Open at full size"><picture><source media="(max-width: 720px)" srcset="assets/shots/cron-phone-dark.png" width="644" height="444"><img src="assets/shots/cron-dark.png" width="1440" height="900" loading="lazy" decoding="async" alt="The Cron page: 34 registered jobs, each with its schedule; on this demo server none has run yet."></picture></a>
+          <a class="theme-img-light" href="assets/shots/cron-light.png" title="Open at full size"><picture><source media="(max-width: 720px)" srcset="assets/shots/cron-phone-light.png" width="644" height="444"><img src="assets/shots/cron-light.png" width="1440" height="900" loading="lazy" decoding="async" alt="The Cron page: 34 registered jobs, each with its schedule; on this demo server none has run yet."></picture></a>
+        </div>
+        <figcaption><span>Cron: the clock.</span><span class="demo">demo data · isolated test instance</span></figcaption>
+      </figure></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="limits" aria-labelledby="h-limits">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <div class="sec-title"><p class="eyebrow">Agents</p><h2 class="h2" id="h-limits">Built so full context windows and usage limits do not stop the work.</h2></div>
+      <div class="sec-intro"><p>Near its context limit an agent writes a handoff and a fresh agent continues from it. When a subscription or provider hits a limit, the turn moves to another member serving the same model, or it is not delivered. Both paths are tested; neither has passed a live drill yet.</p></div>
+    </header>
+    
+  <figure class="fig" data-reveal="fig" aria-labelledby="fig3-name">
+    <div class="fig-head">
+      <div class="fig-title"><span class="fig-no">Figure 3</span><span class="fig-name" id="fig3-name">Handoff and failover</span></div>
+      
+    </div>
+    <div class="fig-body"><svg class="figsvg figsvg-wide" viewBox="0 0 960 300" role="img" aria-labelledby="p5-3-wide-t p5-3-wide-d"><title id="p5-3-wide-t">Limits and full context windows never stop the work</title><desc id="p5-3-wide-d">Top: an agent near its context limit reports the boundary and writes its handoff; a fresh agent reads PROGRESS.md and the receipts and continues, never resuming the transcript. Bottom: when a member serving a model returns a rate or usage limit, the model gateway cools it down and sends the turn to the next member serving the same model; if none serves it, the turn is not delivered rather than switched to another model family.</desc><g class="band"><rect class="bandbg" x="12" y="12" width="936" height="116" rx="18"/><text class="h" x="28" y="36">Context handoff</text></g><g class="node" data-node="t0"><rect class="card" x="28" y="52" width="206" height="57" rx="12"/><text class="t" x="42" y="78">Agent A</text><text class="l" x="42" y="96">near its context limit</text></g><g class="node" data-node="t1"><rect class="card" x="258" y="52" width="206" height="57" rx="12"/><text class="t" x="272" y="78">Boundary</text><text class="l" x="272" y="96">reported, handoff written</text></g><g class="node" data-node="t2"><rect class="card" x="488" y="52" width="206" height="57" rx="12"/><text class="t" x="502" y="78">PROGRESS.md</text><text class="l" x="502" y="96">and the receipts</text></g><g class="node" data-node="t3"><rect class="card" x="718" y="52" width="206" height="57" rx="12"/><text class="t" x="732" y="78">Agent B</text><text class="l" x="732" y="96">reads it, never resumes</text></g><g class="link"><path class="e" d="M234 80.5 C246 80.5 246 80.5 258 80.5"/><circle class="dot" cx="234" cy="80.5" r="2.6"/><circle class="dot" cx="258" cy="80.5" r="2.6"/></g><g class="link"><path class="e" d="M464 80.5 C476 80.5 476 80.5 488 80.5"/><circle class="dot" cx="464" cy="80.5" r="2.6"/><circle class="dot" cx="488" cy="80.5" r="2.6"/></g><g class="link"><path class="e" d="M694 80.5 C706 80.5 706 80.5 718 80.5"/><circle class="dot" cx="694" cy="80.5" r="2.6"/><circle class="dot" cx="718" cy="80.5" r="2.6"/></g><g class="band"><rect class="bandbg" x="12" y="142" width="936" height="146" rx="18"/><text class="h" x="28" y="166">Usage-limit failover</text></g><g class="node" data-node="f0"><rect class="card" x="28" y="182" width="200" height="57" rx="12"/><text class="t" x="42" y="208">Limit hit</text><text class="m" x="42" y="225">429 or 402 on a member</text></g><g class="node" data-node="f1"><rect class="card" x="250" y="182" width="200" height="57" rx="12"/><text class="t" x="264" y="208">Model gateway</text><text class="l" x="264" y="226">cools the member down</text></g><g class="node" data-node="f2"><rect class="card" x="472" y="182" width="206" height="57" rx="12"/><text class="t" x="486" y="208">Same model elsewhere?</text><text class="l" x="486" y="226">another member serves it</text></g><g class="node" data-node="f3"><rect class="card" x="752" y="160" width="184" height="57" rx="12"/><text class="t" x="766" y="186">Next member</text><text class="l" x="766" y="204">same model</text></g><g class="node" data-node="f4"><rect class="card ghost" x="752" y="226" width="184" height="57" rx="12"/><text class="t" x="766" y="252">Not delivered</text><text class="l" x="766" y="270">never another family</text></g><g class="link"><path class="e" d="M228 210.5 C239 210.5 239 210.5 250 210.5"/><circle class="dot" cx="228" cy="210.5" r="2.6"/><circle class="dot" cx="250" cy="210.5" r="2.6"/></g><g class="link"><path class="e" d="M450 210.5 C461 210.5 461 210.5 472 210.5"/><circle class="dot" cx="450" cy="210.5" r="2.6"/><circle class="dot" cx="472" cy="210.5" r="2.6"/></g><g class="link"><path class="e" d="M678 204.8 C715 204.8 715 188.5 752 188.5"/><circle class="dot" cx="678" cy="204.8" r="2.6"/><circle class="dot" cx="752" cy="188.5" r="2.6"/></g><g class="link"><path class="e dash" d="M678 216.2 C715 216.2 715 254.5 752 254.5"/><circle class="dot" cx="678" cy="216.2" r="2.6"/><circle class="dot" cx="752" cy="254.5" r="2.6"/></g><g class="pill"><rect class="pillbg onband" x="696.5" y="186.7" width="37" height="20" rx="10"/><text class="p" x="715" y="200.5" text-anchor="middle">yes</text></g><g class="pill"><rect class="pillbg onband" x="700" y="225.4" width="30" height="20" rx="10"/><text class="p" x="715" y="239.2" text-anchor="middle">no</text></g></svg><svg class="figsvg figsvg-narrow" viewBox="0 0 360 797" role="img" aria-labelledby="p5-3-narrow-t p5-3-narrow-d"><title id="p5-3-narrow-t">Limits and full context windows never stop the work</title><desc id="p5-3-narrow-d">Top: an agent near its context limit reports the boundary and writes its handoff; a fresh agent reads PROGRESS.md and the receipts and continues, never resuming the transcript. Bottom: when a member serving a model returns a rate or usage limit, the model gateway cools it down and sends the turn to the next member serving the same model; if none serves it, the turn is not delivered rather than switched to another model family.</desc><g class="band"><rect class="bandbg" x="8" y="12" width="344" height="336" rx="18"/><text class="h" x="24" y="36">Context handoff</text></g><g class="node" data-node="t0"><rect class="card" x="24" y="52" width="312" height="57" rx="12"/><text class="t" x="38" y="78">Agent A</text><text class="l" x="38" y="96">near its context limit</text></g><g class="node" data-node="t1"><rect class="card" x="24" y="127" width="312" height="57" rx="12"/><text class="t" x="38" y="153">Boundary</text><text class="l" x="38" y="171">reported, handoff written</text></g><g class="link"><path class="e" d="M311 109 C311 118 311 118 311 127"/><circle class="dot" cx="311" cy="109" r="2.6"/><circle class="dot" cx="311" cy="127" r="2.6"/></g><g class="node" data-node="t2"><rect class="card" x="24" y="202" width="312" height="57" rx="12"/><text class="t" x="38" y="228">PROGRESS.md</text><text class="l" x="38" y="246">and the receipts</text></g><g class="link"><path class="e" d="M311 184 C311 193 311 193 311 202"/><circle class="dot" cx="311" cy="184" r="2.6"/><circle class="dot" cx="311" cy="202" r="2.6"/></g><g class="node" data-node="t3"><rect class="card" x="24" y="277" width="312" height="57" rx="12"/><text class="t" x="38" y="303">Agent B</text><text class="l" x="38" y="321">reads it, never resumes</text></g><g class="link"><path class="e" d="M311 259 C311 268 311 268 311 277"/><circle class="dot" cx="311" cy="259" r="2.6"/><circle class="dot" cx="311" cy="277" r="2.6"/></g><g class="band"><rect class="bandbg" x="8" y="360" width="344" height="411" rx="18"/><text class="h" x="24" y="384">Usage-limit failover</text></g><g class="node" data-node="f0"><rect class="card" x="24" y="400" width="312" height="57" rx="12"/><text class="t" x="38" y="426">Limit hit</text><text class="m" x="38" y="443">429 or 402 on a member</text></g><g class="node" data-node="f1"><rect class="card" x="24" y="475" width="312" height="57" rx="12"/><text class="t" x="38" y="501">Model gateway</text><text class="l" x="38" y="519">cools the member down</text></g><g class="link"><path class="e" d="M311 457 C311 466 311 466 311 475"/><circle class="dot" cx="311" cy="457" r="2.6"/><circle class="dot" cx="311" cy="475" r="2.6"/></g><g class="node" data-node="f2"><rect class="card" x="24" y="550" width="312" height="57" rx="12"/><text class="t" x="38" y="576">Same model elsewhere?</text><text class="l" x="38" y="594">another member serves it</text></g><g class="link"><path class="e" d="M311 532 C311 541 311 541 311 550"/><circle class="dot" cx="311" cy="532" r="2.6"/><circle class="dot" cx="311" cy="550" r="2.6"/></g><g class="node" data-node="f3"><rect class="card" x="24" y="625" width="312" height="57" rx="12"/><text class="t" x="38" y="651">Yes: next member</text><text class="l" x="38" y="669">same model, turn delivered</text></g><g class="link"><path class="e" d="M311 607 C311 616 311 616 311 625"/><circle class="dot" cx="311" cy="607" r="2.6"/><circle class="dot" cx="311" cy="625" r="2.6"/></g><g class="node" data-node="f4"><rect class="card ghost" x="24" y="700" width="312" height="57" rx="12"/><text class="t" x="38" y="726">No: not delivered</text><text class="l" x="38" y="744">never another family</text></g></svg></div>
+    <figcaption class="fig-cap"><p>The handoff route is <code>session-rotator.ts</code>; a fresh agent reads PROGRESS.md and the receipts and never resumes the old transcript. A turn is never switched to another model family.</p></figcaption>
+  </figure>
+  </div>
+</section>
+</main>
+
+  <nav class="handoff" aria-label="Next">
+    <a class="handoff-back" href="plan.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5 5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Plan</span></a>
+    <a class="handoff-next" href="sentinels.html"><span class="cr"><span class="handoff-k">Next</span><b>Sentinels</b><span class="handoff-gist">Every code task reviewed twice.</span><span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+  </nav>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html" aria-label="Theioma, home"><span class="tmark" aria-hidden="true"><img src="assets/brand/theioma-orb.webp" alt="" width="96" height="96" decoding="async"></span><span>theioma</span></a>
+      <p>A supervised command centre for engineering with many agents, in software and in hardware. It runs from source on the computers you own.</p>
+      <a class="pill pill-primary pill-sm" href="run/install.html">Run it from source<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <div><p class="foot-k">Product</p><ul class="two"><li><a href="voice.html">Voice</a></li><li><a href="plan.html">Plan</a></li><li><a href="agents.html" aria-current="page">Agents</a></li><li><a href="sentinels.html">Sentinels</a></li><li><a href="approvals.html">Approvals</a></li><li><a href="computers.html">Network / Computers</a></li><li><a href="build-lab.html">Build Lab</a></li><li><a href="memory.html">Memory & learning</a></li><li><a href="atlas.html">Atlas</a></li><li><a href="benchmarks.html">Benchmarks</a></li><li><a href="proof.html">Proof</a></li><li><a href="run/status.html">Status</a></li></ul></div>
+      <div><p class="foot-k">Documentation</p><ul><li><a href="run/install.html">Install</a></li><li><a href="run/docs.html">Documentation map</a></li></ul></div>
+      <div><p class="foot-k">Project</p><ul><li><a href="about.html">About</a></li><li><a href="open-source.html">Open source</a></li><li><a href="run/changelog.html">Changelog</a></li></ul></div>
+    </nav>
+  </div>
+  <div class="wrap foot-legal">
+    <p>Apache License 2.0. Pre-release copy. Read the <a href="proof.html">Proof</a> page for tested scope and open gaps; release claim review is in progress.</p>
+    <p><a href="LICENCES.md">Font licences</a></p>
+  </div>
+  <p class="foot-word" aria-hidden="true">theioma</p>
+</footer>
+</body>
+</html>

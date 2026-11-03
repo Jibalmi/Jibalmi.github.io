@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Theioma: say it once, watch it become a team</title>
+<meta name="description" content="Theioma turns one sentence into a plan, leases each task to a computer you own, runs a real coding agent on it in a real terminal, and stops at every decision that belongs to you.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050505">
+<meta property="og:title" content="Theioma: say it once, watch it become a team">
+<meta property="og:description" content="Theioma turns one sentence into a plan, leases each task to a computer you own, runs a real coding agent on it in a real terminal, and stops at every decision that belongs to you.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22none%22%3E%0A%20%20%3Ctitle%3Etheioma%3C%2Ftitle%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22body%22%20x1%3D%220.15%22%20y1%3D%220.85%22%20x2%3D%220.85%22%20y2%3D%220.15%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%230a2a48%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220.55%22%20stop-color%3D%22%231d1f5c%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%233a1858%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22rim%22%20x1%3D%220.1%22%20y1%3D%220.9%22%20x2%3D%220.9%22%20y2%3D%220.1%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%233bcce3%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220.5%22%20stop-color%3D%22%236950b6%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23db72b4%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22glow%22%20cx%3D%220.71%22%20cy%3D%220.28%22%20r%3D%220.3%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23f38db7%22%20stop-opacity%3D%220.95%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f38db7%22%20stop-opacity%3D%220%22%2F%3E%0A%20%20%20%20%3C%2FradialGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2215%22%20fill%3D%22url(%23body)%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2215%22%20fill%3D%22url(%23glow)%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2214.1%22%20stroke%3D%22url(%23rim)%22%20stroke-width%3D%221.8%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2215.2%22%20cy%3D%2216.4%22%20r%3D%221.1%22%20fill%3D%22%236a5cff%22%2F%3E%0A%3C%2Fsvg%3E">
+<link rel="stylesheet" href="assets/site.css">
+<script>(function(){var d=document.documentElement;if('IntersectionObserver' in window){d.classList.add('js');setTimeout(function(){if(!window.__site)d.classList.remove('js')},3000)}})()</script>
+<script src="assets/site.js" defer></script>
+<script src="assets/sphere.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="scrim" aria-hidden="true"></div>
+<div class="scrim scrim-paper" aria-hidden="true"></div>
+<header class="island">
+  <nav class="island-in" aria-label="Site">
+    <a class="brand" href="index.html" aria-label="Theioma, home"><span class="tmark" aria-hidden="true"><img src="assets/brand/theioma-orb.webp" alt="" width="96" height="96" decoding="async"></span><span>theioma</span></a>
+    <ul class="island-links">
+      <li><details class="nav-menu" data-menu><summary>Product<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="nav-panel"><ul><li><a href="voice.html"><b>Voice</b><span>Say it; the sphere answers.</span></a></li><li><a href="plan.html"><b>Plan</b><span>An interview becomes a plan.</span></a></li><li><a href="agents.html"><b>Agents</b><span>One per task, in a real terminal.</span></a></li><li><a href="sentinels.html"><b>Sentinels</b><span>Every code task reviewed twice.</span></a></li><li><a href="approvals.html"><b>Approvals</b><span>Nothing consequential without you.</span></a></li><li><a href="computers.html"><b>Network / Computers</b><span>Every computer you own, one team.</span></a></li><li><a href="build-lab.html"><b>Build Lab</b><span>Hardware, room by room.</span></a></li><li><a href="memory.html"><b>Memory & learning</b><span>It remembers, and it learns.</span></a></li><li><a href="atlas.html"><b>Atlas</b><span>Every other feature, and where it lives.</span></a></li></ul></div></details></li>
+      <li><a href="benchmarks.html">Benchmarks</a></li><li><a href="proof.html">Proof</a></li><li><a href="run/docs.html">Docs</a></li><li><a href="open-source.html">Open source</a></li><li><a href="about.html">About</a></li>
+      
+    </ul>
+    <a class="pill pill-primary pill-sm" href="run/install.html">Run it<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <button class="burger" type="button" aria-label="Open the menu" aria-expanded="false" aria-controls="menu" data-burger><i></i><i></i></button>
+  </nav>
+</header>
+<div class="overlay" id="menu" aria-label="Menu" hidden>
+  <div class="overlay-in">
+    <div><p class="ov-k">Product</p><ol class="ov-main"><li><a href="voice.html" style="--i:0">Voice</a></li><li><a href="plan.html" style="--i:1">Plan</a></li><li><a href="agents.html" style="--i:2">Agents</a></li><li><a href="sentinels.html" style="--i:3">Sentinels</a></li><li><a href="approvals.html" style="--i:4">Approvals</a></li><li><a href="computers.html" style="--i:5">Network / Computers</a></li><li><a href="build-lab.html" style="--i:6">Build Lab</a></li><li><a href="memory.html" style="--i:7">Memory & learning</a></li><li><a href="atlas.html" style="--i:8">Atlas</a></li></ol></div>
+    <div><p class="ov-k">More</p><ol class="ov-sub"><li><a href="benchmarks.html" style="--i:9">Benchmarks</a></li><li><a href="proof.html" style="--i:10">Proof</a></li><li><a href="run/docs.html" style="--i:11">Docs</a></li><li><a href="open-source.html" style="--i:12">Open source</a></li><li><a href="about.html" style="--i:13">About</a></li><li><a href="run/install.html" style="--i:14">Install</a></li><li><a href="run/status.html" style="--i:15">Status</a></li><li><a href="run/changelog.html" style="--i:16">Changelog</a></li></ol></div>
+    <a class="pill pill-primary" href="run/install.html" style="--i:18">Run it from source<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+  </div>
+</div>
+<main id="main">
+
+<section class="hero" id="top" aria-labelledby="h-top">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Open source · Apache-2.0 · pre-1.0</p>
+    <h1 class="display" id="h-top" data-reveal style="--i:1">Say it once.<br><span class="dim">Watch it become a team.</span></h1>
+    <p class="lede" data-reveal style="--i:2">Describe a goal, review a plan, and follow coding agents in their terminals. Print, flash and desktop-action paths ask for approval; their tested scope is on the Proof page.</p>
+    <div class="actions" data-reveal style="--i:3"><a class="pill pill-primary" href="run/install.html">Run it from source<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+    <ul class="pulse" data-reveal style="--i:4"><li><a href="run/changelog.html"><b>829</b> commits in the last fourteen days</a></li><li><a href="run/changelog.html">last commit <time datetime="2026-10-17">17 Oct 2026</time></a></li><li><a href="proof.html#tests">Historical test evidence unavailable</a></li></ul>
+  </div>
+  <div class="wrap hero-film" id="film" data-reveal style="--i:4">
+    
+    <p class="hero-film-lede">A film of the app at work is planned: one continuous take, start to finish. Until it is made, each section below shows a recording or a drawing, labelled with what it is.</p>
+  </div>
+</section>
+
+<section class="sec how-sec" id="how" aria-labelledby="h-how">
+  <div class="wrap">
+    <header class="sec-head left" data-reveal>
+      <p class="eyebrow">How it goes</p>
+      <h2 class="h2" id="h-how">Say what you want.<br><span class="dim">Theioma staffs it. You approve.</span></h2>
+      <p class="lede">Three steps from a goal to a team at work. Approval coverage and its limits are recorded on the Proof page.</p>
+    </header>
+    <ol class="steps3">
+      <li class="s3 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="s3-n"><span>01</span></p>
+        <h3 class="h3">Say it.</h3>
+        <p class="s3-p">By voice or by text. For software, the master orchestrator interviews you until the goal is specific enough to plan.</p>
+        <div class="s3-viz"><div class="s3-say"><span class="s3-mic" aria-hidden="true"><i></i></span><p>Add passkey sign-in to the billing API.</p></div><p class="s3-sub">You, in your own words</p></div>
+      </div></li>
+      <li class="s3 bz" data-reveal style="--i:1"><div class="cr">
+        <p class="s3-n"><span>02</span></p>
+        <h3 class="h3">It staffs the team.</h3>
+        <p class="s3-p">A project manager turns the goal into tasks, and each task gets its own agent, on a harness and a computer that can run it.</p>
+        <div class="s3-viz"><ol class="s3-tree"><li><b>Master orchestrator</b></li><li><b>Project manager</b></li><li class="s3-row"><span>api lane<em>Claude Code</em></span><span>test lane<em>Codex</em></span><span>docs lane<em>Claude Code</em></span></li></ol></div>
+      </div></li>
+      <li class="s3 bz" data-reveal style="--i:2"><div class="cr">
+        <p class="s3-n"><span>03</span></p>
+        <h3 class="h3">You approve, and watch.</h3>
+        <p class="s3-p">Follow agent sessions on screen. Supported physical and desktop actions file an approval with their evidence.</p>
+        <div class="s3-viz"><div class="s3-ask"><p class="s3-q"><i class="s3-dot" aria-hidden="true"></i>Waits for you</p><p class="s3-what">Run the migration on the billing database?</p><p class="s3-btns"><span class="s3-yes">Approve</span><span class="s3-no">Deny</span></p></div></div>
+      </div></li>
+    </ol>
+    <div class="how-foot" data-reveal>
+      <p class="illus">Illustrative: the sentence, the lanes and the question are examples of what each step shows.</p>
+      <a class="pill pill-ghost" href="plan.html#path">From a sentence to who is doing it<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec what-sec" id="what" aria-labelledby="h-what">
+  <div class="wrap">
+    <header class="sec-head left" data-reveal>
+      <p class="eyebrow">What it does</p>
+      <h2 class="h2" id="h-what">Everything one person needs<br><span class="dim">to run a team of agents.</span></h2>
+      <div class="actions"><a class="pill pill-ghost" href="atlas.html#index">Every feature, and where it lives<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+    </header>
+    <ol class="feat6">
+      <li class="f6 w7 bz" data-reveal style="--i:0"><a class="cr" href="computers.html">
+        <span class="f6-n">#1</span>
+        <span class="f6-h">Connect</span>
+        <span class="f6-p">Manage your agents and computer connections from one place.</span>
+        <span class="f6-chips"><span>Claude Code</span><span>OpenAI Codex CLI</span><span>OpenClaw</span><span>Any agent behind HTTP</span><span>Cursor agent CLI</span></span>
+        <span class="f6-to">Network / Computers<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      </a></li>
+      <li class="f6 w5 bz" data-reveal style="--i:1"><a class="cr" href="atlas.html#route">
+        <span class="f6-n">#2</span>
+        <span class="f6-h">Route</span>
+        <span class="f6-p">Browse models, inspect routing decisions and review recorded usage.</span>
+        <span class="f6-chips"><span>Your subscriptions</span><span>API providers</span><span>Local, on Ollama</span></span>
+        <span class="f6-to">Routing, on the Atlas<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      </a></li>
+      <li class="f6 w5 bz" data-reveal style="--i:0"><a class="cr" href="voice.html">
+        <span class="f6-n">#3</span>
+        <span class="f6-h">Talk</span>
+        <span class="f6-p">Brief it the way you would brief an engineer. It hears you stop, and speaks its answer back.</span>
+        <span class="f6-chips"><span>Silero VAD</span><span>faster-whisper</span><span>Parakeet</span><span>Kokoro</span></span>
+        <span class="f6-to">Voice<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      </a></li>
+      <li class="f6 w7 bz" data-reveal style="--i:1"><a class="cr" href="memory.html">
+        <span class="f6-n">#4</span>
+        <span class="f6-h">Learn</span>
+        <span class="f6-p">Past work is recalled into each new session, and a method worth repeating becomes a skill you keep.</span>
+        <span class="f6-chips"><span>Recall before work</span><span>Feedback capture</span><span>Skills as files</span></span>
+        <span class="f6-to">Memory & learning<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      </a></li>
+      <li class="f6 w7 bz" data-reveal style="--i:0"><a class="cr" href="build-lab.html">
+        <span class="f6-n">#5</span>
+        <span class="f6-h">Build</span>
+        <span class="f6-p">J-PEX carries a hardware brief through 8 rooms; a stage is granted only by a check that ran.</span>
+        <span class="f6-chips"><span>Laboratory</span><span>Circuit Lab</span><span>CAD Studio</span><span>PCB Workshop</span><span>Firmware IDE</span><span>Sim Bay</span><span>Docs Center</span><span>Fab Bay</span></span>
+        <span class="f6-to">Build Lab<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      </a></li>
+      <li class="f6 w5 bz" data-reveal style="--i:1"><a class="cr" href="approvals.html">
+        <span class="f6-n">#6</span>
+        <span class="f6-h">Steer</span>
+        <span class="f6-p">Review supported approval requests and respond in your own words.</span>
+        <span class="f6-chips"><span>From a desk</span><span>Phone-sized preview</span><span>In your own words</span></span>
+        <span class="f6-to">Approvals<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      </a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec cap-sec" id="voice" aria-labelledby="h-voice">
+  <div class="wrap">
+    <div class="cap-grid">
+      <div class="cap-words" data-reveal>
+        <p class="eyebrow">Voice</p>
+        <h2 class="h2" id="h-voice">Say it.<br><span class="dim">The sphere answers.</span></h2>
+        <p class="lede">Brief Theioma the way you would brief an engineer. It hears you stop, writes down what you said, picks a model tier, and speaks its answer back.</p>
+        
+        <div class="actions"><a class="pill pill-ghost" href="voice.html">Voice, in full<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+        <p class="status-line"><b>Status</b><span class="status-text">Speak a brief and hear the answer. A 6 Sep 2026 test with synthetic audio measured an 8.2&nbsp;s spoken turn on an RTX 5080.</span><a href="proof.html#by-capability">Proof</a></p>
+      </div>
+      <div class="cap-demo" data-reveal style="--i:1">
+  <figure class="demo demo-live" data-reveal>
+    <div class="demo-frame">
+      <div class="demo-bar" aria-hidden="true"><i></i><i></i><i></i><span>Voice widget</span></div>
+      <div class="demo-screen voice-screen">
+        <div class="orb"><canvas data-sphere data-sphere-palette="grey" width="360" height="360" role="img" aria-label="The Theioma voice sphere, drawn live by the app’s own renderer"></canvas><i class="orb-ring" aria-hidden="true"></i><i class="orb-core" aria-hidden="true"></i></div>
+        <ol class="loop6"><li><b>Silero VAD</b><span>hears you stop</span></li><li><b>faster-whisper</b><span>speech to text</span></li><li><b>Silence gap</b><span>ends your turn</span></li><li><b>Router</b><span>picks a model tier</span></li><li class="acc"><b>The model</b><span>answers</span></li><li><b>Kokoro</b><span>speaks back</span></li></ol>
+      </div>
+    </div>
+    <figcaption class="demo-cap">
+      <p class="demo-title">The app’s own sphere, live in this page.</p>
+      <div class="reel-meta"><span class="reel-label"><b>Live drawing</b>, not a recording: the app’s sphere renderer runs here; the six stages are the voice loop’s own.</span><span class="reel-acts"><a class="reel-open" href="voice.html#measured">Each stage, measured</a></span></div>
+    </figcaption>
+  </figure></div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="sec cap-sec" id="plan" aria-labelledby="h-plan">
+  <div class="wrap">
+    <div class="cap-grid flip">
+      <div class="cap-words" data-reveal>
+        <p class="eyebrow">Plan</p>
+        <h2 class="h2" id="h-plan">One sentence in.<br><span class="dim">A plan you approve out.</span></h2>
+        <p class="lede">The master orchestrator interviews you until the goal is specific. A project manager turns it into stages and tasks, each with the criteria that say it is done. Then the plan waits for your approval.</p>
+        
+        <div class="actions"><a class="pill pill-ghost" href="plan.html">Plan, in full<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+        <p class="status-line"><b>Status</b><span class="status-text">The interview and the plan run for software and for hardware, and the plan waits for your approval.</span><a href="proof.html#by-capability">Proof</a></p>
+      </div>
+      <div class="cap-demo" data-reveal style="--i:1">
+  <figure class="reel demo demo-crop" data-slot="plan-conversation" data-state="recorded" data-source="fixture" data-kind="clip" style="--cw:600px" data-reveal>
+    <div class="demo-frame">
+      <div class="demo-bar" aria-hidden="true"><i></i><i></i><i></i><span>Projects · Plan</span></div>
+      <button class="demo-play" type="button" data-demo-toggle aria-label="Play or pause the clip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.2v13.6L19.4 12z" fill="currentColor"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13M16 5.5v13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+      <div class="demo-screen" style="--ar:600 / 534">
+        <video class="reel-media demo-video" src="assets/showcase/plan-conversation/plan-conversation.webm" muted playsinline preload="none" data-demo data-from="3.6" data-to="13.6" style="width:213.333%;left:-36.667%;top:-18.727%" aria-label="Deciding the project: the plan, the packet, the composer"></video>
+        <img class="demo-poster" src="assets/demo/plan.jpg" alt="" loading="lazy" decoding="async">
+      </div>
+    </div>
+    <figcaption class="demo-cap">
+      <p class="demo-title">One sentence becomes ten stages.</p>
+      <a class="demo-src" href="proof.html#reel-plan-conversation" data-sha="35695e9c176c"><span class="reel-label"><b>Recorded from the app</b> · fixture data · <time datetime="2026-10-01T02:16:14.842Z">1 Oct 2026</time></span></a>
+    </figcaption>
+  </figure></div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="sec cap-sec" id="agents" aria-labelledby="h-agents">
+  <div class="wrap">
+    <div class="cap-grid">
+      <div class="cap-words" data-reveal>
+        <p class="eyebrow">Agents</p>
+        <h2 class="h2" id="h-agents">Every task gets its own agent,<br><span class="dim">in a real terminal.</span></h2>
+        <p class="lede">Claude Code, Codex, or another harness in the harness table: each agent runs in its own terminal with its brief and its tools, and each harness says how far it has been verified. Who may start whom is a rule in the code, and a worker can never start anyone.</p>
+        <ul class="cap-points"><li><b>107</b> channel tools in every session</li><li><b>93</b> hardware tools, each with its voice twin</li></ul>
+        <div class="actions"><a class="pill pill-ghost" href="agents.html">Agents, in full<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+        <p class="status-line"><b>Status</b><span class="status-text">Claude Code and Codex have each run as an agent under a steward, in a real terminal; OpenClaw, any HTTP agent and Cursor have passed a probe; opencode, Gemini CLI and Aider are rows not verified yet.</span><a href="proof.html#by-capability">Proof</a></p>
+      </div>
+      <div class="cap-demo" data-reveal style="--i:1">
+  <figure class="demo demo-diagram dg-wrap" data-dg data-reveal>
+    <div class="demo-frame"><div class="demo-screen dg-screen"><svg class="dg dg-wide dg-mid" viewBox="0 0 640 612" role="img" aria-labelledby="agw-t agw-d"><title id="agw-t">Who may start whom</title><desc id="agw-d">You give the master orchestrator a goal. It interviews you, writes the plan, and spawns a project manager for software; for a machine it spawns an engineering project manager. A project manager spawns leads, or one room steward per hardware stage; a lead or a steward spawns workers; a worker spawns nothing. Any agent that needs a decision files an approval request, and it waits for you. This repository defines 5 leads, 19 stewards and 49 workers.</desc><style>@keyframes ag-w {0% { transform: translate(594px, 557px); opacity: 0; } 8% { transform: translate(594px, 557px); opacity: 1; } 16% { transform: translate(622px, 557px); opacity: 1; } 70% { transform: translate(622px, 52px); opacity: 1; } 86% { transform: translate(425px, 52px); opacity: 1; } 94% { transform: translate(425px, 52px); opacity: 1; } 100% { transform: translate(425px, 52px); opacity: 0; }}</style><path class="ln" d="M305 90L305 124"/><path class="ln" d="M305 224L305 245L152 245L152 266"/><path class="ln dash" d="M305 245L458 245L458 266"/><path class="ln" d="M152 368L152 404"/><path class="ln dash" d="M458 368L458 404"/><path class="ln" d="M152 482L152 518"/><path class="ln" d="M458 482L458 518"/><path class="ln acc" d="M594 557L622 557L622 52L425 52"/>
+    <text class="s acc" x="612" y="40" text-anchor="end">approvals come back to you</text>
+    <circle class="pk" r="5" style="--pk:ag-w;--pkd:6s"/><g data-n style="--n:0">
+    <rect class="nd ink" x="185" y="14" width="240" height="76" rx="16"/>
+    
+    <text class="t inv" x="203" y="48">You</text>
+    <text class="s inv" x="203" y="68">a goal, and every decision</text>
+  </g><g data-n style="--n:1">
+    <rect class="nd" x="135" y="124" width="340" height="100" rx="16"/>
+    
+    <text class="t" x="153" y="158">Master orchestrator</text>
+    <text class="s" x="153" y="178">interviews you, writes the plan</text><text class="s" x="153" y="198">spawns a PM or a lead</text>
+  </g><g data-n style="--n:2">
+    <rect class="nd" x="16" y="266" width="272" height="102" rx="16"/>
+    <text class="k" x="34" y="292">software</text>
+    <text class="t" x="34" y="316">Project manager</text>
+    <text class="s" x="34" y="336">spawns leads</text>
+  </g><g data-n style="--n:3">
+    <rect class="nd" x="322" y="266" width="272" height="102" rx="16"/>
+    <text class="k" x="340" y="292">a machine</text>
+    <text class="t" x="340" y="316">Engineering PM</text>
+    <text class="s" x="340" y="336">one steward per stage</text>
+  </g><g data-n style="--n:4">
+    <rect class="nd" x="16" y="404" width="272" height="78" rx="16"/>
+    
+    <text class="t" x="34" y="438">Leads</text>
+    <text class="s" x="34" y="458">5 defined · spawn workers</text>
+  </g><g data-n style="--n:5">
+    <rect class="nd" x="322" y="404" width="272" height="78" rx="16"/>
+    
+    <text class="t" x="340" y="438">Room stewards</text>
+    <text class="s" x="340" y="458">19 defined · spawn workers</text>
+  </g><g data-n style="--n:6">
+    <rect class="nd" x="16" y="518" width="578" height="78" rx="16"/>
+    
+    <text class="t" x="34" y="552">Workers</text>
+    <text class="s" x="34" y="572">49 defined · spawn nothing</text>
+  </g></svg><svg class="dg dg-narrow" viewBox="0 0 360 738" role="img" aria-labelledby="agn-t agn-d"><title id="agn-t">Who may start whom</title><desc id="agn-d">You give the master orchestrator a goal. It interviews you, writes the plan, and spawns a project manager for software; for a machine it spawns an engineering project manager. A project manager spawns leads, or one room steward per hardware stage; a lead or a steward spawns workers; a worker spawns nothing. Any agent that needs a decision files an approval request, and it waits for you. This repository defines 5 leads, 19 stewards and 49 workers.</desc><path class="ln" d="M20 50L20 698"/><g data-n style="--n:0">
+    <rect class="nd ink" x="40" y="8" width="300" height="76" rx="16"/>
+    
+    <text class="t inv" x="58" y="42">You</text>
+    <text class="s inv" x="58" y="62">a goal, and every decision</text>
+  </g><g data-n style="--n:1">
+    <rect class="nd" x="40" y="102" width="300" height="100" rx="16"/>
+    
+    <text class="t" x="58" y="136">Master orchestrator</text>
+    <text class="s" x="58" y="156">interviews you, writes the plan</text>
+  </g><g data-n style="--n:2">
+    <rect class="nd" x="52" y="220" width="288" height="102" rx="16"/>
+    <text class="k" x="70" y="246">software</text>
+    <text class="t" x="70" y="270">Project manager</text>
+    <text class="s" x="70" y="290">spawns leads</text>
+  </g><g data-n style="--n:3">
+    <rect class="nd" x="52" y="340" width="288" height="102" rx="16"/>
+    <text class="k" x="70" y="366">a machine</text>
+    <text class="t" x="70" y="390">Engineering PM</text>
+    <text class="s" x="70" y="410">one steward per stage</text>
+  </g><g data-n style="--n:4">
+    <rect class="nd" x="64" y="460" width="276" height="78" rx="16"/>
+    
+    <text class="t" x="82" y="494">Leads</text>
+    <text class="s" x="82" y="514">5 defined · spawn workers</text>
+  </g><g data-n style="--n:5">
+    <rect class="nd" x="64" y="556" width="276" height="78" rx="16"/>
+    
+    <text class="t" x="82" y="590">Room stewards</text>
+    <text class="s" x="82" y="610">19 defined · spawn workers</text>
+  </g><g data-n style="--n:6">
+    <rect class="nd" x="40" y="652" width="300" height="78" rx="16"/>
+    
+    <text class="t" x="58" y="686">Workers</text>
+    <text class="s" x="58" y="706">49 defined · spawn nothing</text>
+  </g></svg></div></div>
+    <figcaption class="demo-cap">
+      <p class="demo-title">Who may start whom, as the code rules it.</p>
+      <div class="reel-meta"><span class="reel-label"><b>Diagram</b>, drawn from <span><code>spawn-authority.ts</code></span>; a recording of a team at work is coming.</span><span class="reel-acts"><button class="pill pill-ghost pill-sm" type="button" data-dg-replay>Replay<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8a4.5 4.5 0 1 0 1.4-3.3M3.5 2.8v2.6h2.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></span></div>
+    </figcaption>
+  </figure></div>
+    </div>
+    
+    <div class="byo" id="byo" data-reveal>
+      <div class="byo-head">
+        <h3 class="h3">Bring your own agents and models.</h3>
+        <p>Each coding agent is a row in one harness table; the rows are read from the code when this page is built.</p>
+        <a class="pill pill-ghost pill-sm" href="agents.html#harness">Every harness<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+      <div class="byo-cols">
+        <div><p class="byo-k">Agents</p><ul class="byo-chips"><li><b>Claude Code</b></li><li><b>OpenAI Codex CLI</b></li><li><b>OpenClaw</b></li><li><b>Any agent behind HTTP</b></li><li><b>opencode</b></li><li><b>Cursor agent CLI</b></li><li><b>Gemini CLI</b></li><li><b>Aider</b></li></ul></div>
+        <div><p class="byo-k">Models</p><ul class="byo-models"><li><b>Subscriptions</b><span>Claude and Codex sessions run on your own logins, never through a shared key.</span></li><li><b>API providers</b><span>Through the model gateway, which hands each session its own token.</span></li><li><b>Local</b><span>Ollama on your own computer, found when the app starts.</span></li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec cap-sec" id="sentinels" aria-labelledby="h-sentinels">
+  <div class="wrap">
+    <div class="cap-grid flip">
+      <div class="cap-words" data-reveal>
+        <p class="eyebrow">Sentinels</p>
+        <h2 class="h2" id="h-sentinels">Checked twice<br><span class="dim">before it is done.</span></h2>
+        <p class="lede">After every code task a code sentinel, then a security sentinel, reports pass or fail. A fail goes back to the worker with its feedback, up to three times, and only a pass closes the task.</p>
+        <ul class="cap-points"><li><data class="mv" value="84" data-metric="sentinel-findings-history.numbers.reviews">84</data> review records on file, <time datetime="2026-07-23T11:35:29.411Z">23 Jul 2026</time> to <time datetime="2026-08-24T12:18:51.293Z">24 Aug 2026</time></li><li><data class="mv" value="62" data-metric="sentinel-findings-history.numbers.findings">62</data> of them findings</li></ul>
+        <div class="actions"><a class="pill pill-ghost" href="sentinels.html">Sentinels, in full<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+        <p class="status-line"><b>Status</b><span class="status-text">The review chain runs on the hub, and its verdicts are on record.</span><a href="proof.html#by-capability">Proof</a></p>
+      </div>
+      <div class="cap-demo" data-reveal style="--i:1">
+  <figure class="reel demo demo-crop" data-slot="sentinel-loop" data-state="recorded" data-source="fixture" data-kind="clip" style="--cw:760px" data-reveal>
+    <div class="demo-frame">
+      <div class="demo-bar" aria-hidden="true"><i></i><i></i><i></i><span>Reviews · Finding</span></div>
+      <button class="demo-play" type="button" data-demo-toggle aria-label="Play or pause the clip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.2v13.6L19.4 12z" fill="currentColor"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13M16 5.5v13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+      <div class="demo-screen" style="--ar:760 / 380">
+        <video class="reel-media demo-video" src="assets/showcase/sentinel-loop/sentinel-loop.webm" muted playsinline preload="none" data-demo data-from="12.5" data-to="24.5" style="width:168.421%;left:-30.526%;top:-11.579%" aria-label="Every task reviewed: findings, fixes, re-review"></video>
+        <img class="demo-poster" src="assets/demo/sentinels.jpg" alt="" loading="lazy" decoding="async">
+      </div>
+    </div>
+    <figcaption class="demo-cap">
+      <p class="demo-title">A finding, its fix, the re-review.</p>
+      <a class="demo-src" href="proof.html#reel-sentinel-loop" data-sha="5a45f3c95f39"><span class="reel-label"><b>Recorded from the app</b> · fixture data · <time datetime="2026-10-01T10:23:55.693Z">1 Oct 2026</time></span></a>
+    </figcaption>
+  </figure></div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="sec cap-sec" id="approvals" aria-labelledby="h-approvals">
+  <div class="wrap">
+    <div class="cap-grid">
+      <div class="cap-words" data-reveal>
+        <p class="eyebrow">Approvals</p>
+        <h2 class="h2" id="h-approvals">Review requests.<br><span class="dim">Stay in control.</span></h2>
+        <p class="lede">Review supported approval requests and answer in your own words. The mobile preview shows the phone-sized flow.</p>
+        
+        <div class="actions"><a class="pill pill-ghost" href="approvals.html">Approvals, in full<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+        <p class="status-line"><b>Status</b><span class="status-text">Prints, flashes and desktop clicks file an approval and wait, and above low risk an approval asks for your passkey. Phone pairing and the phone’s approval routes are built; an approval answered on a physical phone is not yet proven.</span><a href="proof.html#by-capability">Proof</a></p>
+      </div>
+      <div class="cap-demo" data-reveal style="--i:1">
+  <figure class="reel demo demo-crop" data-slot="plan-conversation" data-state="recorded" data-source="fixture" data-kind="clip" style="--cw:468px" data-reveal>
+    <div class="demo-frame">
+      <div class="demo-bar" aria-hidden="true"><i></i><i></i><i></i><span>Inbox · Composer</span></div>
+      <button class="demo-play" type="button" data-demo-toggle aria-label="Play or pause the clip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.2v13.6L19.4 12z" fill="currentColor"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13M16 5.5v13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+      <div class="demo-screen" style="--ar:468 / 470">
+        <video class="reel-media demo-video" src="assets/showcase/plan-conversation/plan-conversation.webm" muted playsinline preload="none" data-demo data-from="34" data-to="46" style="width:273.504%;left:-103.419%;top:-31.915%" aria-label="Deciding the project: the plan, the packet, the composer"></video>
+        <img class="demo-poster" src="assets/demo/approvals.jpg" alt="" loading="lazy" decoding="async">
+      </div>
+    </div>
+    <figcaption class="demo-cap">
+      <p class="demo-title">Your decision, in your own words.</p>
+      <a class="demo-src" href="proof.html#reel-plan-conversation" data-sha="35695e9c176c"><span class="reel-label"><b>Recorded from the app</b> · fixture data · <time datetime="2026-10-01T02:16:14.842Z">1 Oct 2026</time></span></a>
+    </figcaption>
+  </figure></div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="sec cap-sec" id="computers" aria-labelledby="h-computers">
+  <div class="wrap">
+    <div class="cap-grid flip">
+      <div class="cap-words" data-reveal>
+        <p class="eyebrow">Network / Computers</p>
+        <h2 class="h2" id="h-computers">Every computer you own,<br><span class="dim">one team.</span></h2>
+        <p class="lede">A desktop with a GPU, a laptop, a cloud VM: each enrols with its own key and dials out to your hub. Every task is leased to one computer at a time, and when you revoke a computer its work moves on.</p>
+        <ul class="readout">
+          <li><b>A heartbeat from every session, every</b><span class="v" title="packages/channel/src/index.ts HEARTBEAT_INTERVAL_MS = 30_000">30&nbsp;s</span><span class="src"><span><code>channel/src/index.ts</code></span></span></li>
+          <li><b>Silence reads as stale after</b><span class="v" title="apps/web/src/lib/session-liveness/constants.ts">90&nbsp;s</span><span class="src"><span><code>session-liveness/constants.ts</code></span></span></li>
+          <li><b>A revoked computer dropped from the channel</b><span class="v acc" title="node-channel/06-two-node-proof.txt: droppedFromChannelMs 458"><span data-scope-readout>458&nbsp;ms</span></span><span class="src"><span><code>06-two-node-proof.txt</code></span>, three node processes on one computer</span></li>
+        </ul>
+        <div class="actions"><button class="pill pill-ghost" type="button" data-scope-replay aria-pressed="false">Replay a revocation<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8a4.5 4.5 0 1 0 1.4-3.3M3.5 2.8v2.6h2.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><a class="pill pill-ghost" href="computers.html">Computers, in full<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+        <p class="status-line"><b>Status</b><span class="status-text">Device keys, the account CA, mutual TLS 1.3, leases and revocation. The receipts were measured with three node processes on one computer.</span><a href="proof.html#by-capability">Proof</a></p>
+      </div>
+      <div class="cap-demo" data-reveal style="--i:1">
+  <figure class="scope-fig">
+    <div class="scope" data-scope data-state="idle">
+      <svg class="scope-svg" viewBox="-20 -20 640 640" role="img" aria-labelledby="sc-t sc-d">
+  <title id="sc-t">Your computers as tracks around the hub</title>
+  <desc id="sc-d">Illustrative. Ten computers on one account sit around the hub at the centre; a sweep re-paints each one as its heartbeat arrives. Your phone, in orange, is where approvals wait. Replaying a revocation drops laptop-02 and moves its task T-121 to vm-01 with fencing token 8.</desc>
+  <defs>
+    <radialGradient id="sc-face" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#121214"/><stop offset="0.72" stop-color="#0A0A0B"/><stop offset="1" stop-color="#060606"/></radialGradient>
+    <linearGradient id="sc-wedge" gradientUnits="userSpaceOnUse" x1="300" y1="164" x2="202.2" y2="205.5"><stop offset="0" stop-color="#FCFCFD" stop-opacity="0.16"/><stop offset="1" stop-color="#FCFCFD" stop-opacity="0"/></linearGradient>
+  </defs>
+  <circle cx="300" cy="300" r="272" fill="url(#sc-face)"/>
+  <g class="rings"><circle cx="300" cy="300" r="97.9"/><circle cx="300" cy="300" r="163.2"/><circle cx="300" cy="300" r="228.5"/><circle class="outer" cx="300" cy="300" r="272"/></g>
+  <g class="cross"><line x1="300" y1="28" x2="300" y2="572"/><line x1="28" y1="300" x2="572" y2="300"/></g>
+  <g class="ticks"><line x1="300" y1="28" x2="300" y2="40.2" class="maj"/><line x1="323.7" y1="29" x2="323.1" y2="35.8"/><line x1="347.2" y1="32.1" x2="346.1" y2="38.8"/><line x1="370.4" y1="37.3" x2="368.6" y2="43.8"/><line x1="393" y1="44.4" x2="390.7" y2="50.8"/><line x1="415" y1="53.5" x2="412.1" y2="59.6"/><line x1="436" y1="64.4" x2="429.9" y2="75" class="maj"/><line x1="456" y1="77.2" x2="452.1" y2="82.8"/><line x1="474.8" y1="91.6" x2="470.5" y2="96.8"/><line x1="492.3" y1="107.7" x2="487.5" y2="112.5"/><line x1="508.4" y1="125.2" x2="503.2" y2="129.5"/><line x1="522.8" y1="144" x2="517.2" y2="147.9"/><line x1="535.6" y1="164" x2="525" y2="170.1" class="maj"/><line x1="546.5" y1="185" x2="540.4" y2="187.9"/><line x1="555.6" y1="207" x2="549.2" y2="209.3"/><line x1="562.7" y1="229.6" x2="556.2" y2="231.4"/><line x1="567.9" y1="252.8" x2="561.2" y2="253.9"/><line x1="571" y1="276.3" x2="564.2" y2="276.9"/><line x1="572" y1="300" x2="559.8" y2="300" class="maj"/><line x1="571" y1="323.7" x2="564.2" y2="323.1"/><line x1="567.9" y1="347.2" x2="561.2" y2="346.1"/><line x1="562.7" y1="370.4" x2="556.2" y2="368.6"/><line x1="555.6" y1="393" x2="549.2" y2="390.7"/><line x1="546.5" y1="415" x2="540.4" y2="412.1"/><line x1="535.6" y1="436" x2="525" y2="429.9" class="maj"/><line x1="522.8" y1="456" x2="517.2" y2="452.1"/><line x1="508.4" y1="474.8" x2="503.2" y2="470.5"/><line x1="492.3" y1="492.3" x2="487.5" y2="487.5"/><line x1="474.8" y1="508.4" x2="470.5" y2="503.2"/><line x1="456" y1="522.8" x2="452.1" y2="517.2"/><line x1="436" y1="535.6" x2="429.9" y2="525" class="maj"/><line x1="415" y1="546.5" x2="412.1" y2="540.4"/><line x1="393" y1="555.6" x2="390.7" y2="549.2"/><line x1="370.4" y1="562.7" x2="368.6" y2="556.2"/><line x1="347.2" y1="567.9" x2="346.1" y2="561.2"/><line x1="323.7" y1="571" x2="323.1" y2="564.2"/><line x1="300" y1="572" x2="300" y2="559.8" class="maj"/><line x1="276.3" y1="571" x2="276.9" y2="564.2"/><line x1="252.8" y1="567.9" x2="253.9" y2="561.2"/><line x1="229.6" y1="562.7" x2="231.4" y2="556.2"/><line x1="207" y1="555.6" x2="209.3" y2="549.2"/><line x1="185" y1="546.5" x2="187.9" y2="540.4"/><line x1="164" y1="535.6" x2="170.1" y2="525" class="maj"/><line x1="144" y1="522.8" x2="147.9" y2="517.2"/><line x1="125.2" y1="508.4" x2="129.5" y2="503.2"/><line x1="107.7" y1="492.3" x2="112.5" y2="487.5"/><line x1="91.6" y1="474.8" x2="96.8" y2="470.5"/><line x1="77.2" y1="456" x2="82.8" y2="452.1"/><line x1="64.4" y1="436" x2="75" y2="429.9" class="maj"/><line x1="53.5" y1="415" x2="59.6" y2="412.1"/><line x1="44.4" y1="393" x2="50.8" y2="390.7"/><line x1="37.3" y1="370.4" x2="43.8" y2="368.6"/><line x1="32.1" y1="347.2" x2="38.8" y2="346.1"/><line x1="29" y1="323.7" x2="35.8" y2="323.1"/><line x1="28" y1="300" x2="40.2" y2="300" class="maj"/><line x1="29" y1="276.3" x2="35.8" y2="276.9"/><line x1="32.1" y1="252.8" x2="38.8" y2="253.9"/><line x1="37.3" y1="229.6" x2="43.8" y2="231.4"/><line x1="44.4" y1="207" x2="50.8" y2="209.3"/><line x1="53.5" y1="185" x2="59.6" y2="187.9"/><line x1="64.4" y1="164" x2="75" y2="170.1" class="maj"/><line x1="77.2" y1="144" x2="82.8" y2="147.9"/><line x1="91.6" y1="125.2" x2="96.8" y2="129.5"/><line x1="107.7" y1="107.7" x2="112.5" y2="112.5"/><line x1="125.2" y1="91.6" x2="129.5" y2="96.8"/><line x1="144" y1="77.2" x2="147.9" y2="82.8"/><line x1="164" y1="64.4" x2="170.1" y2="75" class="maj"/><line x1="185" y1="53.5" x2="187.9" y2="59.6"/><line x1="207" y1="44.4" x2="209.3" y2="50.8"/><line x1="229.6" y1="37.3" x2="231.4" y2="43.8"/><line x1="252.8" y1="32.1" x2="253.9" y2="38.8"/><line x1="276.3" y1="29" x2="276.9" y2="35.8"/></g>
+  <g class="bearings"><text x="300" y="11.1" text-anchor="middle">000</text><text x="592.4" y="303.5" text-anchor="middle">090</text><text x="300" y="595.9" text-anchor="middle">180</text><text x="7.6" y="303.5" text-anchor="middle">270</text></g>
+  <g class="sweep"><path d="M300 300L300 28A272 272 0 0 0 104.3 111.1Z" fill="url(#sc-wedge)"/><line class="edge" x1="300" y1="300" x2="300" y2="28"/></g>
+  <g class="trks">
+    <g class="trk" transform="translate(342 153.6)" style="--d:-7.6s">
+      <circle class="trk-echo" r="11"/>
+      <circle class="trk-dot" r="3.6"/>
+      <text class="trk-id" x="12" y="-2" text-anchor="start">rig-01</text>
+      <text class="trk-work" x="12" y="12" text-anchor="start">Local model</text>
+      
+      
+    </g>
+    <g class="trk" transform="translate(475.8 162.7)" style="--d:-6.8s">
+      <circle class="trk-echo" r="11"/>
+      <circle class="trk-dot" r="3.6"/>
+      <text class="trk-id" x="12" y="-2" text-anchor="start">laptop-01</text>
+      <text class="trk-work" x="12" y="12" text-anchor="start">Claude Code</text>
+      
+      
+    </g>
+    <g class="trk" transform="translate(426.7 331.6)" style="--d:-5.7s" data-revoked>
+      <circle class="trk-echo" r="11"/>
+      <circle class="trk-dot" r="3.6"/>
+      <text class="trk-id" x="12" y="-2" text-anchor="start">laptop-02</text>
+      <text class="trk-work" x="12" y="12" text-anchor="start">Codex</text>
+      <text class="trk-lease now" x="12" y="25" text-anchor="start">T-121 · token 7</text><text class="trk-lease next" x="12" y="25" text-anchor="start">revoked · fenced</text>
+      
+    </g>
+    <g class="trk" transform="translate(452.9 469.8)" style="--d:-4.9s">
+      <circle class="trk-echo" r="11"/>
+      <circle class="trk-dot" r="3.6"/>
+      <text class="trk-id" x="12" y="-2" text-anchor="start">cad-01</text>
+      <text class="trk-work" x="12" y="12" text-anchor="start">CAD kernel</text>
+      
+      
+    </g>
+    <g class="trk" transform="translate(322 456.2)" style="--d:-4.2s">
+      <circle class="trk-echo" r="11"/>
+      <circle class="trk-dot" r="3.6"/>
+      <text class="trk-id" x="12" y="-2" text-anchor="start">mac-01</text>
+      <text class="trk-work" x="12" y="12" text-anchor="start">Claude Code</text>
+      
+      
+    </g>
+    <g class="trk" transform="translate(201 502.9)" style="--d:-3.4s">
+      <circle class="trk-echo" r="11"/>
+      <circle class="trk-dot" r="3.6"/>
+      <text class="trk-id" x="-12" y="-2" text-anchor="end">rig-02</text>
+      <text class="trk-work" x="-12" y="12" text-anchor="end">Simulation</text>
+      
+      
+    </g>
+    <g class="trk" transform="translate(158.7 381.6)" style="--d:-2.7s">
+      <circle class="trk-echo" r="11"/>
+      <circle class="trk-dot" r="3.6"/>
+      <text class="trk-id" x="-12" y="-2" text-anchor="end">mac-mini</text>
+      <text class="trk-work" x="-12" y="12" text-anchor="end">Browser test</text>
+      
+      
+    </g>
+    <g class="trk" transform="translate(85.6 238.5)" style="--d:-1.6s" data-takes>
+      <circle class="trk-echo" r="11"/>
+      <circle class="trk-dot" r="3.6"/>
+      <text class="trk-id" x="-12" y="-2" text-anchor="end">vm-01</text>
+      <text class="trk-work" x="-12" y="12" text-anchor="end">Idle</text>
+      
+      <text class="trk-lease now" x="-12" y="25" text-anchor="end">no lease</text><text class="trk-lease next acc" x="-12" y="25" text-anchor="end">T-121 · token 8</text>
+    </g>
+    <g class="trk" transform="translate(186.5 190.4)" style="--d:-1s">
+      <circle class="trk-echo" r="11"/>
+      <circle class="trk-dot" r="3.6"/>
+      <text class="trk-id" x="-12" y="-2" text-anchor="end">vm-02</text>
+      <text class="trk-work" x="-12" y="12" text-anchor="end">FEA</text>
+      
+      
+    </g>
+    <g class="trk" transform="translate(229.4 82.7)" style="--d:-0.4s">
+      <circle class="trk-echo" r="11"/>
+      <circle class="trk-dot" r="3.6"/>
+      <text class="trk-id" x="-12" y="-2" text-anchor="end">rig-03</text>
+      <text class="trk-work" x="-12" y="12" text-anchor="end">Voice</text>
+      
+      
+    </g>
+    <g class="trk trk-phone" transform="translate(393.1 269.7)" style="--d:-6.4s">
+      <circle class="trk-echo" r="11"/>
+      <rect class="trk-dot" x="-3.4" y="-5.4" width="6.8" height="10.8" rx="1.8"/>
+      <text class="trk-id" x="12" y="-2">your phone</text>
+      <text class="trk-work acc" x="12" y="12">1 approval waits</text>
+    </g>
+  </g>
+</svg>
+      <div class="scope-hub"><canvas data-sphere data-sphere-palette="grey" width="140" height="140" aria-hidden="true"></canvas><i class="orb-core" aria-hidden="true"></i><span>hub · your account</span></div>
+    </div>
+    <figcaption class="illus">Illustrative: ten computers on one account; the names, the tasks and the tokens are examples, and the sweep is not to time scale. The measured numbers are beside it, each with its receipt.</figcaption>
+  </figure></div>
+    </div>
+    <div class="cap-below">
+  <figure class="reel demo demo-crop" data-slot="split-computers" data-state="recorded" data-source="fixture" data-kind="clip" data-m style="--cw:1036px;--mw:247.104%;--ml:-43.629%;--mt:-33.146%;--mar:518 / 356;--pw:200%;--pl:0%;--pt:0%" data-reveal>
+    <div class="demo-frame">
+      <div class="demo-bar" aria-hidden="true"><i></i><i></i><i></i><span>Agents · Network</span></div>
+      <button class="demo-play" type="button" data-demo-toggle aria-label="Play or pause the clip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.2v13.6L19.4 12z" fill="currentColor"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13M16 5.5v13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+      <div class="demo-screen" style="--ar:1036 / 356">
+        <video class="reel-media demo-video" src="assets/showcase/split-computers/split-computers.webm" muted playsinline preload="none" data-demo data-from="60.5" data-to="71.5" style="width:123.552%;left:-21.815%;top:-33.146%" aria-label="Every computer you own: enrol, grant, split the work"></video>
+        <img class="demo-poster" src="assets/demo/computers.jpg" alt="" loading="lazy" decoding="async">
+      </div>
+    </div>
+    <figcaption class="demo-cap">
+      <p class="demo-title">Every computer, and the agents on it.</p>
+      <a class="demo-src" href="proof.html#reel-split-computers" data-sha="fd8b3f8ffde7"><span class="reel-label"><b>Recorded from the app</b> · fixture data · <time datetime="2026-10-01T02:19:03.129Z">1 Oct 2026</time></span></a>
+    </figcaption>
+  </figure></div>
+  </div>
+</section>
+
+<section class="sec cap-sec" id="limits" aria-labelledby="h-limits">
+  <div class="wrap">
+    <div class="cap-grid">
+      <div class="cap-words" data-reveal>
+        <p class="eyebrow">Limits</p>
+        <h2 class="h2" id="h-limits">Plan for limits.<br><span class="dim">See the handoff paths.</span></h2>
+        <p class="lede">Follow the paths for handing off a full context window and trying another member serving the same model.</p>
+        <div class="actions"><a class="pill pill-ghost" href="agents.html#limits">Limits, in full<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+        <p class="status-line"><b>Status</b><span class="status-text">A full context window hands off to a fresh session, and a usage limit moves the turn to another member serving the same model. Both are tested; neither has passed a live drill yet.</span><a href="proof.html#by-capability">Proof</a></p>
+      </div>
+      <div class="cap-demo" data-reveal style="--i:1">
+  <figure class="demo demo-diagram tl-fig" data-reveal>
+    <div class="demo-frame">
+      <div class="demo-bar" aria-hidden="true"><i></i><i></i><i></i><span>Handoff and failover</span></div>
+      <div class="tl">
+        
+        <div class="tl-track">
+          <p class="tl-k">A full context window</p>
+          <ol class="tl-steps"><li style="--i:0"><i aria-hidden="true"></i><b>Agent A works</b><span>on its task, in its own terminal</span></li><li class="acc" style="--i:1"><i aria-hidden="true"></i><b>Near its limit</b><span>it reports the boundary and writes its handoff</span></li><li style="--i:2"><i aria-hidden="true"></i><b>Agent B continues</b><span>from PROGRESS.md and the receipts</span></li></ol>
+          <p class="tl-end">The old transcript is never resumed.</p>
+        </div>
+        
+        <div class="tl-track">
+          <p class="tl-k">A usage limit</p>
+          <ol class="tl-steps"><li style="--i:0"><i aria-hidden="true"></i><b>A member hits its limit</b><span>a subscription or a provider says stop</span></li><li class="acc" style="--i:1"><i aria-hidden="true"></i><b>The gateway cools it down</b><span>and looks for the same model elsewhere</span></li><li style="--i:2"><i aria-hidden="true"></i><b>The next member answers</b><span>serving the same model</span></li></ol>
+          <p class="tl-end">If none serves that model, the turn is not delivered; it never moves to another model family.</p>
+        </div>
+      </div>
+    </div>
+    <figcaption class="demo-cap">
+      <p class="demo-title">Two limits, and the route each one takes.</p>
+      <div class="reel-meta"><span class="reel-label"><b>Diagram</b>, drawn from <span><code>session-rotator.ts</code></span> and the model gateway; not a recording.</span><span class="reel-acts"><a class="reel-open" href="agents.html#limits">The full figure</a></span></div>
+    </figcaption>
+  </figure></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec cap-sec" id="build-lab" aria-labelledby="h-build-lab">
+  <div class="wrap">
+    <div class="cap-grid">
+      <div class="cap-words" data-reveal>
+        <p class="eyebrow">Build Lab</p>
+        <h2 class="h2" id="h-build-lab">Hardware,<br><span class="dim">room by room.</span></h2>
+        <p class="lede">J-PEX carries a hardware brief through 8 rooms, each owned by a steward: requirements, parts, CAD, circuit, firmware, simulation, documents, fabrication. A stage is granted only by a check that ran, never by an agent saying so.</p>
+        <ul class="cap-points"><li><b>93</b> hardware tools, the same from a terminal or by voice</li><li>One brief for a drone went through every room</li><li>Drone v2 is under way, built by the product’s own stewards: its state on 17 Oct is below</li></ul>
+        <div class="actions"><a class="pill pill-ghost" href="build-lab.html">Build Lab, in full<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+        <p class="status-line"><b>Status</b><span class="status-text">Every stage up to the print gate has run on a real project, and a print waits for your approval.</span><a href="proof.html#by-capability">Proof</a></p>
+      </div>
+      <div class="cap-demo" data-reveal style="--i:1">
+  <figure class="demo demo-still" data-reveal>
+    <div class="demo-frame">
+      <div class="demo-bar" aria-hidden="true"><i></i><i></i><i></i><span>Build Lab · Render</span></div>
+      <div class="demo-screen" style="--ar:1600 / 864"><img class="demo-img" src="assets/demo/build-lab-render.jpg" alt="A rendered racing quadcopter: an orange printed frame, four motors with propellers, a flight stack, a battery and an antenna." width="1600" height="864" loading="lazy" decoding="async"></div>
+    </div>
+    <figcaption class="demo-cap">
+      <p class="demo-title">The racing quad, drawn from its own STEP files.</p>
+      <div class="reel-meta"><span class="reel-label"><b>Design render</b>, <time datetime="2026-09-23">23 Sep 2026</time>: drawn in Blender from the Build Lab’s own STEP files, a candidate airframe on revision 91. Not a recording of the app, and not a printed object.</span></div>
+    </figcaption>
+  </figure></div>
+    </div>
+    
+    <p class="band-k" id="drone-v2" data-reveal>Drone v2, as it stands on 17 October 2026</p>
+    <ol class="bcards">
+      
+      <li class="bc w6 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate part">partly</span><span class="bc-area">Stage 1 · system graph</span></p>
+        <p class="bc-title">The machine as one graph, checked against its records</p>
+        <p class="bc-num">44<span class="bc-unit">nodes</span></p><ul class="bc-kv"><li><span>Connections</span><b>94</b></li><li><span>Wire · mechanical · thermal · bus</span><b>44 · 32 · 17 · 1</b></li></ul>
+        <p class="bc-sub">It first closed on 14 Oct with 39 nodes and 85 connections, 17 of 17 records matching. It closed again on 17 Oct after the video changed, and the operator’s scope cut that afternoon re-opened it.</p>
+        <p class="bc-foot"><time datetime="2026-10-17">17 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>the project’s PM files</code></span></p>
+      </div></li>
+      
+      <li class="bc w6 bz" data-reveal style="--i:1"><div class="cr">
+        <p class="bc-k"><span class="bstate prog">in progress</span><span class="bc-area">Stage 2 · component research</span></p>
+        <p class="bc-title">A full buying list, over the budget</p>
+        <p class="bc-num">EUR&nbsp;854.32<span class="bc-unit">sourced</span></p><ul class="bc-kv"><li><span>The ceiling</span><b>EUR&nbsp;450</b></li><li><span>Over it by</span><b>EUR&nbsp;404.32</b></li><li><span>With import estimates</span><b>EUR&nbsp;914.60</b></li><li><span>Costs still unknown</span><b>7</b></li></ul>
+        <p class="bc-sub">Research ran 6 rounds; the last one’s 23 of 23 receipts are current and 53 sources are kept on file. Nothing is bought. On 17 Oct the operator kept EUR&nbsp;450 and asked for a cut scope with no live video, so the list is being priced again. The stage cannot close until its research check passes.</p>
+        <p class="bc-foot"><time datetime="2026-10-17">17 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>the project’s PM files</code></span></p>
+      </div></li>
+      
+      <li class="bc w6 bz" data-reveal style="--i:2"><div class="cr">
+        <p class="bc-k"><span class="bstate none">no run yet</span><span class="bc-area">Not started</span></p>
+        <p class="bc-title">CAD, circuits, firmware, a print, a flight</p>
+        <p class="bc-ring">Not started</p>
+        <p class="bc-sub">Stage 3 has not started. Nothing has been printed, flashed or flown, and there is no all-up weight yet (a partial sum of board and part masses reads 407.2&nbsp;g). The drone is not finished.</p>
+        <p class="bc-foot"><time datetime="2026-10-17">17 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>the project’s PM files</code></span></p>
+      </div></li>
+      
+      <li class="bc w6 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate part">partly</span><span class="bc-area">The chain</span></p>
+        <p class="bc-title">The product staffed the work itself</p>
+        <ul class="bc-kv"><li><span>Room stewards an engineering PM spawned, 13 Oct</span><b>11</b></li><li><span>Workers under the Laboratory steward, 13 to 17 Oct</span><b>19</b></li></ul>
+        <p class="bc-sub">Not clean yet: stage 2 research was issued 7 times and assessed 6 times, and stewards and workers churned instead of the stage closing.</p>
+        <p class="bc-foot"><time datetime="2026-10-17">17 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>17-GAP-REGISTER</code></span></p>
+      </div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec cap-sec" id="memory" aria-labelledby="h-memory">
+  <div class="wrap">
+    <div class="cap-grid flip">
+      <div class="cap-words" data-reveal>
+        <p class="eyebrow">Memory & learning</p>
+        <h2 class="h2" id="h-memory">It remembers,<br><span class="dim">and it learns.</span></h2>
+        <p class="lede">Before an agent starts, Theioma recalls similar past work into its session. What agents find is filed with where it came from, and a method worth repeating becomes a skill: a file you keep.</p>
+        
+        <div class="actions"><a class="pill pill-ghost" href="memory.html">Memory, in full<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+        <p class="status-line"><b>Status</b><span class="status-text">Past work is recalled into new sessions, and feedback and outcomes are logged. The nightly passes run and record each step, and none has yet applied an edit live; the monthly fine-tune is a dry run that trains nothing.</span><a href="proof.html#by-capability">Proof</a></p>
+      </div>
+      <div class="cap-demo" data-reveal style="--i:1">
+  <figure class="demo demo-ledger" data-reveal>
+    <div class="demo-frame">
+      <div class="demo-bar" aria-hidden="true"><i></i><i></i><i></i><span>Memory and learning</span></div>
+      <ol class="mem-rows"><li><span class="st">runs</span><b>Recall before work</b><span class="mem-d">the spawn primer brings analogous past work into a new session</span></li><li><span class="st">runs</span><b>A memory agents search</b><span class="mem-d">full text first, reranked by embeddings</span></li><li><span class="st">runs</span><b>Feedback capture</b><span class="mem-d">how each run went, logged</span></li><li><span class="st">runs</span><b>Skills as files</b><span class="mem-d">a method worth repeating becomes a SKILL.md you keep</span></li><li><span class="st part">ran once</span><b>A local fine-tune, held to its own gate</b><span class="mem-d">one adapter was trained on 1 Oct 2026, and its held-out gate refused it</span></li><li><span class="st no">dry run</span><b>The monthly fine-tune job</b><span class="mem-d">it records the run, and trains and swaps nothing</span></li><li><span class="st">runs</span><b>Nightly consolidation and daily self-improvement</b><span class="mem-d">each night and each day a job records its steps; none has yet proposed and applied an edit live</span></li></ol>
+    </div>
+    <figcaption class="demo-cap">
+      <p class="demo-title">What it keeps from every run.</p>
+      <div class="reel-meta"><span class="reel-label"><b>A list, not a recording</b>: what it keeps from every run.</span><span class="reel-acts"><a class="reel-open" href="memory.html#memory">How the memory answers</a></span></div>
+    </figcaption>
+  </figure></div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="sec bench-sec" id="benchmarks" aria-labelledby="h-benchmarks">
+  <div class="wrap">
+    <header class="sec-head left" data-reveal>
+      <p class="eyebrow">Benchmarks</p>
+      <h2 class="h2" id="h-benchmarks">Measured, with its date.<br><span class="dim">Not measured, said plainly.</span></h2>
+      <p class="lede">Each number is read from the file it was measured in when this page is built, and names that file. Where nothing has been measured yet, the card shows a hollow ring and what it waits on, never a zero.</p>
+      <div class="actions"><a class="pill pill-ghost" href="benchmarks.html">Benchmarks, in full<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+    </header>
+    <p class="band-k" data-reveal>Routing and models, read from the app</p>
+    <ol class="bcards">
+      
+      <li class="bc w7 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate measured">measured</span><span class="bc-area">Routing</span></p>
+        <p class="bc-title">Tokens for the price of Claude Opus 5.5</p>
+        <ul class="bc-kv"><li><span>Last 7 days</span><b><data class="mv" value="0.91" data-metric="tokens-for-opus.numbers.multiple7d">0.91×</data></b></li><li><span>Last 30 days</span><b><data class="mv" value="1.06" data-metric="tokens-for-opus.numbers.multiple30d">1.06×</data></b></li></ul>
+        <p class="bc-sub">The tokens routing served for the list-price value it drew, against the tokens that value buys on Claude Opus 5.5 alone. Over the last 7 days routing served <data class="mv" value="18" data-metric="tokens-for-opus.numbers.served7d">18.0B</data> tokens, where the same value buys <data class="mv" value="19.8" data-metric="tokens-for-opus.numbers.onOpus7d">19.8B</data> on Opus 5.5 alone: below one, because GPT-6-Astra lists above Opus 5.5. Over 30 days it served <data class="mv" value="35.2" data-metric="tokens-for-opus.numbers.served30d">35.2B</data> against <data class="mv" value="33.4" data-metric="tokens-for-opus.numbers.onOpus30d">33.4B</data> on Opus 5.5 alone. This is list-price value, not money: most of the work runs on included subscriptions and free routes, a subscription call counts at its list-price equivalent and a free or local call at zero.</p>
+        <p class="bc-foot"><time datetime="2026-10-17">17 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>the scorecard, read from the app</code></span> · <a href="benchmarks.html#m-tokens-for-opus">Method and caveat</a></p>
+      </div></li>
+      
+      <li class="bc w5 bz" data-reveal style="--i:1"><div class="cr">
+        <p class="bc-k"><span class="bstate measured">measured</span><span class="bc-area">Models</span></p>
+        <p class="bc-title">Which catalogue models have been tried</p>
+        <p class="bc-num"><data class="mv" value="17" data-metric="catalogue-coverage.numbers.withData">17</data><span class="bc-unit">of <data class="mv" value="773" data-metric="catalogue-coverage.numbers.catalogue">773</data> have data</span></p>
+        <p class="bc-sub">Never tried: <data class="mv" value="72" data-metric="catalogue-coverage.numbers.noTools">72</data> have no tool support, <data class="mv" value="52" data-metric="catalogue-coverage.numbers.noConnection">52</data> have no enabled connection, and <data class="mv" value="632" data-metric="catalogue-coverage.numbers.neverRouted">632</data> were never routed to. Most of the catalogue has not been tested yet.</p>
+        <p class="bc-foot"><time datetime="2026-10-17">17 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>the scorecard, read from the app</code></span></p>
+      </div></li>
+    </ol>
+    
+    <p class="band-k" data-reveal>Voice</p>
+    <ol class="bcards">
+      
+      <li class="bc w7 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate measured">measured</span><span class="bc-area">Speech model</span></p>
+        <p class="bc-title">First audio from the speech model, before and after its rewrite</p>
+        
+        <div class="pair">
+          <div class="pair-row">
+            <span class="pair-k">p50</span>
+            <span class="pair-bars" aria-hidden="true"><i class="was" style="width:56.4%"></i><i class="now" style="width:33.1%"></i></span>
+            <span class="pair-v"><span class="was">262.0</span><span class="now">153.6<small>ms</small></span></span>
+          </div>
+          <div class="pair-row">
+            <span class="pair-k">p95</span>
+            <span class="pair-bars" aria-hidden="true"><i class="was" style="width:100.0%"></i><i class="now" style="width:65.5%"></i></span>
+            <span class="pair-v"><span class="was">464.5</span><span class="now">304.1<small>ms</small></span></span>
+          </div>
+          <p class="pair-key"><span class="was">Before</span><span class="now">After</span></p>
+        </div>
+        <p class="bc-sub">Kokoro on the RTX 5080: 330 paired requests, two voices, in one process; the same length and the same word error rate as before. This dated run times the model alone, not a whole turn. The source now defaults to <code>fp32-matmul</code>; it does not measure the running service.</p>
+        <p class="bc-foot"><time datetime="2026-10-04">4 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>b-kokoro-speed</code></span></p>
+      </div></li>
+      
+      <li class="bc w5 bz" data-reveal style="--i:1"><div class="cr">
+        <p class="bc-k"><span class="bstate measured">measured</span><span class="bc-area">Voice turn</span></p>
+        <p class="bc-title">A whole spoken turn through the app, at its best</p>
+        <p class="bc-num">8.2<span class="bc-unit">s, on the RTX 5080</span></p>
+        <div class="pair">
+          <div class="pair-row">
+            <span class="pair-k">turn</span>
+            <span class="pair-bars" aria-hidden="true"><i class="was" style="width:100.0%"></i><i class="now" style="width:35.3%"></i></span>
+            <span class="pair-v"><span class="was">23.1</span><span class="now">8.2<small>s</small></span></span>
+          </div>
+          <p class="pair-key"><span class="was">On the CPU</span><span class="now">On the RTX 5080</span></p>
+        </div>
+        <p class="bc-sub">Speech to text, the answer and its speech, through the app’s own routes. A turn under one second has not been measured on any path.</p>
+        <p class="bc-foot"><time datetime="2026-09-06">6 Sep 2026</time><span class="sep" aria-hidden="true">·</span><span><code>voice-e2e.md §8.1</code></span></p>
+      </div></li>
+      
+      <li class="bc w12 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate measured">measured</span><span class="bc-area">Voice budget</span></p>
+        <p class="bc-title">Where a turn’s time goes, stage by stage, against a 300&nbsp;ms target</p>
+        
+        <ol class="stages">
+          <li>
+            <span class="sg-l">The end of your turn, decided</span>
+            <span class="sg-bar" aria-hidden="true"><i style="width:37.12%"></i><b style="left:3.06%"></b></span>
+            <span class="sg-v"><b>1,455</b>&nbsp;ms</span>
+            <span class="sg-n">p95&nbsp;1,508&nbsp;ms · n 24 · its share 120&nbsp;ms</span>
+          </li>
+          <li>
+            <span class="sg-l">Speech to text, the final transcript</span>
+            <span class="sg-bar" aria-hidden="true"><i style="width:1.45%"></i><b style="left:0.51%"></b></span>
+            <span class="sg-v"><b>57</b>&nbsp;ms</span>
+            <span class="sg-n">p95&nbsp;88&nbsp;ms · n 105 · its share 20&nbsp;ms</span>
+          </li>
+          <li>
+            <span class="sg-l">The local model’s first output</span>
+            <span class="sg-bar" aria-hidden="true"><i style="width:100.00%"></i><b style="left:1.53%"></b></span>
+            <span class="sg-v"><b>3,920</b>&nbsp;ms</span>
+            <span class="sg-n">p95&nbsp;6,263&nbsp;ms · n 24 · its share 60&nbsp;ms</span>
+          </li>
+          <li>
+            <span class="sg-l">First audio of the first clause</span>
+            <span class="sg-bar" aria-hidden="true"><i style="width:4.59%"></i><b style="left:1.53%"></b></span>
+            <span class="sg-v"><b>180</b>&nbsp;ms</span>
+            <span class="sg-n">p95&nbsp;274&nbsp;ms · n 24 · its share 60&nbsp;ms</span>
+          </li>
+        </ol>
+        <p class="sg-key"><span class="bar">p50, all to one scale</span><span class="tick">its share of the 300&nbsp;ms target</span></p>
+        <p class="bc-sub">Each stage timed on its own, on synthetic speech, as the app ships it. Not measured yet: the phone path’s transcript, the route before the model, playback start. The 300&nbsp;ms is the operator’s target for first audio, not a measurement.</p>
+        <p class="bc-foot"><time datetime="2026-09-30">30 Sep 2026</time><span class="sep" aria-hidden="true">·</span><span><code>voice-latency budget.md</code></span></p>
+      </div></li>
+    </ol>
+    <p class="band-k" data-reveal>Computers and learning</p>
+    <ol class="bcards">
+      
+      <li class="bc w4 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate measured">measured</span><span class="bc-area">Computers</span></p>
+        <p class="bc-title">A revoked computer, dropped from the channel</p>
+        <p class="bc-num">458<span class="bc-unit">ms</span></p>
+        <p class="bc-sub">Its process exited with code 3 and the others kept working. Three node processes on one computer, not two machines.</p>
+        <p class="bc-foot"><time datetime="2026-09-29">29 Sep 2026</time><span class="sep" aria-hidden="true">·</span><span><code>06-two-node-proof.txt</code></span></p>
+      </div></li>
+      
+      <li class="bc w4 bz" data-reveal style="--i:1"><div class="cr">
+        <p class="bc-k"><span class="bstate measured">measured</span><span class="bc-area">Computers</span></p>
+        <p class="bc-title">A spawn sent to one computer, there and back</p>
+        <p class="bc-num">141<span class="bc-unit">ms</span></p>
+        <p class="bc-sub">It ran on that computer only. The same proof, on the same one computer.</p>
+        <p class="bc-foot"><time datetime="2026-09-29">29 Sep 2026</time><span class="sep" aria-hidden="true">·</span><span><code>06-two-node-proof.txt</code></span></p>
+      </div></li>
+      
+      <li class="bc w4 bz" data-reveal style="--i:2"><div class="cr">
+        <p class="bc-k"><span class="bstate ran">ran once</span><span class="bc-area">Learning</span></p>
+        <p class="bc-title">A local fine-tune, held to its evaluation gate</p>
+        <ul class="bc-kv"><li><span>The base model</span><b>309 of 319</b></li><li><span>With the adapter</span><b>310 of 319</b></li></ul>
+        <p class="bc-sub">Held-out answers right, one task class, Qwen3-4B. A gain of 0.0031 against a gate of 0.02, so the swap refused the adapter and nothing is served from it.</p>
+        <p class="bc-foot"><time datetime="2026-10-01">1 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>d2-train-serve</code></span></p>
+      </div></li>
+    </ol>
+    <p class="band-k" data-reveal>Not measured yet</p>
+    <ol class="bcards">
+      
+      <li class="bc w4 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate low">not enough data</span><span class="bc-area">Cost</span></p>
+        <p class="bc-title">What routing through the cost cascade changes</p>
+        <p class="bc-ring">Not enough data yet</p>
+        <p class="bc-sub"><data class="mv" value="6" data-metric="cost-saved-router.observed.routedSessions">6</data> sessions ran on a model the router chose; a claim needs <data class="mv" value="30" data-metric="cost-saved-router.observed.sessionFloor">30</data>.</p>
+        <p class="bc-foot"><a href="benchmarks.html#m-cost-saved-router">Method, dates and caveat</a></p>
+      </div></li>
+      
+      <li class="bc w4 bz" data-reveal style="--i:1"><div class="cr">
+        <p class="bc-k"><span class="bstate none">no run yet</span><span class="bc-area">Speed</span></p>
+        <p class="bc-title">Time to a done task, against one plain session</p>
+        <p class="bc-ring">No run yet</p>
+        <p class="bc-sub">One controlled bench measures it; a real run waits for the operator’s go-ahead.</p>
+        <p class="bc-foot"><a href="benchmarks.html#m-speed-build-time">Method, dates and caveat</a></p>
+      </div></li>
+      
+      <li class="bc w4 bz" data-reveal style="--i:2"><div class="cr">
+        <p class="bc-k"><span class="bstate none">no run yet</span><span class="bc-area">Correctness</span></p>
+        <p class="bc-title">Right first time, by hidden acceptance tests</p>
+        <p class="bc-ring">No run yet</p>
+        <p class="bc-sub">The same bench; the tests decide, not the agent.</p>
+        <p class="bc-foot"><a href="benchmarks.html#m-one-shot-correctness">Method, dates and caveat</a></p>
+      </div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec paper tp-sec" id="proof" aria-labelledby="h-proof">
+  <div class="wrap">
+    <header class="sec-head left" data-reveal>
+      <p class="eyebrow">Tests and proof</p>
+      <h2 class="h2" id="h-proof">Tests run, with their results.<br><span class="dim">Proof, with its receipt.</span></h2>
+      <p class="lede">The test suite, the type check and the lint as last filed in the repository, the ship list as it stands, and every run end to end. Each carries its date and its file, and a failure is counted, not hidden.</p>
+      <div class="actions"><a class="pill pill-primary" href="proof.html#tests">Every test, and everything proven<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+    </header>
+    
+    <ol class="bcards">
+      
+      <li class="bc w7 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate old">no recent run</span><span class="bc-area">Vitest</span></p>
+        <p class="bc-title">The whole test suite</p>
+        <p class="bc-ring">Historical evidence unavailable</p>
+        <p class="bc-sub">The historical raw test receipts are unavailable. Total, pass counts and the local database comparison are unknown; no suite pass is claimed.</p>
+        <p class="bc-foot"><span><code>Historical lane notes</code></span> · notes are not verification of missing raw receipts</p>
+      </div></li>
+      
+      <li class="bc w5 bz" data-reveal style="--i:1"><div class="cr">
+        <p class="bc-k"><span class="bstate prog">in progress</span><span class="bc-area">Ship list</span></p>
+        <p class="bc-title">What v1.0 must meet</p>
+        <p class="bc-num">2<span class="bc-unit">of 25 met</span></p>
+        <ol class="crit" aria-label="2 of 25 criteria met"><li class=""><span>R1</span></li><li class=""><span>R2</span></li><li class="met"><span>R3</span></li><li class="met"><span>R4</span></li><li class=""><span>A1</span></li><li class=""><span>A2</span></li><li class=""><span>A3</span></li><li class=""><span>B1</span></li><li class=""><span>B2</span></li><li class=""><span>B3</span></li><li class=""><span>C1</span></li><li class=""><span>C2</span></li><li class=""><span>C3</span></li><li class=""><span>C4</span></li><li class=""><span>C5</span></li><li class=""><span>C6</span></li><li class=""><span>D1</span></li><li class=""><span>D2</span></li><li class=""><span>D3</span></li><li class=""><span>E1</span></li><li class=""><span>E2</span></li><li class=""><span>E3</span></li><li class=""><span>X1</span></li><li class=""><span>X2</span></li><li class=""><span>X3</span></li></ol>
+        <p class="bc-sub">Read from the ship program’s registry when this page was built: 305 work lanes, 104 of them committed or done.</p>
+        <p class="bc-foot"><time datetime="2026-10-17">17 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>00-SHIPPABLE.md</code></span></p>
+      </div></li>
+      
+      <li class="bc w4 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate red">not green yet</span><span class="bc-area">Type check</span></p>
+        <p class="bc-title">TypeScript, the whole app</p>
+        <p class="bc-num">10<span class="bc-unit">errors in 7 files</span></p>
+        <p class="bc-sub">As read at 11:52 on <time datetime="2026-10-04">4 Oct 2026</time>, the last whole-app read filed in the repository. Their fixes are in the tree; later reads are not filed here yet.</p>
+        <p class="bc-foot"><time datetime="2026-10-04">4 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>r-tsc-green</code></span></p>
+      </div></li>
+      
+      <li class="bc w4 bz" data-reveal style="--i:1"><div class="cr">
+        <p class="bc-k"><span class="bstate part">partly</span><span class="bc-area">Lint</span></p>
+        <p class="bc-title">ESLint</p>
+        <ul class="bc-lines"><li><span class="bstate measured">pass</span><b>Every package</b></li><li><span class="bstate none">no result</span><b>The app, typed</b></li></ul>
+        <p class="bc-sub">The app’s typed lint ran out of memory before it finished. A run in smaller pieces has not finished yet.</p>
+        <p class="bc-foot"><time datetime="2026-10-04">4 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>r-lint-green</code></span></p>
+      </div></li>
+      
+      <li class="bc w4 bz" data-reveal style="--i:2"><div class="cr">
+        <p class="bc-k"><span class="bstate old">no recent run</span><span class="bc-area">CI</span></p>
+        <p class="bc-title">Continuous integration on master</p>
+        <p class="bc-num bc-date">3 Sep 2026</p>
+        <p class="bc-sub">The last run on a push to master, and those runs were cancelled. No CI pass is claimed here.</p>
+        <p class="bc-foot"><time datetime="2026-10-06">6 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>r-ci-health</code></span></p>
+      </div></li>
+      
+      <li class="bc w12 bz" data-reveal style="--i:0"><div class="cr">
+        <p class="bc-k"><span class="bstate measured">measured</span><span class="bc-area">At the published commit</span></p>
+        <p class="bc-title">Tests the repository keeps</p>
+        <ul class="bc-stats"><li><b>6,883</b><span>TypeScript and JavaScript test files</span></li><li><b>310</b><span>Python test files</span></li><li><b>266</b><span>Playwright end-to-end specs</span></li></ul>
+        <p class="bc-sub">A count of files, not a pass rate. The end-to-end specs run in batches, and no single all-green run of them exists to cite yet.</p>
+        <p class="bc-foot"><time datetime="2026-10-17">17 Oct 2026</time><span class="sep" aria-hidden="true">·</span>commit <code>604ad1f53</code>, counted by <code>git ls-tree</code></p>
+      </div></li>
+    </ol>
+    
+    <div class="runs-wrap" data-reveal>
+      <div class="runs-head">
+        <h3 class="h3">Run end to end.</h3>
+        <p>One brief or one project at a time, through the real app, every request logged. Each report names what it proved and what it did not.</p>
+        <a class="pill pill-ghost pill-sm" href="proof.html#e2e">Every run, with its report<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+      
+        <ol class="runs">
+          <li><span class="runs-d"><time datetime="2026-10-03">3 Oct 2026</time></span><span class="runs-w"><b>A hardware interview, through the product</b><span>31 requirement rows filed and the plan approved. Its hand-off to the engineering project manager has not run.</span></span><span class="runs-s"><span><code>c-int-live-proof</code></span></span></li>
+          <li><span class="runs-d"><time datetime="2026-09-29">29 Sep 2026</time></span><span class="runs-w"><b>Many computers, three node processes on one computer</b><span>3 device keys; mutual TLS, leases and a revocation; the revoked process exited and the rest kept working.</span></span><span class="runs-s"><span><code>06-two-node-proof.txt</code></span></span></li>
+          <li><span class="runs-d"><time datetime="2026-09-07">7 Sep 2026</time></span><span class="runs-w"><b>A robotic arm, through the same rooms</b><span>224 logged calls; its report left two approvals for the operator.</span></span><span class="runs-s"><span><code>2026-09-07-arm-e2e.md</code></span></span></li>
+          <li><span class="runs-d"><time datetime="2026-09-06">6 Sep 2026</time></span><span class="runs-w"><b>One drone brief, through every room</b><span>144 logged calls; every id a row the run wrote.</span></span><span class="runs-s"><span><code>2026-09-06-drone-e2e.md</code></span></span></li>
+          <li><span class="runs-d"><time datetime="2026-09-06">6 Sep 2026</time></span><span class="runs-w"><b>A software project, through every page</b><span>106 logged round trips: created, planned, worked, refused with a reason, read back.</span></span><span class="runs-s"><span><code>2026-09-06-software-e2e.md</code></span></span></li>
+        </ol>
+    </div>
+    
+    <div class="status-strip" id="status" data-reveal>
+      <div class="ss-head">
+        <h3 class="h3">What Theioma does.</h3>
+        <p>Each area below has its own page: what it does, how it works, and the receipts behind it.</p>
+        <a class="pill pill-ghost pill-sm" href="run/status.html#areas">Area by area<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+      <ul class="ss-areas ss-names"><li><b>Many computers</b></li><li><b>Agents</b></li><li><b>Models</b></li><li><b>Phone approvals</b></li><li><b>Voice and desktop</b></li><li><b>Learning</b></li><li><b>J-PEX hardware</b></li><li><b>Packaging</b></li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec paper" id="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <header class="sec-head left" data-reveal>
+      <p class="eyebrow">FAQ</p>
+      <h2 class="h2" id="h-faq">Questions,<br><span class="dim">answered plainly.</span></h2>
+      <div class="actions"><a class="pill pill-ghost" href="run/install.html#faq">Every question, with the install guide<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+    </header>
+    <div class="faq" data-reveal>
+      <details><summary>Does Theioma replace Claude Code, Codex or OpenClaw?<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary><div class="ans"><p>No. They are the agents. Theioma spawns them into real terminals, gives them their briefs and tools, connects them to each other, and shows you everything they do.</p></div></details>
+      <details><summary>Can I run it across several computers?<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary><div class="ans"><p>As a preview. Each computer you own enrols with its own key, receives a certificate from your account’s authority, and takes work leased to it over mutual TLS, with leases and revocation. The receipts were measured with three node processes on one computer; two physical computers come after v1.0. The steps are in <a href="computers.html#connect">how a computer joins</a>.</p></div></details>
+      <details><summary>Do I need a GPU?<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary><div class="ans"><p>No. Subscriptions and API providers carry the work without one. Local models and speech can use a GPU. A 6 Sep 2026 test with synthetic audio measured an 8.2&nbsp;s spoken turn on an RTX 5080 and 23.1&nbsp;s on the CPU; these are historical timings, not current-service performance. A local fine-tune uses it; the monthly fine-tune job is a dry run today and trains nothing. A computer with a GPU reports its memory and temperature to the hub.</p></div></details>
+      <details><summary>What does it cost to run?<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary><div class="ans"><p>Theioma uses the subscriptions, API keys, free tiers and local models you connect. A usage ledger shows spend and subscription use per agent, project and computer.</p></div></details>
+      <details><summary>Where does my code go?<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary><div class="ans"><p>It stays on your computers and in your own Git repository. What an agent sends to its model provider goes to that provider; with a local model on Ollama, it stays on your computer.</p></div></details>
+      <details><summary>Is there an installer?<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary><div class="ans"><p>Not a published one. Theioma runs from source on Windows, and the desktop shell builds unsigned Windows installers from the same source. This site offers no download button.</p></div></details>
+      <details><summary>What does “fixture” mean on this page?<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary><div class="ans"><p>A fixture recording is the real app in a real browser on an isolated test server, over rows made for that take and deleted after it: not a live session, and nothing in it was sent to a real agent. A live recording is the running app on real data. Every recording here says which it is, and when it was made.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec start" id="start" aria-labelledby="h-start">
+  <div class="wrap start-grid">
+    <div data-reveal>
+      <p class="eyebrow">Get started</p>
+      <h2 class="h2" id="h-start">Run it<br><span class="dim">from source.</span></h2>
+      <p class="lede">These commands start the web app on one Windows computer. They took a clean checkout to a running app on 1 Oct 2026, and have not been re-run on the current tree. A second computer joins with the node agent, as a preview. No installer is published, so this page has no download button.</p>
+      <div class="actions"><a class="pill pill-primary" href="run/install.html">Read the install guide<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+      <ul class="readout">
+        <li><b>Windows, Git, Node.js 20.18 or later but below 23, npm 9 or later, and Docker with its engine running</b><span class="v">needs</span><span class="src"><span><code>README, You need</code></span></span></li>
+        <li><b>The quick start these commands come from</b><span class="v">README</span><span class="src"><span><code>README, Quick start</code></span></span></li>
+      </ul>
+    </div>
+    <div class="term bz" data-reveal style="--i:1"><div class="cr"><p class="term-bar"><i></i><i></i><i></i><span>one computer, from source</span></p><div class="code"><pre># source is private during pre-release; access on request
+node scripts/setup/doctor.mjs        <span class="c"># read-only: names each missing piece and its fix</span>
+npm ci
+node scripts/setup/bootstrap.mjs     <span class="c"># database container, apps/web/.env.local, schema, seed</span>
+npm run build -w @theioma/latent-mesh   <span class="c"># once, before the first agent session</span>
+cd apps/web &amp;&amp; node server.mjs</pre></div></div></div>
+  </div>
+</section>
+</main>
+
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="index.html" aria-label="Theioma, home"><span class="tmark" aria-hidden="true"><img src="assets/brand/theioma-orb.webp" alt="" width="96" height="96" decoding="async"></span><span>theioma</span></a>
+      <p>A supervised command centre for engineering with many agents, in software and in hardware. It runs from source on the computers you own.</p>
+      <a class="pill pill-primary pill-sm" href="run/install.html">Run it from source<span class="pill-ic"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <div><p class="foot-k">Product</p><ul class="two"><li><a href="voice.html">Voice</a></li><li><a href="plan.html">Plan</a></li><li><a href="agents.html">Agents</a></li><li><a href="sentinels.html">Sentinels</a></li><li><a href="approvals.html">Approvals</a></li><li><a href="computers.html">Network / Computers</a></li><li><a href="build-lab.html">Build Lab</a></li><li><a href="memory.html">Memory & learning</a></li><li><a href="atlas.html">Atlas</a></li><li><a href="benchmarks.html">Benchmarks</a></li><li><a href="proof.html">Proof</a></li><li><a href="run/status.html">Status</a></li></ul></div>
+      <div><p class="foot-k">Documentation</p><ul><li><a href="run/install.html">Install</a></li><li><a href="run/docs.html">Documentation map</a></li></ul></div>
+      <div><p class="foot-k">Project</p><ul><li><a href="about.html">About</a></li><li><a href="open-source.html">Open source</a></li><li><a href="run/changelog.html">Changelog</a></li></ul></div>
+    </nav>
+  </div>
+  <div class="wrap foot-legal">
+    <p>Apache License 2.0. Pre-release copy. Read the <a href="proof.html">Proof</a> page for tested scope and open gaps; release claim review is in progress.</p>
+    <p><a href="LICENCES.md">Font licences</a></p>
+  </div>
+  <p class="foot-word" aria-hidden="true">theioma</p>
+</footer>
+</body>
+</html>
