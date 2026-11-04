@@ -706,6 +706,153 @@ function mission(el, data, coast, src) {
   if (REDUCE) S.td = S.dur;
 }
 
+/* ------------------------------------------------------------------ Scene 4: removal campaign (several carriers, stages leave orbit) */
+function campaign(el, data, coast, src) {
+  const K = 1e-3, M = data.meta, G = data.grid_d, O = data.objects, ST = data.stops, TG = data.tugs, N = O.length;
+  const S = shell(el, data, { near: 0.01, far: 2000, minD: 0.4, maxD: 140, fov: 34 });
+  const { scene, mats } = S;
+  S.hud.k.textContent = `Removal campaign · ${data.chasers.length + 1} carriers · nominal plan`;
+  scene.add(new THREE.AmbientLight(0xffffff, 0.22));
+  const sun = new THREE.DirectionalLight(0xffffff, 2.0); sun.position.set(-0.6, 0.35, 0.75); scene.add(sun);
+  const RE = M.RE_km * K;
+  scene.add(new THREE.Mesh(new THREE.SphereGeometry(RE, 96, 64), new THREE.MeshStandardMaterial({ color: 0x39414c, roughness: 1 })));
+  if (coast) {
+    const p = [];
+    coast.lines.forEach((ln) => { for (let i = 0; i + 3 < ln.length; i += 2) {
+      for (const j of [i, i + 2]) { const lo = ln[j] / 100 * D2R, la = ln[j + 1] / 100 * D2R, r = RE * 1.001; p.push(r * Math.cos(la) * Math.cos(lo), r * Math.sin(la), -r * Math.cos(la) * Math.sin(lo)); } } });
+    const g = new LineSegmentsGeometry(); g.setPositions(p); scene.add(new LineSegments2(g, lineMat(C.ter, 0.6, 0.5, mats)));
+  }
+  const unwrap = (a) => { const r = a.slice(); for (let k = 1; k < r.length; k++) { while (r[k] - r[k - 1] > 180) r[k] -= 360; while (r[k] - r[k - 1] < -180) r[k] += 360; } return r; };
+  O.forEach((o) => { o.R = unwrap(o.raan_deg); const n = o.R.length - 1; o.rate = (o.R[n] - o.R[0]) / (G[n] - G[0]); });
+  const ref = Math.max(...O.map((o) => o.rate)) + 0.002;
+  const byId = new Map(O.map((o, k) => [o.norad, k]));
+  const SPEED = 42, INTRO = 1.5; // days per display second
+  const toD = (t) => INTRO + t / SPEED, toT = (td) => Math.max(0, (td - INTRO) * SPEED);
+  S.dur = toD(M.duration_d) + 3; S.loop = true;
+  const W = 36, uObj = (k, td) => O[k].u_deg[0] + W * td;
+
+  const carriers = [{ label: ST[0].carrier, launch_d: 0, samples: data.chaser }, ...data.chasers].map((c) => {
+    const s = c.samples, tC = s.map((x) => x.t_d), RC = unwrap(s.map((x) => x.raan_deg));
+    const stops = ST.filter((x) => x.carrier === c.label).map((x) => ({ k: byId.get(x.norad), d0: toD(x.start_d), d1: toD(x.end_d) })).sort((a, b) => a.d0 - b.d0);
+    const legs = stops.slice(0, -1).map((st, i) => { const t0 = st.d1, t1 = stops[i + 1].d0, from = uObj(st.k, t0), to = uObj(stops[i + 1].k, t1); return { t0, t1, from, du: ((to - from) % 360 + 360) % 360 + 360 * Math.max(0, Math.round(0.3 * (t1 - t0))) }; });
+    return { label: c.label, t0: tC[0], t1: tC[tC.length - 1], s, tC, RC, stops, legs };
+  });
+  function uCarrier(c, td) {
+    const st = c.stops; if (!st.length) return W * td;
+    if (td <= st[0].d0) return uObj(st[0].k, st[0].d0) - 1.4 * W * (st[0].d0 - td);
+    for (let i = 0; i < st.length; i++) {
+      if (td <= st[i].d1) return uObj(st[i].k, td);
+      if (i < c.legs.length && td < c.legs[i].t1) return c.legs[i].from + c.legs[i].du * (td - c.legs[i].t0) / (c.legs[i].t1 - c.legs[i].t0);
+    }
+    return uObj(st[st.length - 1].k, st[st.length - 1].d1) + 1.4 * W * (td - st[st.length - 1].d1);
+  }
+  function pos(a, i, Om, u, out) {
+    const cO = Math.cos(Om * D2R), sO = Math.sin(Om * D2R), ci = Math.cos(i * D2R), si = Math.sin(i * D2R), cu = Math.cos(u * D2R), su = Math.sin(u * D2R);
+    return out.set(a * (cO * cu - sO * ci * su) * K, a * si * su * K, -a * (sO * cu + cO * ci * su) * K);
+  }
+  const objEl = (k, t) => { const j = bsearch(G, t), s = clamp((t - G[j]) / (G[j + 1] - G[j]), 0, 1), o = O[k]; return { a: lerp(o.a_km[j], o.a_km[j + 1], s), Om: lerp(o.R[j], o.R[j + 1], s) - ref * t, i: o.i_deg }; };
+  const carEl = (c, t) => { const j = bsearch(c.tC, t), s = clamp((t - c.tC[j]) / Math.max(c.tC[j + 1] - c.tC[j], 1e-6), 0, 1), x = c.s[j], y = c.s[j + 1]; return { a: lerp(x.a_km, y.a_km, s), Om: lerp(c.RC[j], c.RC[j + 1], s) - ref * t, i: lerp(x.i_deg, y.i_deg, s) }; };
+
+  const SEG = 72, ringGeo = (n) => { const g = new LineSegmentsGeometry(); g.setPositions(new Float32Array(n * SEG * 6)); return g; };
+  const poolRings = new LineSegments2(ringGeo(N), lineMat(C.sec, 0.6, 0.09, mats)); poolRings.frustumCulled = false; scene.add(poolRings);
+  const carRings = new LineSegments2(ringGeo(carriers.length), lineMat(C.acc, 0.8, 0.4, mats)); carRings.frustumCulled = false; scene.add(carRings);
+  const tmp = new THREE.Vector3(), tmp2 = new THREE.Vector3(), a1 = new THREE.Vector3(), a2 = new THREE.Vector3();
+  function writeRing(arr, off, a, i, Om) { for (let s = 0; s < SEG; s++) { pos(a, i, Om, s / SEG * 360, tmp); pos(a, i, Om, (s + 1) / SEG * 360, tmp2); arr[off++] = tmp.x; arr[off++] = tmp.y; arr[off++] = tmp.z; arr[off++] = tmp2.x; arr[off++] = tmp2.y; arr[off++] = tmp2.z; } return off; }
+  const arrOf = (ls) => ls.geometry.attributes.instanceStart.data;
+  const dmat = dotMaterial(); S.dotMats.push(dmat);
+  const pd = dots(N + carriers.length, dmat); scene.add(pd);
+
+  // entry arcs: a stage's last orbit, fading as it comes down
+  const ENT = TG.map((g) => ({ k: byId.get(g.target_norad), d: toD(g.reentry_d) })), MAXE = 12, arcPts = 14;
+  const arcBuf = new Float32Array(MAXE * (arcPts - 1) * 6), arcG = new THREE.BufferGeometry();
+  arcG.setAttribute('position', new THREE.BufferAttribute(arcBuf, 3)); arcG.setDrawRange(0, 0);
+  const arcs = new THREE.LineSegments(arcG, new THREE.LineBasicMaterial({ color: C.acc, transparent: true, opacity: 0.85 })); arcs.frustumCulled = false; scene.add(arcs);
+
+  // close-up: one capture on a loop, schematic, built when asked for
+  const close = { fam: null, loading: false, map: {}, clock: 0 };
+  const LOOP = 11;
+  function loadClose(fam) {
+    if (close.map[fam] || close.loading) return; close.loading = true;
+    const name = fam === 'SL-16' ? 'v6_stage_sl16_kit' : 'v6_stage_sl8_kit';
+    new GLTFLoader().load(new URL(`../../models/debris-removal/${name}.glb`, new URL(src, location.href)).href, (gltf) => {
+      const cs = new THREE.Scene(); cs.add(new THREE.HemisphereLight(0xe8eeff, 0x4a4a58, 2.1));
+      const key = new THREE.DirectionalLight(0xffffff, 3.0); key.position.set(3, 5, 4); cs.add(key);
+      const body = new THREE.Group(); cs.add(body); const root = gltf.scene; body.add(root);
+      root.traverse((o) => { if (o.isMesh) { if (!o.geometry.attributes.normal) o.geometry.computeVertexNormals(); o.add(new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry, 28), new THREE.LineBasicMaterial({ color: 0xc8ccd8, transparent: true, opacity: 0.25 }))); const c = o.material && o.material.color ? o.material.color.clone() : new THREE.Color(0x9aa0b0), l = 0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b; if (l < 0.22) c.lerp(new THREE.Color(0x9aa0b0), 0.42 - l); const h = {}; c.getHSL(h); if (!(h.h < 0.08 && h.s > 0.6)) c.setHSL(h.h, h.s * 0.18, Math.min(h.l, 0.74)); o.material = new THREE.MeshStandardMaterial({ color: c, metalness: 0.3, roughness: 0.55, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 }); } });
+      const box = new THREE.Box3().setFromObject(root), sz = box.getSize(new THREE.Vector3()), c0 = box.getCenter(new THREE.Vector3()), s = 7 / Math.max(sz.x, sz.y, sz.z);
+      root.scale.setScalar(s); root.position.copy(c0).multiplyScalar(-s); body.updateMatrixWorld(true);
+      const TARGET = new Set(['stage', 'nozzle', 'adapter']), kit = new THREE.Group(); body.add(kit); const list = [], stage = [];
+      root.traverse((o) => { if (o.isMesh || o.name) { const n = o.name || ''; if (TARGET.has(n)) stage.push(o); else if (n && o.parent === root) list.push(o); } });
+      list.forEach((o) => kit.attach(o));
+      const cS = new THREE.Box3().setFromObject(root).getCenter(new THREE.Vector3()), cK = new THREE.Box3().setFromObject(kit).getCenter(new THREE.Vector3()), ax = cK.clone().sub(cS).normalize();
+      const pl = new THREE.Mesh(new THREE.ConeGeometry(0.28, 2.2, 16), new THREE.MeshBasicMaterial({ color: C.acc, transparent: true, opacity: 0.8 }));
+      const end = new THREE.Box3().setFromObject(kit), tip = cK.clone().addScaledVector(ax, end.getSize(new THREE.Vector3()).dot(new THREE.Vector3(Math.abs(ax.x), Math.abs(ax.y), Math.abs(ax.z))) / 2 + 1.1);
+      pl.position.copy(tip); pl.quaternion.setFromUnitVectors(new THREE.Vector3(0, -1, 0), ax); pl.visible = false; kit.add(pl);
+      close.map[fam] = { cs, body, kit, ax, pl, spin: new THREE.Vector3(0.55, 0.45, 0.7).normalize(), q0: new THREE.Quaternion() };
+      close.loading = false;
+    }, undefined, (e) => { close.loading = false; console.error(e); });
+  }
+  const IDQ = new THREE.Quaternion();
+  function stepClose(c, dt) {
+    close.clock = (close.clock + dt) % LOOP; const u = close.clock, w0 = 0.9;
+    if (u < dt + 1e-3) { c.body.position.set(0, 0, 0); c.body.quaternion.setFromAxisAngle(new THREE.Vector3(0.6, 0.2, 0.77).normalize(), 0.9); c.oriented = false; }
+    c.kit.position.copy(c.ax).multiplyScalar(u < 3 ? 4.6 * smooth(clamp((3 - u) / 3, 0, 1)) : 0);
+    const w = u < 3.6 ? w0 : u < 5.6 ? w0 * (1 - (u - 3.6) / 2) : 0;
+    if (w > 0) c.body.rotateOnWorldAxis(c.spin, w * dt);
+    else if (u < 6.5) { if (!c.oriented) { c.q0.copy(c.body.quaternion); c.oriented = true; } c.body.quaternion.slerpQuaternions(c.q0, IDQ, smooth(clamp((u - 5.6) / 0.9, 0, 1))); }
+    else c.body.quaternion.copy(IDQ);
+    c.pl.visible = u >= 6.8 && u < 10;
+    if (u >= 6.8) { tmp.copy(c.ax).applyQuaternion(c.body.quaternion).multiplyScalar(-Math.pow((u - 6.8) * 1.15, 2.2) * 0.8); c.body.position.copy(tmp); }
+    return u < 3 ? 'kit matches the tumble' : u < 3.6 ? 'clamp closes on the adapter ring' : u < 5.6 ? 'tumble stopped on 22 N thrusters' : u < 6.8 ? 'turning, engines away from the stage' : 'one long burn to a 60 km perigee';
+  }
+
+  const rig = cameraRig(S); rig.dir.set(0.42, 0.78, 0.46).normalize();
+  let mode = 'shell';
+  const bShell = S.button('Whole shell', () => setMode('shell'), true), bClose = S.button('Close-up', () => setMode('close'), false);
+  function setMode(m) { mode = m; bShell.setAttribute('aria-pressed', m === 'shell'); bClose.setAttribute('aria-pressed', m === 'close'); S.forceDist = true; S.user = false; close.clock = 0; }
+  const fit = (r) => { const tv = Math.tan(S.camera.fov / 2 * D2R), th = tv * S.camera.aspect; return r / Math.min(tv, th); };
+  S.onRestart = () => { S.user = false; };
+
+  S.frame = (dt) => {
+    const td = S.td, t = Math.min(toT(td), M.duration_d);
+    const pa = arrOf(poolRings); let off = 0, removed = 0;
+    for (let k = 0; k < N; k++) { const o = O[k], gone = o.reentry_d != null && t >= o.reentry_d; if (gone) removed++; const e = objEl(k, t); off = writeRing(pa.array, off, gone ? 1 : e.a, e.i, e.Om); }
+    pa.needsUpdate = true;
+    for (let k = 0; k < N; k++) {
+      const o = O[k], gone = o.reentry_d != null && t >= o.reentry_d, e = objEl(k, t); pos(e.a, e.i, e.Om, uObj(k, td), tmp);
+      setDot(pd, k, tmp, o.reentry_d != null ? C.sec : C.ter, gone ? 0 : 0.85, o.reentry_d != null ? 3 : 2.3);
+    }
+    const ca = arrOf(carRings); let cOff = 0, active = 0, cur = null;
+    carriers.forEach((c, i) => {
+      const on = t >= c.t0 && t <= c.t1; if (on) { active++; cur = c; }
+      if (on) { const e = carEl(c, t); cOff = writeRing(ca.array, cOff, e.a, e.i, e.Om); pos(e.a, e.i, e.Om, uCarrier(c, td), tmp); setDot(pd, N + i, tmp, C.acc, 1, 7); }
+      else { cOff = writeRing(ca.array, cOff, 1, 0, 0); setDot(pd, N + i, tmp2.set(0, 0, 0), C.acc, 0, 1); }
+    });
+    ca.needsUpdate = true; dirtyDots(pd);
+
+    let n = 0; for (const f of ENT) { const age = td - f.d; if (age < 0 || age > 1.6 || n >= MAXE) continue;
+      const o = O[f.k], e = objEl(f.k, t); for (let j = 0; j < arcPts - 1; j++) { const s0 = j / (arcPts - 1), s1 = (j + 1) / (arcPts - 1), lim = clamp(age / 0.8, 0, 1); pos(lerp(e.a, M.RE_km + 40, s0 * lim), e.i, e.Om, uObj(f.k, f.d) + 70 * s0 * lim, a1); pos(lerp(e.a, M.RE_km + 40, s1 * lim), e.i, e.Om, uObj(f.k, f.d) + 70 * s1 * lim, a2); arcBuf.set([a1.x, a1.y, a1.z, a2.x, a2.y, a2.z], n * 6 * (arcPts - 1) + j * 6); } n++; }
+    arcG.setDrawRange(0, n * 2 * (arcPts - 1)); arcG.attributes.position.needsUpdate = true;
+
+    const fam = cur && cur.label.includes('SL-16') ? 'SL-16' : 'SL-8';
+    if (mode === 'close') loadClose(fam);
+    const cl = mode === 'close' ? close.map[fam] || close.map['SL-8'] || close.map['SL-16'] : null;
+    S.overScene = cl ? cl.cs : null;
+    const step = cl ? stepClose(cl, S.playing ? dt : 0) : '';
+    if (!S.rigInit) { rig.snap(new THREE.Vector3(), fit(9.4)); S.rigInit = true; }
+    const dist = cl ? fit(5.4) : fit(9.4), focus = tmp.set(0, 0, 0).clone();
+    rig.step(focus, dist, dt, S.forceDist ? 10 : 0, S.forceDist || !S.user ? 3 : 0);
+    if (S.forceDist && S.controls.target.distanceTo(focus) < 0.6 && Math.abs(S.camera.position.distanceTo(S.controls.target) / dist - 1) < 0.05) S.forceDist = false;
+
+    const year = 2034 + t / 365.25;
+    S.hud.clock.innerHTML = `${year.toFixed(1)}<small>day ${fmt(t)} of ${fmt(M.duration_d)}</small>`;
+    S.hud.ph.innerHTML = cl ? `${fam} stage <i>· ${step} · schematic</i>` : removed >= TG.length ? `Campaign done <i>· every kit used, nominal plan</i>` : `${cur ? cur.label : 'Launch'} <i>· working through its stages</i>`;
+    S.readout([['Stages entered', `${removed} / ${TG.length}`], ['Carriers active', `${active} of ${carriers.length}`], ['Kits used', `${TG.filter((g) => t >= g.release_d).length}`]]);
+  };
+  S.start();
+  if (REDUCE) S.td = S.dur;
+}
+
 function mount(el) {
   el.innerHTML = '<div class="t3-load">Loading trajectory</div>';
   const src = el.dataset.src;
@@ -714,7 +861,7 @@ function mount(el) {
     else {
       let coast = null;
       try { coast = await fetch(new URL('../../globe/coast110.json', new URL(src, location.href))).then((r) => (r.ok ? r.json() : null)); } catch (e) { coast = null; }
-      if (data.meta && data.meta.schema === 'mission_v5') mission(el, data, coast, src); else tour(el, data, coast);
+      if (data.chasers) campaign(el, data, coast, src); else if (data.meta && data.meta.schema === 'mission_v5') mission(el, data, coast, src); else tour(el, data, coast);
     }
   }).catch((err) => { el.innerHTML = '<div class="t3-load">Trajectory could not load</div>'; console.error(err); });
 }

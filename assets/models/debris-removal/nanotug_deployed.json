@@ -182,16 +182,132 @@
     -0.0
    ],
    "group": "power"
-  }
- },
- "status": "concept; dimensions marked estimated in the BOM",
- "views": {
-  "iso": {
-   "pos": [
-    3,
-    2,
-    3
-   ]
+  },
+  "wire_w1_red": {
+   "label": "W1 Wing 1 lead, red (representative)",
+   "explode": [
+    0.0,
+    0.04,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_w1_black": {
+   "label": "W1 Wing 1 lead, black (representative)",
+   "explode": [
+    0.0,
+    0.04,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_w2_red": {
+   "label": "W2 Wing 2 lead, red (representative)",
+   "explode": [
+    0.0,
+    0.04,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_w2_black": {
+   "label": "W2 Wing 2 lead, black (representative)",
+   "explode": [
+    0.0,
+    0.04,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_w3_red": {
+   "label": "W3 Wing 3 lead, red (representative)",
+   "explode": [
+    0.0,
+    0.04,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_w3_black": {
+   "label": "W3 Wing 3 lead, black (representative)",
+   "explode": [
+    0.0,
+    0.04,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_w4_red": {
+   "label": "W4 Wing 4 lead, red (representative)",
+   "explode": [
+    0.0,
+    0.04,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_w4_black": {
+   "label": "W4 Wing 4 lead, black (representative)",
+   "explode": [
+    0.0,
+    0.04,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_w5_orange": {
+   "label": "W5 Normal thruster lead, orange (representative)",
+   "explode": [
+    0.04,
+    0.06,
+    -0.04
+   ],
+   "group": "wiring"
+  },
+  "wire_w5_white": {
+   "label": "W5 Normal thruster lead, white (representative)",
+   "explode": [
+    0.04,
+    0.06,
+    -0.04
+   ],
+   "group": "wiring"
+  },
+  "wire_w6_orange": {
+   "label": "W6 Tangential thruster lead +Y, orange (representative)",
+   "explode": [
+    0.0,
+    0.0,
+    -0.08
+   ],
+   "group": "wiring"
+  },
+  "wire_w6_white": {
+   "label": "W6 Tangential thruster lead +Y, white (representative)",
+   "explode": [
+    0.0,
+    0.0,
+    -0.08
+   ],
+   "group": "wiring"
+  },
+  "wire_w7_orange": {
+   "label": "W7 Tangential thruster lead -Y, orange (representative)",
+   "explode": [
+    0.0,
+    0.0,
+    0.08
+   ],
+   "group": "wiring"
+  },
+  "wire_w7_white": {
+   "label": "W7 Tangential thruster lead -Y, white (representative)",
+   "explode": [
+    0.0,
+    0.0,
+    0.08
+   ],
+   "group": "wiring"
   }
  }
 }
