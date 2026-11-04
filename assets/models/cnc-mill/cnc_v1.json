@@ -283,19 +283,19 @@
    "group": "Sliders"
   },
   "bar_lower": {
-   "label": "Bridge bar, lower (1010, 160 mm) (est.)",
+   "label": "Bridge bar, motor side (1010, 160 mm) (est.)",
    "explode": [
-    0.0,
-    0.13,
+    -0.03,
+    0.15,
     0.0
    ],
    "group": "Bridge"
   },
   "bar_upper": {
-   "label": "Bridge bar, upper (1010, 160 mm) (est.)",
+   "label": "Bridge bar, spindle side (1010, 160 mm) (est.)",
    "explode": [
-    0.0,
-    0.175,
+    0.03,
+    0.15,
     0.0
    ],
    "group": "Bridge"
@@ -346,7 +346,7 @@
    "group": "Y axis"
   },
   "belt_y": {
-   "label": "GT2 belt, Y (between the bars) (est.)",
+   "label": "GT2 belt, Y (above the bars) (est.)",
    "explode": [
     0.0,
     0.1,
@@ -355,10 +355,19 @@
    "group": "Y axis"
   },
   "effector": {
-   "label": "End-effector (Y slider, printed) (est.)",
+   "label": "End-effector: carriage + Z drive housing (printed) (est.)",
    "explode": [
     0.0,
     0.235,
+    0.0
+   ],
+   "group": "Z axis"
+  },
+  "z_guide": {
+   "label": "Z guide, vertical extrusion (20 mm, est.) (est.)",
+   "explode": [
+    0.0,
+    0.25,
     0.0
    ],
    "group": "Z axis"
@@ -373,7 +382,7 @@
    "group": "Z axis"
   },
   "pulley_z": {
-   "label": "GT2 16T motor pulley (Z) (est.)",
+   "label": "GT2 20T motor pulley (Z) (est.)",
    "explode": [
     0.0,
     0.27,
@@ -382,7 +391,7 @@
    "group": "Z axis"
   },
   "gear_z": {
-   "label": "GT2 40T gear on the screw (Z) (est.)",
+   "label": "GT2 60T pulley on the screw (Z) (est.)",
    "explode": [
     0.0,
     0.27,
@@ -409,7 +418,7 @@
    "group": "Z axis"
   },
   "spindle_holder": {
-   "label": "Spindle holder (2 guide teeth) (est.)",
+   "label": "Spindle holder (clamp + guide carriage) (est.)",
    "explode": [
     0.0,
     0.15,
@@ -427,7 +436,7 @@
    "group": "Fasteners"
   },
   "spindle_can": {
-   "label": "Spindle: DC motor can (36 mm) (est.)",
+   "label": "Spindle: 775-class DC motor (42 mm) (est.)",
    "explode": [
     0.0,
     0.195,
@@ -461,6 +470,24 @@
     0.0
    ],
    "group": "Reference"
+  },
+  "tray": {
+   "label": "Wooden tray for the electronics (est.)",
+   "explode": [
+    -0.06,
+    0.0,
+    0.0
+   ],
+   "group": "Electronics"
+  },
+  "controller": {
+   "label": "Makerbase (MKS) controller board (est.)",
+   "explode": [
+    -0.06,
+    0.03,
+    0.0
+   ],
+   "group": "Electronics"
   }
  }
 }

@@ -1,0 +1,466 @@
+{
+ "title": "Rucksack CNC mill v1 (reconstruction, est. dimensions)",
+ "units": "mm",
+ "explode_scale": 1,
+ "parts": {
+  "foot_1": {
+   "label": "Rubber foot 1 (est.)",
+   "explode": [
+    0.0,
+    -0.05,
+    0.0
+   ],
+   "group": "Base"
+  },
+  "foot_2": {
+   "label": "Rubber foot 2 (est.)",
+   "explode": [
+    0.0,
+    -0.05,
+    0.0
+   ],
+   "group": "Base"
+  },
+  "foot_3": {
+   "label": "Rubber foot 3 (est.)",
+   "explode": [
+    0.0,
+    -0.05,
+    0.0
+   ],
+   "group": "Base"
+  },
+  "foot_4": {
+   "label": "Rubber foot 4 (est.)",
+   "explode": [
+    0.0,
+    -0.05,
+    0.0
+   ],
+   "group": "Base"
+  },
+  "base_board": {
+   "label": "Base board (MDF / hardboard) (est.)",
+   "explode": [
+    0.0,
+    -0.025,
+    0.0
+   ],
+   "group": "Base"
+  },
+  "rail_x1": {
+   "label": "X rail 1 (1010 extrusion, 260 mm) (est.)",
+   "explode": [
+    0.0,
+    0.0,
+    0.055
+   ],
+   "group": "Frame"
+  },
+  "rail_x2": {
+   "label": "X rail 2 (1010 extrusion, 260 mm) (est.)",
+   "explode": [
+    0.0,
+    0.0,
+    -0.055
+   ],
+   "group": "Frame"
+  },
+  "cross_y1": {
+   "label": "Cross member 1 (1010, 159.2 mm) (est.)",
+   "explode": [
+    -0.055,
+    0.0,
+    0.0
+   ],
+   "group": "Frame"
+  },
+  "cross_y2": {
+   "label": "Cross member 2 (1010, 159.2 mm) (est.)",
+   "explode": [
+    0.055,
+    0.0,
+    0.0
+   ],
+   "group": "Frame"
+  },
+  "bracket_mx_f": {
+   "label": "Bracket + motor plate +X (front) (est.)",
+   "explode": [
+    0.03,
+    0.04,
+    0.02
+   ],
+   "group": "Frame"
+  },
+  "screws_mx_f": {
+   "label": "M5 button screws, +X bracket f (est.)",
+   "explode": [
+    0.03,
+    0.07,
+    0.02
+   ],
+   "group": "Fasteners"
+  },
+  "bracket_id_f": {
+   "label": "Bracket + idler plate -X (front) (est.)",
+   "explode": [
+    -0.03,
+    0.04,
+    0.02
+   ],
+   "group": "Frame"
+  },
+  "screws_id_f": {
+   "label": "M5 button screws, -X bracket f (est.)",
+   "explode": [
+    -0.03,
+    0.07,
+    0.02
+   ],
+   "group": "Fasteners"
+  },
+  "bracket_mx_r": {
+   "label": "Bracket + motor plate +X (rear) (est.)",
+   "explode": [
+    0.03,
+    0.04,
+    -0.02
+   ],
+   "group": "Frame"
+  },
+  "screws_mx_r": {
+   "label": "M5 button screws, +X bracket r (est.)",
+   "explode": [
+    0.03,
+    0.07,
+    -0.02
+   ],
+   "group": "Fasteners"
+  },
+  "bracket_id_r": {
+   "label": "Bracket + idler plate -X (rear) (est.)",
+   "explode": [
+    -0.03,
+    0.04,
+    -0.02
+   ],
+   "group": "Frame"
+  },
+  "screws_id_r": {
+   "label": "M5 button screws, -X bracket r (est.)",
+   "explode": [
+    -0.03,
+    0.07,
+    -0.02
+   ],
+   "group": "Fasteners"
+  },
+  "motor_x_f": {
+   "label": "NEMA 17 stepper, X drive (front) (est.)",
+   "explode": [
+    0.04,
+    -0.01,
+    0.02
+   ],
+   "group": "X axis"
+  },
+  "screws_mnx_f": {
+   "label": "M3 screws, X motor f",
+   "explode": [
+    0.04,
+    0.06,
+    0.02
+   ],
+   "group": "Fasteners"
+  },
+  "pulley_x_f": {
+   "label": "GT2 20T drive pulley (f) (est.)",
+   "explode": [
+    0.04,
+    0.09,
+    0.02
+   ],
+   "group": "X axis"
+  },
+  "idler_x_f": {
+   "label": "GT2 20T idler pulley (f) (est.)",
+   "explode": [
+    -0.04,
+    0.09,
+    0.02
+   ],
+   "group": "X axis"
+  },
+  "pin_x_f": {
+   "label": "Idler pin M5 (f) (est.)",
+   "explode": [
+    -0.04,
+    0.12,
+    0.02
+   ],
+   "group": "X axis"
+  },
+  "belt_x_f": {
+   "label": "GT2 belt, X (f) (est.)",
+   "explode": [
+    0.0,
+    0.13,
+    0.02
+   ],
+   "group": "X axis"
+  },
+  "motor_x_r": {
+   "label": "NEMA 17 stepper, X drive (rear) (est.)",
+   "explode": [
+    0.04,
+    -0.01,
+    -0.02
+   ],
+   "group": "X axis"
+  },
+  "screws_mnx_r": {
+   "label": "M3 screws, X motor r",
+   "explode": [
+    0.04,
+    0.06,
+    -0.02
+   ],
+   "group": "Fasteners"
+  },
+  "pulley_x_r": {
+   "label": "GT2 20T drive pulley (r) (est.)",
+   "explode": [
+    0.04,
+    0.09,
+    -0.02
+   ],
+   "group": "X axis"
+  },
+  "idler_x_r": {
+   "label": "GT2 20T idler pulley (r) (est.)",
+   "explode": [
+    -0.04,
+    0.09,
+    -0.02
+   ],
+   "group": "X axis"
+  },
+  "pin_x_r": {
+   "label": "Idler pin M5 (r) (est.)",
+   "explode": [
+    -0.04,
+    0.12,
+    -0.02
+   ],
+   "group": "X axis"
+  },
+  "belt_x_r": {
+   "label": "GT2 belt, X (r) (est.)",
+   "explode": [
+    0.0,
+    0.13,
+    -0.02
+   ],
+   "group": "X axis"
+  },
+  "slider_x_f": {
+   "label": "X slider (front, printed) (est.)",
+   "explode": [
+    0.0,
+    0.055,
+    0.03
+   ],
+   "group": "Sliders"
+  },
+  "slider_x_r": {
+   "label": "X slider (rear, printed) (est.)",
+   "explode": [
+    0.0,
+    0.055,
+    -0.03
+   ],
+   "group": "Sliders"
+  },
+  "bar_lower": {
+   "label": "Bridge bar, lower (1010, 160 mm) (est.)",
+   "explode": [
+    0.0,
+    0.13,
+    0.0
+   ],
+   "group": "Bridge"
+  },
+  "bar_upper": {
+   "label": "Bridge bar, upper (1010, 160 mm) (est.)",
+   "explode": [
+    0.0,
+    0.175,
+    0.0
+   ],
+   "group": "Bridge"
+  },
+  "motor_y": {
+   "label": "NEMA 17 stepper, Y drive (est.)",
+   "explode": [
+    -0.06,
+    0.055,
+    0.0
+   ],
+   "group": "Y axis"
+  },
+  "screws_mny": {
+   "label": "M3 screws, Y motor",
+   "explode": [
+    -0.08,
+    0.055,
+    0.0
+   ],
+   "group": "Fasteners"
+  },
+  "pulley_y": {
+   "label": "GT2 20T drive pulley (Y) (est.)",
+   "explode": [
+    0.06,
+    0.055,
+    0.0
+   ],
+   "group": "Y axis"
+  },
+  "idler_y": {
+   "label": "GT2 20T idler (Y) (est.)",
+   "explode": [
+    0.06,
+    0.055,
+    0.0
+   ],
+   "group": "Y axis"
+  },
+  "pin_y": {
+   "label": "Idler pin M5 (Y) (est.)",
+   "explode": [
+    0.095,
+    0.055,
+    0.0
+   ],
+   "group": "Y axis"
+  },
+  "belt_y": {
+   "label": "GT2 belt, Y (between the bars) (est.)",
+   "explode": [
+    0.0,
+    0.1,
+    0.0
+   ],
+   "group": "Y axis"
+  },
+  "effector": {
+   "label": "End-effector (Y slider, printed) (est.)",
+   "explode": [
+    0.0,
+    0.235,
+    0.0
+   ],
+   "group": "Z axis"
+  },
+  "motor_z": {
+   "label": "NEMA 17 stepper, Z drive (est.)",
+   "explode": [
+    0.0,
+    0.19,
+    0.0
+   ],
+   "group": "Z axis"
+  },
+  "pulley_z": {
+   "label": "GT2 16T motor pulley (Z) (est.)",
+   "explode": [
+    0.0,
+    0.27,
+    0.0
+   ],
+   "group": "Z axis"
+  },
+  "gear_z": {
+   "label": "GT2 40T gear on the screw (Z) (est.)",
+   "explode": [
+    0.0,
+    0.27,
+    0.0
+   ],
+   "group": "Z axis"
+  },
+  "belt_z": {
+   "label": "GT2 belt, Z drive (est.)",
+   "explode": [
+    0.0,
+    0.31,
+    0.0
+   ],
+   "group": "Z axis"
+  },
+  "leadscrew": {
+   "label": "Z lead screw (threaded rod) (est.)",
+   "explode": [
+    0.0,
+    0.255,
+    0.0
+   ],
+   "group": "Z axis"
+  },
+  "spindle_holder": {
+   "label": "Spindle holder (2 guide teeth) (est.)",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "Z axis"
+  },
+  "clamp_screw": {
+   "label": "Spindle clamp screw (M4) (est.)",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "Fasteners"
+  },
+  "spindle_can": {
+   "label": "Spindle: DC motor can (36 mm) (est.)",
+   "explode": [
+    0.0,
+    0.195,
+    0.0
+   ],
+   "group": "Spindle"
+  },
+  "spindle_chuck": {
+   "label": "Chuck / collet (est.)",
+   "explode": [
+    0.0,
+    0.16,
+    0.0
+   ],
+   "group": "Spindle"
+  },
+  "cutter": {
+   "label": "End mill 3 mm (foam-cutting bit) (est.)",
+   "explode": [
+    0.0,
+    0.105,
+    0.0
+   ],
+   "group": "Spindle"
+  },
+  "work_cube": {
+   "label": "Working cube 2.5 in (63.5 mm)",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "Reference"
+  }
+ }
+}

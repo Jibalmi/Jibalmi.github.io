@@ -64,9 +64,14 @@ function mount(el) {
     state.t = t;
     const s = state.meta.explode_scale || 1;
     state.parts.forEach((p) => p.obj.position.copy(p.base).addScaledVector(p.dir, t * s));
+    if (state.r0) {  // pull the camera back only as far as the explode needs
+      const want = (state.r0 + (state.r1 - state.r0) * t) / Math.sin((camera.fov / 2) * Math.PI / 180) * 1.02;
+      const dir = camera.position.clone().sub(controls.target).normalize();
+      camera.position.copy(controls.target).addScaledVector(dir, want);
+    }
   }
   function home() {
-    const r = state.radius, d = r / Math.sin((camera.fov / 2) * Math.PI / 180) * 1.08, c = state.center || new THREE.Vector3();
+    const r = state.r0 || state.radius, d = r / Math.sin((camera.fov / 2) * Math.PI / 180) * 0.98, c = state.center || new THREE.Vector3();
     const dir = new THREE.Vector3(0.62, 0.42, 0.66).normalize();
     camera.position.copy(c).addScaledVector(dir, d); controls.target.copy(c); controls.update();
   }
@@ -83,6 +88,8 @@ function mount(el) {
         let base = o.material && o.material.color ? o.material.color.clone() : new THREE.Color(palette[ci++ % palette.length]);
         const lum = 0.2126 * base.r + 0.7152 * base.g + 0.0722 * base.b;
         if (lum < 0.22) base.lerp(new THREE.Color(0x9aa0b0), 0.42 - lum);
+        { const hsl = {}; base.getHSL(hsl); const accent = hsl.h > 0.0 && hsl.h < 0.08 && hsl.s > 0.6;
+          if (!accent) base.setHSL(hsl.h, hsl.s * 0.18, Math.min(hsl.l, 0.74)); }  // studio palette: keep only the orange accent saturated
         const tr = o.material && (o.material.transparent || o.material.opacity < 1), op = tr ? Math.min(o.material.opacity, 0.35) : 1;
         o.material = new THREE.MeshStandardMaterial({ color: base, metalness: 0.3, roughness: 0.5, side: THREE.DoubleSide, transparent: !!tr, opacity: op, depthWrite: !tr,
           polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 });
@@ -102,8 +109,11 @@ function mount(el) {
     state.parts.forEach((p) => p.obj.position.copy(p.base).addScaledVector(p.dir, s0));
     union.union(new THREE.Box3().setFromObject(group));
     state.parts.forEach((p) => p.obj.position.copy(p.base));
-    state.center = union.getCenter(new THREE.Vector3());
-    state.radius = union.getBoundingSphere(new THREE.Sphere()).radius || state.radius;
+    const asm = new THREE.Box3().setFromObject(group);
+    state.center = asm.getCenter(new THREE.Vector3());
+    state.r0 = asm.getBoundingSphere(new THREE.Sphere()).radius || state.radius;
+    state.r1 = Math.max(state.r0, union.getBoundingSphere(new THREE.Sphere()).radius || state.r0);
+    state.radius = state.r0;
     camera.near = state.radius / 100; camera.far = state.radius * 60; camera.updateProjectionMatrix();
     home(); load.remove();
     if (!state.parts.some((p) => p.dir.lengthSq() > 0)) el.querySelector('.m3-ex').style.display = 'none';

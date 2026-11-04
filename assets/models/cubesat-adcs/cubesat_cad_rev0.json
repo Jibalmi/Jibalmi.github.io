@@ -1,0 +1,664 @@
+{
+ "title": "CubeSat ADCS testbed spacecraft (reconstruction; 960 g, about 100 x 100 x 150 mm)",
+ "units": "mm",
+ "explode_scale": 1.0,
+ "parts": {
+  "base_plate": {
+   "label": "Base plate, PETG, 100x100x4",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "insert_1": {
+   "label": "Heated threaded insert M4",
+   "explode": [
+    0.0,
+    -0.01,
+    0.0
+   ],
+   "group": "interface"
+  },
+  "screw_m4_1": {
+   "label": "M4 screw to rotating table",
+   "explode": [
+    0.0,
+    -0.04,
+    0.0
+   ],
+   "group": "interface"
+  },
+  "insert_2": {
+   "label": "Heated threaded insert M4",
+   "explode": [
+    0.0,
+    -0.01,
+    0.0
+   ],
+   "group": "interface"
+  },
+  "screw_m4_2": {
+   "label": "M4 screw to rotating table",
+   "explode": [
+    0.0,
+    -0.04,
+    0.0
+   ],
+   "group": "interface"
+  },
+  "insert_3": {
+   "label": "Heated threaded insert M4",
+   "explode": [
+    0.0,
+    -0.01,
+    0.0
+   ],
+   "group": "interface"
+  },
+  "screw_m4_3": {
+   "label": "M4 screw to rotating table",
+   "explode": [
+    0.0,
+    -0.04,
+    0.0
+   ],
+   "group": "interface"
+  },
+  "insert_4": {
+   "label": "Heated threaded insert M4",
+   "explode": [
+    0.0,
+    -0.01,
+    0.0
+   ],
+   "group": "interface"
+  },
+  "screw_m4_4": {
+   "label": "M4 screw to rotating table",
+   "explode": [
+    0.0,
+    -0.04,
+    0.0
+   ],
+   "group": "interface"
+  },
+  "rotating_table": {
+   "label": "Rotating test table (context, est.)",
+   "explode": [
+    0.0,
+    -0.07,
+    0.0
+   ],
+   "group": "testbed"
+  },
+  "plate_1": {
+   "label": "Aluminium plate, 0.063 in thick",
+   "explode": [
+    0.0,
+    0.16,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "plate_2": {
+   "label": "Aluminium plate, 0.063 in thick",
+   "explode": [
+    0.0,
+    0.325,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "plate_3": {
+   "label": "Aluminium plate, 0.063 in thick",
+   "explode": [
+    0.0,
+    0.565,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b1_1": {
+   "label": "Brass standoff M2, lower bay",
+   "explode": [
+    0.0,
+    0.12,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b1_2": {
+   "label": "Brass standoff M2, lower bay",
+   "explode": [
+    0.0,
+    0.12,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b1_3": {
+   "label": "Brass standoff M2, lower bay",
+   "explode": [
+    0.0,
+    0.12,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b1_4": {
+   "label": "Brass standoff M2, lower bay",
+   "explode": [
+    0.0,
+    0.12,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b2_1": {
+   "label": "Brass standoff M2, middle bay",
+   "explode": [
+    0.0,
+    0.285,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b2_2": {
+   "label": "Brass standoff M2, middle bay",
+   "explode": [
+    0.0,
+    0.285,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b2_3": {
+   "label": "Brass standoff M2, middle bay",
+   "explode": [
+    0.0,
+    0.285,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b2_4": {
+   "label": "Brass standoff M2, middle bay",
+   "explode": [
+    0.0,
+    0.285,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b3_1": {
+   "label": "Brass standoff M2, upper bay",
+   "explode": [
+    0.0,
+    0.44,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b3_2": {
+   "label": "Brass standoff M2, upper bay",
+   "explode": [
+    0.0,
+    0.44,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b3_3": {
+   "label": "Brass standoff M2, upper bay",
+   "explode": [
+    0.0,
+    0.44,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b3_4": {
+   "label": "Brass standoff M2, upper bay",
+   "explode": [
+    0.0,
+    0.44,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "screw_m2_1": {
+   "label": "M2 pan-head screw, top plate",
+   "explode": [
+    0.0,
+    0.6,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "screw_m2_2": {
+   "label": "M2 pan-head screw, top plate",
+   "explode": [
+    0.0,
+    0.6,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "screw_m2_3": {
+   "label": "M2 pan-head screw, top plate",
+   "explode": [
+    0.0,
+    0.6,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "screw_m2_4": {
+   "label": "M2 pan-head screw, top plate",
+   "explode": [
+    0.0,
+    0.6,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "rw_boss_1": {
+   "label": "Reaction-wheel motor mount boss",
+   "explode": [
+    0.0,
+    0.025,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "rw_boss_2": {
+   "label": "Reaction-wheel motor mount boss",
+   "explode": [
+    0.0,
+    0.025,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "rw_boss_3": {
+   "label": "Reaction-wheel motor mount boss",
+   "explode": [
+    0.0,
+    0.025,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "rw_boss_4": {
+   "label": "Reaction-wheel motor mount boss",
+   "explode": [
+    0.0,
+    0.025,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "rw_motor": {
+   "label": "Reaction-wheel motor (1000 KV drone class)",
+   "explode": [
+    0.0,
+    0.05,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "rw_flywheel": {
+   "label": "Flywheel disc, aluminium, 72 dia x 11",
+   "explode": [
+    0.0,
+    0.085,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "rw_esc": {
+   "label": "Motor ESC (size est.)",
+   "explode": [
+    0.0,
+    0.03,
+    -0.03
+   ],
+   "group": "adcs"
+  },
+  "mt_x": {
+   "label": "Magnetorquer rod X (wound, 80 mm)",
+   "explode": [
+    -0.04,
+    0.045,
+    0.04
+   ],
+   "group": "adcs"
+  },
+  "mt_y": {
+   "label": "Magnetorquer rod Y (wound, 80 mm)",
+   "explode": [
+    -0.04,
+    0.045,
+    0.04
+   ],
+   "group": "adcs"
+  },
+  "mt_bracket": {
+   "label": "Magnetorquer corner bracket",
+   "explode": [
+    -0.04,
+    0.04,
+    0.04
+   ],
+   "group": "adcs"
+  },
+  "mt_collar_1": {
+   "label": "Magnetorquer end collar",
+   "explode": [
+    0.03,
+    0.04,
+    -0.03
+   ],
+   "group": "adcs"
+  },
+  "mt_collar_2": {
+   "label": "Magnetorquer end collar",
+   "explode": [
+    0.03,
+    0.04,
+    -0.03
+   ],
+   "group": "adcs"
+  },
+  "cell_b1": {
+   "label": "Battery cell, 18650 size (bottom layer)",
+   "explode": [
+    0.045,
+    0.035,
+    0.0
+   ],
+   "group": "power"
+  },
+  "cell_b2": {
+   "label": "Battery cell, 18650 size (bottom layer)",
+   "explode": [
+    0.045,
+    0.035,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pdb_spacer_1": {
+   "label": "PDB spacer",
+   "explode": [
+    0.0,
+    0.205,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pdb_spacer_2": {
+   "label": "PDB spacer",
+   "explode": [
+    0.0,
+    0.205,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pdb_spacer_3": {
+   "label": "PDB spacer",
+   "explode": [
+    0.0,
+    0.205,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pdb_spacer_4": {
+   "label": "PDB spacer",
+   "explode": [
+    0.0,
+    0.205,
+    0.0
+   ],
+   "group": "power"
+  },
+  "pdb": {
+   "label": "Power distribution board (relays, 5 V converter; size est.)",
+   "explode": [
+    0.0,
+    0.205,
+    0.0
+   ],
+   "group": "power"
+  },
+  "arduino": {
+   "label": "Arduino Nano (model assumed; 43.2 x 18.5)",
+   "explode": [
+    0.0,
+    0.225,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "imu": {
+   "label": "ICM-20948 IMU breakout, 25.7 x 17.7",
+   "explode": [
+    0.0,
+    0.245,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "pi_spacer_1": {
+   "label": "Pi 5 spacer M2.5",
+   "explode": [
+    0.0,
+    0.355,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "pi_spacer_2": {
+   "label": "Pi 5 spacer M2.5",
+   "explode": [
+    0.0,
+    0.355,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "pi_spacer_3": {
+   "label": "Pi 5 spacer M2.5",
+   "explode": [
+    0.0,
+    0.355,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "pi_spacer_4": {
+   "label": "Pi 5 spacer M2.5",
+   "explode": [
+    0.0,
+    0.355,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "raspberry_pi_5": {
+   "label": "Raspberry Pi 5, 85 x 56",
+   "explode": [
+    -0.03,
+    0.375,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "hq_camera": {
+   "label": "Raspberry Pi HQ Camera, 38 x 38 x 18.4",
+   "explode": [
+    0.0,
+    0.4,
+    -0.07
+   ],
+   "group": "payload"
+  },
+  "science_lens": {
+   "label": "25 mm f/2.4 M12 telephoto lens (GAOJA OPT)",
+   "explode": [
+    0.0,
+    0.4,
+    -0.12
+   ],
+   "group": "payload"
+  },
+  "bracket_sci_1": {
+   "label": "Science-camera L bracket",
+   "explode": [
+    0.0,
+    0.36,
+    -0.05
+   ],
+   "group": "structure"
+  },
+  "bracket_sci_2": {
+   "label": "Science-camera L bracket",
+   "explode": [
+    0.0,
+    0.36,
+    -0.05
+   ],
+   "group": "structure"
+  },
+  "ir_camera": {
+   "label": "MLX90640 thermal camera breakout, 25.7 x 17.7",
+   "explode": [
+    0.07,
+    0.4,
+    0.0
+   ],
+   "group": "payload"
+  },
+  "bracket_ir_1": {
+   "label": "IR-camera L bracket",
+   "explode": [
+    0.04,
+    0.36,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "bracket_ir_2": {
+   "label": "IR-camera L bracket",
+   "explode": [
+    0.04,
+    0.36,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "star_camera": {
+   "label": "Pi Camera Module 3 Wide (104 deg), 25 x 24 x 12.4",
+   "explode": [
+    0.07,
+    0.4,
+    0.0
+   ],
+   "group": "payload"
+  },
+  "bracket_st_1": {
+   "label": "Star-camera L bracket",
+   "explode": [
+    0.04,
+    0.36,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "bracket_st_2": {
+   "label": "Star-camera L bracket",
+   "explode": [
+    0.04,
+    0.36,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "cell_t1": {
+   "label": "Battery pack, 18650 size (top layer)",
+   "explode": [
+    0.0,
+    0.52,
+    0.0
+   ],
+   "group": "power"
+  },
+  "cell_t2": {
+   "label": "Battery pack, 18650 size (top layer)",
+   "explode": [
+    0.0,
+    0.52,
+    0.0
+   ],
+   "group": "power"
+  },
+  "cell_t3": {
+   "label": "Battery pack, 18650 size (top layer)",
+   "explode": [
+    0.0,
+    0.52,
+    0.0
+   ],
+   "group": "power"
+  },
+  "battery_cradle": {
+   "label": "Battery cradle (printed fixture, est.)",
+   "explode": [
+    0.0,
+    0.48,
+    0.0
+   ],
+   "group": "power"
+  },
+  "cradle_post_1": {
+   "label": "Cradle post",
+   "explode": [
+    0.0,
+    0.5,
+    0.0
+   ],
+   "group": "power"
+  },
+  "cradle_post_2": {
+   "label": "Cradle post",
+   "explode": [
+    0.0,
+    0.5,
+    0.0
+   ],
+   "group": "power"
+  },
+  "cradle_post_3": {
+   "label": "Cradle post",
+   "explode": [
+    0.0,
+    0.5,
+    0.0
+   ],
+   "group": "power"
+  },
+  "cradle_post_4": {
+   "label": "Cradle post",
+   "explode": [
+    0.0,
+    0.5,
+    0.0
+   ],
+   "group": "power"
+  }
+ }
+}

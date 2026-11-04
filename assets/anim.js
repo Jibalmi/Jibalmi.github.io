@@ -15,7 +15,7 @@ async function mount(el) {
   const fmt = mod.format || ((t) => t.toFixed(1) + ' s');
   let t = 0, playing = false, last = 0, visible = false;
   function fit() {
-    const dpr = Math.min(devicePixelRatio || 1, 2), w = el.clientWidth, asp = mod.aspectFor ? mod.aspectFor(w, data) : (data.aspect || 0.5625), h = Math.round(w * asp);
+    const dpr = Math.min(devicePixelRatio || 1, 3), w = el.clientWidth, asp = mod.aspectFor ? mod.aspectFor(w, data) : (data.aspect || 0.5625), h = Math.round(w * asp);
     canvas.style.height = h + 'px'; canvas.width = w * dpr; canvas.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     canvas.cssW = w; canvas.cssH = h;
     if (mod.init) mod.init(ctx, data, canvas);
@@ -34,5 +34,6 @@ async function mount(el) {
   new ResizeObserver(fit).observe(el);
   new IntersectionObserver((es) => { visible = es[0].isIntersecting; if (visible && !reduce && !el.dataset.started) { el.dataset.started = 1; set(true); } }, { threshold: 0.4 }).observe(el);
   fit(); requestAnimationFrame(frame);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => draw());   // redraw once Geist has loaded
 }
 document.querySelectorAll('.anim').forEach((el) => { mount(el).catch((e) => { el.textContent = 'Animation could not load'; console.error(e); }); });
