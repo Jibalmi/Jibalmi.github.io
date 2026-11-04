@@ -397,7 +397,9 @@ function tour(el, data, coast) {
     const g = new LineSegmentsGeometry(); g.setPositions(p); const l = new LineSegments2(g, lineMat(C.ter, 0.6, 0.5, mats)); scene.add(l);
   }
   // ECI (x, y, z) -> three (x, z, -y); y-up is the pole
-  const O = data.objs, L = data.legs, ref = data.ref_rate, N = O.length;
+  const O = data.objs, L = data.legs, N = O.length;
+  // display frame turns at the slowest rate in the data, so every plane moves the same way and a lower, faster craft catches up from one side only
+  const ref = Math.max(...O.map((o) => o.r), ...L.map((g) => g.rc)) + 0.002;
   function pos(a, i, Om, u, out) {
     const cO = Math.cos(Om * D2R), sO = Math.sin(Om * D2R), ci = Math.cos(i * D2R), si = Math.sin(i * D2R), cu = Math.cos(u * D2R), su = Math.sin(u * D2R);
     const x = a * (cO * cu - sO * ci * su), y = a * (sO * cu + cO * ci * su), z = a * si * su;
@@ -423,7 +425,8 @@ function tour(el, data, coast) {
 
   // servicer state along the tour
   const legFrac = 0.06; // drawn share of the leg spent lowering / climbing (the real burns are short)
-  const dU = (a, b) => ((b - a + 540) % 360) - 180;
+  // always prograde: the craft flies forward along its orbit to the target's phase, plus whole revolutions; never the short way back
+  L.forEach((g) => { const days = g.t1 - g.t0, d = 0.7 + 1.15 * Math.sqrt(days / 100); g.u0 = O[g.fr].u; g.du = ((O[g.to].u - O[g.fr].u + 360) % 360) + 360 * Math.max(1, Math.round(0.4 * d)); });
   function svc(t) {
     let k = 0; while (k < L.length - 1 && t > L[k].t1) k++;
     const g = L[k];
@@ -434,12 +437,12 @@ function tour(el, data, coast) {
     const a = up > 0 ? lerp(g.a_d, g.a_to, up) : lerp(g.a_from, g.a_d, down);
     const i = lerp(g.i_from, g.i_to, up);
     const Om = g.O0 + g.rc * (t - g.t0) - ref * t;
-    const u = O[g.fr].u + dU(O[g.fr].u, O[g.to].u) * smooth(s);
+    const u = g.u0 + g.du * s;
     return { k, a, i, Om, u, s };
   }
 
   // trail: the servicer's drawn path, precomputed, revealed with time
-  const PER = 90, trailT = [], trailP = [];
+  const PER = 240, trailT = [], trailP = [];
   L.forEach((g) => { for (let j = 0; j <= PER; j++) { const t = g.t0 + (g.t1 - g.t0) * j / PER; if (j === 0 && trailT.length) continue; const s = svc(Math.min(t, g.t1 - 1e-6)); pos(s.a, s.i, s.Om, s.u, tmp); trailT.push(t); trailP.push(tmp.x, tmp.y, tmp.z); } });
   const trail = polyline(trailP, C.acc, 1.3, 0.9, mats); scene.add(trail);
 
