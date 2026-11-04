@@ -1,0 +1,45 @@
+[
+ {
+  "file": "perci-hero.png",
+  "kind": "photo",
+  "poster": "perci-hero.jpg",
+  "caption": "PERCI penetrator: studio render of the reconstructed CAD from the report.",
+  "alt": "PERCI penetrator rendered in three-quarter view on a near-black studio backdrop",
+  "section_hint": "hero",
+  "source": "_src/models/perci/perci.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 128 samples, 2560x1440"
+ },
+ {
+  "file": "perci-explode.mp4",
+  "webm": "perci-explode.webm",
+  "kind": "video",
+  "poster": "perci-explode.jpg",
+  "caption": "PERCI penetrator: the parts fly in to assemble in build order, then the assembly explodes along the CAD explode offsets and holds.",
+  "alt": "Exploded-view animation of the PERCI penetrator: parts assemble with eased, staggered motion, then separate",
+  "section_hint": "design",
+  "duration_s": 9.03,
+  "source": "_src/models/perci/perci.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 64 samples, 1920x1080 at 30 fps"
+ },
+ {
+  "file": "perci-mission.mp4",
+  "webm": "perci-mission.webm",
+  "kind": "video",
+  "poster": "perci-mission.jpg",
+  "caption": "Illustrative mission sequence (schematic, not to scale): PERCI separates from a generic carrier, its four Star 5D motors fire, the motor pairs are jettisoned as it flips tip-first, then it approaches fast and strikes the ice with an ejecta plume. Separation and impact are in slow motion.",
+  "alt": "Rendered animation of the PERCI penetrator separating from a carrier, firing four solid motors, dropping them in pairs, flipping nose-down and hitting an icy surface that throws up dust",
+  "section_hint": "mission",
+  "illustrative": true,
+  "duration_s": 15.8,
+  "source": "_src/models/perci/perci.glb in a scripted scene by _src/render/blender_render.py (job perci_mission; Cycles 48 samples, OIDN, AgX); plume, carrier, ground and ejecta are illustrative"
+ },
+ {
+  "file": "perci-turntable.mp4",
+  "webm": "perci-turntable.webm",
+  "kind": "video",
+  "poster": "perci-turntable.jpg",
+  "caption": "PERCI penetrator: one full turn of the reconstructed CAD from the report.",
+  "alt": "PERCI penetrator turning 360 degrees on a dark studio floor",
+  "section_hint": "design",
+  "duration_s": 6.0,
+  "source": "_src/models/perci/perci.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 64 samples, 1920x1080 at 30 fps"
+ }
+]

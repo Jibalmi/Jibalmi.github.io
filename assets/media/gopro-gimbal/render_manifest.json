@@ -1,0 +1,33 @@
+[
+ {
+  "file": "gimbal-v2-hero.png",
+  "kind": "photo",
+  "poster": "gimbal-v2-hero.jpg",
+  "caption": "GoPro gimbal v2 (brushless): studio render of the CAD.",
+  "alt": "GoPro gimbal v2 (brushless) rendered in three-quarter view on a near-black studio backdrop",
+  "section_hint": "hero",
+  "source": "_src/models/gopro-gimbal/gimbal_v2.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 128 samples, 2560x1440"
+ },
+ {
+  "file": "gimbal-v2-explode.mp4",
+  "webm": "gimbal-v2-explode.webm",
+  "kind": "video",
+  "poster": "gimbal-v2-explode.jpg",
+  "caption": "GoPro gimbal v2 (brushless): the parts fly in to assemble in build order, then the assembly explodes along the CAD explode offsets and holds.",
+  "alt": "Exploded-view animation of the GoPro gimbal v2 (brushless): parts assemble with eased, staggered motion, then separate",
+  "section_hint": "design",
+  "duration_s": 9.03,
+  "source": "_src/models/gopro-gimbal/gimbal_v2.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 64 samples, 1920x1080 at 30 fps"
+ },
+ {
+  "file": "gimbal-v2-turntable.mp4",
+  "webm": "gimbal-v2-turntable.webm",
+  "kind": "video",
+  "poster": "gimbal-v2-turntable.jpg",
+  "caption": "GoPro gimbal v2 (brushless): one full turn of the CAD.",
+  "alt": "GoPro gimbal v2 (brushless) turning 360 degrees on a dark studio floor",
+  "section_hint": "design",
+  "duration_s": 6.0,
+  "source": "_src/models/gopro-gimbal/gimbal_v2.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 64 samples, 1920x1080 at 30 fps"
+ }
+]

@@ -1,0 +1,33 @@
+[
+ {
+  "file": "cnc-v2-hero.png",
+  "kind": "photo",
+  "poster": "cnc-v2-hero.jpg",
+  "caption": "Rucksack CNC mill v2: studio render of the design CAD.",
+  "alt": "Rucksack CNC mill v2 rendered in three-quarter view on a near-black studio backdrop",
+  "section_hint": "hero",
+  "source": "_src/models/cnc-mill/cnc_v2.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 128 samples, 2560x1440"
+ },
+ {
+  "file": "cnc-v2-explode.mp4",
+  "webm": "cnc-v2-explode.webm",
+  "kind": "video",
+  "poster": "cnc-v2-explode.jpg",
+  "caption": "Rucksack CNC mill v2: the parts fly in to assemble in build order, then the assembly explodes along the CAD explode offsets and holds.",
+  "alt": "Exploded-view animation of the Rucksack CNC mill v2: parts assemble with eased, staggered motion, then separate",
+  "section_hint": "design",
+  "duration_s": 9.03,
+  "source": "_src/models/cnc-mill/cnc_v2.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 64 samples, 1920x1080 at 30 fps"
+ },
+ {
+  "file": "cnc-v2-turntable.mp4",
+  "webm": "cnc-v2-turntable.webm",
+  "kind": "video",
+  "poster": "cnc-v2-turntable.jpg",
+  "caption": "Rucksack CNC mill v2: one full turn of the design CAD.",
+  "alt": "Rucksack CNC mill v2 turning 360 degrees on a dark studio floor",
+  "section_hint": "design",
+  "duration_s": 6.0,
+  "source": "_src/models/cnc-mill/cnc_v2.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 64 samples, 1920x1080 at 30 fps"
+ }
+]
