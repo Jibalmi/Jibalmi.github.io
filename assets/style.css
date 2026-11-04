@@ -316,3 +316,45 @@ h3 { font-size: 1.4rem; font-weight: 400; letter-spacing: -.02em; }
 .parts td { padding: .45rem .6rem; border-bottom: 1px solid var(--line); color: var(--text2); vertical-align: top; }
 .parts td.n { font-family: var(--mono); color: var(--text); white-space: nowrap; }
 .parts td.note { color: var(--mut); font-size: .8rem; }
+
+/* ---- compact type scale and full-width project layout (Nov 2026) ---- */
+html { font-size: 15px; }
+@media (max-width: 560px) { html { font-size: 14.5px; } }
+body { font-size: 1rem; line-height: 1.6; }
+.wrap { max-width: 1680px; padding: 0 clamp(16px, 3.2vw, 48px); }
+h1 { font-size: clamp(2.1rem, 4.4vw, 3.6rem); }
+h2 { font-size: clamp(1.3rem, 2vw, 1.7rem); }
+h3 { font-size: 1.15rem; }
+.lede { font-size: clamp(1rem, 1.3vw, 1.15rem); margin-top: 1rem; }
+.hero h1 { font-size: clamp(2.9rem, 7.4vw, 6.4rem); }
+.hero-grid { min-height: min(62vh, 600px); }
+.numbers b, .stats b { font-size: clamp(1.5rem, 2.6vw, 2.3rem); }
+.numbers span, .stats span { font-size: .82rem; }
+.stats li { padding: 1.1rem 1.2rem 1.1rem 0; }
+.card h3 { font-size: 1.12rem; }
+.card.big h3 { font-size: clamp(1.5rem, 2.2vw, 1.9rem); }
+.card p { font-size: .92rem; }
+.disc h3 { font-size: 1.45rem; }
+.foot-big { font-size: clamp(1.6rem, 3.2vw, 2.6rem); }
+.pn a { font-size: clamp(1.05rem, 1.6vw, 1.35rem); }
+.about-text p:first-child { font-size: clamp(1.15rem, 1.7vw, 1.45rem); }
+.about-text p { font-size: 1rem; }
+.timeline h3 { font-size: 1.1rem; }
+.project-h { padding: clamp(1.2rem, 3vw, 2.2rem) 0 clamp(1rem, 2vw, 1.6rem); }
+.p-hero .media { aspect-ratio: auto; height: clamp(260px, 46vh, 560px); }
+.project-intro { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(1.4rem, 4vw, 4rem); align-items: start; padding-top: clamp(1.6rem, 3vw, 2.6rem); }
+.project-intro .summary { font: 300 clamp(1.08rem, 1.45vw, 1.3rem)/1.5 var(--sans); letter-spacing: -.01em; margin: 0 0 1.2rem; color: var(--text); max-width: 44em; }
+.project-side { position: static !important; }
+.spec { font-size: .86rem; }
+.spec th { font-size: .64rem; padding-top: .7rem; }
+.spec th, .spec td { padding: .55rem .8rem; }
+.project-text { padding-top: clamp(1.6rem, 3vw, 2.6rem); }
+.project-text section { margin-top: clamp(2rem, 3.6vw, 3.2rem); }
+.project-text h2 { font-size: clamp(1.25rem, 1.8vw, 1.55rem); }
+.project-text p, .project-text ul { max-width: 52em; font-size: 1rem; }
+.figs { max-width: 1180px; gap: 1.1rem; }
+.fig-png img, .img-fig img { max-height: 88vh; width: auto; max-width: 100%; margin: 0 auto; }
+.model-fig .model3d { height: clamp(380px, 72vh, 760px) !important; }
+.fig figcaption { font-size: .86rem; }
+@media (max-width: 920px) { .project-intro { grid-template-columns: minmax(0, 1fr); } .p-hero .media { height: auto; aspect-ratio: 16 / 10; } }
+@media (max-width: 560px) { .model-fig .model3d { height: 62vh !important; } .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
