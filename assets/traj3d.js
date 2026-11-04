@@ -10,6 +10,7 @@ import { LineSegments2 } from './vendor/jsm/lines/LineSegments2.js';
 import { LineGeometry } from './vendor/jsm/lines/LineGeometry.js';
 import { LineSegmentsGeometry } from './vendor/jsm/lines/LineSegmentsGeometry.js';
 import { LineMaterial } from './vendor/jsm/lines/LineMaterial.js';
+import { GLTFLoader } from './vendor/jsm/GLTFLoader.js';
 
 const REDUCE = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 const C = { bg: 0x0b0b0c, text: 0xededee, sec: 0x8e8e96, ter: 0x5c5c64, hair: 0x2a2a2f, grid: 0x1c1c20, acc: 0xff5b2e };
@@ -162,7 +163,7 @@ function shell(el, data, opts) {
       S.frame(dt);
       controls.update();
       S.post && S.post();
-      renderer.render(scene, camera);
+      renderer.render(S.overScene || scene, camera);
     })(0);
   };
   return S;
@@ -523,6 +524,188 @@ function tour(el, data, coast) {
 }
 
 /* ------------------------------------------------------------------ mount */
+/* ------------------------------------------------------------------ Scene 3: nanotug mission replay (schema mission_v5) */
+function mission(el, data, coast, src) {
+  const K = 1e-3, M = data.meta, G = data.grid_d, O = data.objects, CH = data.chaser, ST = data.stops, TG = data.tugs, N = O.length;
+  const S = shell(el, data, { near: 0.01, far: 2000, minD: 0.4, maxD: 140, fov: 34 });
+  const { scene, mats } = S;
+  S.hud.k.textContent = `Nanotug mission · ${ST.length} stops · concept replay`;
+  scene.add(new THREE.AmbientLight(0xffffff, 0.22));
+  const sun = new THREE.DirectionalLight(0xffffff, 2.0); sun.position.set(-0.6, 0.35, 0.75); scene.add(sun);
+  const RE = M.RE_km * K;
+  scene.add(new THREE.Mesh(new THREE.SphereGeometry(RE, 96, 64), new THREE.MeshStandardMaterial({ color: 0x39414c, roughness: 1 })));
+  if (coast) {
+    const p = [];
+    coast.lines.forEach((ln) => { for (let i = 0; i + 3 < ln.length; i += 2) {
+      for (const j of [i, i + 2]) { const lo = ln[j] / 100 * D2R, la = ln[j + 1] / 100 * D2R, r = RE * 1.001; p.push(r * Math.cos(la) * Math.cos(lo), r * Math.sin(la), -r * Math.cos(la) * Math.sin(lo)); } } });
+    const g = new LineSegmentsGeometry(); g.setPositions(p); scene.add(new LineSegments2(g, lineMat(C.ter, 0.6, 0.5, mats)));
+  }
+  const unwrap = (a) => { const r = a.slice(); for (let k = 1; k < r.length; k++) { while (r[k] - r[k - 1] > 180) r[k] -= 360; while (r[k] - r[k - 1] < -180) r[k] += 360; } return r; };
+  O.forEach((o) => { o.R = unwrap(o.raan_deg); const n = o.R.length - 1; o.rate = (o.R[n] - o.R[0]) / (G[n] - G[0]); });
+  const tC = CH.map((c) => c.t_d), RC = unwrap(CH.map((c) => c.raan_deg));
+  const ref = Math.max(...O.map((o) => o.rate)) + 0.002; // the view turns at the slowest node rate, so every plane moves the same way
+  const byId = new Map(O.map((o, k) => [o.norad, k]));
+  const stopK = ST.map((s) => byId.get(s.norad)), inTour = new Map(stopK.map((k, j) => [k, j]));
+  const tugsOf = ST.map((s) => TG.filter((g) => g.target_norad === s.norad));
+
+  // display time -> mission time: the long waits run fast, each stop slows down so its steps can be seen
+  const STOP = 5.5, keys = [[0, 0], [1, 0]], W = 36; // W: drawn orbital rate, deg per display second (real rate is 13.8 rev a day)
+  let td0 = 1, tLast = 0; const spans = [];
+  const push = (x, t) => { td0 = x; tLast = Math.max(tLast + 1e-6, t); keys.push([x, tLast]); };
+  push(td0 + 5, ST[0].start_d);
+  ST.forEach((s, i) => {
+    const [a, b] = tugsOf[i], d0 = td0;
+    [[0.16, a.release_d], [0.32, a.attach_d], [0.46, b.attach_d], [0.74, a.detumble_end_d], [0.92, a.orient_end_d], [1, s.end_d]].forEach(([f, t]) => push(d0 + f * STOP, t));
+    spans.push([d0, td0]);
+    if (i + 1 < ST.length) { const days = ST[i + 1].start_d - s.end_d; push(td0 + 0.8 + Math.sqrt(days / 100), ST[i + 1].start_d); }
+  });
+  push(td0 + 4, M.duration_d);
+  S.dur = td0 + 2.5; S.loop = true;
+  const simT = (td) => piecewise(keys, td);
+
+  // drawn phase: always prograde. Objects share one rate; the carrier flies forward faster between stops and catches its next target
+  const uObj = (k, td) => O[k].u_deg[0] + W * td;
+  const legs = spans.slice(0, -1).map((sp, i) => {
+    const t0 = sp[1], t1 = spans[i + 1][0], from = uObj(stopK[i], t0), to = uObj(stopK[i + 1], t1);
+    return { t0, t1, from, du: ((to - from) % 360 + 360) % 360 + 360 * Math.max(1, Math.round(0.25 * (t1 - t0))) };
+  });
+  const uFirst = CH[0].u_deg, duFirst = ((uObj(stopK[0], spans[0][0]) - uFirst) % 360 + 360) % 360 + 720;
+  function uChaser(td) {
+    if (td <= spans[0][0]) return uFirst + duFirst * clamp(td / spans[0][0], 0, 1);
+    for (let i = 0; i < spans.length; i++) {
+      if (td <= spans[i][1]) return uObj(stopK[i], td);
+      if (i < legs.length && td < legs[i].t1) return legs[i].from + legs[i].du * (td - legs[i].t0) / (legs[i].t1 - legs[i].t0);
+    }
+    return uObj(stopK[spans.length - 1], spans[spans.length - 1][1]) + 1.4 * W * (td - spans[spans.length - 1][1]);
+  }
+  function pos(a, i, Om, u, out) {
+    const cO = Math.cos(Om * D2R), sO = Math.sin(Om * D2R), ci = Math.cos(i * D2R), si = Math.sin(i * D2R), cu = Math.cos(u * D2R), su = Math.sin(u * D2R);
+    return out.set(a * (cO * cu - sO * ci * su) * K, a * si * su * K, -a * (sO * cu + cO * ci * su) * K);
+  }
+  const objEl = (k, t) => { const j = bsearch(G, t), s = clamp((t - G[j]) / (G[j + 1] - G[j]), 0, 1), o = O[k]; return { a: lerp(o.a_km[j], o.a_km[j + 1], s), Om: lerp(o.R[j], o.R[j + 1], s) - ref * t, i: o.i_deg }; };
+  const chEl = (t) => { const j = bsearch(tC, t), s = clamp((t - tC[j]) / Math.max(tC[j + 1] - tC[j], 1e-6), 0, 1), c = CH[j], d = CH[j + 1];
+    return { a: lerp(c.a_km, d.a_km, s), Om: lerp(RC[j], RC[j + 1], s) - ref * t, i: lerp(c.i_deg, d.i_deg, s), dv: lerp(c.dv_total_ms, d.dv_total_ms, s), xe: lerp(c.xe_total_kg, d.xe_total_kg, s), phase: c.phase }; };
+
+  // rings and dots
+  const SEG = 72, ringGeo = (n) => { const g = new LineSegmentsGeometry(); g.setPositions(new Float32Array(n * SEG * 6)); return g; };
+  const poolRings = new LineSegments2(ringGeo(N), lineMat(C.sec, 0.6, 0.1, mats)); poolRings.frustumCulled = false; scene.add(poolRings);
+  const nextRing = new LineSegments2(ringGeo(1), lineMat(C.sec, 1.0, 0.75, mats)); nextRing.frustumCulled = false; scene.add(nextRing);
+  const svcRing = new LineSegments2(ringGeo(1), lineMat(C.acc, 0.9, 0.5, mats)); svcRing.frustumCulled = false; scene.add(svcRing);
+  const tmp = new THREE.Vector3(), tmp2 = new THREE.Vector3(), sp = new THREE.Vector3(), nx = new THREE.Vector3();
+  function writeRing(arr, off, a, i, Om) { for (let s = 0; s < SEG; s++) { pos(a, i, Om, s / SEG * 360, tmp); pos(a, i, Om, (s + 1) / SEG * 360, tmp2); arr[off++] = tmp.x; arr[off++] = tmp.y; arr[off++] = tmp.z; arr[off++] = tmp2.x; arr[off++] = tmp2.y; arr[off++] = tmp2.z; } return off; }
+  const arrOf = (ls) => ls.geometry.attributes.instanceStart.data;
+  const dmat = dotMaterial(); S.dotMats.push(dmat);
+  const pd = dots(N + 1, dmat); scene.add(pd);
+  const TAIL = 260, tailBuf = new Float32Array(TAIL * 3), tailG = new THREE.BufferGeometry();
+  tailG.setAttribute('position', new THREE.BufferAttribute(tailBuf, 3)); tailG.setDrawRange(0, 0);
+  const tail = new THREE.Line(tailG, new THREE.LineBasicMaterial({ color: C.acc, transparent: true, opacity: 0.8 })); tail.frustumCulled = false; scene.add(tail);
+  let tailN = 0;
+  const labS = S.label('carrier', 'a'), labN = S.label('', 'w');
+
+  // close-up: built the first time it is asked for
+  const close = { ready: false, loading: false, scene: null, body: null, g: [], plume: [], n: [], stop: -1, spin: new THREE.Vector3(), q0: new THREE.Quaternion(), oriented: false };
+  function buildClose() {
+    if (close.loading) return; close.loading = true;
+    const url = new URL('../../models/debris-removal/stage_with_tugs.glb', new URL(src, location.href)).href;
+    new GLTFLoader().load(url, (gltf) => {
+      const cs = new THREE.Scene(); cs.add(new THREE.HemisphereLight(0xe8eeff, 0x4a4a58, 2.1));
+      const key = new THREE.DirectionalLight(0xffffff, 3.0); key.position.set(3, 5, 4); cs.add(key);
+      const body = new THREE.Group(); cs.add(body);
+      const root = gltf.scene; body.add(root);
+      root.traverse((o) => { if (o.isMesh) { if (!o.geometry.attributes.normal) o.geometry.computeVertexNormals(); o.add(new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry, 28), new THREE.LineBasicMaterial({ color: 0xc8ccd8, transparent: true, opacity: 0.25 }))); const c = o.material && o.material.color ? o.material.color.clone() : new THREE.Color(0x9aa0b0), l = 0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b; if (l < 0.22) c.lerp(new THREE.Color(0x9aa0b0), 0.42 - l); const h = {}; c.getHSL(h); if (!(h.h < 0.08 && h.s > 0.6)) c.setHSL(h.h, h.s * 0.18, Math.min(h.l, 0.74)); o.material = new THREE.MeshStandardMaterial({ color: c, metalness: 0.3, roughness: 0.55, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 }); } });
+      const box = new THREE.Box3().setFromObject(root), sz = box.getSize(new THREE.Vector3()), c0 = box.getCenter(new THREE.Vector3()), s = 6 / Math.max(sz.x, sz.y, sz.z);
+      root.scale.setScalar(s); root.position.copy(c0).multiplyScalar(-s); body.updateMatrixWorld(true);
+      const ax = sz.x >= sz.y && sz.x >= sz.z ? new THREE.Vector3(1, 0, 0) : sz.y >= sz.z ? new THREE.Vector3(0, 1, 0) : new THREE.Vector3(0, 0, 1);
+      ['t0', 't1'].forEach((pre) => {
+        const grp = new THREE.Group(); body.add(grp); const list = [];
+        root.traverse((o) => { if (o.name && o.name.startsWith(pre + '_')) list.push(o); });
+        list.filter((o) => !list.includes(o.parent)).forEach((o) => grp.attach(o));
+        const c = new THREE.Box3().setFromObject(grp).getCenter(new THREE.Vector3()), n = c.clone().addScaledVector(ax, -c.dot(ax)).normalize();
+        const pl = new THREE.Mesh(new THREE.ConeGeometry(0.05, 0.5, 12), new THREE.MeshBasicMaterial({ color: C.acc, transparent: true, opacity: 0.85 }));
+        pl.position.copy(c).addScaledVector(n, 0.2); pl.quaternion.setFromUnitVectors(new THREE.Vector3(0, -1, 0), n.clone().cross(ax).normalize()); pl.position.add(n.clone().cross(ax).normalize().multiplyScalar(0.3)); pl.visible = false; grp.add(pl);
+        close.g.push(grp); close.plume.push(pl); close.n.push(n);
+      });
+      close.ax = ax; close.scene = cs; close.body = body; close.ready = true; close.stop = -1;
+    }, undefined, (e) => console.error(e));
+  }
+  function updateClose(i, t, dt) {
+    if (!close.ready) return;
+    const [a, b] = tugsOf[i];
+    if (close.stop !== i) { close.stop = i; close.oriented = false; close.spin.set(0.35 + 0.3 * Math.sin(i * 2.1), 0.6, 0.72 * Math.cos(i * 1.3)).normalize(); close.body.quaternion.setFromAxisAngle(new THREE.Vector3(0.6, 0.2, 0.77).normalize(), 0.9 + i); }
+    [a, b].forEach((g, k) => {
+      const gp = close.g[k]; gp.visible = t >= g.release_d;
+      gp.position.copy(close.n[k]).multiplyScalar(t < g.attach_d ? 6 * smooth(clamp((g.attach_d - t) / (g.attach_d - g.release_d), 0, 1)) : 0);
+      close.plume[k].visible = t >= a.detumble_start_d && t < a.detumble_end_d && Math.floor(performance.now() / 60) % 3 !== 0;
+    });
+    const w0 = 0.9, w = t < a.detumble_start_d ? w0 : t < a.detumble_end_d ? w0 * (1 - (t - a.detumble_start_d) / (a.detumble_end_d - a.detumble_start_d)) : 0;
+    if (w > 0) close.body.rotateOnWorldAxis(close.spin, w * dt);
+    else if (t < a.orient_end_d) { if (!close.oriented) { close.q0.copy(close.body.quaternion); close.oriented = true; } close.body.quaternion.slerpQuaternions(close.q0, UP, smooth(clamp((t - a.detumble_end_d) / (a.orient_end_d - a.detumble_end_d), 0, 1))); }
+    else close.body.quaternion.copy(UP);
+  }
+  const UP = new THREE.Quaternion();
+
+  // camera
+  const rig = cameraRig(S); rig.dir.set(0.42, 0.78, 0.46).normalize();
+  let mode = 'shell';
+  const bShell = S.button('Whole shell', () => setMode('shell'), true), bFollow = S.button('Follow carrier', () => setMode('follow'), false), bClose = S.button('Close-up', () => setMode('close'), false);
+  function setMode(m) { mode = m; bShell.setAttribute('aria-pressed', m === 'shell'); bFollow.setAttribute('aria-pressed', m === 'follow'); bClose.setAttribute('aria-pressed', m === 'close'); S.forceDist = true; S.user = false; if (m === 'close') buildClose(); }
+  const shellDist = () => { const tv = Math.tan(S.camera.fov / 2 * D2R), th = tv * S.camera.aspect; return 9.4 / Math.min(tv, th); };
+  const closeDist = () => { const tv = Math.tan(S.camera.fov / 2 * D2R), th = tv * S.camera.aspect; return 4.6 / Math.min(tv, th); };
+  S.onRestart = () => { S.user = false; tailN = 0; tailG.setDrawRange(0, 0); close.stop = -1; };
+
+  S.frame = (dt) => {
+    const td = S.td, t = simT(td), c = chEl(t);
+    let idx = ST.length - 1; for (let i = 0; i < ST.length; i++) if (t <= ST[i].end_d) { idx = i; break; }
+    const onStop = t >= ST[idx].start_d && t <= ST[idx].end_d, nextK = t > ST[ST.length - 1].end_d ? -1 : stopK[idx];
+
+    const pa = arrOf(poolRings); let off = 0;
+    for (let k = 0; k < N; k++) { const e = objEl(k, t); off = writeRing(pa.array, off, e.a, e.i, e.Om); }
+    pa.needsUpdate = true;
+    if (nextK >= 0) { const e = objEl(nextK, t); writeRing(arrOf(nextRing).array, 0, e.a, e.i, e.Om); arrOf(nextRing).needsUpdate = true; }
+    nextRing.visible = nextK >= 0;
+    const ce = onStop ? objEl(nextK, t) : c;
+    writeRing(arrOf(svcRing).array, 0, ce.a, ce.i, ce.Om); arrOf(svcRing).needsUpdate = true;
+    pos(ce.a, ce.i, ce.Om, uChaser(td), sp);
+
+    let served = 0; ST.forEach((s, i) => { if (t >= tugsOf[i][0].orient_end_d) served++; });
+    for (let k = 0; k < N; k++) {
+      const e = objEl(k, t); pos(e.a, e.i, e.Om, uObj(k, td), tmp);
+      const j = inTour.get(k); let hex = C.ter, al = 0.7, sz = 2.4;
+      if (j !== undefined) { if (t >= tugsOf[j][0].orient_end_d) { hex = C.text; al = 0.95; sz = 4.5; } else { hex = C.sec; al = 0.9; sz = 3; } }
+      if (k === nextK) { hex = C.text; al = 1; sz = 6; nx.copy(tmp); }
+      setDot(pd, k, tmp, hex, al, sz);
+    }
+    setDot(pd, N, sp, C.acc, 1, 7); dirtyDots(pd);
+
+    if (S.playing && dt > 0) { if (tailN < TAIL) tailN++; else tailBuf.copyWithin(0, 3); tailBuf[(tailN - 1) * 3] = sp.x; tailBuf[(tailN - 1) * 3 + 1] = sp.y; tailBuf[(tailN - 1) * 3 + 2] = sp.z; tailG.attributes.position.needsUpdate = true; tailG.setDrawRange(0, tailN); }
+
+    const isClose = mode === 'close' && close.ready;
+    S.overScene = isClose ? close.scene : null;
+    if (isClose) updateClose(idx, t, S.playing ? dt : 0);
+    if (!S.rigInit) { rig.snap(new THREE.Vector3(), shellDist()); S.rigInit = true; }
+    const follow = mode === 'follow', focus = (follow ? sp : tmp.set(0, 0, 0)).clone(), dist = follow ? 6 : isClose ? closeDist() : shellDist();
+    rig.step(focus, dist, dt, S.forceDist ? 10 : 0, S.forceDist || (!S.user && !follow) ? 3 : 0);
+    if (follow && !S.user) { tmp2.copy(sp).normalize(); tmp2.y += 0.35; tmp2.normalize().multiplyScalar(S.camera.position.distanceTo(S.controls.target)).add(S.controls.target); S.camera.position.lerp(tmp2, 1 - Math.exp(-2 * dt)); }
+    if (S.forceDist && S.controls.target.distanceTo(focus) < 0.6 && Math.abs(S.camera.position.distanceTo(S.controls.target) / dist - 1) < 0.05) S.forceDist = false;
+
+    S.place(labS, sp, !isClose && !S.hidden(sp, tmp2.set(0, 0, 0), RE), 9, 6);
+    if (nextK >= 0 && !onStop && !isClose) { labN.s.textContent = `next: NORAD ${O[nextK].norad}`; S.place(labN, nx, !S.hidden(nx, tmp2.set(0, 0, 0), RE), 9, -12); } else S.place(labN, nx, false);
+
+    const released = TG.filter((g) => t >= g.release_d).length, alt = ce.a - M.RE_km;
+    let gap = ''; if (nextK >= 0) { const e = objEl(nextK, t), d = ((e.Om - c.Om + 540) % 360 + 360) % 360 - 180; gap = `${Math.abs(onStop ? 0 : d).toFixed(1)}°`; }
+    S.hud.clock.innerHTML = `Year ${(t / 365.25).toFixed(1)}<small>day ${fmt(t)} of ${fmt(M.duration_d)}</small>`;
+    const sch = isClose ? ' <i>· schematic, tumble speeded up</i>' : '';
+    if (onStop) { const [a, b] = tugsOf[idx]; const st = t < a.release_d ? 'approach and inspection' : t < b.attach_d ? 'tugs released, pads closing on the wall' : t < a.detumble_end_d ? 'attached, detumbling' : t < a.orient_end_d ? 'turning to a stable attitude' : 'stabilised, carrier leaves';
+      S.hud.ph.innerHTML = `Stop ${idx + 1} of ${ST.length} <i>· NORAD ${ST[idx].norad}, ${st}</i>${sch}`; }
+    else if (t > ST[ST.length - 1].end_d) S.hud.ph.innerHTML = `Tour done <i>· ${ST.length} stabilised, carrier disposal</i>`;
+    else if (t < ST[0].start_d) S.hud.ph.innerHTML = `Spiral up from 300 km <i>· electric thrust, ${fmt(alt)} km</i>`;
+    else S.hud.ph.innerHTML = `Leg ${idx} of ${ST.length - 1} <i>· ${fmt(alt)} km, waiting for the planes to meet</i>`;
+    S.readout([['Stops', `${served} / ${ST.length}`], ['Tugs left', `${40 - released} / 40`], ['Delta-V', `${fmt(c.dv)} m/s`, 'a'], ['Xenon', `${fmt(c.xe)} kg`], ['Altitude', `${fmt(alt)} km`], ['Plane gap', gap || '–']]);
+  };
+  S.start();
+  if (REDUCE) S.td = S.dur;
+}
+
 function mount(el) {
   el.innerHTML = '<div class="t3-load">Loading trajectory</div>';
   const src = el.dataset.src;
@@ -531,7 +714,7 @@ function mount(el) {
     else {
       let coast = null;
       try { coast = await fetch(new URL('../../globe/coast110.json', new URL(src, location.href))).then((r) => (r.ok ? r.json() : null)); } catch (e) { coast = null; }
-      tour(el, data, coast);
+      if (data.meta && data.meta.schema === 'mission_v5') mission(el, data, coast, src); else tour(el, data, coast);
     }
   }).catch((err) => { el.innerHTML = '<div class="t3-load">Trajectory could not load</div>'; console.error(err); });
 }

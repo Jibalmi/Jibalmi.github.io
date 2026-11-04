@@ -1,0 +1,1232 @@
+{
+ "title": "Carrier, deployed: arrays out, port 1 tubes open, front tugs gone, one tug released",
+ "units": "mm",
+ "explode_scale": 1.0,
+ "parts": {
+  "ring": {
+   "label": "ESPA ring, 62 in OD, 24 in tall, six 15 in ports",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "port_flanges": {
+   "label": "Port flanges, 15 in",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "top_deck": {
+   "label": "Forward deck",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "aft_deck": {
+   "label": "Aft deck",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "xe_tank": {
+   "label": "Xenon tank, inside the ring",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "sep_ring": {
+   "label": "Launch adapter ring, 62 in",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "hall_0": {
+   "label": "Hall thruster, SPT-100 class, two firing, two spare",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "hall_1": {
+   "label": "Hall thruster, SPT-100 class, two firing, two spare",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "hall_2": {
+   "label": "Hall thruster, SPT-100 class, two firing, two spare",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "hall_3": {
+   "label": "Hall thruster, SPT-100 class, two firing, two spare",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "sensor_head": {
+   "label": "RPO sensor head: lidar, narrow and wide cameras, on the sixth port",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "antenna": {
+   "label": "S-band antenna",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "array_0": {
+   "label": "Solar array wing, circular fan-fold, about 10 m2",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "array_1": {
+   "label": "Solar array wing, circular fan-fold, about 10 m2",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "adapter_0": {
+   "label": "Tube adapter plate, bolted to the 15 in port",
+   "explode": [
+    1.0,
+    0.0,
+    -0.0
+   ],
+   "group": "dispenser"
+  },
+  "tube_0_0": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    1.0,
+    -0.0402,
+    0.0402
+   ],
+   "group": "dispenser"
+  },
+  "door_0_0": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    1.42,
+    -0.0402,
+    0.0402
+   ],
+   "group": "dispenser"
+  },
+  "tug_0_0_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    1.2,
+    -0.0402,
+    0.0402
+   ],
+   "group": "tugs"
+  },
+  "latch_0_0": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    1.14,
+    -0.0402,
+    0.0402
+   ],
+   "group": "dispenser"
+  },
+  "tube_0_1": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    1.0,
+    -0.0402,
+    -0.0402
+   ],
+   "group": "dispenser"
+  },
+  "door_0_1": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    1.42,
+    -0.0402,
+    -0.0402
+   ],
+   "group": "dispenser"
+  },
+  "tug_0_1_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    1.2,
+    -0.0402,
+    -0.0402
+   ],
+   "group": "tugs"
+  },
+  "latch_0_1": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    1.14,
+    -0.0402,
+    -0.0402
+   ],
+   "group": "dispenser"
+  },
+  "tube_0_2": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    1.0,
+    0.0402,
+    0.0402
+   ],
+   "group": "dispenser"
+  },
+  "door_0_2": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    1.42,
+    0.0402,
+    0.0402
+   ],
+   "group": "dispenser"
+  },
+  "tug_0_2_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    1.2,
+    0.0402,
+    0.0402
+   ],
+   "group": "tugs"
+  },
+  "latch_0_2": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    1.14,
+    0.0402,
+    0.0402
+   ],
+   "group": "dispenser"
+  },
+  "tube_0_3": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    1.0,
+    0.0402,
+    -0.0402
+   ],
+   "group": "dispenser"
+  },
+  "door_0_3": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    1.42,
+    0.0402,
+    -0.0402
+   ],
+   "group": "dispenser"
+  },
+  "tug_0_3_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    1.2,
+    0.0402,
+    -0.0402
+   ],
+   "group": "tugs"
+  },
+  "latch_0_3": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    1.14,
+    0.0402,
+    -0.0402
+   ],
+   "group": "dispenser"
+  },
+  "adapter_1": {
+   "label": "Tube adapter plate, bolted to the 15 in port",
+   "explode": [
+    0.5,
+    0.0,
+    -0.86603
+   ],
+   "group": "dispenser"
+  },
+  "tube_1_0": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    0.53481,
+    -0.0402,
+    -0.84593
+   ],
+   "group": "dispenser"
+  },
+  "door_1_0": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    0.74481,
+    -0.0402,
+    -1.20966
+   ],
+   "group": "dispenser"
+  },
+  "tug_1_0_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    0.63481,
+    -0.0402,
+    -1.01913
+   ],
+   "group": "tugs"
+  },
+  "tug_1_0_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    0.75481,
+    -0.0402,
+    -1.22698
+   ],
+   "group": "tugs"
+  },
+  "latch_1_0": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    0.60481,
+    -0.0402,
+    -0.96717
+   ],
+   "group": "dispenser"
+  },
+  "tube_1_1": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    0.46519,
+    -0.0402,
+    -0.88613
+   ],
+   "group": "dispenser"
+  },
+  "door_1_1": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    0.67519,
+    -0.0402,
+    -1.24986
+   ],
+   "group": "dispenser"
+  },
+  "tug_1_1_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    0.56519,
+    -0.0402,
+    -1.05933
+   ],
+   "group": "tugs"
+  },
+  "tug_1_1_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    0.68519,
+    -0.0402,
+    -1.26718
+   ],
+   "group": "tugs"
+  },
+  "latch_1_1": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    0.53519,
+    -0.0402,
+    -1.00737
+   ],
+   "group": "dispenser"
+  },
+  "tube_1_2": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    0.53481,
+    0.0402,
+    -0.84593
+   ],
+   "group": "dispenser"
+  },
+  "door_1_2": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    0.74481,
+    0.0402,
+    -1.20966
+   ],
+   "group": "dispenser"
+  },
+  "tug_1_2_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    0.63481,
+    0.0402,
+    -1.01913
+   ],
+   "group": "tugs"
+  },
+  "tug_1_2_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    0.75481,
+    0.0402,
+    -1.22698
+   ],
+   "group": "tugs"
+  },
+  "latch_1_2": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    0.60481,
+    0.0402,
+    -0.96717
+   ],
+   "group": "dispenser"
+  },
+  "tube_1_3": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    0.46519,
+    0.0402,
+    -0.88613
+   ],
+   "group": "dispenser"
+  },
+  "door_1_3": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    0.67519,
+    0.0402,
+    -1.24986
+   ],
+   "group": "dispenser"
+  },
+  "tug_1_3_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    0.56519,
+    0.0402,
+    -1.05933
+   ],
+   "group": "tugs"
+  },
+  "tug_1_3_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    0.68519,
+    0.0402,
+    -1.26718
+   ],
+   "group": "tugs"
+  },
+  "latch_1_3": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    0.53519,
+    0.0402,
+    -1.00737
+   ],
+   "group": "dispenser"
+  },
+  "adapter_2": {
+   "label": "Tube adapter plate, bolted to the 15 in port",
+   "explode": [
+    -0.5,
+    0.0,
+    -0.86603
+   ],
+   "group": "dispenser"
+  },
+  "tube_2_0": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    -0.46519,
+    -0.0402,
+    -0.88613
+   ],
+   "group": "dispenser"
+  },
+  "door_2_0": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    -0.67519,
+    -0.0402,
+    -1.24986
+   ],
+   "group": "dispenser"
+  },
+  "tug_2_0_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.56519,
+    -0.0402,
+    -1.05933
+   ],
+   "group": "tugs"
+  },
+  "tug_2_0_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.68519,
+    -0.0402,
+    -1.26718
+   ],
+   "group": "tugs"
+  },
+  "latch_2_0": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    -0.53519,
+    -0.0402,
+    -1.00737
+   ],
+   "group": "dispenser"
+  },
+  "tube_2_1": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    -0.53481,
+    -0.0402,
+    -0.84593
+   ],
+   "group": "dispenser"
+  },
+  "door_2_1": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    -0.74481,
+    -0.0402,
+    -1.20966
+   ],
+   "group": "dispenser"
+  },
+  "tug_2_1_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.63481,
+    -0.0402,
+    -1.01913
+   ],
+   "group": "tugs"
+  },
+  "tug_2_1_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.75481,
+    -0.0402,
+    -1.22698
+   ],
+   "group": "tugs"
+  },
+  "latch_2_1": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    -0.60481,
+    -0.0402,
+    -0.96717
+   ],
+   "group": "dispenser"
+  },
+  "tube_2_2": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    -0.46519,
+    0.0402,
+    -0.88613
+   ],
+   "group": "dispenser"
+  },
+  "door_2_2": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    -0.67519,
+    0.0402,
+    -1.24986
+   ],
+   "group": "dispenser"
+  },
+  "tug_2_2_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.56519,
+    0.0402,
+    -1.05933
+   ],
+   "group": "tugs"
+  },
+  "tug_2_2_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.68519,
+    0.0402,
+    -1.26718
+   ],
+   "group": "tugs"
+  },
+  "latch_2_2": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    -0.53519,
+    0.0402,
+    -1.00737
+   ],
+   "group": "dispenser"
+  },
+  "tube_2_3": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    -0.53481,
+    0.0402,
+    -0.84593
+   ],
+   "group": "dispenser"
+  },
+  "door_2_3": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    -0.74481,
+    0.0402,
+    -1.20966
+   ],
+   "group": "dispenser"
+  },
+  "tug_2_3_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.63481,
+    0.0402,
+    -1.01913
+   ],
+   "group": "tugs"
+  },
+  "tug_2_3_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.75481,
+    0.0402,
+    -1.22698
+   ],
+   "group": "tugs"
+  },
+  "latch_2_3": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    -0.60481,
+    0.0402,
+    -0.96717
+   ],
+   "group": "dispenser"
+  },
+  "adapter_3": {
+   "label": "Tube adapter plate, bolted to the 15 in port",
+   "explode": [
+    -1.0,
+    0.0,
+    -0.0
+   ],
+   "group": "dispenser"
+  },
+  "tube_3_0": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    -1.0,
+    -0.0402,
+    -0.0402
+   ],
+   "group": "dispenser"
+  },
+  "door_3_0": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    -1.42,
+    -0.0402,
+    -0.0402
+   ],
+   "group": "dispenser"
+  },
+  "tug_3_0_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -1.2,
+    -0.0402,
+    -0.0402
+   ],
+   "group": "tugs"
+  },
+  "tug_3_0_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -1.44,
+    -0.0402,
+    -0.0402
+   ],
+   "group": "tugs"
+  },
+  "latch_3_0": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    -1.14,
+    -0.0402,
+    -0.0402
+   ],
+   "group": "dispenser"
+  },
+  "tube_3_1": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    -1.0,
+    -0.0402,
+    0.0402
+   ],
+   "group": "dispenser"
+  },
+  "door_3_1": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    -1.42,
+    -0.0402,
+    0.0402
+   ],
+   "group": "dispenser"
+  },
+  "tug_3_1_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -1.2,
+    -0.0402,
+    0.0402
+   ],
+   "group": "tugs"
+  },
+  "tug_3_1_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -1.44,
+    -0.0402,
+    0.0402
+   ],
+   "group": "tugs"
+  },
+  "latch_3_1": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    -1.14,
+    -0.0402,
+    0.0402
+   ],
+   "group": "dispenser"
+  },
+  "tube_3_2": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    -1.0,
+    0.0402,
+    -0.0402
+   ],
+   "group": "dispenser"
+  },
+  "door_3_2": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    -1.42,
+    0.0402,
+    -0.0402
+   ],
+   "group": "dispenser"
+  },
+  "tug_3_2_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -1.2,
+    0.0402,
+    -0.0402
+   ],
+   "group": "tugs"
+  },
+  "tug_3_2_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -1.44,
+    0.0402,
+    -0.0402
+   ],
+   "group": "tugs"
+  },
+  "latch_3_2": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    -1.14,
+    0.0402,
+    -0.0402
+   ],
+   "group": "dispenser"
+  },
+  "tube_3_3": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    -1.0,
+    0.0402,
+    0.0402
+   ],
+   "group": "dispenser"
+  },
+  "door_3_3": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    -1.42,
+    0.0402,
+    0.0402
+   ],
+   "group": "dispenser"
+  },
+  "tug_3_3_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -1.2,
+    0.0402,
+    0.0402
+   ],
+   "group": "tugs"
+  },
+  "tug_3_3_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -1.44,
+    0.0402,
+    0.0402
+   ],
+   "group": "tugs"
+  },
+  "latch_3_3": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    -1.14,
+    0.0402,
+    0.0402
+   ],
+   "group": "dispenser"
+  },
+  "adapter_4": {
+   "label": "Tube adapter plate, bolted to the 15 in port",
+   "explode": [
+    -0.5,
+    0.0,
+    0.86603
+   ],
+   "group": "dispenser"
+  },
+  "tube_4_0": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    -0.53481,
+    -0.0402,
+    0.84593
+   ],
+   "group": "dispenser"
+  },
+  "door_4_0": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    -0.74481,
+    -0.0402,
+    1.20966
+   ],
+   "group": "dispenser"
+  },
+  "tug_4_0_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.63481,
+    -0.0402,
+    1.01913
+   ],
+   "group": "tugs"
+  },
+  "tug_4_0_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.75481,
+    -0.0402,
+    1.22698
+   ],
+   "group": "tugs"
+  },
+  "latch_4_0": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    -0.60481,
+    -0.0402,
+    0.96717
+   ],
+   "group": "dispenser"
+  },
+  "tube_4_1": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    -0.46519,
+    -0.0402,
+    0.88613
+   ],
+   "group": "dispenser"
+  },
+  "door_4_1": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    -0.67519,
+    -0.0402,
+    1.24986
+   ],
+   "group": "dispenser"
+  },
+  "tug_4_1_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.56519,
+    -0.0402,
+    1.05933
+   ],
+   "group": "tugs"
+  },
+  "tug_4_1_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.68519,
+    -0.0402,
+    1.26718
+   ],
+   "group": "tugs"
+  },
+  "latch_4_1": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    -0.53519,
+    -0.0402,
+    1.00737
+   ],
+   "group": "dispenser"
+  },
+  "tube_4_2": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    -0.53481,
+    0.0402,
+    0.84593
+   ],
+   "group": "dispenser"
+  },
+  "door_4_2": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    -0.74481,
+    0.0402,
+    1.20966
+   ],
+   "group": "dispenser"
+  },
+  "tug_4_2_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.63481,
+    0.0402,
+    1.01913
+   ],
+   "group": "tugs"
+  },
+  "tug_4_2_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.75481,
+    0.0402,
+    1.22698
+   ],
+   "group": "tugs"
+  },
+  "latch_4_2": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    -0.60481,
+    0.0402,
+    0.96717
+   ],
+   "group": "dispenser"
+  },
+  "tube_4_3": {
+   "label": "Dispenser tube, two tugs in tandem, 623 mm",
+   "explode": [
+    -0.46519,
+    0.0402,
+    0.88613
+   ],
+   "group": "dispenser"
+  },
+  "door_4_3": {
+   "label": "Tube door, spring hinge, restrains the front tug",
+   "explode": [
+    -0.67519,
+    0.0402,
+    1.24986
+   ],
+   "group": "dispenser"
+  },
+  "tug_4_3_0": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.56519,
+    0.0402,
+    1.05933
+   ],
+   "group": "tugs"
+  },
+  "tug_4_3_1": {
+   "label": "Nanotug in tube (stowed, envelope shown)",
+   "explode": [
+    -0.68519,
+    0.0402,
+    1.26718
+   ],
+   "group": "tugs"
+  },
+  "latch_4_3": {
+   "label": "Mid-tube latch frame, second release, second spring seat",
+   "explode": [
+    -0.53519,
+    0.0402,
+    1.00737
+   ],
+   "group": "dispenser"
+  },
+  "free_frame": {
+   "label": "Released: 8U frame, 226 x 226 x 227 mm overall with the pad",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "structure"
+  },
+  "free_top_plate": {
+   "label": "Released: Top plate, radiator face",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "structure"
+  },
+  "free_tank": {
+   "label": "Released: Solid iodine tank and sublimator, 1.1 L (a xenon tank of this volume holds 1.3 kg), estimated",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "free_hall_normal": {
+   "label": "Released: Hall thruster, 7 mN class, normal to the pad: exhaust away from the wall (80 x 55 mm, listing)",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "free_hall_tan_p": {
+   "label": "Released: Hall thruster, 7 mN class, tangential: detumble couple",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "free_hall_tan_m": {
+   "label": "Released: Hall thruster, 7 mN class, tangential: detumble couple",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "propulsion"
+  },
+  "free_ppu": {
+   "label": "Released: Shared power processor",
+   "explode": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "free_battery": {
+   "label": "Released: Battery, 300 W h",
+   "explode": [
+    0.0,
+    -0.0,
+    -0.0
+   ],
+   "group": "power"
+  },
+  "free_avionics": {
+   "label": "Released: Flight computer, radios, GNSS",
+   "explode": [
+    -0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "free_wheels": {
+   "label": "Released: Three reaction wheels, 50 mN m s",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "free_cold_gas": {
+   "label": "Released: Cold-gas terminal thrusters and bottle, 0.25 kg",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "propulsion"
+  },
+  "free_camera": {
+   "label": "Released: RPO camera",
+   "explode": [
+    -0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "free_lidar": {
+   "label": "Released: Time-of-flight lidar",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "free_pad_suspension": {
+   "label": "Released: Pad suspension, 30 mm stroke, 200 N/m",
+   "explode": [
+    0.0,
+    -0.0,
+    -0.0
+   ],
+   "group": "attachment"
+  },
+  "free_pad_tile_0": {
+   "label": "Released: Dry-adhesive tile set, 0.013 m2 (pair 0.027 m2)",
+   "explode": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "group": "attachment"
+  },
+  "free_pad_tile_1": {
+   "label": "Released: Dry-adhesive tile set, 0.013 m2 (pair 0.027 m2)",
+   "explode": [
+    0.0,
+    -0.0,
+    -0.0
+   ],
+   "group": "attachment"
+  },
+  "free_wing_0": {
+   "label": "Released: Deployable array wing, 0.15 m2 of 0.6 m2",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "power"
+  },
+  "free_wing_1": {
+   "label": "Released: Deployable array wing, 0.15 m2 of 0.6 m2",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "power"
+  },
+  "free_wing_2": {
+   "label": "Released: Deployable array wing, 0.15 m2 of 0.6 m2",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "power"
+  },
+  "free_wing_3": {
+   "label": "Released: Deployable array wing, 0.15 m2 of 0.6 m2",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "power"
+  }
+ },
+ "status": "concept; dimensions marked estimated in the BOM",
+ "views": {
+  "iso": {
+   "pos": [
+    3,
+    2,
+    3
+   ]
+  }
+ }
+}

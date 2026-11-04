@@ -1,0 +1,395 @@
+{
+ "title": "SL-8 stage with two tugs on the +V wall, 1 m apart",
+ "units": "mm",
+ "explode_scale": 1.0,
+ "parts": {
+  "stage": {
+   "label": "SL-8 second stage (6 m x 2.4 m), simplified, context only",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "target"
+  },
+  "nozzle": {
+   "label": "Engine bell, simplified",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "target"
+  },
+  "t0_frame": {
+   "label": "8U frame, 226 x 226 x 227 mm overall with the pad",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "structure"
+  },
+  "t0_top_plate": {
+   "label": "Top plate, radiator face",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "structure"
+  },
+  "t0_tank": {
+   "label": "Solid iodine tank and sublimator, 1.1 L (a xenon tank of this volume holds 1.3 kg), estimated",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "t0_hall_normal": {
+   "label": "Hall thruster, 7 mN class, normal to the pad: exhaust away from the wall (80 x 55 mm, listing)",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "t0_hall_tan_p": {
+   "label": "Hall thruster, 7 mN class, tangential: detumble couple",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "t0_hall_tan_m": {
+   "label": "Hall thruster, 7 mN class, tangential: detumble couple",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "propulsion"
+  },
+  "t0_ppu": {
+   "label": "Shared power processor",
+   "explode": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "t0_battery": {
+   "label": "Battery, 300 W h",
+   "explode": [
+    0.0,
+    -0.0,
+    -0.0
+   ],
+   "group": "power"
+  },
+  "t0_avionics": {
+   "label": "Flight computer, radios, GNSS",
+   "explode": [
+    -0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "t0_wheels": {
+   "label": "Three reaction wheels, 50 mN m s",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "t0_cold_gas": {
+   "label": "Cold-gas terminal thrusters and bottle, 0.25 kg",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "propulsion"
+  },
+  "t0_camera": {
+   "label": "RPO camera",
+   "explode": [
+    -0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "t0_lidar": {
+   "label": "Time-of-flight lidar",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "t0_pad_suspension": {
+   "label": "Pad suspension, 30 mm stroke, 200 N/m",
+   "explode": [
+    0.0,
+    -0.0,
+    -0.0
+   ],
+   "group": "attachment"
+  },
+  "t0_pad_tile_0": {
+   "label": "Dry-adhesive tile set, 0.013 m2 (pair 0.027 m2)",
+   "explode": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "group": "attachment"
+  },
+  "t0_pad_tile_1": {
+   "label": "Dry-adhesive tile set, 0.013 m2 (pair 0.027 m2)",
+   "explode": [
+    0.0,
+    -0.0,
+    -0.0
+   ],
+   "group": "attachment"
+  },
+  "t0_wing_0": {
+   "label": "Deployable array wing, 0.15 m2 of 0.6 m2",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "power"
+  },
+  "t0_wing_1": {
+   "label": "Deployable array wing, 0.15 m2 of 0.6 m2",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "power"
+  },
+  "t0_wing_2": {
+   "label": "Deployable array wing, 0.15 m2 of 0.6 m2",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "power"
+  },
+  "t0_wing_3": {
+   "label": "Deployable array wing, 0.15 m2 of 0.6 m2",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "power"
+  },
+  "t1_frame": {
+   "label": "8U frame, 226 x 226 x 227 mm overall with the pad",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "structure"
+  },
+  "t1_top_plate": {
+   "label": "Top plate, radiator face",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "structure"
+  },
+  "t1_tank": {
+   "label": "Solid iodine tank and sublimator, 1.1 L (a xenon tank of this volume holds 1.3 kg), estimated",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "t1_hall_normal": {
+   "label": "Hall thruster, 7 mN class, normal to the pad: exhaust away from the wall (80 x 55 mm, listing)",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "t1_hall_tan_p": {
+   "label": "Hall thruster, 7 mN class, tangential: detumble couple",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "t1_hall_tan_m": {
+   "label": "Hall thruster, 7 mN class, tangential: detumble couple",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "propulsion"
+  },
+  "t1_ppu": {
+   "label": "Shared power processor",
+   "explode": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "t1_battery": {
+   "label": "Battery, 300 W h",
+   "explode": [
+    0.0,
+    -0.0,
+    -0.0
+   ],
+   "group": "power"
+  },
+  "t1_avionics": {
+   "label": "Flight computer, radios, GNSS",
+   "explode": [
+    -0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "t1_wheels": {
+   "label": "Three reaction wheels, 50 mN m s",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "t1_cold_gas": {
+   "label": "Cold-gas terminal thrusters and bottle, 0.25 kg",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "propulsion"
+  },
+  "t1_camera": {
+   "label": "RPO camera",
+   "explode": [
+    -0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "t1_lidar": {
+   "label": "Time-of-flight lidar",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "t1_pad_suspension": {
+   "label": "Pad suspension, 30 mm stroke, 200 N/m",
+   "explode": [
+    0.0,
+    -0.0,
+    -0.0
+   ],
+   "group": "attachment"
+  },
+  "t1_pad_tile_0": {
+   "label": "Dry-adhesive tile set, 0.013 m2 (pair 0.027 m2)",
+   "explode": [
+    0.0,
+    -0.0,
+    0.0
+   ],
+   "group": "attachment"
+  },
+  "t1_pad_tile_1": {
+   "label": "Dry-adhesive tile set, 0.013 m2 (pair 0.027 m2)",
+   "explode": [
+    0.0,
+    -0.0,
+    -0.0
+   ],
+   "group": "attachment"
+  },
+  "t1_wing_0": {
+   "label": "Deployable array wing, 0.15 m2 of 0.6 m2",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "power"
+  },
+  "t1_wing_1": {
+   "label": "Deployable array wing, 0.15 m2 of 0.6 m2",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "power"
+  },
+  "t1_wing_2": {
+   "label": "Deployable array wing, 0.15 m2 of 0.6 m2",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "power"
+  },
+  "t1_wing_3": {
+   "label": "Deployable array wing, 0.15 m2 of 0.6 m2",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "power"
+  }
+ },
+ "status": "concept; dimensions marked estimated in the BOM",
+ "views": {
+  "iso": {
+   "pos": [
+    3,
+    2,
+    3
+   ]
+  }
+ }
+}

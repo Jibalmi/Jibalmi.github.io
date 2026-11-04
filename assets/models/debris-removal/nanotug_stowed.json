@@ -1,0 +1,197 @@
+{
+ "title": "Nanotug, stowed, 8U (226 x 226 x 227 mm), wings folded, pad at the base",
+ "units": "mm",
+ "explode_scale": 1.0,
+ "parts": {
+  "frame": {
+   "label": "8U frame, 226 x 226 x 227 mm overall with the pad",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "structure"
+  },
+  "top_plate": {
+   "label": "Top plate, radiator face",
+   "explode": [
+    0.0,
+    0.07,
+    -0.0
+   ],
+   "group": "structure"
+  },
+  "tank": {
+   "label": "Solid iodine tank and sublimator, 1.1 L (a xenon tank of this volume holds 1.3 kg), estimated",
+   "explode": [
+    0.0,
+    0.15,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "hall_normal": {
+   "label": "Hall thruster, 7 mN class, normal to the pad: exhaust away from the wall (80 x 55 mm, listing)",
+   "explode": [
+    0.06,
+    0.13,
+    -0.06
+   ],
+   "group": "propulsion"
+  },
+  "hall_tan_p": {
+   "label": "Hall thruster, 7 mN class, tangential: detumble couple",
+   "explode": [
+    0.0,
+    0.0,
+    -0.13
+   ],
+   "group": "propulsion"
+  },
+  "hall_tan_m": {
+   "label": "Hall thruster, 7 mN class, tangential: detumble couple",
+   "explode": [
+    0.0,
+    0.0,
+    0.13
+   ],
+   "group": "propulsion"
+  },
+  "ppu": {
+   "label": "Shared power processor",
+   "explode": [
+    0.0,
+    -0.03,
+    0.15
+   ],
+   "group": "power"
+  },
+  "battery": {
+   "label": "Battery, 300 W h",
+   "explode": [
+    0.0,
+    -0.03,
+    -0.15
+   ],
+   "group": "power"
+  },
+  "avionics": {
+   "label": "Flight computer, radios, GNSS",
+   "explode": [
+    -0.13,
+    0.03,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "wheels": {
+   "label": "Three reaction wheels, 50 mN m s",
+   "explode": [
+    0.13,
+    0.03,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "cold_gas": {
+   "label": "Cold-gas terminal thrusters and bottle, 0.25 kg",
+   "explode": [
+    0.0,
+    0.1,
+    0.07
+   ],
+   "group": "propulsion"
+  },
+  "camera": {
+   "label": "RPO camera",
+   "explode": [
+    -0.03,
+    0.09,
+    -0.03
+   ],
+   "group": "avionics"
+  },
+  "lidar": {
+   "label": "Time-of-flight lidar",
+   "explode": [
+    0.0,
+    0.09,
+    -0.03
+   ],
+   "group": "avionics"
+  },
+  "pad_suspension": {
+   "label": "Pad suspension, 30 mm stroke, 200 N/m",
+   "explode": [
+    0.0,
+    -0.07,
+    -0.0
+   ],
+   "group": "attachment"
+  },
+  "pad_tile_0": {
+   "label": "Dry-adhesive tile set, 0.013 m2 (pair 0.027 m2)",
+   "explode": [
+    0.0,
+    -0.12,
+    0.05
+   ],
+   "group": "attachment"
+  },
+  "pad_tile_1": {
+   "label": "Dry-adhesive tile set, 0.013 m2 (pair 0.027 m2)",
+   "explode": [
+    0.0,
+    -0.12,
+    -0.05
+   ],
+   "group": "attachment"
+  },
+  "wing_0": {
+   "label": "Deployable array wing, folded in the 6 mm allowance",
+   "explode": [
+    0.17,
+    0.0,
+    -0.0
+   ],
+   "group": "power"
+  },
+  "wing_1": {
+   "label": "Deployable array wing, folded in the 6 mm allowance",
+   "explode": [
+    -0.17,
+    0.0,
+    -0.0
+   ],
+   "group": "power"
+  },
+  "wing_2": {
+   "label": "Deployable array wing, folded in the 6 mm allowance",
+   "explode": [
+    0.0,
+    0.0,
+    -0.17
+   ],
+   "group": "power"
+  },
+  "wing_3": {
+   "label": "Deployable array wing, folded in the 6 mm allowance",
+   "explode": [
+    0.0,
+    0.0,
+    0.17
+   ],
+   "group": "power"
+  }
+ },
+ "status": "concept; dimensions marked estimated in the BOM",
+ "views": {
+  "iso": {
+   "pos": [
+    3,
+    2,
+    3
+   ]
+  }
+ }
+}
