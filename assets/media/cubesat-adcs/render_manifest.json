@@ -1,0 +1,34 @@
+[
+ {
+  "file": "cubesat-hero.png",
+  "kind": "photo",
+  "poster": "cubesat-hero.jpg",
+  "caption": "CubeSat ADCS testbed: studio render of the reconstructed CAD.",
+  "alt": "CubeSat ADCS testbed rendered in three-quarter view on a near-black studio backdrop",
+  "section_hint": "hero",
+  "source": "_src/models/cubesat-adcs/cubesat.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 128 samples, 2560x1440",
+  "sm": "cubesat-hero.jpg"
+ },
+ {
+  "file": "cubesat-explode.mp4",
+  "webm": "cubesat-explode.webm",
+  "kind": "video",
+  "poster": "cubesat-explode.jpg",
+  "caption": "CubeSat ADCS testbed: the parts fly in to assemble in build order, then the assembly explodes along the CAD explode offsets and holds.",
+  "alt": "Exploded-view animation of the CubeSat ADCS testbed: parts assemble with eased, staggered motion, then separate",
+  "section_hint": "design",
+  "duration_s": 9.03,
+  "source": "_src/models/cubesat-adcs/cubesat.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 64 samples, 1920x1080 at 30 fps"
+ },
+ {
+  "file": "cubesat-turntable.mp4",
+  "webm": "cubesat-turntable.webm",
+  "kind": "video",
+  "poster": "cubesat-turntable.jpg",
+  "caption": "CubeSat ADCS testbed: one full turn of the reconstructed CAD.",
+  "alt": "CubeSat ADCS testbed turning 360 degrees on a dark studio floor",
+  "section_hint": "design",
+  "duration_s": 6.0,
+  "source": "_src/models/cubesat-adcs/cubesat.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 64 samples, 1920x1080 at 30 fps"
+ }
+]
