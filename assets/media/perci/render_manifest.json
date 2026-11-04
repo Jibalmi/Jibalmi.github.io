@@ -6,7 +6,8 @@
   "caption": "PERCI penetrator: studio render of the reconstructed CAD from the report.",
   "alt": "PERCI penetrator rendered in three-quarter view on a near-black studio backdrop",
   "section_hint": "hero",
-  "source": "_src/models/perci/perci.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 128 samples, 2560x1440"
+  "source": "_src/models/perci/perci.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 128 samples, 2560x1440",
+  "sm": "perci-hero.jpg"
  },
  {
   "file": "perci-explode.mp4",
