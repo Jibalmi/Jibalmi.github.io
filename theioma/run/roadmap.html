@@ -59,8 +59,8 @@
 <section class="sec" id="new" aria-labelledby="h-new">
   <div class="wrap">
     <header class="sec-head" data-reveal>
-      <div class="sec-title"><p class="eyebrow">New and planned</p><h2 class="h2" id="h-new">New on 3 November 2026.</h2></div>
-      <div class="sec-intro"><p>Changes to the harness that runs the agents, and to how it treats the disk. Each is new: written and tested on 3 Nov, not yet proven over a long run.</p></div>
+      <div class="sec-title"><p class="eyebrow">New and planned</p><h2 class="h2" id="h-new">New on 3 and 4 November 2026.</h2></div>
+      <div class="sec-intro"><p>Changes to the harness that runs the agents, and to how it treats the disk. Each is new: written and tested on 3 and 4 Nov, not yet proven over a long run.</p></div>
     </header>
     <ol class="bcards">
       <li class="bc w6 bz" data-reveal style="--i:0"><div class="cr">
@@ -97,6 +97,13 @@
         
         <p class="bc-sub">On 3 Nov the drive filled because nothing owned the task checkouts: free space fell from 79 GB to 5 GB in seven hours, with 268 checkouts of about 0.44 GB each that had outlived their agents. Now the one who makes a checkout removes it. A task checkout is freed when its last session ends, and its branch keeps the work. Checkouts share a 25 GB budget, and over it no new one is made. A checkout leaves out the documentation’s images, videos and PDFs: about 280 MB instead of about 420 MB. A Claude Code session records the checkouts it makes and removes them when it ends; one that holds changes is kept, with the reason written down.</p>
         <p class="bc-foot"><time datetime="2026-11-03">3 Nov 2026</time><span class="sep" aria-hidden="true">·</span><span><code>plan.ts</code></span> · <span><code>session-checkouts-clean.mjs</code></span></p>
+      </div></li>
+      <li class="bc w12 bz" data-reveal style="--i:2"><div class="cr">
+        <p class="bc-k"><span class="bstate new">new</span><span class="bc-area">Harness · every agent</span></p>
+        <p class="bc-title">Start and end hooks for every harness, and a scratch folder per session</p>
+        
+        <p class="bc-sub">Claude Code’s own hooks never run for Codex, Cursor or opencode, so the platform now runs its own: named steps at an agent’s start and at its end, each isolated so one failure never stops the next, each run recorded. Every session gets its own scratch folder, made at its start, named in its brief and cleaned when it ends. Tested in focused suites; a live start on each harness has not run yet.</p>
+        <p class="bc-foot"><time datetime="2026-11-04">4 Nov 2026</time><span class="sep" aria-hidden="true">·</span><span><code>lifecycle-hooks.ts</code></span> · <span><code>scratch-root.ts</code></span></p>
       </div></li>
     </ol>
   </div>

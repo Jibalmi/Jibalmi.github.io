@@ -135,8 +135,8 @@
           </div>
           <p class="pair-key"><span class="was">Before</span><span class="now">After</span></p>
         </div>
-        <p class="bc-sub">Kokoro on the RTX 5080: 330 paired requests, two voices, in one process; the same length and the same word error rate as before. This dated run times the model alone, not a whole turn. The source now defaults to <code>fp32-matmul</code>; it does not measure the running service.</p>
-        <p class="bc-foot"><time datetime="2026-10-04">4 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>b-kokoro-speed</code></span></p>
+        <p class="bc-sub">Kokoro on the RTX 5080: 330 paired requests, two voices, in one process; the same length and the same word error rate as before. This dated run times the model alone, not a whole turn. The source now defaults to <code>fp32-matmul</code>; it does not measure the running service. A later reading by lane voice-pick, recorded on 29 Oct, puts its first segment at 45 to 101&nbsp;ms in the process and 135 to 170&nbsp;ms through the app’s route.</p>
+        <p class="bc-foot"><time datetime="2026-10-04">4 Oct 2026</time><span class="sep" aria-hidden="true">·</span><span><code>b-kokoro-speed</code></span> · <span><code>CLAUDE.md, kokoro-tts</code></span></p>
       </div></li>
       
       <li class="bc w5 bz" data-reveal style="--i:1"><div class="cr">
@@ -186,8 +186,8 @@
           </li>
         </ol>
         <p class="sg-key"><span class="bar">p50, all to one scale</span><span class="tick">its share of the 300&nbsp;ms target</span></p>
-        <p class="bc-sub">Each stage timed on its own, on synthetic speech, as the app ships it. Not measured yet: the phone path’s transcript, the route before the model, playback start. The 300&nbsp;ms is the operator’s target for first audio, not a measurement.</p>
-        <p class="bc-foot"><time datetime="2026-09-30">30 Sep 2026</time><span class="sep" aria-hidden="true">·</span><span><code>voice-latency budget.md</code></span></p>
+        <p class="bc-sub">Each stage timed on its own, on synthetic speech, as the app ships it. Not measured yet: the phone path’s transcript, the route before the model, playback start. The 300&nbsp;ms is the operator’s target for first audio, not a measurement; on 29 Oct he split it, 300&nbsp;ms for reflexes and actions and 1.0&nbsp;s for content answers.</p>
+        <p class="bc-foot"><time datetime="2026-09-30">30 Sep 2026</time><span class="sep" aria-hidden="true">·</span><span><code>voice-latency budget.md</code></span> · <span><code>ADR-155, VOI-04</code></span></p>
       </div></li>
     </ol>
     <p class="band-k" data-reveal>Computers and learning</p>
@@ -197,7 +197,7 @@
         <p class="bc-k"><span class="bstate measured">measured</span><span class="bc-area">Computers</span></p>
         <p class="bc-title">A revoked computer, dropped from the channel</p>
         <p class="bc-num">458<span class="bc-unit">ms</span></p>
-        <p class="bc-sub">Its process exited with code 3 and the others kept working. Three node processes on one computer, not two machines.</p>
+        <p class="bc-sub">Its process exited with code 3 and the others kept working. Three node processes on one computer, not two machines; a physical second computer has joined since 23 Oct, and nothing has been timed on it yet.</p>
         <p class="bc-foot"><time datetime="2026-09-29">29 Sep 2026</time><span class="sep" aria-hidden="true">·</span><span><code>06-two-node-proof.txt</code></span></p>
       </div></li>
       
