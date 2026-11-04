@@ -40,7 +40,7 @@
    "group": "structure"
   },
   "rod_1": {
-   "label": "Brass threaded rod M3, full height",
+   "label": "Brass standoffs, stacked, about 3.6 across",
    "explode": [
     0.0,
     0.0,
@@ -49,7 +49,7 @@
    "group": "structure"
   },
   "nuts_1": {
-   "label": "M3 nuts clamping the plates (set of 8)",
+   "label": "Joint collars on the standoffs, plus top nut",
    "explode": [
     0.0,
     0.0,
@@ -58,7 +58,7 @@
    "group": "structure"
   },
   "rod_2": {
-   "label": "Brass threaded rod M3, full height",
+   "label": "Brass standoffs, stacked, about 3.6 across",
    "explode": [
     0.0,
     0.0,
@@ -67,7 +67,7 @@
    "group": "structure"
   },
   "nuts_2": {
-   "label": "M3 nuts clamping the plates (set of 8)",
+   "label": "Joint collars on the standoffs, plus top nut",
    "explode": [
     0.0,
     0.0,
@@ -76,7 +76,7 @@
    "group": "structure"
   },
   "rod_3": {
-   "label": "Brass threaded rod M3, full height",
+   "label": "Brass standoffs, stacked, about 3.6 across",
    "explode": [
     0.0,
     0.0,
@@ -85,7 +85,7 @@
    "group": "structure"
   },
   "nuts_3": {
-   "label": "M3 nuts clamping the plates (set of 8)",
+   "label": "Joint collars on the standoffs, plus top nut",
    "explode": [
     0.0,
     0.0,
@@ -94,7 +94,7 @@
    "group": "structure"
   },
   "rod_4": {
-   "label": "Brass threaded rod M3, full height",
+   "label": "Brass standoffs, stacked, about 3.6 across",
    "explode": [
     0.0,
     0.0,
@@ -103,7 +103,7 @@
    "group": "structure"
   },
   "nuts_4": {
-   "label": "M3 nuts clamping the plates (set of 8)",
+   "label": "Joint collars on the standoffs, plus top nut",
    "explode": [
     0.0,
     0.0,
@@ -111,26 +111,53 @@
    ],
    "group": "structure"
   },
-  "rw_motor": {
-   "label": "Reaction-wheel motor (1000 KV drone class)",
+  "rw_mount": {
+   "label": "White wheel mount / hub on the base",
    "explode": [
     0.0,
-    0.025,
+    0.012,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "rw_motor": {
+   "label": "Reaction-wheel motor, dark bell above the wheel (1000 KV drone class)",
+   "explode": [
+    0.0,
+    0.036,
     0.0
    ],
    "group": "adcs"
   },
   "rw_flywheel": {
-   "label": "Reaction wheel, white, about 56 dia x 13",
+   "label": "Reaction wheel, white, about 66 dia x 13",
    "explode": [
     0.0,
-    0.055,
+    0.062,
     0.0
    ],
    "group": "adcs"
   },
   "rw_esc": {
-   "label": "Motor ESC, front edge (size est.)",
+   "label": "Motor ESC, flat board, 20 A class (make unconfirmed)",
+   "explode": [
+    0.0,
+    0.02,
+    0.04
+   ],
+   "group": "adcs"
+  },
+  "esc_label": {
+   "label": "ESC label, black",
+   "explode": [
+    0.0,
+    0.02,
+    0.04
+   ],
+   "group": "adcs"
+  },
+  "esc_stripe": {
+   "label": "ESC label, orange stripe",
    "explode": [
     0.0,
     0.02,
@@ -139,7 +166,16 @@
    "group": "adcs"
   },
   "mt_y": {
-   "label": "Magnetorquer rod (wound, 80 mm), along Y",
+   "label": "Magnetorquer rod (80 mm, wound, black wrap), along Y",
+   "explode": [
+    -0.04,
+    0.02,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "mt_y_disc": {
+   "label": "Magnetorquer end disc, brass/copper, about 10 mm",
    "explode": [
     -0.04,
     0.02,
@@ -156,8 +192,62 @@
    ],
    "group": "adcs"
   },
+  "terminal_1": {
+   "label": "Crimped spade terminal, front right",
+   "explode": [
+    0.04,
+    0.02,
+    0.03
+   ],
+   "group": "power"
+  },
+  "terminal_2": {
+   "label": "Crimped spade terminal, front right",
+   "explode": [
+    0.04,
+    0.02,
+    0.03
+   ],
+   "group": "power"
+  },
+  "terminal_tape": {
+   "label": "Black tape over the terminal wiring",
+   "explode": [
+    0.04,
+    0.02,
+    0.03
+   ],
+   "group": "power"
+  },
   "blue_pcb": {
-   "label": "Blue interface PCB with headers (sensors, wiring)",
+   "label": "Power Distribution Board, blue solder mask, about 103 x 103",
+   "explode": [
+    0.0,
+    0.1,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "pdb_core": {
+   "label": "PDB FR4 core (lighter edge)",
+   "explode": [
+    0.0,
+    0.1,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "pdb_pads": {
+   "label": "PDB pad row near the front edge",
+   "explode": [
+    0.0,
+    0.1,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "pdb_header": {
+   "label": "PDB signal header (ESC signal)",
    "explode": [
     0.0,
     0.1,
@@ -175,7 +265,7 @@
    "group": "avionics"
   },
   "cam_green": {
-   "label": "Camera board, green, ~25 x 24 with M12-style lens (identity to confirm)",
+   "label": "Raspberry Pi Camera Module 3, green, 25 x 24",
    "explode": [
     0.0,
     0.21,
@@ -184,7 +274,7 @@
    "group": "payload"
   },
   "cam_black": {
-   "label": "Camera board, black (Adafruit-style), with round lens (identity to confirm)",
+   "label": "MLX90640 thermal array breakout, Adafruit, black",
    "explode": [
     0.0,
     0.21,
@@ -193,7 +283,7 @@
    "group": "payload"
   },
   "bracket_g1": {
-   "label": "Camera L bracket, printed",
+   "label": "Camera bracket, slotted, printed white",
    "explode": [
     0.0,
     0.19,
@@ -202,7 +292,7 @@
    "group": "structure"
   },
   "bracket_g2": {
-   "label": "Camera L bracket, printed",
+   "label": "Camera bracket, slotted, printed white",
    "explode": [
     0.0,
     0.19,
@@ -211,7 +301,7 @@
    "group": "structure"
   },
   "bracket_k1": {
-   "label": "Camera L bracket, printed",
+   "label": "Camera bracket, slotted, printed white",
    "explode": [
     0.0,
     0.19,
@@ -220,11 +310,29 @@
    "group": "structure"
   },
   "bracket_k2": {
-   "label": "Camera L bracket, printed",
+   "label": "Camera bracket, slotted, printed white",
    "explode": [
     0.0,
     0.19,
     0.04
+   ],
+   "group": "structure"
+  },
+  "cam_screws_g": {
+   "label": "Bracket screws, Camera Module 3",
+   "explode": [
+    0.0,
+    0.21,
+    0.07
+   ],
+   "group": "structure"
+  },
+  "cam_screws_k": {
+   "label": "Bracket screws, MLX90640",
+   "explode": [
+    0.0,
+    0.21,
+    0.07
    ],
    "group": "structure"
   },
@@ -246,19 +354,37 @@
    ],
    "group": "structure"
   },
-  "ribbon": {
-   "label": "Camera ribbon cable (orange FFC)",
+  "dupont_5way": {
+   "label": "Black 5-way Dupont housing, hanging at the right",
    "explode": [
-    0.0,
+    0.06,
     0.21,
-    0.05
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "dupont_1way": {
+   "label": "Single Dupont shell on the sixth jumper",
+   "explode": [
+    0.06,
+    0.21,
+    0.0
    ],
    "group": "avionics"
   },
   "red_stub": {
-   "label": "Red stub out of the +X side (antenna or connector cover; to confirm)",
+   "label": "Red stub out of the +X side (identity unknown)",
    "explode": [
     0.08,
+    0.2,
+    0.0
+   ],
+   "group": "comms"
+  },
+  "heatshrink_lump": {
+   "label": "Black heat-shrunk lump beside the red stub",
+   "explode": [
+    0.06,
     0.2,
     0.0
    ],
@@ -344,6 +470,204 @@
     0.0
    ],
    "group": "power"
+  },
+  "wire_esc_bat_red": {
+   "label": "ESC battery lead, red",
+   "explode": [
+    0.0,
+    0.02,
+    0.04
+   ],
+   "group": "wiring"
+  },
+  "wire_esc_bat_black": {
+   "label": "ESC battery lead, black",
+   "explode": [
+    0.0,
+    0.02,
+    0.04
+   ],
+   "group": "wiring"
+  },
+  "wire_esc_phase_1": {
+   "label": "ESC motor phase, short",
+   "explode": [
+    0.0,
+    0.02,
+    0.04
+   ],
+   "group": "wiring"
+  },
+  "wire_esc_phase_2": {
+   "label": "ESC motor phase, short",
+   "explode": [
+    0.0,
+    0.02,
+    0.04
+   ],
+   "group": "wiring"
+  },
+  "wire_esc_phase_3": {
+   "label": "ESC motor phase, short",
+   "explode": [
+    0.0,
+    0.02,
+    0.04
+   ],
+   "group": "wiring"
+  },
+  "wire_esc_sig_white": {
+   "label": "ESC signal, white",
+   "explode": [
+    0.0,
+    0.02,
+    0.04
+   ],
+   "group": "wiring"
+  },
+  "wire_esc_sig_black": {
+   "label": "ESC signal, black",
+   "explode": [
+    0.0,
+    0.02,
+    0.04
+   ],
+   "group": "wiring"
+  },
+  "wire_mt_y_1": {
+   "label": "Magnetorquer Y lead",
+   "explode": [
+    -0.04,
+    0.02,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_mt_y_2": {
+   "label": "Magnetorquer Y lead",
+   "explode": [
+    -0.04,
+    0.02,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_mt_x_1": {
+   "label": "Magnetorquer X lead",
+   "explode": [
+    -0.04,
+    0.02,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_mt_x_2": {
+   "label": "Magnetorquer X lead",
+   "explode": [
+    -0.04,
+    0.02,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_pdb_yellow": {
+   "label": "Yellow wire, PDB to plate 1",
+   "explode": [
+    0.0,
+    0.13,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_jumper_purple": {
+   "label": "Jumper wire, purple",
+   "explode": [
+    0.06,
+    0.21,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_jumper_yellow": {
+   "label": "Jumper wire, yellow",
+   "explode": [
+    0.06,
+    0.21,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_jumper_white": {
+   "label": "Jumper wire, white",
+   "explode": [
+    0.06,
+    0.21,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_jumper_black": {
+   "label": "Jumper wire, black",
+   "explode": [
+    0.06,
+    0.21,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_jumper_green": {
+   "label": "Jumper wire, green",
+   "explode": [
+    0.06,
+    0.21,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_jumper_red": {
+   "label": "Jumper wire, red",
+   "explode": [
+    0.06,
+    0.21,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_pair_red": {
+   "label": "Pi to plate 2 pair, red",
+   "explode": [
+    0.06,
+    0.21,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_pair_black": {
+   "label": "Pi to plate 2 pair, black",
+   "explode": [
+    0.06,
+    0.21,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "ribbon": {
+   "label": "Camera ribbon cable (orange FFC)",
+   "explode": [
+    0.0,
+    0.21,
+    0.05
+   ],
+   "group": "wiring"
+  },
+  "ribbon_2": {
+   "label": "Second FFC behind the first (lower end not visible)",
+   "explode": [
+    0.0,
+    0.21,
+    0.05
+   ],
+   "group": "wiring"
   },
   "platform": {
    "label": "Rotating platform, white (testbed)",

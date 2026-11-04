@@ -1,0 +1,1214 @@
+{
+ "title": "CubeSat ADCS v3 (design, not built; 100 x 100 x 157.6 mm)",
+ "units": "mm",
+ "explode_scale": 1.0,
+ "parts": {
+  "base_plate": {
+   "label": "L0 base, PETG, 100x100x4 (as built, reused)",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "L1_power": {
+   "label": "L1 power board, blue FR4, 4-layer",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "L2_avionics": {
+   "label": "L2 avionics board, blue FR4, 4-layer",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "L3_payload": {
+   "label": "L3 payload board, blue FR4, 2-layer",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "L4_top": {
+   "label": "L4 top board, blue FR4, 2-layer",
+   "explode": [
+    0.0,
+    0.295,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b0_1": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b0_2": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b0_3": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b0_4": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b1_1": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b1_2": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b1_3": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b1_4": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b2_1": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b2_2": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b2_3": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b2_4": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b3_1": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b3_2": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b3_3": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "standoff_b3_4": {
+   "label": "Standoff, Al hex M3, 5.5 AF",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "screw_top_1": {
+   "label": "M3 screw head, top",
+   "explode": [
+    0.0,
+    0.295,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "screw_bot_1": {
+   "label": "M3 screw, bottom, in a counterbore",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "screw_top_2": {
+   "label": "M3 screw head, top",
+   "explode": [
+    0.0,
+    0.295,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "screw_bot_2": {
+   "label": "M3 screw, bottom, in a counterbore",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "screw_top_3": {
+   "label": "M3 screw head, top",
+   "explode": [
+    0.0,
+    0.295,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "screw_bot_3": {
+   "label": "M3 screw, bottom, in a counterbore",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "screw_top_4": {
+   "label": "M3 screw head, top",
+   "explode": [
+    0.0,
+    0.295,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "screw_bot_4": {
+   "label": "M3 screw, bottom, in a counterbore",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "esq_L1": {
+   "label": "Stack connector, ESQ-126 style 2x26, 2.54 pitch",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "stack"
+  },
+  "esq_L2": {
+   "label": "Stack connector, ESQ-126 style 2x26, 2.54 pitch",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "stack"
+  },
+  "esq_L3": {
+   "label": "Stack connector, ESQ-126 style 2x26, 2.54 pitch",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "stack"
+  },
+  "esq_pins_12": {
+   "label": "ESQ gold tails, L2 into L1",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "stack"
+  },
+  "esq_pins_23": {
+   "label": "ESQ gold tails, L3 into L2",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "stack"
+  },
+  "driver": {
+   "label": "mjbots moteus-c1 wheel driver, 38x38x9",
+   "explode": [
+    0.0,
+    0.006,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "drv_standoff_1": {
+   "label": "Driver standoff, 2 mm",
+   "explode": [
+    0.0,
+    0.003,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "drv_standoff_2": {
+   "label": "Driver standoff, 2 mm",
+   "explode": [
+    0.0,
+    0.003,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "drv_standoff_3": {
+   "label": "Driver standoff, 2 mm",
+   "explode": [
+    0.0,
+    0.003,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "drv_standoff_4": {
+   "label": "Driver standoff, 2 mm",
+   "explode": [
+    0.0,
+    0.003,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "pedestal": {
+   "label": "Motor pedestal, printed PETG, OD 44, ID 40, corner windows + wire slot",
+   "explode": [
+    0.0,
+    0.012,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "motor_seat": {
+   "label": "Motor seat disc, closes the 0.5 mm from pedestal to stator",
+   "explode": [
+    0.0,
+    0.016,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "rw_stator": {
+   "label": "GL30 motor, stator portion",
+   "explode": [
+    0.0,
+    0.02,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "rw_rotor": {
+   "label": "GL30 motor, rotor portion",
+   "explode": [
+    0.0,
+    0.03,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "rw_magnet": {
+   "label": "Encoder magnet in the bore (read through not verified)",
+   "explode": [
+    0.0,
+    0.03,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "rw_rim": {
+   "label": "Wheel rim, brass, 70 OD, 52 ID, 10 thick, 12 balance holes",
+   "explode": [
+    0.0,
+    0.044,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "rw_web": {
+   "label": "Wheel web and hub, Al, 2 mm web, hub dia 16",
+   "explode": [
+    0.0,
+    0.04,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "rw_hub_bolts": {
+   "label": "Hub bolts to the rotor (3)",
+   "explode": [
+    0.0,
+    0.044,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "mt_x": {
+   "label": "Torquer X, reused rod, 80 x 9 wound",
+   "explode": [
+    0.0,
+    0.008,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "mt_y": {
+   "label": "Torquer Y, reused rod, 80 x 9 wound",
+   "explode": [
+    0.0,
+    0.008,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "saddle_x1": {
+   "label": "Torquer saddle, printed",
+   "explode": [
+    0.0,
+    0.004,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "saddle_x2": {
+   "label": "Torquer saddle, printed",
+   "explode": [
+    0.0,
+    0.004,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "saddle_y1": {
+   "label": "Torquer saddle, printed",
+   "explode": [
+    0.0,
+    0.004,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "saddle_y2": {
+   "label": "Torquer saddle, printed",
+   "explode": [
+    0.0,
+    0.004,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "mt_term_x": {
+   "label": "Torquer X lead terminal",
+   "explode": [
+    0.0,
+    0.008,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "mt_term_y": {
+   "label": "Torquer Y lead terminal",
+   "explode": [
+    0.0,
+    0.008,
+    0.0
+   ],
+   "group": "adcs"
+  },
+  "buck_5v": {
+   "label": "Pololu D24V50F5 5 V buck, 17.8x20.3x8.8",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "power"
+  },
+  "xt30_arm_a": {
+   "label": "Arm link socket A, XT30 right angle",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "power"
+  },
+  "xt30_arm_b": {
+   "label": "Arm link socket B, XT30 right angle",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "power"
+  },
+  "arm_link": {
+   "label": "Removable arm link, faces +X for access",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "power"
+  },
+  "fuse_10a": {
+   "label": "10 A blade fuse holder",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "power"
+  },
+  "drv8876_x": {
+   "label": "DRV8876 H-bridge, torquer X",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "power"
+  },
+  "drv8876_y": {
+   "label": "DRV8876 H-bridge, torquer Y",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "power"
+  },
+  "ina228": {
+   "label": "INA228 bus monitor",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "power"
+  },
+  "shunt": {
+   "label": "2 mOhm shunt",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "power"
+  },
+  "ideal_diode": {
+   "label": "LM74700 + N-FET ideal diode",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "power"
+  },
+  "j1_bat": {
+   "label": "J1 battery entry",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "power"
+  },
+  "j2_wheel_pwr": {
+   "label": "J2 wheel power (L1 underside)",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "power"
+  },
+  "j3_can": {
+   "label": "J3 CAN (L1 underside)",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "power"
+  },
+  "j4_tq_x": {
+   "label": "J4 torquer X (L1 underside)",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "power"
+  },
+  "j5_tq_y": {
+   "label": "J5 torquer Y (L1 underside)",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "power"
+  },
+  "teensy_socket_a": {
+   "label": "Teensy socket strip, 2.54",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "teensy_socket_b": {
+   "label": "Teensy socket strip, 2.54",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "teensy_41": {
+   "label": "PJRC Teensy 4.1, 61x18",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "gyro_sch16t": {
+   "label": "Murata SCH16T fine gyro, about 11x9",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "gyro_icm42688": {
+   "label": "TDK ICM-42688-P wide gyro, 3x2.5",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "tcan1042": {
+   "label": "TCAN1042 CAN-FD transceiver, SOIC-8",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "j9_sun": {
+   "label": "J9 thermal array connector",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "raspberry_pi_5": {
+   "label": "Raspberry Pi 5, 85x56, flat, connectors up",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "pi_spacer_1": {
+   "label": "Pi spacer, M2.5, 6 mm",
+   "explode": [
+    0.0,
+    0.214,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "pi_spacer_2": {
+   "label": "Pi spacer, M2.5, 6 mm",
+   "explode": [
+    0.0,
+    0.214,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "pi_spacer_3": {
+   "label": "Pi spacer, M2.5, 6 mm",
+   "explode": [
+    0.0,
+    0.214,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "pi_spacer_4": {
+   "label": "Pi spacer, M2.5, 6 mm",
+   "explode": [
+    0.0,
+    0.214,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "pi_screws": {
+   "label": "Pi screws, M2.5",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "pi_plug_pwr": {
+   "label": "Right-angle plug, GPIO 2, 4, 6 (5 V, GND)",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "pi_plug_uart": {
+   "label": "Right-angle plug, GPIO 8, 10 (UART)",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "j6_mag": {
+   "label": "J6 magnetometer",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "j7_pipwr": {
+   "label": "J7 Pi 5 V",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "j8_piuart": {
+   "label": "J8 Pi UART",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "cam_star": {
+   "label": "Star camera: Camera Module 3 Wide, 25x24, reused",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "payload"
+  },
+  "bracket_star": {
+   "label": "Star camera bracket, slotted PETG",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "cam_mlx": {
+   "label": "MLX90640 breakout, 25.7x17.7, reused",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "payload"
+  },
+  "bracket_mlx": {
+   "label": "Thermal array bracket, slotted PETG",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "cam_hq": {
+   "label": "Science camera: HQ Camera M12 body, 38x38x18, reused",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "payload"
+  },
+  "cam_hq_lens": {
+   "label": "M12 lens, front at y=-52",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "payload"
+  },
+  "bracket_hq": {
+   "label": "Science camera bracket, slotted PETG",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "structure"
+  },
+  "batt_cradle": {
+   "label": "Battery cradle, printed",
+   "explode": [
+    0.0,
+    0.301,
+    0.0
+   ],
+   "group": "power"
+  },
+  "batt_pack": {
+   "label": "Tattu 1300 mAh 4S pack, 72x34x28",
+   "explode": [
+    0.0,
+    0.335,
+    0.0
+   ],
+   "group": "power"
+  },
+  "batt_strap": {
+   "label": "Battery strap, 1 mm over the pack",
+   "explode": [
+    0.0,
+    0.341,
+    0.0
+   ],
+   "group": "power"
+  },
+  "xt30_batt": {
+   "label": "Battery XT30 pair (pack pigtail not modelled)",
+   "explode": [
+    0.0,
+    0.301,
+    0.0
+   ],
+   "group": "power"
+  },
+  "mag_mmc5983": {
+   "label": "MMC5983MA breakout, 25.7x17.8",
+   "explode": [
+    0.0,
+    0.303,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "mag_spacers": {
+   "label": "Magnetometer spacers",
+   "explode": [
+    0.0,
+    0.299,
+    0.0
+   ],
+   "group": "avionics"
+  },
+  "wire_W01": {
+   "label": "W01 BAT+: L4 battery XT30 to L1 J1 arm link, AWG 16",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W02": {
+   "label": "W02 BAT-: L4 battery XT30 to L1 J1, AWG 16",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W03": {
+   "label": "W03 WHL+: L1 J2 to L0 moteus J1, AWG 22",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W04": {
+   "label": "W04 WHL-: L1 J2 to L0 moteus J1, AWG 22",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W05": {
+   "label": "W05 CANH: L1 J3 to L0 moteus J2, AWG 26",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W06": {
+   "label": "W06 CANL: L1 J3 to L0 moteus J2, AWG 26",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W07": {
+   "label": "W07 MA: L0 moteus to Motor phase A, AWG 24",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W08": {
+   "label": "W08 MB: L0 moteus to Motor phase B, AWG 24",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W09": {
+   "label": "W09 MC: L0 moteus to Motor phase C, AWG 24",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W10": {
+   "label": "W10 TX+: L1 J4 to Torquer X, AWG 22",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W11": {
+   "label": "W11 TX-: L1 J4 to Torquer X, AWG 22",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W12": {
+   "label": "W12 TY+: L1 J5 to Torquer Y, AWG 22",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W13": {
+   "label": "W13 TY-: L1 J5 to Torquer Y, AWG 22",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W14": {
+   "label": "W14 MAG5: L3 J6 to L4 magnetometer, AWG 28 (4 core, one tube)",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W15": {
+   "label": "W15 PIPWR: L3 J7 to Pi 5 GPIO 2,4,6, AWG 20 (2 core, one tube)",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W16": {
+   "label": "W16 PIUART: L3 J8 to Pi 5 GPIO 8,10, AWG 28 (2 core, one tube)",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_W17": {
+   "label": "W17 SUN: L2 J9 to MLX90640, AWG 28 (4 core, one tube)",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_FFC1": {
+   "label": "FFC1 CSI0: Pi 5 CAM0 to Star camera, 22-pin FFC",
+   "explode": [
+    0.0,
+    0.22,
+    0.03
+   ],
+   "group": "wiring"
+  },
+  "wire_FFC2": {
+   "label": "FFC2 CSI1: Pi 5 CAM1 to Science camera, 22-pin FFC",
+   "explode": [
+    0.0,
+    0.22,
+    0.03
+   ],
+   "group": "wiring"
+  },
+  "tie_L4_pwr": {
+   "label": "Strain relief, W01/W02 at the L4 notch",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "tie_L3_pwr": {
+   "label": "Strain relief, W01/W02 at the L3 notch",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "tie_L2_pwr": {
+   "label": "Strain relief, W01/W02 at the L2 notch",
+   "explode": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "tie_L1_harness": {
+   "label": "Harness clamp bar under L1, beside the slot",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "tie_base_harness": {
+   "label": "Harness post on the base, W03-W06",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "tie_L3_w17": {
+   "label": "Strain relief, W17 at the L3 slot",
+   "explode": [
+    0.0,
+    0.15,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "tie_L4_w14": {
+   "label": "Strain relief, W14 at the L4 notch",
+   "explode": [
+    0.0,
+    0.22,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "platform": {
+   "label": "Rotating platform (testbed)",
+   "explode": [
+    0.0,
+    -0.06,
+    0.0
+   ],
+   "group": "testbed"
+  },
+  "shaft": {
+   "label": "Platform shaft (testbed)",
+   "explode": [
+    0.0,
+    -0.09,
+    0.0
+   ],
+   "group": "testbed"
+  },
+  "foam_base": {
+   "label": "Foam base block (testbed)",
+   "explode": [
+    0.0,
+    -0.12,
+    0.0
+   ],
+   "group": "testbed"
+  },
+  "breadboard": {
+   "label": "Breadboard on the foam base (testbed)",
+   "explode": [
+    0.0,
+    -0.12,
+    0.0
+   ],
+   "group": "testbed"
+  },
+  "nano": {
+   "label": "Arduino Nano (testbed)",
+   "explode": [
+    0.0,
+    -0.12,
+    0.0
+   ],
+   "group": "testbed"
+  },
+  "truth_encoder": {
+   "label": "AS5600 truth encoder board on the shaft (testbed reference)",
+   "explode": [
+    0.0,
+    -0.09,
+    0.0
+   ],
+   "group": "testbed"
+  },
+  "truth_collar": {
+   "label": "Encoder magnet collar on the shaft (testbed)",
+   "explode": [
+    0.0,
+    -0.09,
+    0.0
+   ],
+   "group": "testbed"
+  }
+ },
+ "status": "design, not built"
+}

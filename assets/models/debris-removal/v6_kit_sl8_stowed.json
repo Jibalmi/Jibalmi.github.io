@@ -1,0 +1,206 @@
+{
+ "title": "Deorbit kit, SL-8 size, stowed: clamp folded, boom retracted",
+ "units": "mm",
+ "explode_scale": 1.0,
+ "parts": {
+  "clamp_ring": {
+   "label": "Clamp hub ring",
+   "explode": [
+    0.0,
+    -0.3,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "arm_0": {
+   "label": "Clamp arm, radial drive",
+   "explode": [
+    0.0,
+    -0.3,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "jaw_0": {
+   "label": "Clamp jaw, closes behind the ring flange",
+   "explode": [
+    0.0,
+    -0.42,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "arm_1": {
+   "label": "Clamp arm, radial drive",
+   "explode": [
+    0.0,
+    -0.3,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "jaw_1": {
+   "label": "Clamp jaw, closes behind the ring flange",
+   "explode": [
+    0.0,
+    -0.42,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "arm_2": {
+   "label": "Clamp arm, radial drive",
+   "explode": [
+    0.0,
+    -0.3,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "jaw_2": {
+   "label": "Clamp jaw, closes behind the ring flange",
+   "explode": [
+    0.0,
+    -0.42,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "boom": {
+   "label": "Compliant boom, damps the first contact, 1.2 m stroke at full reach",
+   "explode": [
+    0.0,
+    -0.16,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "deck": {
+   "label": "Thrust deck, carries the engines into the boom",
+   "explode": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "group": "structure"
+  },
+  "tank_0": {
+   "label": "Biprop tank, MON or MMH, 134 L in all with ullage",
+   "explode": [
+    0.0,
+    0.25,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "tank_1": {
+   "label": "Biprop tank, MON or MMH, 134 L in all with ullage",
+   "explode": [
+    0.0,
+    0.25,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "top": {
+   "label": "Engine deck",
+   "explode": [
+    0.0,
+    0.45,
+    -0.0
+   ],
+   "group": "structure"
+  },
+  "engine_0": {
+   "label": "400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    0.0,
+    0.62,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "engine_1": {
+   "label": "400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    0.0,
+    0.62,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "rcs_0": {
+   "label": "Four-thruster 22 N pod",
+   "explode": [
+    0.0,
+    0.08,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "rcs_1": {
+   "label": "Four-thruster 22 N pod",
+   "explode": [
+    0.0,
+    0.08,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "rcs_2": {
+   "label": "Four-thruster 22 N pod",
+   "explode": [
+    0.0,
+    0.08,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "rcs_3": {
+   "label": "Four-thruster 22 N pod",
+   "explode": [
+    0.0,
+    0.08,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "bottle": {
+   "label": "Pressurant bottle",
+   "explode": [
+    0.0,
+    0.15,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "sensors": {
+   "label": "Lidar and two cameras, facing the stage",
+   "explode": [
+    -0.25,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "avionics": {
+   "label": "Avionics, battery 1.2 kWh, radios",
+   "explode": [
+    0.25,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  }
+ },
+ "status": "concept; dimensions marked estimated in the BOM",
+ "views": {
+  "iso": {
+   "pos": [
+    3,
+    2,
+    3
+   ]
+  }
+ }
+}
