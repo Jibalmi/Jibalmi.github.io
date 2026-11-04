@@ -424,3 +424,29 @@ h3 { font-size: 1.15rem; }
 }
 @media (prefers-reduced-motion: reduce) { .globe3d .g3-read, .globe3d button { transition: none; } }
 .globe3d .g3-k em { font-style: normal; text-transform: none; letter-spacing: 0; }
+
+/* report against re-analysis */
+.cmp { margin-top: clamp(2rem, 4vw, 3.4rem); padding-top: 1.4rem; border-top: 1px solid var(--line); }
+.cmp h2 { font: 300 clamp(1.3rem, 1.9vw, 1.7rem)/1.2 var(--sans); letter-spacing: -.02em; margin: 0 0 1rem; }
+.cmp table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.cmp thead th { text-align: left; font: 400 .68rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--mut); padding: 0 1.2rem .6rem 0; border-bottom: 1px solid var(--line2); }
+.cmp thead th.now { color: var(--accent); }
+.cmp tbody th { text-align: left; font-weight: 400; color: var(--text2); padding: .62rem 1.2rem .62rem 0; width: 22%; vertical-align: top; }
+.cmp td { padding: .62rem 1.2rem .62rem 0; color: var(--mut); vertical-align: top; width: 22%; }
+.cmp td.now { color: var(--text); width: 26%; }
+.cmp td.why { color: var(--mut); font-size: .84rem; width: 30%; padding-right: 0; }
+.cmp tbody tr { border-bottom: 1px solid var(--line); }
+.cmp-end { display: grid; grid-template-columns: 22% minmax(0, 1fr); padding-top: 1.1rem; }
+.cmp-end h3 { font: 400 .68rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin: .35rem 0 0; }
+.cmp-end p { font: 300 clamp(1rem, 1.25vw, 1.14rem)/1.55 var(--sans); margin: 0; max-width: 52em; color: var(--text); }
+@media (max-width: 760px) {
+  .cmp thead { display: none; }
+  .cmp table, .cmp tbody, .cmp tr, .cmp tbody th, .cmp td { display: block; width: auto !important; padding-right: 0; }
+  .cmp tbody tr { padding: .75rem 0; }
+  .cmp tbody th { padding: 0 0 .35rem; color: var(--text); }
+  .cmp td { padding: .1rem 0; }
+  .cmp td[data-l]::before { content: attr(data-l); display: block; font: 400 .62rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--mut); margin-top: .35rem; }
+  .cmp td.now[data-l]::before { color: var(--accent); }
+  .cmp td.why { margin-top: .35rem; }
+  .cmp-end { grid-template-columns: minmax(0, 1fr); gap: .4rem; }
+}
