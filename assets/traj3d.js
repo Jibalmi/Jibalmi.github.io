@@ -738,6 +738,7 @@ function campaign(el, data, coast, src) {
     return { label: c.label, t0: tC[0], t1: tC[tC.length - 1], s, tC, RC, stops, legs };
   });
   function uCarrier(c, td) {
+    if (/never stop/.test(M.status || '')) return 1.35 * W * td;
     const st = c.stops; if (!st.length) return W * td;
     if (td <= st[0].d0) return uObj(st[0].k, st[0].d0) - 1.4 * W * (st[0].d0 - td);
     for (let i = 0; i < st.length; i++) {
@@ -760,7 +761,10 @@ function campaign(el, data, coast, src) {
   function writeRing(arr, off, a, i, Om) { for (let s = 0; s < SEG; s++) { pos(a, i, Om, s / SEG * 360, tmp); pos(a, i, Om, (s + 1) / SEG * 360, tmp2); arr[off++] = tmp.x; arr[off++] = tmp.y; arr[off++] = tmp.z; arr[off++] = tmp2.x; arr[off++] = tmp2.y; arr[off++] = tmp2.z; } return off; }
   const arrOf = (ls) => ls.geometry.attributes.instanceStart.data;
   const dmat = dotMaterial(); S.dotMats.push(dmat);
-  const pd = dots(N + carriers.length, dmat); scene.add(pd);
+  const MAXK = 16, pd = dots(N + carriers.length + MAXK, dmat); scene.add(pd);
+  const NEVER = /never stop/.test(M.status || ''), KIT_S = 1.1; // v7: carriers stay on their drift orbit; a kit's flight is drawn for 1.1 s (real transfer about 3 d)
+  const KITS = TG.map((g) => ({ k: byId.get(g.target_norad), d: toD(g.release_d), c: carriers.find((c) => c.label === g.carrier), dv: g.kit_dv_ms }));
+  const K0 = N + carriers.length;
 
   // entry arcs: a stage's last orbit, fading as it comes down
   const ENT = TG.map((g) => ({ k: byId.get(g.target_norad), d: toD(g.reentry_d) })), MAXE = 12, arcPts = 14;
@@ -803,7 +807,7 @@ function campaign(el, data, coast, src) {
     else c.body.quaternion.copy(IDQ);
     c.pl.visible = u >= 6.8 && u < 10;
     if (u >= 6.8) { tmp.copy(c.ax).applyQuaternion(c.body.quaternion).multiplyScalar(-Math.pow((u - 6.8) * 1.15, 2.2) * 0.8); c.body.position.copy(tmp); }
-    return u < 3 ? 'kit matches the tumble' : u < 3.6 ? 'clamp closes on the adapter ring' : u < 5.6 ? 'tumble stopped on 22 N thrusters' : u < 6.8 ? 'turning, engines away from the stage' : 'one long burn to a 60 km perigee';
+    return u < 3 ? 'kit closes from 3 km below, matches the tumble' : u < 3.6 ? 'clamp closes on the adapter ring' : u < 5.6 ? 'tumble stopped on 22 N thrusters' : u < 6.8 ? 'turning, engines away from the stage' : 'one long burn to a 60 km perigee';
   }
 
   const rig = cameraRig(S); rig.dir.set(0.42, 0.78, 0.46).normalize();
@@ -828,7 +832,12 @@ function campaign(el, data, coast, src) {
       if (on) { const e = carEl(c, t); cOff = writeRing(ca.array, cOff, e.a, e.i, e.Om); pos(e.a, e.i, e.Om, uCarrier(c, td), tmp); setDot(pd, N + i, tmp, C.acc, 1, 7); }
       else { cOff = writeRing(ca.array, cOff, 1, 0, 0); setDot(pd, N + i, tmp2.set(0, 0, 0), C.acc, 0, 1); }
     });
-    ca.needsUpdate = true; dirtyDots(pd);
+    ca.needsUpdate = true;
+    let nk = 0; if (NEVER) for (const f of KITS) { const age = td - f.d; if (age < 0 || age > KIT_S || nk >= MAXK) continue;
+      const s = smooth(age / KIT_S), e = objEl(f.k, t), ce = carEl(f.c, clamp(t, f.c.t0, f.c.t1)), uc = uCarrier(f.c, td), ut = uObj(f.k, td), du = ((ut - uc) % 360 + 360) % 360;
+      pos(lerp(ce.a, e.a, s), lerp(ce.i, e.i, s), lerp(ce.Om, e.Om, s), uc + du * s, tmp); setDot(pd, K0 + nk, tmp, C.text, 1, 4.5); nk++; }
+    for (let j = nk; j < MAXK; j++) setDot(pd, K0 + j, tmp2.set(0, 0, 0), C.text, 0, 1);
+    dirtyDots(pd);
 
     let n = 0; for (const f of ENT) { const age = td - f.d; if (age < 0 || age > 1.6 || n >= MAXE) continue;
       const o = O[f.k], e = objEl(f.k, t); for (let j = 0; j < arcPts - 1; j++) { const s0 = j / (arcPts - 1), s1 = (j + 1) / (arcPts - 1), lim = clamp(age / 0.8, 0, 1); pos(lerp(e.a, M.RE_km + 40, s0 * lim), e.i, e.Om, uObj(f.k, f.d) + 70 * s0 * lim, a1); pos(lerp(e.a, M.RE_km + 40, s1 * lim), e.i, e.Om, uObj(f.k, f.d) + 70 * s1 * lim, a2); arcBuf.set([a1.x, a1.y, a1.z, a2.x, a2.y, a2.z], n * 6 * (arcPts - 1) + j * 6); } n++; }
@@ -846,7 +855,7 @@ function campaign(el, data, coast, src) {
 
     const year = 2034 + t / 365.25;
     S.hud.clock.innerHTML = `${year.toFixed(1)}<small>day ${fmt(t)} of ${fmt(M.duration_d)}</small>`;
-    S.hud.ph.innerHTML = cl ? `${fam} stage <i>· ${step} · schematic</i>` : removed >= TG.length ? `Campaign done <i>· every kit used, nominal plan</i>` : `${cur ? cur.label : 'Launch'} <i>· working through its stages</i>`;
+    S.hud.ph.innerHTML = cl ? `${fam} stage <i>· ${step} · schematic</i>` : removed >= TG.length ? `Campaign done <i>· every kit used, nominal plan</i>` : `${cur ? cur.label : 'Launch'} <i>· ${NEVER ? 'on its drift orbit, kits leaving as planes cross' : 'working through its stages'}</i>`;
     S.readout([['Stages entered', `${removed} / ${TG.length}`], ['Carriers active', `${active} of ${carriers.length}`], ['Kits used', `${TG.filter((g) => t >= g.release_d).length}`]]);
   };
   S.start();

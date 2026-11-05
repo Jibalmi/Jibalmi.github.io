@@ -1,0 +1,2024 @@
+{
+ "title": "Carrier with two rings: ten 24 in ports, ten kits",
+ "units": "mm",
+ "explode_scale": 1.0,
+ "parts": {
+  "lv_ring": {
+   "label": "Launch adapter ring",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "bus": {
+   "label": "Bus: avionics, 4.5 kW power, RPO sensors, 150 kg xenon",
+   "explode": [
+    0.0,
+    -0.7,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "xe": {
+   "label": "Xenon tank, 150 kg",
+   "explode": [
+    0.0,
+    -1.0,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "hall_0": {
+   "label": "Hall thruster, 83 mN class, two firing, two spare",
+   "explode": [
+    0.0,
+    -1.2,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "hall_1": {
+   "label": "Hall thruster, 83 mN class, two firing, two spare",
+   "explode": [
+    0.0,
+    -1.2,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "hall_2": {
+   "label": "Hall thruster, 83 mN class, two firing, two spare",
+   "explode": [
+    0.0,
+    -1.2,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "hall_3": {
+   "label": "Hall thruster, 83 mN class, two firing, two spare",
+   "explode": [
+    0.0,
+    -1.2,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "ring_0": {
+   "label": "ESPA Grande class ring, 62 in OD, 42 in tall, five 24 in ports",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "dispenser"
+  },
+  "k00_clamp_ring": {
+   "label": "Kit 1: Clamp hub ring",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k00_arm_0": {
+   "label": "Kit 1: Clamp arm, radial drive",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k00_jaw_0": {
+   "label": "Kit 1: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k00_arm_1": {
+   "label": "Kit 1: Clamp arm, radial drive",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k00_jaw_1": {
+   "label": "Kit 1: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k00_arm_2": {
+   "label": "Kit 1: Clamp arm, radial drive",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k00_jaw_2": {
+   "label": "Kit 1: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k00_boom": {
+   "label": "Kit 1: Compliant boom, damps the first contact, 1.2 m stroke at full reach",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k00_deck": {
+   "label": "Kit 1: Thrust deck, carries the engines into the boom",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "structure"
+  },
+  "k00_tank_0": {
+   "label": "Kit 1: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k00_tank_1": {
+   "label": "Kit 1: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k00_top": {
+   "label": "Kit 1: Engine deck",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "structure"
+  },
+  "k00_engine_0": {
+   "label": "Kit 1: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k00_engine_1": {
+   "label": "Kit 1: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k00_rcs_0": {
+   "label": "Kit 1: Four-thruster 22 N pod",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k00_rcs_1": {
+   "label": "Kit 1: Four-thruster 22 N pod",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k00_rcs_2": {
+   "label": "Kit 1: Four-thruster 22 N pod",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k00_rcs_3": {
+   "label": "Kit 1: Four-thruster 22 N pod",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k00_bottle": {
+   "label": "Kit 1: Pressurant bottle",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k00_sensors": {
+   "label": "Kit 1: Lidar and two cameras, facing the stage",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "k00_avionics": {
+   "label": "Kit 1: Avionics, battery 1.2 kWh, radios",
+   "explode": [
+    1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "k01_clamp_ring": {
+   "label": "Kit 2: Clamp hub ring",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k01_arm_0": {
+   "label": "Kit 2: Clamp arm, radial drive",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k01_jaw_0": {
+   "label": "Kit 2: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k01_arm_1": {
+   "label": "Kit 2: Clamp arm, radial drive",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k01_jaw_1": {
+   "label": "Kit 2: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k01_arm_2": {
+   "label": "Kit 2: Clamp arm, radial drive",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k01_jaw_2": {
+   "label": "Kit 2: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k01_boom": {
+   "label": "Kit 2: Compliant boom, damps the first contact, 1.2 m stroke at full reach",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k01_deck": {
+   "label": "Kit 2: Thrust deck, carries the engines into the boom",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "structure"
+  },
+  "k01_tank_0": {
+   "label": "Kit 2: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k01_tank_1": {
+   "label": "Kit 2: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k01_top": {
+   "label": "Kit 2: Engine deck",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "structure"
+  },
+  "k01_engine_0": {
+   "label": "Kit 2: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k01_engine_1": {
+   "label": "Kit 2: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k01_rcs_0": {
+   "label": "Kit 2: Four-thruster 22 N pod",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k01_rcs_1": {
+   "label": "Kit 2: Four-thruster 22 N pod",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k01_rcs_2": {
+   "label": "Kit 2: Four-thruster 22 N pod",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k01_rcs_3": {
+   "label": "Kit 2: Four-thruster 22 N pod",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k01_bottle": {
+   "label": "Kit 2: Pressurant bottle",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k01_sensors": {
+   "label": "Kit 2: Lidar and two cameras, facing the stage",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "avionics"
+  },
+  "k01_avionics": {
+   "label": "Kit 2: Avionics, battery 1.2 kWh, radios",
+   "explode": [
+    0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "avionics"
+  },
+  "k02_clamp_ring": {
+   "label": "Kit 3: Clamp hub ring",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k02_arm_0": {
+   "label": "Kit 3: Clamp arm, radial drive",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k02_jaw_0": {
+   "label": "Kit 3: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k02_arm_1": {
+   "label": "Kit 3: Clamp arm, radial drive",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k02_jaw_1": {
+   "label": "Kit 3: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k02_arm_2": {
+   "label": "Kit 3: Clamp arm, radial drive",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k02_jaw_2": {
+   "label": "Kit 3: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k02_boom": {
+   "label": "Kit 3: Compliant boom, damps the first contact, 1.2 m stroke at full reach",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k02_deck": {
+   "label": "Kit 3: Thrust deck, carries the engines into the boom",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "structure"
+  },
+  "k02_tank_0": {
+   "label": "Kit 3: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k02_tank_1": {
+   "label": "Kit 3: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k02_top": {
+   "label": "Kit 3: Engine deck",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "structure"
+  },
+  "k02_engine_0": {
+   "label": "Kit 3: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k02_engine_1": {
+   "label": "Kit 3: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k02_rcs_0": {
+   "label": "Kit 3: Four-thruster 22 N pod",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k02_rcs_1": {
+   "label": "Kit 3: Four-thruster 22 N pod",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k02_rcs_2": {
+   "label": "Kit 3: Four-thruster 22 N pod",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k02_rcs_3": {
+   "label": "Kit 3: Four-thruster 22 N pod",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k02_bottle": {
+   "label": "Kit 3: Pressurant bottle",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k02_sensors": {
+   "label": "Kit 3: Lidar and two cameras, facing the stage",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "avionics"
+  },
+  "k02_avionics": {
+   "label": "Kit 3: Avionics, battery 1.2 kWh, radios",
+   "explode": [
+    -0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "avionics"
+  },
+  "k03_clamp_ring": {
+   "label": "Kit 4: Clamp hub ring",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k03_arm_0": {
+   "label": "Kit 4: Clamp arm, radial drive",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k03_jaw_0": {
+   "label": "Kit 4: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k03_arm_1": {
+   "label": "Kit 4: Clamp arm, radial drive",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k03_jaw_1": {
+   "label": "Kit 4: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k03_arm_2": {
+   "label": "Kit 4: Clamp arm, radial drive",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k03_jaw_2": {
+   "label": "Kit 4: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k03_boom": {
+   "label": "Kit 4: Compliant boom, damps the first contact, 1.2 m stroke at full reach",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k03_deck": {
+   "label": "Kit 4: Thrust deck, carries the engines into the boom",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "structure"
+  },
+  "k03_tank_0": {
+   "label": "Kit 4: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k03_tank_1": {
+   "label": "Kit 4: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k03_top": {
+   "label": "Kit 4: Engine deck",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "structure"
+  },
+  "k03_engine_0": {
+   "label": "Kit 4: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k03_engine_1": {
+   "label": "Kit 4: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k03_rcs_0": {
+   "label": "Kit 4: Four-thruster 22 N pod",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k03_rcs_1": {
+   "label": "Kit 4: Four-thruster 22 N pod",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k03_rcs_2": {
+   "label": "Kit 4: Four-thruster 22 N pod",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k03_rcs_3": {
+   "label": "Kit 4: Four-thruster 22 N pod",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k03_bottle": {
+   "label": "Kit 4: Pressurant bottle",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k03_sensors": {
+   "label": "Kit 4: Lidar and two cameras, facing the stage",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "avionics"
+  },
+  "k03_avionics": {
+   "label": "Kit 4: Avionics, battery 1.2 kWh, radios",
+   "explode": [
+    -0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "avionics"
+  },
+  "k04_clamp_ring": {
+   "label": "Kit 5: Clamp hub ring",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k04_arm_0": {
+   "label": "Kit 5: Clamp arm, radial drive",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k04_jaw_0": {
+   "label": "Kit 5: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k04_arm_1": {
+   "label": "Kit 5: Clamp arm, radial drive",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k04_jaw_1": {
+   "label": "Kit 5: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k04_arm_2": {
+   "label": "Kit 5: Clamp arm, radial drive",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k04_jaw_2": {
+   "label": "Kit 5: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k04_boom": {
+   "label": "Kit 5: Compliant boom, damps the first contact, 1.2 m stroke at full reach",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k04_deck": {
+   "label": "Kit 5: Thrust deck, carries the engines into the boom",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "structure"
+  },
+  "k04_tank_0": {
+   "label": "Kit 5: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k04_tank_1": {
+   "label": "Kit 5: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k04_top": {
+   "label": "Kit 5: Engine deck",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "structure"
+  },
+  "k04_engine_0": {
+   "label": "Kit 5: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k04_engine_1": {
+   "label": "Kit 5: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k04_rcs_0": {
+   "label": "Kit 5: Four-thruster 22 N pod",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k04_rcs_1": {
+   "label": "Kit 5: Four-thruster 22 N pod",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k04_rcs_2": {
+   "label": "Kit 5: Four-thruster 22 N pod",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k04_rcs_3": {
+   "label": "Kit 5: Four-thruster 22 N pod",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k04_bottle": {
+   "label": "Kit 5: Pressurant bottle",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k04_sensors": {
+   "label": "Kit 5: Lidar and two cameras, facing the stage",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "avionics"
+  },
+  "k04_avionics": {
+   "label": "Kit 5: Avionics, battery 1.2 kWh, radios",
+   "explode": [
+    0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "avionics"
+  },
+  "ring_1": {
+   "label": "ESPA Grande class ring, 62 in OD, 42 in tall, five 24 in ports",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "dispenser"
+  },
+  "k10_clamp_ring": {
+   "label": "Kit 6: Clamp hub ring",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k10_arm_0": {
+   "label": "Kit 6: Clamp arm, radial drive",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k10_jaw_0": {
+   "label": "Kit 6: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k10_arm_1": {
+   "label": "Kit 6: Clamp arm, radial drive",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k10_jaw_1": {
+   "label": "Kit 6: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k10_arm_2": {
+   "label": "Kit 6: Clamp arm, radial drive",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k10_jaw_2": {
+   "label": "Kit 6: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k10_boom": {
+   "label": "Kit 6: Compliant boom, damps the first contact, 1.2 m stroke at full reach",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "capture"
+  },
+  "k10_deck": {
+   "label": "Kit 6: Thrust deck, carries the engines into the boom",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "structure"
+  },
+  "k10_tank_0": {
+   "label": "Kit 6: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k10_tank_1": {
+   "label": "Kit 6: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k10_top": {
+   "label": "Kit 6: Engine deck",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "structure"
+  },
+  "k10_engine_0": {
+   "label": "Kit 6: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k10_engine_1": {
+   "label": "Kit 6: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k10_rcs_0": {
+   "label": "Kit 6: Four-thruster 22 N pod",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k10_rcs_1": {
+   "label": "Kit 6: Four-thruster 22 N pod",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k10_rcs_2": {
+   "label": "Kit 6: Four-thruster 22 N pod",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k10_rcs_3": {
+   "label": "Kit 6: Four-thruster 22 N pod",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k10_bottle": {
+   "label": "Kit 6: Pressurant bottle",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k10_sensors": {
+   "label": "Kit 6: Lidar and two cameras, facing the stage",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "avionics"
+  },
+  "k10_avionics": {
+   "label": "Kit 6: Avionics, battery 1.2 kWh, radios",
+   "explode": [
+    0.88992,
+    0.0,
+    -0.64656
+   ],
+   "group": "avionics"
+  },
+  "k11_clamp_ring": {
+   "label": "Kit 7: Clamp hub ring",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k11_arm_0": {
+   "label": "Kit 7: Clamp arm, radial drive",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k11_jaw_0": {
+   "label": "Kit 7: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k11_arm_1": {
+   "label": "Kit 7: Clamp arm, radial drive",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k11_jaw_1": {
+   "label": "Kit 7: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k11_arm_2": {
+   "label": "Kit 7: Clamp arm, radial drive",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k11_jaw_2": {
+   "label": "Kit 7: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k11_boom": {
+   "label": "Kit 7: Compliant boom, damps the first contact, 1.2 m stroke at full reach",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "capture"
+  },
+  "k11_deck": {
+   "label": "Kit 7: Thrust deck, carries the engines into the boom",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "structure"
+  },
+  "k11_tank_0": {
+   "label": "Kit 7: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k11_tank_1": {
+   "label": "Kit 7: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k11_top": {
+   "label": "Kit 7: Engine deck",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "structure"
+  },
+  "k11_engine_0": {
+   "label": "Kit 7: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k11_engine_1": {
+   "label": "Kit 7: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k11_rcs_0": {
+   "label": "Kit 7: Four-thruster 22 N pod",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k11_rcs_1": {
+   "label": "Kit 7: Four-thruster 22 N pod",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k11_rcs_2": {
+   "label": "Kit 7: Four-thruster 22 N pod",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k11_rcs_3": {
+   "label": "Kit 7: Four-thruster 22 N pod",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k11_bottle": {
+   "label": "Kit 7: Pressurant bottle",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k11_sensors": {
+   "label": "Kit 7: Lidar and two cameras, facing the stage",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "avionics"
+  },
+  "k11_avionics": {
+   "label": "Kit 7: Avionics, battery 1.2 kWh, radios",
+   "explode": [
+    -0.33992,
+    0.0,
+    -1.04616
+   ],
+   "group": "avionics"
+  },
+  "k12_clamp_ring": {
+   "label": "Kit 8: Clamp hub ring",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k12_arm_0": {
+   "label": "Kit 8: Clamp arm, radial drive",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k12_jaw_0": {
+   "label": "Kit 8: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k12_arm_1": {
+   "label": "Kit 8: Clamp arm, radial drive",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k12_jaw_1": {
+   "label": "Kit 8: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k12_arm_2": {
+   "label": "Kit 8: Clamp arm, radial drive",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k12_jaw_2": {
+   "label": "Kit 8: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k12_boom": {
+   "label": "Kit 8: Compliant boom, damps the first contact, 1.2 m stroke at full reach",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "capture"
+  },
+  "k12_deck": {
+   "label": "Kit 8: Thrust deck, carries the engines into the boom",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "structure"
+  },
+  "k12_tank_0": {
+   "label": "Kit 8: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k12_tank_1": {
+   "label": "Kit 8: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k12_top": {
+   "label": "Kit 8: Engine deck",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "structure"
+  },
+  "k12_engine_0": {
+   "label": "Kit 8: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k12_engine_1": {
+   "label": "Kit 8: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k12_rcs_0": {
+   "label": "Kit 8: Four-thruster 22 N pod",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k12_rcs_1": {
+   "label": "Kit 8: Four-thruster 22 N pod",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k12_rcs_2": {
+   "label": "Kit 8: Four-thruster 22 N pod",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k12_rcs_3": {
+   "label": "Kit 8: Four-thruster 22 N pod",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k12_bottle": {
+   "label": "Kit 8: Pressurant bottle",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "propulsion"
+  },
+  "k12_sensors": {
+   "label": "Kit 8: Lidar and two cameras, facing the stage",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "k12_avionics": {
+   "label": "Kit 8: Avionics, battery 1.2 kWh, radios",
+   "explode": [
+    -1.1,
+    0.0,
+    -0.0
+   ],
+   "group": "avionics"
+  },
+  "k13_clamp_ring": {
+   "label": "Kit 9: Clamp hub ring",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k13_arm_0": {
+   "label": "Kit 9: Clamp arm, radial drive",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k13_jaw_0": {
+   "label": "Kit 9: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k13_arm_1": {
+   "label": "Kit 9: Clamp arm, radial drive",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k13_jaw_1": {
+   "label": "Kit 9: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k13_arm_2": {
+   "label": "Kit 9: Clamp arm, radial drive",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k13_jaw_2": {
+   "label": "Kit 9: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k13_boom": {
+   "label": "Kit 9: Compliant boom, damps the first contact, 1.2 m stroke at full reach",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "capture"
+  },
+  "k13_deck": {
+   "label": "Kit 9: Thrust deck, carries the engines into the boom",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "structure"
+  },
+  "k13_tank_0": {
+   "label": "Kit 9: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k13_tank_1": {
+   "label": "Kit 9: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k13_top": {
+   "label": "Kit 9: Engine deck",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "structure"
+  },
+  "k13_engine_0": {
+   "label": "Kit 9: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k13_engine_1": {
+   "label": "Kit 9: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k13_rcs_0": {
+   "label": "Kit 9: Four-thruster 22 N pod",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k13_rcs_1": {
+   "label": "Kit 9: Four-thruster 22 N pod",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k13_rcs_2": {
+   "label": "Kit 9: Four-thruster 22 N pod",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k13_rcs_3": {
+   "label": "Kit 9: Four-thruster 22 N pod",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k13_bottle": {
+   "label": "Kit 9: Pressurant bottle",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "propulsion"
+  },
+  "k13_sensors": {
+   "label": "Kit 9: Lidar and two cameras, facing the stage",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "avionics"
+  },
+  "k13_avionics": {
+   "label": "Kit 9: Avionics, battery 1.2 kWh, radios",
+   "explode": [
+    -0.33992,
+    0.0,
+    1.04616
+   ],
+   "group": "avionics"
+  },
+  "k14_clamp_ring": {
+   "label": "Kit 10: Clamp hub ring",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k14_arm_0": {
+   "label": "Kit 10: Clamp arm, radial drive",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k14_jaw_0": {
+   "label": "Kit 10: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k14_arm_1": {
+   "label": "Kit 10: Clamp arm, radial drive",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k14_jaw_1": {
+   "label": "Kit 10: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k14_arm_2": {
+   "label": "Kit 10: Clamp arm, radial drive",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k14_jaw_2": {
+   "label": "Kit 10: Clamp jaw, closes behind the ring flange",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k14_boom": {
+   "label": "Kit 10: Compliant boom, damps the first contact, 1.2 m stroke at full reach",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "capture"
+  },
+  "k14_deck": {
+   "label": "Kit 10: Thrust deck, carries the engines into the boom",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "structure"
+  },
+  "k14_tank_0": {
+   "label": "Kit 10: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k14_tank_1": {
+   "label": "Kit 10: Biprop tank, MON or MMH, 148 L in all with ullage",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k14_top": {
+   "label": "Kit 10: Engine deck",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "structure"
+  },
+  "k14_engine_0": {
+   "label": "Kit 10: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k14_engine_1": {
+   "label": "Kit 10: 400 N class storable engine, 4.3 kg, 318 s",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k14_rcs_0": {
+   "label": "Kit 10: Four-thruster 22 N pod",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k14_rcs_1": {
+   "label": "Kit 10: Four-thruster 22 N pod",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k14_rcs_2": {
+   "label": "Kit 10: Four-thruster 22 N pod",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k14_rcs_3": {
+   "label": "Kit 10: Four-thruster 22 N pod",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k14_bottle": {
+   "label": "Kit 10: Pressurant bottle",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "propulsion"
+  },
+  "k14_sensors": {
+   "label": "Kit 10: Lidar and two cameras, facing the stage",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "avionics"
+  },
+  "k14_avionics": {
+   "label": "Kit 10: Avionics, battery 1.2 kWh, radios",
+   "explode": [
+    0.88992,
+    0.0,
+    0.64656
+   ],
+   "group": "avionics"
+  },
+  "deck": {
+   "label": "Top deck",
+   "explode": [
+    0.0,
+    0.8,
+    0.0
+   ],
+   "group": "bus"
+  },
+  "wing_0": {
+   "label": "Solar array wing, folded",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "wing_1": {
+   "label": "Solar array wing, folded",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "power"
+  },
+  "sensor": {
+   "label": "RPO sensor head",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "bus"
+  }
+ },
+ "status": "concept; dimensions marked estimated in the BOM",
+ "views": {
+  "iso": {
+   "pos": [
+    3,
+    2,
+    3
+   ]
+  }
+ }
+}
