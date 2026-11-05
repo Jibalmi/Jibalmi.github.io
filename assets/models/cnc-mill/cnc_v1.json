@@ -1,46 +1,10 @@
 {
- "title": "Rucksack CNC mill v1 (reconstruction, est. dimensions)",
+ "title": "Rucksack CNC mill v1 (rebuilt from the 2022 photos and sketches)",
  "units": "mm",
  "explode_scale": 1,
  "parts": {
-  "foot_1": {
-   "label": "Rubber foot 1 (est.)",
-   "explode": [
-    0.0,
-    -0.05,
-    0.0
-   ],
-   "group": "Base"
-  },
-  "foot_2": {
-   "label": "Rubber foot 2 (est.)",
-   "explode": [
-    0.0,
-    -0.05,
-    0.0
-   ],
-   "group": "Base"
-  },
-  "foot_3": {
-   "label": "Rubber foot 3 (est.)",
-   "explode": [
-    0.0,
-    -0.05,
-    0.0
-   ],
-   "group": "Base"
-  },
-  "foot_4": {
-   "label": "Rubber foot 4 (est.)",
-   "explode": [
-    0.0,
-    -0.05,
-    0.0
-   ],
-   "group": "Base"
-  },
   "base_board": {
-   "label": "Base board (MDF / hardboard) (est.)",
+   "label": "Perforated hardboard base (est.)",
    "explode": [
     0.0,
     -0.025,
@@ -49,7 +13,7 @@
    "group": "Base"
   },
   "rail_x1": {
-   "label": "X rail 1 (1010 extrusion, 260 mm) (est.)",
+   "label": "X rail 1 (1 in 8020, 292 mm) (est.)",
    "explode": [
     0.0,
     0.0,
@@ -58,7 +22,7 @@
    "group": "Frame"
   },
   "rail_x2": {
-   "label": "X rail 2 (1010 extrusion, 260 mm) (est.)",
+   "label": "X rail 2 (1 in 8020, 292 mm) (est.)",
    "explode": [
     0.0,
     0.0,
@@ -67,7 +31,7 @@
    "group": "Frame"
   },
   "cross_y1": {
-   "label": "Cross member 1 (1010, 159.2 mm) (est.)",
+   "label": "Cross member 1 (1 in 8020, 175.4 mm) (est.)",
    "explode": [
     -0.055,
     0.0,
@@ -76,7 +40,7 @@
    "group": "Frame"
   },
   "cross_y2": {
-   "label": "Cross member 2 (1010, 159.2 mm) (est.)",
+   "label": "Cross member 2 (1 in 8020, 175.4 mm) (est.)",
    "explode": [
     0.055,
     0.0,
@@ -84,188 +48,152 @@
    ],
    "group": "Frame"
   },
-  "bracket_mx_f": {
-   "label": "Bracket + motor plate +X (front) (est.)",
+  "endblock_m_f": {
+   "label": "End block + motor mount, +X front (printed) (est.)",
    "explode": [
-    0.03,
+    0.035,
     0.04,
     0.02
    ],
    "group": "Frame"
   },
-  "screws_mx_f": {
-   "label": "M5 button screws, +X bracket f (est.)",
+  "endblock_i_f": {
+   "label": "End block + idler post, -X front (printed) (est.)",
    "explode": [
-    0.03,
-    0.07,
-    0.02
-   ],
-   "group": "Fasteners"
-  },
-  "bracket_id_f": {
-   "label": "Bracket + idler plate -X (front) (est.)",
-   "explode": [
-    -0.03,
+    -0.035,
     0.04,
     0.02
    ],
    "group": "Frame"
   },
-  "screws_id_f": {
-   "label": "M5 button screws, -X bracket f (est.)",
+  "endblock_m_r": {
+   "label": "End block + motor mount, +X rear (printed) (est.)",
    "explode": [
-    -0.03,
-    0.07,
-    0.02
-   ],
-   "group": "Fasteners"
-  },
-  "bracket_mx_r": {
-   "label": "Bracket + motor plate +X (rear) (est.)",
-   "explode": [
-    0.03,
+    0.035,
     0.04,
     -0.02
    ],
    "group": "Frame"
   },
-  "screws_mx_r": {
-   "label": "M5 button screws, +X bracket r (est.)",
+  "endblock_i_r": {
+   "label": "End block + idler post, -X rear (printed) (est.)",
    "explode": [
-    0.03,
-    0.07,
-    -0.02
-   ],
-   "group": "Fasteners"
-  },
-  "bracket_id_r": {
-   "label": "Bracket + idler plate -X (rear) (est.)",
-   "explode": [
-    -0.03,
+    -0.035,
     0.04,
     -0.02
    ],
    "group": "Frame"
   },
-  "screws_id_r": {
-   "label": "M5 button screws, -X bracket r (est.)",
+  "flange_x_f": {
+   "label": "Stepper end bell + shaft, X (f)",
    "explode": [
-    -0.03,
-    0.07,
-    -0.02
-   ],
-   "group": "Fasteners"
-  },
-  "motor_x_f": {
-   "label": "NEMA 17 stepper, X drive (front) (est.)",
-   "explode": [
-    0.04,
-    -0.01,
+    0.055,
+    -0.005,
     0.02
    ],
    "group": "X axis"
   },
-  "screws_mnx_f": {
-   "label": "M3 screws, X motor f",
+  "motor_x_f": {
+   "label": "NEMA 17 stepper, X (front) (est.)",
    "explode": [
-    0.04,
-    0.06,
+    0.055,
+    -0.005,
     0.02
    ],
-   "group": "Fasteners"
+   "group": "X axis"
   },
   "pulley_x_f": {
-   "label": "GT2 20T drive pulley (f) (est.)",
+   "label": "GT2 20T drive pulley, X (f) (est.)",
    "explode": [
-    0.04,
-    0.09,
+    0.055,
+    0.06,
     0.02
    ],
    "group": "X axis"
   },
   "idler_x_f": {
-   "label": "GT2 20T idler pulley (f) (est.)",
+   "label": "Idler collar, X (f) (est.)",
    "explode": [
-    -0.04,
-    0.09,
+    -0.055,
+    0.06,
     0.02
    ],
    "group": "X axis"
   },
-  "pin_x_f": {
-   "label": "Idler pin M5 (f) (est.)",
+  "screw_idler_f": {
+   "label": "Long M5 cap screw, idler post (f) (est.)",
    "explode": [
-    -0.04,
-    0.12,
+    -0.055,
+    0.1,
     0.02
    ],
-   "group": "X axis"
+   "group": "Fasteners"
   },
   "belt_x_f": {
-   "label": "GT2 belt, X (f) (est.)",
+   "label": "GT2 6 mm belt, X (f) (est.)",
    "explode": [
     0.0,
-    0.13,
+    0.075,
     0.02
+   ],
+   "group": "X axis"
+  },
+  "flange_x_r": {
+   "label": "Stepper end bell + shaft, X (r)",
+   "explode": [
+    0.055,
+    -0.005,
+    -0.02
    ],
    "group": "X axis"
   },
   "motor_x_r": {
-   "label": "NEMA 17 stepper, X drive (rear) (est.)",
+   "label": "NEMA 17 stepper, X (rear) (est.)",
    "explode": [
-    0.04,
-    -0.01,
+    0.055,
+    -0.005,
     -0.02
    ],
    "group": "X axis"
   },
-  "screws_mnx_r": {
-   "label": "M3 screws, X motor r",
-   "explode": [
-    0.04,
-    0.06,
-    -0.02
-   ],
-   "group": "Fasteners"
-  },
   "pulley_x_r": {
-   "label": "GT2 20T drive pulley (r) (est.)",
+   "label": "GT2 20T drive pulley, X (r) (est.)",
    "explode": [
-    0.04,
-    0.09,
+    0.055,
+    0.06,
     -0.02
    ],
    "group": "X axis"
   },
   "idler_x_r": {
-   "label": "GT2 20T idler pulley (r) (est.)",
+   "label": "Idler collar, X (r) (est.)",
    "explode": [
-    -0.04,
-    0.09,
+    -0.055,
+    0.06,
     -0.02
    ],
    "group": "X axis"
   },
-  "pin_x_r": {
-   "label": "Idler pin M5 (r) (est.)",
+  "screw_idler_r": {
+   "label": "Long M5 cap screw, idler post (r) (est.)",
    "explode": [
-    -0.04,
-    0.12,
+    -0.055,
+    0.1,
     -0.02
    ],
-   "group": "X axis"
+   "group": "Fasteners"
   },
   "belt_x_r": {
-   "label": "GT2 belt, X (r) (est.)",
+   "label": "GT2 6 mm belt, X (r) (est.)",
    "explode": [
     0.0,
-    0.13,
+    0.075,
     -0.02
    ],
    "group": "X axis"
   },
   "slider_x_f": {
-   "label": "X slider (front, printed) (est.)",
+   "label": "X slider, front: tower + Y motor mount (printed) (est.)",
    "explode": [
     0.0,
     0.055,
@@ -274,7 +202,7 @@
    "group": "Sliders"
   },
   "slider_x_r": {
-   "label": "X slider (rear, printed) (est.)",
+   "label": "X slider, rear: tower with the Y idler (printed) (est.)",
    "explode": [
     0.0,
     0.055,
@@ -282,119 +210,128 @@
    ],
    "group": "Sliders"
   },
-  "bar_lower": {
-   "label": "Bridge bar, motor side (1010, 160 mm) (est.)",
+  "screws_tower": {
+   "label": "M5 cap screws into the bar ends' slots (est.)",
    "explode": [
-    -0.03,
-    0.15,
+    0.0,
+    0.08,
+    0.0
+   ],
+   "group": "Fasteners"
+  },
+  "bar_lower": {
+   "label": "Bridge bar, lower (1 in 8020, 190.5 mm) (est.)",
+   "explode": [
+    0.0,
+    0.12,
     0.0
    ],
    "group": "Bridge"
   },
   "bar_upper": {
-   "label": "Bridge bar, spindle side (1010, 160 mm) (est.)",
+   "label": "Bridge bar, upper (1 in 8020, 190.5 mm) (est.)",
    "explode": [
-    0.03,
-    0.15,
+    0.0,
+    0.17,
     0.0
    ],
    "group": "Bridge"
   },
-  "motor_y": {
-   "label": "NEMA 17 stepper, Y drive (est.)",
+  "flange_y": {
+   "label": "Stepper end bell + shaft, Y",
    "explode": [
-    -0.06,
-    0.055,
-    0.0
+    0.0,
+    -0.01,
+    0.07
    ],
    "group": "Y axis"
   },
-  "screws_mny": {
-   "label": "M3 screws, Y motor",
+  "motor_y": {
+   "label": "NEMA 17 stepper, Y (on the front slider) (est.)",
    "explode": [
-    -0.08,
-    0.055,
-    0.0
+    0.0,
+    -0.01,
+    0.07
    ],
-   "group": "Fasteners"
+   "group": "Y axis"
   },
   "pulley_y": {
-   "label": "GT2 20T drive pulley (Y) (est.)",
+   "label": "GT2 20T drive pulley, Y (est.)",
    "explode": [
-    0.06,
-    0.055,
-    0.0
+    0.0,
+    0.05,
+    0.07
    ],
    "group": "Y axis"
   },
   "idler_y": {
-   "label": "GT2 20T idler (Y) (est.)",
+   "label": "Y idler (est.)",
    "explode": [
-    0.06,
-    0.055,
-    0.0
-   ],
-   "group": "Y axis"
-  },
-  "pin_y": {
-   "label": "Idler pin M5 (Y) (est.)",
-   "explode": [
-    0.095,
-    0.055,
-    0.0
+    0.0,
+    0.05,
+    -0.06
    ],
    "group": "Y axis"
   },
   "belt_y": {
-   "label": "GT2 belt, Y (above the bars) (est.)",
+   "label": "GT2 6 mm belt, Y (between the bars) (est.)",
    "explode": [
     0.0,
-    0.1,
+    0.095,
     0.0
    ],
    "group": "Y axis"
   },
   "effector": {
-   "label": "End-effector: carriage + Z drive housing (printed) (est.)",
+   "label": "End effector: body, foot and top plate (printed) (est.)",
    "explode": [
     0.0,
-    0.235,
+    0.245,
     0.0
    ],
    "group": "Z axis"
   },
   "z_guide": {
-   "label": "Z guide, vertical extrusion (20 mm, est.) (est.)",
+   "label": "Z guide column (slotted extrusion, about 12 x 45) (est.)",
    "explode": [
     0.0,
-    0.25,
+    0.28,
+    0.0
+   ],
+   "group": "Z axis"
+  },
+  "flange_z": {
+   "label": "Stepper end bell + shaft, Z",
+   "explode": [
+    -0.07,
+    0.17,
     0.0
    ],
    "group": "Z axis"
   },
   "motor_z": {
-   "label": "NEMA 17 stepper, Z drive (est.)",
+   "label": "NEMA 17 stepper, Z (the added third axis) (est.)",
    "explode": [
-    0.0,
-    0.19,
+    -0.07,
+    0.17,
     0.0
    ],
    "group": "Z axis"
   },
   "pulley_z": {
-   "label": "GT2 20T motor pulley (Z) (est.)",
+   "label": "GT2 20T motor pulley, Z (est.)",
    "explode": [
-    0.0,
-    0.27,
+    -0.07,
+    0.3,
     0.0
    ],
    "group": "Z axis"
   },
   "gear_z": {
-   "label": "GT2 60T pulley on the screw (Z) (est.)",
+   "label": "GT2 40T pulley on the screw (est.)",
    "explode": [
     0.0,
-    0.27,
+    0.3,
     0.0
    ],
    "group": "Z axis"
@@ -403,61 +340,97 @@
    "label": "GT2 belt, Z drive (est.)",
    "explode": [
     0.0,
-    0.31,
+    0.335,
     0.0
    ],
    "group": "Z axis"
   },
   "leadscrew": {
-   "label": "Z lead screw (threaded rod) (est.)",
+   "label": "Z lead screw (threaded rod, M6) (est.)",
    "explode": [
     0.0,
-    0.255,
+    0.262,
     0.0
    ],
    "group": "Z axis"
   },
   "spindle_holder": {
-   "label": "Spindle holder (clamp + guide carriage) (est.)",
+   "label": "Spindle holder, back half with the two teeth (printed) (est.)",
    "explode": [
     0.0,
-    0.15,
+    0.165,
+    0.0
+   ],
+   "group": "Z axis"
+  },
+  "spindle_holder_cap": {
+   "label": "Spindle clamp cap (printed) (est.)",
+   "explode": [
+    0.06,
+    0.165,
     0.0
    ],
    "group": "Z axis"
   },
   "clamp_screw": {
-   "label": "Spindle clamp screw (M4) (est.)",
+   "label": "M4 clamp screws (est.)",
    "explode": [
-    0.0,
-    0.15,
+    0.06,
+    0.165,
     0.0
    ],
    "group": "Fasteners"
   },
   "spindle_can": {
-   "label": "Spindle: 775-class DC motor (42 mm) (est.)",
+   "label": "Spindle: 775-class brushed DC motor (est.)",
    "explode": [
-    0.0,
-    0.195,
+    0.06,
+    0.21,
+    0.0
+   ],
+   "group": "Spindle"
+  },
+  "spindle_pcb": {
+   "label": "Motor terminal disc (M+ / M-) (est.)",
+   "explode": [
+    0.06,
+    0.23,
+    0.0
+   ],
+   "group": "Spindle"
+  },
+  "spindle_shaft": {
+   "label": "Motor shaft, rear end (est.)",
+   "explode": [
+    0.06,
+    0.235,
     0.0
    ],
    "group": "Spindle"
   },
   "spindle_chuck": {
-   "label": "Chuck / collet (est.)",
+   "label": "Collet shank (est.)",
    "explode": [
-    0.0,
-    0.16,
+    0.06,
+    0.17,
+    0.0
+   ],
+   "group": "Spindle"
+  },
+  "spindle_nut": {
+   "label": "Collet nut (est.)",
+   "explode": [
+    0.06,
+    0.15,
     0.0
    ],
    "group": "Spindle"
   },
   "cutter": {
-   "label": "End mill 3 mm (foam-cutting bit) (est.)",
+   "label": "End mill, 3 mm (est.)",
    "explode": [
-    0.0,
-    0.105,
+    0.06,
+    0.125,
     0.0
    ],
    "group": "Spindle"
@@ -472,7 +445,7 @@
    "group": "Reference"
   },
   "tray": {
-   "label": "Wooden tray for the electronics (est.)",
+   "label": "Bent-ply tray for the electronics (est.)",
    "explode": [
     -0.06,
     0.0,
@@ -481,13 +454,400 @@
    "group": "Electronics"
   },
   "controller": {
-   "label": "Makerbase (MKS) controller board (est.)",
+   "label": "Makerbase control board (solder side up) (est.)",
    "explode": [
     -0.06,
-    0.03,
+    0.04,
     0.0
    ],
    "group": "Electronics"
+  },
+  "conn_board_w1": {
+   "label": "W1 board header (est.)",
+   "explode": [
+    -0.06,
+    0.04,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "conn_board_w2": {
+   "label": "W2 board header (est.)",
+   "explode": [
+    -0.06,
+    0.04,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "conn_board_w3": {
+   "label": "W3 board header (est.)",
+   "explode": [
+    -0.06,
+    0.04,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "conn_board_w4": {
+   "label": "W4 board header (est.)",
+   "explode": [
+    -0.06,
+    0.04,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "conn_board_w5": {
+   "label": "W5 board header (est.)",
+   "explode": [
+    -0.06,
+    0.04,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "conn_motor_w1": {
+   "label": "W1 motor connector (est.)",
+   "explode": [
+    0.055,
+    -0.005,
+    0.02
+   ],
+   "group": "Wiring"
+  },
+  "wire_w1_black": {
+   "label": "W1 X front motor lead, black (est.)",
+   "explode": [
+    0.035,
+    -0.04,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w1_green": {
+   "label": "W1 X front motor lead, green (est.)",
+   "explode": [
+    0.035,
+    -0.04,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w1_red": {
+   "label": "W1 X front motor lead, red (est.)",
+   "explode": [
+    0.035,
+    -0.04,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w1_blue": {
+   "label": "W1 X front motor lead, blue (est.)",
+   "explode": [
+    0.035,
+    -0.04,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "conn_motor_w2": {
+   "label": "W2 motor connector (est.)",
+   "explode": [
+    0.055,
+    -0.005,
+    -0.02
+   ],
+   "group": "Wiring"
+  },
+  "wire_w2_black": {
+   "label": "W2 X rear motor lead, black (est.)",
+   "explode": [
+    0.035,
+    -0.04,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w2_green": {
+   "label": "W2 X rear motor lead, green (est.)",
+   "explode": [
+    0.035,
+    -0.04,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w2_red": {
+   "label": "W2 X rear motor lead, red (est.)",
+   "explode": [
+    0.035,
+    -0.04,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w2_blue": {
+   "label": "W2 X rear motor lead, blue (est.)",
+   "explode": [
+    0.035,
+    -0.04,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "conn_motor_w3": {
+   "label": "W3 motor connector (est.)",
+   "explode": [
+    0.0,
+    -0.01,
+    0.07
+   ],
+   "group": "Wiring"
+  },
+  "wire_w3_black": {
+   "label": "W3 Y motor lead (service loop), black (est.)",
+   "explode": [
+    0.02,
+    -0.04,
+    0.03
+   ],
+   "group": "Wiring"
+  },
+  "wire_w3_green": {
+   "label": "W3 Y motor lead (service loop), green (est.)",
+   "explode": [
+    0.02,
+    -0.04,
+    0.03
+   ],
+   "group": "Wiring"
+  },
+  "wire_w3_red": {
+   "label": "W3 Y motor lead (service loop), red (est.)",
+   "explode": [
+    0.02,
+    -0.04,
+    0.03
+   ],
+   "group": "Wiring"
+  },
+  "wire_w3_blue": {
+   "label": "W3 Y motor lead (service loop), blue (est.)",
+   "explode": [
+    0.02,
+    -0.04,
+    0.03
+   ],
+   "group": "Wiring"
+  },
+  "conn_motor_w4": {
+   "label": "W4 motor connector (est.)",
+   "explode": [
+    -0.07,
+    0.17,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w4_black": {
+   "label": "W4 Z motor lead (service loop), black (est.)",
+   "explode": [
+    -0.07,
+    0.06,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w4_green": {
+   "label": "W4 Z motor lead (service loop), green (est.)",
+   "explode": [
+    -0.07,
+    0.06,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w4_red": {
+   "label": "W4 Z motor lead (service loop), red (est.)",
+   "explode": [
+    -0.07,
+    0.06,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w4_blue": {
+   "label": "W4 Z motor lead (service loop), blue (est.)",
+   "explode": [
+    -0.07,
+    0.06,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "conn_spindle_m": {
+   "label": "W5 solder joints on M+ and M- (est.)",
+   "explode": [
+    0.06,
+    0.23,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w5a_black": {
+   "label": "W5A Spindle lead, M-, black (est.)",
+   "explode": [
+    -0.07,
+    0.06,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w5b_red": {
+   "label": "W5B Spindle lead, M+, red (est.)",
+   "explode": [
+    -0.07,
+    0.06,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "conn_usb_b": {
+   "label": "W6 USB-B plug (est.)",
+   "explode": [
+    -0.06,
+    0.04,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w6_usb": {
+   "label": "W6 USB cable to the PC, usb (est.)",
+   "explode": [
+    -0.06,
+    0.04,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "conn_usb_a": {
+   "label": "W6 USB-A plug (est.)",
+   "explode": [
+    -0.06,
+    0.04,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "conn_power": {
+   "label": "W7 power terminal (est.)",
+   "explode": [
+    -0.06,
+    0.04,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w7_black": {
+   "label": "W7 Supply lead, black (est.)",
+   "explode": [
+    -0.06,
+    0.04,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w7_red": {
+   "label": "W7 Supply lead, red (est.)",
+   "explode": [
+    -0.06,
+    0.04,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "tie_1": {
+   "label": "Cable tie 1 (est.)",
+   "explode": [
+    0.035,
+    -0.04,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "tie_2": {
+   "label": "Cable tie 2 (est.)",
+   "explode": [
+    0.02,
+    -0.04,
+    0.03
+   ],
+   "group": "Wiring"
+  },
+  "tie_3": {
+   "label": "Cable tie 3 (est.)",
+   "explode": [
+    -0.07,
+    0.06,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "tie_4": {
+   "label": "Cable tie 4 (est.)",
+   "explode": [
+    0.035,
+    -0.04,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "tie_5": {
+   "label": "Cable tie 5 (est.)",
+   "explode": [
+    -0.07,
+    0.06,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "sleeve_1": {
+   "label": "Blue heat-shrink sleeve 1 (est.)",
+   "explode": [
+    0.035,
+    -0.04,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "sleeve_2": {
+   "label": "Blue heat-shrink sleeve 2 (est.)",
+   "explode": [
+    0.035,
+    -0.04,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "sleeve_3": {
+   "label": "Blue heat-shrink sleeve 3 (est.)",
+   "explode": [
+    0.02,
+    -0.04,
+    0.03
+   ],
+   "group": "Wiring"
+  },
+  "sleeve_4": {
+   "label": "Blue heat-shrink sleeve 4 (est.)",
+   "explode": [
+    0.035,
+    -0.04,
+    -0.04
+   ],
+   "group": "Wiring"
   }
  }
 }

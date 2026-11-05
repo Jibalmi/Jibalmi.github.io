@@ -785,6 +785,51 @@
     0.0
    ],
    "group": "propulsion"
+  },
+  "wire_t1_red": {
+   "label": "T1 Battery bus to ADCS, red (representative bundle)",
+   "explode": [
+    0.0,
+    -0.17,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_t1_black": {
+   "label": "T1 Battery bus to ADCS, black (representative bundle)",
+   "explode": [
+    0.0,
+    -0.17,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_t2_blue": {
+   "label": "T2 Data trunk, CDH to the nose, blue (representative bundle)",
+   "explode": [
+    0.0,
+    -0.17,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_t2_white": {
+   "label": "T2 Data trunk, CDH to the nose, white (representative bundle)",
+   "explode": [
+    0.0,
+    -0.17,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_t3_yellow": {
+   "label": "T3 Nadir camera lead, yellow (representative bundle)",
+   "explode": [
+    0.0,
+    -0.17,
+    0.0
+   ],
+   "group": "wiring"
   }
  }
 }

@@ -569,6 +569,438 @@
     0.0
    ],
    "group": "Reference"
+  },
+  "conn_motor_y": {
+   "label": "Drive connector, Y motor (est.)",
+   "explode": [
+    0.0,
+    0.0,
+    0.16
+   ],
+   "group": "Wiring"
+  },
+  "conn_motor_x": {
+   "label": "Drive connector, X motor (est.)",
+   "explode": [
+    -0.14,
+    0.19,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "conn_motor_z": {
+   "label": "Drive connector, Z motor (est.)",
+   "explode": [
+    0.0,
+    0.18,
+    0.14
+   ],
+   "group": "Wiring"
+  },
+  "wire_w1_red": {
+   "label": "W1 Y drive cable, red (est.)",
+   "explode": [
+    0.02,
+    -0.02,
+    0.12
+   ],
+   "group": "Wiring"
+  },
+  "wire_w1_black": {
+   "label": "W1 Y drive cable, black (est.)",
+   "explode": [
+    0.02,
+    -0.02,
+    0.12
+   ],
+   "group": "Wiring"
+  },
+  "wire_w1_green": {
+   "label": "W1 Y drive cable, green (est.)",
+   "explode": [
+    0.02,
+    -0.02,
+    0.12
+   ],
+   "group": "Wiring"
+  },
+  "wire_w1_yellow": {
+   "label": "W1 Y drive cable, yellow (est.)",
+   "explode": [
+    0.02,
+    -0.02,
+    0.12
+   ],
+   "group": "Wiring"
+  },
+  "wire_w1_white": {
+   "label": "W1 Y drive cable, white (est.)",
+   "explode": [
+    0.02,
+    -0.02,
+    0.12
+   ],
+   "group": "Wiring"
+  },
+  "wire_w2_red": {
+   "label": "W2 X drive cable, red (est.)",
+   "explode": [
+    -0.09,
+    0.06,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w2_black": {
+   "label": "W2 X drive cable, black (est.)",
+   "explode": [
+    -0.09,
+    0.06,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w2_green": {
+   "label": "W2 X drive cable, green (est.)",
+   "explode": [
+    -0.09,
+    0.06,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w2_yellow": {
+   "label": "W2 X drive cable, yellow (est.)",
+   "explode": [
+    -0.09,
+    0.06,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w2_white": {
+   "label": "W2 X drive cable, white (est.)",
+   "explode": [
+    -0.09,
+    0.06,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "conn_limit_y": {
+   "label": "Y limit switch connector (est.)",
+   "explode": [
+    0.0,
+    0.03,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "conn_limit_x": {
+   "label": "X limit switch connector (est.)",
+   "explode": [
+    0.0,
+    0.03,
+    0.03
+   ],
+   "group": "Wiring"
+  },
+  "conn_limit_z": {
+   "label": "Z limit switch connector (est.)",
+   "explode": [
+    0.02,
+    0.18,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w3_blue": {
+   "label": "W3 Limit loop, Y leg, blue (est.)",
+   "explode": [
+    -0.04,
+    0.02,
+    -0.06
+   ],
+   "group": "Wiring"
+  },
+  "wire_w3_white": {
+   "label": "W3 Limit loop, Y leg, white (est.)",
+   "explode": [
+    -0.04,
+    0.02,
+    -0.06
+   ],
+   "group": "Wiring"
+  },
+  "wire_w4_blue": {
+   "label": "W4 Limit loop, X leg, blue (est.)",
+   "explode": [
+    -0.09,
+    0.06,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w4_white": {
+   "label": "W4 Limit loop, X leg, white (est.)",
+   "explode": [
+    -0.09,
+    0.06,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "conn_24": {
+   "label": "24 V output terminals (est.)",
+   "explode": [
+    0.04,
+    -0.03,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "conn_48": {
+   "label": "48 V output terminals (est.)",
+   "explode": [
+    0.15,
+    0.1,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w5_red": {
+   "label": "W5 24 V supply lead, red (est.)",
+   "explode": [
+    0.04,
+    -0.03,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w5_black": {
+   "label": "W5 24 V supply lead, black (est.)",
+   "explode": [
+    0.04,
+    -0.03,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w6_red": {
+   "label": "W6 48 V supply lead, red (est.)",
+   "explode": [
+    0.04,
+    -0.03,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w6_black": {
+   "label": "W6 48 V supply lead, black (est.)",
+   "explode": [
+    0.04,
+    -0.03,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w7_green": {
+   "label": "W7 Spindle driver control, green (est.)",
+   "explode": [
+    0.04,
+    -0.03,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w7_yellow": {
+   "label": "W7 Spindle driver control, yellow (est.)",
+   "explode": [
+    0.04,
+    -0.03,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w7_white": {
+   "label": "W7 Spindle driver control, white (est.)",
+   "explode": [
+    0.04,
+    -0.03,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w7_blue": {
+   "label": "W7 Spindle driver control, blue (est.)",
+   "explode": [
+    0.04,
+    -0.03,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "wire_w8_red": {
+   "label": "W8 E-stop loop, red (est.)",
+   "explode": [
+    0.06,
+    0.04,
+    0.03
+   ],
+   "group": "Wiring"
+  },
+  "wire_w8_white": {
+   "label": "W8 E-stop loop, white (est.)",
+   "explode": [
+    0.06,
+    0.04,
+    0.03
+   ],
+   "group": "Wiring"
+  },
+  "clamp_loop": {
+   "label": "Cable clamp on the column top (est.)",
+   "explode": [
+    0.07,
+    0.06,
+    -0.03
+   ],
+   "group": "Wiring"
+  },
+  "wire_w9_red": {
+   "label": "W9 Spindle power (service loop), red (est.)",
+   "explode": [
+    0.02,
+    0.18,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w9_white": {
+   "label": "W9 Spindle power (service loop), white (est.)",
+   "explode": [
+    0.02,
+    0.18,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w9_black": {
+   "label": "W9 Spindle power (service loop), black (est.)",
+   "explode": [
+    0.02,
+    0.18,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w9_green": {
+   "label": "W9 Spindle power (service loop), green (est.)",
+   "explode": [
+    0.02,
+    0.18,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w10_red": {
+   "label": "W10 Z drive cable (service loop), red (est.)",
+   "explode": [
+    0.02,
+    0.18,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w10_black": {
+   "label": "W10 Z drive cable (service loop), black (est.)",
+   "explode": [
+    0.02,
+    0.18,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w10_green": {
+   "label": "W10 Z drive cable (service loop), green (est.)",
+   "explode": [
+    0.02,
+    0.18,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w10_yellow": {
+   "label": "W10 Z drive cable (service loop), yellow (est.)",
+   "explode": [
+    0.02,
+    0.18,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w10_white": {
+   "label": "W10 Z drive cable (service loop), white (est.)",
+   "explode": [
+    0.02,
+    0.18,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w11_blue": {
+   "label": "W11 Limit loop, Z leg (service loop), blue (est.)",
+   "explode": [
+    0.02,
+    0.18,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "wire_w11_white": {
+   "label": "W11 Limit loop, Z leg (service loop), white (est.)",
+   "explode": [
+    0.02,
+    0.18,
+    -0.04
+   ],
+   "group": "Wiring"
+  },
+  "tie_1": {
+   "label": "Cable tie 1 (est.)",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "tie_2": {
+   "label": "Cable tie 2 (est.)",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "tie_3": {
+   "label": "Cable tie 3 (est.)",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "Wiring"
+  },
+  "tie_4": {
+   "label": "Cable tie 4 (est.)",
+   "explode": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "group": "Wiring"
   }
  }
 }

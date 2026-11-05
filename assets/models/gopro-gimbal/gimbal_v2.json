@@ -299,6 +299,258 @@
     0.16
    ],
    "group": "cradle"
+  },
+  "wire_w1_ptfe": {
+   "label": "W1 Yaw loom through the yaw bore (15 conductors, ptfe)",
+   "explode": [
+    0.0,
+    0.04,
+    -0.03
+   ],
+   "group": "wiring"
+  },
+  "wire_w1_red": {
+   "label": "W1 Yaw loom through the yaw bore (15 conductors, red)",
+   "explode": [
+    0.0,
+    0.04,
+    -0.03
+   ],
+   "group": "wiring"
+  },
+  "wire_w1_blue": {
+   "label": "W1 Yaw loom through the yaw bore (15 conductors, blue)",
+   "explode": [
+    0.0,
+    0.04,
+    -0.03
+   ],
+   "group": "wiring"
+  },
+  "wire_w1_green": {
+   "label": "W1 Yaw loom through the yaw bore (15 conductors, green)",
+   "explode": [
+    0.0,
+    0.04,
+    -0.03
+   ],
+   "group": "wiring"
+  },
+  "wire_w1_yellow": {
+   "label": "W1 Yaw loom through the yaw bore (15 conductors, yellow)",
+   "explode": [
+    0.0,
+    0.04,
+    -0.03
+   ],
+   "group": "wiring"
+  },
+  "wire_w1_black": {
+   "label": "W1 Yaw loom through the yaw bore (15 conductors, black)",
+   "explode": [
+    0.0,
+    0.04,
+    -0.03
+   ],
+   "group": "wiring"
+  },
+  "wire_w2_ptfe": {
+   "label": "W2 Roll motor pigtail (4 conductors, ptfe)",
+   "explode": [
+    0.0,
+    0.078,
+    -0.08
+   ],
+   "group": "wiring"
+  },
+  "wire_w2_red": {
+   "label": "W2 Roll motor pigtail (4 conductors, red)",
+   "explode": [
+    0.0,
+    0.078,
+    -0.08
+   ],
+   "group": "wiring"
+  },
+  "wire_w2_blue": {
+   "label": "W2 Roll motor pigtail (4 conductors, blue)",
+   "explode": [
+    0.0,
+    0.078,
+    -0.08
+   ],
+   "group": "wiring"
+  },
+  "wire_w2_green": {
+   "label": "W2 Roll motor pigtail (4 conductors, green)",
+   "explode": [
+    0.0,
+    0.078,
+    -0.08
+   ],
+   "group": "wiring"
+  },
+  "wire_w3_ptfe": {
+   "label": "W3 Roll loom through the roll bore (11 conductors, ptfe)",
+   "explode": [
+    0.0,
+    0.078,
+    -0.08
+   ],
+   "group": "wiring"
+  },
+  "wire_w3_red": {
+   "label": "W3 Roll loom through the roll bore (11 conductors, red)",
+   "explode": [
+    0.0,
+    0.078,
+    -0.08
+   ],
+   "group": "wiring"
+  },
+  "wire_w3_blue": {
+   "label": "W3 Roll loom through the roll bore (11 conductors, blue)",
+   "explode": [
+    0.0,
+    0.078,
+    -0.08
+   ],
+   "group": "wiring"
+  },
+  "wire_w3_green": {
+   "label": "W3 Roll loom through the roll bore (11 conductors, green)",
+   "explode": [
+    0.0,
+    0.078,
+    -0.08
+   ],
+   "group": "wiring"
+  },
+  "wire_w3_yellow": {
+   "label": "W3 Roll loom through the roll bore (11 conductors, yellow)",
+   "explode": [
+    0.0,
+    0.078,
+    -0.08
+   ],
+   "group": "wiring"
+  },
+  "wire_w3_black": {
+   "label": "W3 Roll loom through the roll bore (11 conductors, black)",
+   "explode": [
+    0.0,
+    0.078,
+    -0.08
+   ],
+   "group": "wiring"
+  },
+  "wire_w4_ptfe": {
+   "label": "W4 Pitch motor pigtail (4 conductors, ptfe)",
+   "explode": [
+    -0.054,
+    0.078,
+    0.07
+   ],
+   "group": "wiring"
+  },
+  "wire_w4_red": {
+   "label": "W4 Pitch motor pigtail (4 conductors, red)",
+   "explode": [
+    -0.054,
+    0.078,
+    0.07
+   ],
+   "group": "wiring"
+  },
+  "wire_w4_blue": {
+   "label": "W4 Pitch motor pigtail (4 conductors, blue)",
+   "explode": [
+    -0.054,
+    0.078,
+    0.07
+   ],
+   "group": "wiring"
+  },
+  "wire_w4_green": {
+   "label": "W4 Pitch motor pigtail (4 conductors, green)",
+   "explode": [
+    -0.054,
+    0.078,
+    0.07
+   ],
+   "group": "wiring"
+  },
+  "wire_w5_ptfe": {
+   "label": "W5 Pitch loom to the IMU (7 conductors, ptfe)",
+   "explode": [
+    -0.054,
+    0.078,
+    0.07
+   ],
+   "group": "wiring"
+  },
+  "wire_w5_red": {
+   "label": "W5 Pitch loom to the IMU (7 conductors, red)",
+   "explode": [
+    -0.054,
+    0.078,
+    0.07
+   ],
+   "group": "wiring"
+  },
+  "wire_w5_blue": {
+   "label": "W5 Pitch loom to the IMU (7 conductors, blue)",
+   "explode": [
+    -0.054,
+    0.078,
+    0.07
+   ],
+   "group": "wiring"
+  },
+  "wire_w5_green": {
+   "label": "W5 Pitch loom to the IMU (7 conductors, green)",
+   "explode": [
+    -0.054,
+    0.078,
+    0.07
+   ],
+   "group": "wiring"
+  },
+  "wire_w5_yellow": {
+   "label": "W5 Pitch loom to the IMU (7 conductors, yellow)",
+   "explode": [
+    -0.054,
+    0.078,
+    0.07
+   ],
+   "group": "wiring"
+  },
+  "wire_w5_black": {
+   "label": "W5 Pitch loom to the IMU (7 conductors, black)",
+   "explode": [
+    -0.054,
+    0.078,
+    0.07
+   ],
+   "group": "wiring"
+  },
+  "wire_w6_ptfe": {
+   "label": "W6 Battery lead (2 conductors, ptfe)",
+   "explode": [
+    0.04,
+    -0.03,
+    0.0
+   ],
+   "group": "wiring"
+  },
+  "wire_w6_red": {
+   "label": "W6 Battery lead (2 conductors, red)",
+   "explode": [
+    0.04,
+    -0.03,
+    0.0
+   ],
+   "group": "wiring"
   }
  }
 }
