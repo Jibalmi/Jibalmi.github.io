@@ -3,11 +3,10 @@
   "file": "cnc-v1-hero.png",
   "kind": "photo",
   "poster": "cnc-v1-hero.jpg",
-  "caption": "Rucksack CNC mill v1: studio render of the reconstructed CAD, estimated dimensions.",
+  "caption": "Rucksack CNC mill v1: studio render of the CAD rebuilt from the build photos and sketches, sizes scaled from photos.",
   "alt": "Rucksack CNC mill v1 rendered in three-quarter view on a near-black studio backdrop",
   "section_hint": "hero",
-  "source": "_src/models/cnc-mill/cnc_v1.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 128 samples, 2560x1440",
-  "sm": "cnc-v1-hero.jpg"
+  "source": "_src/models/cnc-mill/cnc_v1.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 128 samples, 2560x1440"
  },
  {
   "file": "cnc-v2-hero.png",
@@ -16,8 +15,7 @@
   "caption": "Rucksack CNC mill v2: studio render of the design CAD.",
   "alt": "Rucksack CNC mill v2 rendered in three-quarter view on a near-black studio backdrop",
   "section_hint": "hero",
-  "source": "_src/models/cnc-mill/cnc_v2.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 128 samples, 2560x1440",
-  "sm": "cnc-v2-hero.jpg"
+  "source": "_src/models/cnc-mill/cnc_v2.glb rendered by _src/render/blender_render.py (Blender 5.1 Cycles, OptiX, OpenImageDenoise, AgX), 128 samples, 2560x1440"
  },
  {
   "file": "cnc-v1-explode.mp4",
@@ -35,7 +33,7 @@
   "webm": "cnc-v1-turntable.webm",
   "kind": "video",
   "poster": "cnc-v1-turntable.jpg",
-  "caption": "Rucksack CNC mill v1: one full turn of the reconstructed CAD, estimated dimensions.",
+  "caption": "Rucksack CNC mill v1: one full turn of the CAD rebuilt from the build photos and sketches, sizes scaled from photos.",
   "alt": "Rucksack CNC mill v1 turning 360 degrees on a dark studio floor",
   "section_hint": "design",
   "duration_s": 6.0,
