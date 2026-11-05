@@ -450,3 +450,32 @@ h3 { font-size: 1.15rem; }
   .cmp td.why { margin-top: .35rem; }
   .cmp-end { grid-template-columns: minmax(0, 1fr); gap: .4rem; }
 }
+
+/* about: flight path */
+.fpath { position: relative; --lx: 15rem; }
+.fpath-line { position: absolute; top: .4rem; bottom: 0; left: var(--lx); width: 1px; background: var(--line2); }
+.fpath-line i { position: absolute; left: 0; top: 0; width: 1px; height: 100%; background: var(--accent); transform-origin: top; transform: scaleY(var(--p, 1)); }
+.fpath-line b { position: absolute; left: -3px; top: calc(var(--p, 1) * 100%); width: 7px; height: 7px; margin-top: -3px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 14px 3px rgba(255, 91, 46, .55); opacity: 0; transition: opacity .3s; }
+.js .fpath.live .fpath-line b { opacity: 1; }
+.legs, .pts { list-style: none; margin: 0; padding: 0; }
+.leg { display: grid; grid-template-columns: var(--lx) minmax(0, 1fr); padding-bottom: clamp(2rem, 4vw, 3.4rem); }
+.leg-h { position: sticky; top: 6rem; align-self: start; padding-right: 2rem; }
+.leg-h h3 { font: 300 clamp(1.3rem, 2vw, 1.75rem)/1.15 var(--sans); letter-spacing: -.02em; margin: 0 0 .35rem; }
+.leg-h .yrs { font: 400 .72rem var(--mono); letter-spacing: .08em; color: var(--accent); margin: 0 0 .45rem; }
+.leg-h .what { font-size: .88rem; color: var(--mut); margin: 0; line-height: 1.4; }
+.pt { position: relative; display: grid; grid-template-columns: 3.4rem minmax(0, 1fr); gap: .8rem; padding: 0 0 1.25rem 1.6rem; }
+.pt::before { content: ""; position: absolute; left: -3px; top: .42rem; width: 7px; height: 7px; border-radius: 50%; background: var(--bg); border: 1px solid var(--line2); transition: background .35s, border-color .35s; }
+.pt.on::before, html:not(.js) .pt::before { background: var(--accent); border-color: var(--accent); }
+.pt .yr { font: 400 .74rem var(--mono); color: var(--mut); padding-top: .18rem; }
+.pt h4 { font: 400 1rem/1.3 var(--sans); margin: 0 0 .2rem; color: var(--text); }
+.pt h4 a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line2); transition: border-color .2s, color .2s; }
+.pt h4 a:hover { color: var(--accent); border-color: var(--accent); }
+.pt h4 a span { font-size: .8em; color: var(--mut); }
+.pt p { margin: 0; font-size: .9rem; color: var(--text2); max-width: 40em; line-height: 1.45; }
+@media (max-width: 760px) {
+  .fpath { --lx: 0px; }
+  .leg { grid-template-columns: minmax(0, 1fr); }
+  .leg-h { position: static; padding: 0 0 1rem 1.2rem; }
+  .pt { grid-template-columns: minmax(0, 1fr); gap: .1rem; padding-left: 1.2rem; }
+}
+@media (prefers-reduced-motion: reduce) { .fpath-line b { display: none; } }

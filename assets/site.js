@@ -62,3 +62,19 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) close(); });
   }
 })();
+
+/* about: the flight path fills with scroll */
+(function () {
+  var el = document.getElementById('fpath'); if (!el) return;
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) { el.querySelectorAll('.pt').forEach(function (p) { p.classList.add('on'); }); return; }
+  var line = el.querySelector('.fpath-line'), pts = el.querySelectorAll('.pt'), tick = false;
+  el.classList.add('live');
+  function draw() {
+    tick = false;
+    var r = line.getBoundingClientRect(), p = Math.min(1, Math.max(0, (innerHeight * 0.62 - r.top) / r.height)), y = r.top + p * r.height;
+    line.style.setProperty('--p', p.toFixed(4));
+    pts.forEach(function (n) { n.classList.toggle('on', n.getBoundingClientRect().top + 8 <= y); });
+  }
+  function ask() { if (!tick) { tick = true; requestAnimationFrame(draw); } }
+  addEventListener('scroll', ask, { passive: true }); addEventListener('resize', ask); draw();
+})();
