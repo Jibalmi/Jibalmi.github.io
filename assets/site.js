@@ -78,3 +78,13 @@
   function ask() { if (!tick) { tick = true; requestAnimationFrame(draw); } }
   addEventListener('scroll', ask, { passive: true }); addEventListener('resize', ask); draw();
 })();
+
+/* cv: section menu follows the scroll */
+(function () {
+  var links = [].slice.call(document.querySelectorAll('.cv-nav a')); if (!links.length || !('IntersectionObserver' in window)) return;
+  var byId = {}; links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting && byId[e.target.id]) { links.forEach(function (a) { a.classList.remove('on'); }); byId[e.target.id].classList.add('on'); byId[e.target.id].scrollIntoView({ block: 'nearest', inline: 'center' }); } });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  document.querySelectorAll('.cv-sec').forEach(function (s) { io.observe(s); });
+})();
